@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-rm /tmp/holberton/betty
-=======
-rm /tmp/betty
->>>>>>> 5b06a5c3b5bc6bc6c7bedf90a650cea2a8fc579c
+rm /tmp/holberton/betty 
