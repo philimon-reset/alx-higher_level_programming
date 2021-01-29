@@ -26,24 +26,11 @@
 	it€kbi;;;;;;;;;;;w
 
 # File marks:
-'0  8  1  ~/.git/MERGE_MSG
-'1  26  37  ~/.git/COMMIT_EDITMSG
-'2  6  74  ~/alx-system_engineering_devops/.git/MERGE_MSG
-'3  7  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
+'0  26  37  ~/.git/COMMIT_EDITMSG
+'1  6  74  ~/alx-system_engineering_devops/.git/MERGE_MSG
+'2  7  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
 
 # Jumplist (newest first):
--'  8  1  ~/.git/MERGE_MSG
--'  1  0  ~/.git/MERGE_MSG
--'  26  37  ~/.git/COMMIT_EDITMSG
--'  1  0  ~/.git/COMMIT_EDITMSG
--'  6  74  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  1  0  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  7  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  8  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  6  74  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  1  0  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  7  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
--'  8  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
 -'  26  37  ~/.git/COMMIT_EDITMSG
 -'  1  0  ~/.git/COMMIT_EDITMSG
 -'  6  74  ~/alx-system_engineering_devops/.git/MERGE_MSG
@@ -56,13 +43,6 @@
 -'  8  5  ~/alx-system_engineering_devops/.git/MERGE_MSG
 
 # History of marks within files (newest to oldest):
-
-> ~/.git/MERGE_MSG
-	"	8	1
-	^	8	1
-	.	8	1
-	+	7	3
-	+	8	1
 
 > ~/.git/COMMIT_EDITMSG
 	"	26	37
