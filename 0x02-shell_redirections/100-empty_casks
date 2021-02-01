@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -path "./" -print | ls -laR
+find . -empty -path "./" -print | ls -laR
