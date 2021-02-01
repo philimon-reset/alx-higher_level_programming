@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((%x$DECIMAL))"
+echo "$(printf%x $DECIMAL)"
