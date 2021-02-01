@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -path "./" -print 
+find . -empty -printf %f\\n
