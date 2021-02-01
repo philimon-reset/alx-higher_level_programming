@@ -1,11 +1,11 @@
 Shell Scripts info
 =======
 0-hello_world
-= 
-prints "Hello, World", followed by a new line
+=== 
+  prints "Hello, World", followed by a new line
 1-confused_smiley
-=
-displays a confused smiley to the terminal
+===
+  displays a confused smiley to the terminal
 2-hellofile
 =
 displays the contents of /etc/passwd to the terminal
