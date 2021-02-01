@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 echo -ne "{a..z}{a..z}\\n" | grep -v "00"
+=======
+echo -ne {a..z}{a..z}\\n | grep -v "oo" | rev | cut -b1,2 | rev
+>>>>>>> 06010e3a7d8dda337475845326cdcb66985e7bd0
