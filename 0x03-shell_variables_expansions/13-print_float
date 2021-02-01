@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((.2%f$NUM))"
+echo $((.2%f$NUM))
