@@ -1,2 +1,0 @@
-#!/bin/base
-ls -apv --format=comma

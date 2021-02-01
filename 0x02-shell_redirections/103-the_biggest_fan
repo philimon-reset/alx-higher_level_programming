@@ -1,2 +1,0 @@
-#!/bin/bash
-cut -f1 | tail -n +2 | sort -u
