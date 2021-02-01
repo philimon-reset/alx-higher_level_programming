@@ -1,0 +1,2 @@
+#!/bin/bash 
+find /root/alx-system_engineering_devops/0x01-shell_permissions/ -type d -exec chmod 711 {} +
