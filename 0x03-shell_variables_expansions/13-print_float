@@ -1,2 +1,2 @@
 #!/bin/bash
-printf ".2%f"NUM
+printf .2%fNUM
