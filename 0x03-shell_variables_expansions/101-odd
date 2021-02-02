@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l /etc/passwd | cat -n | tr -d '    ' | grep "^/d[13579]$"
+ls -l /etc/passwd | cat -n | grep "^/d[13579]$"
