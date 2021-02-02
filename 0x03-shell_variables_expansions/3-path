@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
 echo $PATH | tr ":" $"\n" | wc -l
-=======
-echo "$PATH" | cut -d: -f1- --output-delimiter=$'\n' | wc -l
->>>>>>> 022bd791fbc53e224aff2cb843ea64453ba585d4
