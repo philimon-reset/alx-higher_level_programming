@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | cat -n | tr -d '    ' | grep "^[0-9]*[1,3,5,7,9]" | cut -f2
+ls | cat -n | tr -d '/t' ':' | grep "^[0-9]*[1,3,5,7,9]" | cut -d: -f2
