@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | cat -n | tr -d '    ' | grep -E "^[0-9]*[1,3,5,7,9]"
+ls | cat -n | tr -d '    ' | grep "^[0-9]*[1,3,5,7,9]"
