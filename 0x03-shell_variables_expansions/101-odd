@@ -1,1 +1,2 @@
 #!/bin/bash
+ls -l /etc/passwd | cat -n | tr -d '    ' | grep "^[13579]"
