@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | cat -n | tr -d '    ' | grep -E "^/d*[13579]$"
+ls | cat -n | tr -d '    ' | grep -E "^[13579]"
