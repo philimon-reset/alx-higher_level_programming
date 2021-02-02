@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -n +2 | 
+cut -k1 | tail -n +2 | sort -u
