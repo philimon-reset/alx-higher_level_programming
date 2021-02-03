@@ -1,5 +1,2 @@
-#Low level programming in C.
-==
-
-adsasd
+Low level programming in C.
 ==
