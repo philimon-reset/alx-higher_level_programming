@@ -15,7 +15,7 @@ int main(void)
 	while (l <= 'z')
 	{
 		putchar(l);
-		l = l+1;
+		l = l + 1;
 	}
 	return (0);
 }
