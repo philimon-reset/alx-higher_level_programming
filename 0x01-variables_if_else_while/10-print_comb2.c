@@ -9,10 +9,10 @@
 int main(void)
 {
 	int l, a;
-	
-	for (l = 48;l <= 57;l++)
+
+	for (l = 48; l <= 57; l++)
 	{
-		for (a = 48;a <= 57;a++)
+		for (a = 48; a <= 57; a++)
 		{
 		putchar(l);
 		putchar(a);
