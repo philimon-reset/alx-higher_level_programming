@@ -14,8 +14,8 @@ int main(void)
 	{
 		for (a = l + 1; a <= 57; a++)
 		{
-			for (e = a + 1; e <= 57; e++)
-			{
+				for (e = a + 1; e <= 57; e++)
+				{
 		putchar(l);
 		putchar(a);
 		putchar(e);
