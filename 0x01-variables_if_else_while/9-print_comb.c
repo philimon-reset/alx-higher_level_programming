@@ -14,7 +14,8 @@ int main(void)
 	while (l <= '9')
 	{
 		putchar(l);
-		putchar(044);
+		putchar(44);
+		putchar(32);
 		l = l + 1;
 	}
 	putchar('\n');
