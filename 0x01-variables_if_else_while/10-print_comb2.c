@@ -8,18 +8,20 @@
  */
 int main(void)
 {
-	int l;
-
-	l = 48;
-	while (l <= 57)
+	int l, a;
+	
+	for (l = 48;l <= 57;l++)
 	{
+		for (a = 48;a <= 57;a++)
+		{
 		putchar(l);
-		if (l <= 56)
+		putchar(a);
+		if (l <= 57 && a <= 56)
 		{
 		putchar(44);
 		putchar(32);
 		}
-		l = l + 1;
+		}
 	}
 	putchar('\n');
 	return (0);
