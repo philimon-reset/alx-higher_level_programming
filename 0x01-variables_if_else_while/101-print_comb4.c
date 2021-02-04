@@ -14,11 +14,11 @@ int main(void)
 	{
 		for (a = l + 1; a <= 57; a++)
 		{
-				for (e = a + 1; e <= 57; e++)
-				{
-		putchar(l);
-		putchar(a);
-		putchar(e);
+			for (e = a + 1; e <= 57; e++)
+			{
+				putchar(l);
+				putchar(a);
+				putchar(e);
 		if (l != 55 || a != 56 || e != 57)
 		{
 		putchar(44);
