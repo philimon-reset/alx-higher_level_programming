@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic $c
+gcc -Wall -Werror -Wextra -pedantic $compile
