@@ -10,8 +10,8 @@ int main(void)
 {
 	int l;
 
-	l = 0;
-	while (l <= 9)
+	l = 48;
+	while (l <= 57)
 	{
 		putchar(l);
 		putchar(44);
