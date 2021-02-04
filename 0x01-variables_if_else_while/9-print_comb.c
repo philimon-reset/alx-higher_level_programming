@@ -8,12 +8,17 @@
  */
 int main(void)
 {
-	char l;
+	int l;
 
-	l = 'a';
-	while (l <= 'z')
+	l = 48;
+	while (l <= 57)
 	{
 		putchar(l);
+		if (l <= 56)
+		{
+		putchar(44);
+		putchar(32);
+		}
 		l = l + 1;
 	}
 	putchar('\n');
