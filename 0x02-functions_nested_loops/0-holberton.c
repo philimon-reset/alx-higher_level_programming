@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include "_putchar.c"
+
 /**
- * main - entry point
+ * main - entry point -> prints Holberton with line feed
  *
  * Return: 0
  */
