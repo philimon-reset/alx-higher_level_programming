@@ -1,21 +1,32 @@
 #include "holberton.h"
 
 /**
- * print_sign - checks if greater, less than or equal to zero
+ * print_to_98 - 
  *
  *@n: character to be checked
  * Return: 1 if greater than 0
  * 0 if equal to 0
  * -1 if less than zero
  */
-int print_last_digit(int n)
+void print_to_98(int n)
 {
-	int last;
-
-	last = n % 10;
-	if (n < 0)
+	if (n < 98)
 	{
-		last = last * -1
+		while (n <= 98)
+	{
+		_putchar(n);
+		_putchar(',');
+		_putchar(32);
+		n++;
 	}
-	_putchar(last);
+	}
+	else if (n > 98)
+	{
+		while (n > 98)
+	{
+		_putchar(n);
+		_putchar(',');
+		_putchar(32);
+		n--;
+	}
 }
