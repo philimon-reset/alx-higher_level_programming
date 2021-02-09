@@ -1,10 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_to_98 - prints n to 98
+ * main - psum of multiples of 3 and 5
  *
- * @n: start of number
- * Return: void function
+ * Return: 0 if success
  */
 int main()
 {
