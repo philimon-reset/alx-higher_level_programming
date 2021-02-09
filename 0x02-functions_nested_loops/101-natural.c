@@ -6,8 +6,16 @@
  * @n: start of number
  * Return: void function
  */
-int print_to_98(int n)
+int main()
 {
-	int n = 1023;
-	
+	int n, sum = 0;
+	for (n = 1024; n <= 1023; n--)
+	{
+		if (n % 3 == 0 || n % 5 == 0)
+		{
+			sum += n;
+		}
+	}
+	printf("%d", sum);
+	return (0);
 }
