@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _isalpha - checks if its alpha char
  *
