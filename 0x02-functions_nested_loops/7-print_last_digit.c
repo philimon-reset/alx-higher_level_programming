@@ -1,17 +1,15 @@
 #include "holberton.h"
 
 /**
- * print_sign - checks if greater, less than or equal to zero
+ * print_last_digit - checks last digit
  *
  *@n: character to be checked
- * Return: 1 if greater than 0
- * 0 if equal to 0
- * -1 if less than zero
+ * Return: last digit
  */
 int print_last_digit(int n)
 {
-	int last;
+	int last_digit;
 
-	last = n % 10;
-	return (last)
+	last_digit = n % 10;
+	return (last_digit);
 }
