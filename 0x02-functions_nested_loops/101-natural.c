@@ -5,7 +5,7 @@
  *
  * Return: 0 if success
  */
-int main()
+int main(void)
 {
 	int n, sum = 0;
 	for (n = 1023; n >= 0; n--)
