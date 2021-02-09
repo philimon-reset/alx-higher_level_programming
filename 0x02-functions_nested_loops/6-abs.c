@@ -3,6 +3,7 @@
 /**
  * _abs - check absolute
  *
+ *@n - integer to be checked
  * Return: 1 if greater than 0
  * 0 if equal to 0
  * -1 if less than zero
