@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
+ * largest - print the largest number
  * @a: first integer
  * @b: secound integer
  * @c: third integer
- * largest - print the largest number
  * Return: largest
  */
 
