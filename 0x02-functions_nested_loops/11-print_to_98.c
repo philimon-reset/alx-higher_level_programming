@@ -3,7 +3,7 @@
 /**
  * print_to_98 - prints n to 98
  *
- *@n: start of number
+ * @n: start of number
  * Return: void function
  */
 void print_to_98(int n)
