@@ -1,21 +1,22 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
- * print_sign - checks if greater, less than or equal to zero
+ * main - psum of multiples of 3 and 5
  *
- *@n: character to be checked
- * Return: 1 if greater than 0
- * 0 if equal to 0
- * -1 if less than zero
+ * Return: 0 if success
  */
-int print_last_digit(int n)
+int main(void)
 {
-	int last;
+	int n, sum = 0;
 
-	last = n % 10;
-	if (n < 0)
+	for (n = 1023; n >= 0; n--)
 	{
-		last = last * -1
+		if (n % 3 == 0 || n % 5 == 0)
+		{
+			sum += n;
+		}
 	}
-	_putchar(last);
+	printf("%d", sum);
+	printf("\n");
+	return (0);
 }
