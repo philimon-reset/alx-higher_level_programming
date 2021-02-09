@@ -1,29 +1,19 @@
 #include "holberton.h"
 
 /**
- * print_sign - checks if greater, less than or equal to zero
+ * jack_bauer - print every minute of the day
  *
- *@n: character to be checked
- * Return: 1 if greater than 0
- * 0 if equal to 0
- * -1 if less than zero
+ * Return: void function
  */
-int print_sign(int n)
+void jack_bauer(void)
 {
+	int n;
+	int j;
+	
+	for (n = 0; n <= 23; n++)
+	{
+		for (j = 0; j <= 59; j++)
+		{
+			_putchar()
 
-	if (n > 0)
-	{
-		_putchar(43);
-		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar('0');
-		return (0);
-	}
-	else
-	{
-		_putchar(43);
-		return (-1);
-	}
 }
