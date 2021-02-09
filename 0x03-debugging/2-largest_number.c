@@ -4,8 +4,8 @@
  * @a: first integer
  * @b: secound integer
  * @c: third integer
- * main - prints the largest of 3 integers
- * Return: 0
+ * largest - print the largest number
+ * Return: largest
  */
 
 int largest(int a, int b, int c)
