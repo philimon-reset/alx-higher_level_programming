@@ -1,1 +1,1 @@
-int
+int main(void);
