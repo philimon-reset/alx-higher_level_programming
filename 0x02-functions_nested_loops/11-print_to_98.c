@@ -1,12 +1,10 @@
 #include "holberton.h"
 
 /**
- * print_to_98 - 
+ * print_to_98 - prints n to 98
  *
- *@n: character to be checked
- * Return: 1 if greater than 0
- * 0 if equal to 0
- * -1 if less than zero
+ *@n: start of number
+ * Return: void function
  */
 void print_to_98(int n)
 {
