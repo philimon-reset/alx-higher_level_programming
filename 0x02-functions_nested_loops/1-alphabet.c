@@ -5,13 +5,15 @@
  *
  * Return: null
  */
-void print_alphabet(void)
-{
-	char l;
-
-	for (l = 'a'; l <= 'z'; l++)
-	{
-		_putchar(l);
-	}
-	_putchar(10);
-}
+void print_alphabet(void)                                                                                                                                                
+{                                                                                                                                                                         
+        char l;                                                                                                                                                           
+                                                                                                                                                                          
+        l = 'a';                                                                                                                                                          
+        while (l <= 'z')                                                                                                                                                  
+             	{                                                                                                                                                         
+                        _putchar(l);                                                                                                                                      
+                        l++;                                                                                                                                              
+                }                                                                                                                                                         
+        _putchar('\n');                                                                                                                                                   
+}   
