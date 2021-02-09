@@ -9,7 +9,7 @@
 int main()
 {
 	int n, sum = 0;
-	for (n = 1024; n >= 0; n--)
+	for (n = 1023; n >= 0; n--)
 	{
 		if (n % 3 == 0 || n % 5 == 0)
 		{
