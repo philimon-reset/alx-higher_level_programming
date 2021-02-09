@@ -1,5 +1,23 @@
+#include "holberton.h"
+
 /**
- * main - entry point -> prints Holberton with line feed
+ * _islower - checks if its lowercase
  *
- * Return: 0
+ * Return: 1 if lowercase 0 if not
  */
+int _islower(int c)
+{
+
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+			}
+	else if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+			}
+	else
+	{
+		return (0);
+	}
+}
