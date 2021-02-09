@@ -1,21 +1,15 @@
 #include "holberton.h"
 
 /**
- * print_sign - checks if greater, less than or equal to zero
+ * add - add two integers
  *
- *@n: character to be checked
- * Return: 1 if greater than 0
- * 0 if equal to 0
- * -1 if less than zero
+ * Return: addition of two integers
  */
-int print_last_digit(int n)
+int add(int, int)
 {
-	int last;
+	int a, b, addi;
 
-	last = n % 10;
-	if (n < 0)
-	{
-		last = last * -1
-	}
-	_putchar(last);
+	addi = a + b;
+	_putchar(addi + '0');
+	return (addi);
 }
