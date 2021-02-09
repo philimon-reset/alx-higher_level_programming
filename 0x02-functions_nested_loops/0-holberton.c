@@ -1,12 +1,21 @@
 #include <stdio.h>
-#include "_putchar.c"
+
 /**
- * main - entry point
+ * main - entry point -> prints Holberton with line feed
  *
  * Return: 0
  */
 int main(void)
 {
-	_putchar('H');
+	putchar('H');
+	putchar('o');
+	putchar('l');
+	putchar('b');
+	putchar('e');
+	putchar('r');
+	putchar('t');
+	putchar('o');
+	putchar('n');
+	putchar(10);
 	return (0);
 }
