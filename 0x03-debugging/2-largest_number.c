@@ -1,11 +1,13 @@
 /**
-* main - prints the largest of 3 integers
-* Return: 0
-*/
+ * @a: first integer
+ * @b: secound integer
+ * @c: third integer
+ * main - prints the largest of 3 integers
+ * Return: 0
+ */
 
-int main(void)
+int largest(int a, int b, int c)
 {
-	int a, b, c;
 	int largest;
 
 	if (a >= b && a >= c)
