@@ -1,5 +1,29 @@
+#include "holberton.h"
+
 /**
- * main - entry point -> prints Holberton with line feed
+ * print_sign - checks if greater, less than or equal to zero
  *
- * Return: 0
+ *@n: character to be checked
+ * Return: 1 if greater than 0
+ * 0 if equal to 0
+ * -1 if less than zero
  */
+int print_sign(int n)
+{
+
+	if (n > 0)
+	{
+		_putchar(43);
+		return (1);
+	}		}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar(43);
+		return (-1);
+	}
+}
