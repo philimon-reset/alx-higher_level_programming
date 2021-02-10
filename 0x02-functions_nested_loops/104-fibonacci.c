@@ -1,32 +1,27 @@
 #include <stdio.h>
-
 /**
- * main - Entry point, prints the first 50 fibonacci numbers
+ * main - print the first 50 fibonacci characters
  *
- * Return: Always 0
+ * Return: 0 if success
  */
 int main(void)
 {
-	int counter = 2;
-	unsigned long first = 1;
-	unsigned long second = 2;
-	unsigned long fib;
+	unsigned int c;
+	unsigned long a = 0, b = 1, fibonacci;
 
-	printf("1, 2, ");
-	while (counter <= 49)
+	for (c = 1; c <= 98; c++)
 	{
-		fib = first + second;
-		if (counter < 49)
+		fibonacci = a + b;
+		if (c < 98)
 		{
-			printf("%ld, ", fib);
+			printf("%ld, ", fibonacci);
 		}
 		else
 		{
-			printf("%ld", fib);
+			printf("%ld", fibonacci);
 		}
-		first = second;
-		second = fib;
-		counter++;
+		a = b;
+		b = fibonacci;
 	}
 	printf("\n");
 	return (0);
