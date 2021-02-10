@@ -10,9 +10,9 @@ int main(void)
 	int c;
 	long a = 0, b = 1, fibonacci;
 
-	for (c = 1; c <= 11; c++)
+	for (c = 1; c <= 50; c++)
 	{
-		if (c < 11)
+		if (c < 50)
 		{
 			printf("%ld, ", a);
 		}
