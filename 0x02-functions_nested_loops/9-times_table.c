@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * print_times_table - print multiplication table
+ * times_table - print multiplication table
  * @a: first digit
  * @b: second digit
  * Return: void function
  */
-void print_times_table(int a, int b)
+void times_table(void)
 {
 	int a = 0, b = 0;
 
