@@ -1,22 +1,25 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - psum of multiples of 3 and 5
+ * main - finds and prints the sum of the even-valued terms in the fibonacci sequence
  *
  * Return: 0 if success
  */
 int main(void)
 {
-	int n, sum = 0;
+	long a = 1, b = 2, sum = 2, fibonacci;
 
-	for (n = 1023; n >= 0; n--)
+	while (fibonacci <= 4000000)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
+		fibonacci = a + b;
+		if (fibonacci % 2 == 0)
 		{
-			sum += n;
+			sum = sum + fibonacci;
 		}
+		a = b;
+		b = fibonacci;
 	}
-	printf("%d", sum);
+	printf("%ld", sum);
 	printf("\n");
 	return (0);
 }
