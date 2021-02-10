@@ -8,9 +8,7 @@
 int main(void)
 {
 	int c;
-	long a;
-	long b;
-	long fibonacci;
+	int a, b, fibonacci;
 
 	while (c <= 49)
 	{
