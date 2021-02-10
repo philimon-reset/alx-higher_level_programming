@@ -1,28 +1,32 @@
-#include "holberton.h"
 #include <stdio.h>
+
 /**
- * main - print the first 50 fibonacci characters
+ * main - Entry point, prints the first 50 fibonacci numbers
  *
- * Return: 0 if success
+ * Return: Always 0
  */
 int main(void)
 {
-	unsigned int c;
-	unsigned long a = 0, b = 1, fibonacci;
+	int counter = 2;
+	unsigned long first = 1;
+	unsigned long second = 2;
+	unsigned long fib;
 
-	for (c = 1; c <= 98; c++)
+	printf("1, 2, ");
+	while (counter <= 49)
 	{
-		fibonacci = a + b;
-		if (c < 98)
+		fib = first + second;
+		if (counter < 49)
 		{
-			printf("%ld, ", fibonacci);
+			printf("%ld, ", fib);
 		}
 		else
 		{
-			printf("%ld", fibonacci);
+			printf("%ld", fib);
 		}
-		a = b;
-		b = fibonacci;
+		first = second;
+		second = fib;
+		counter++;
 	}
 	printf("\n");
 	return (0);
