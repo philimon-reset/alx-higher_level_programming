@@ -8,23 +8,16 @@
 int main(void)
 {
 	int c;
-	int a, b, fibonacci;
+	long a = 0, b = 1, fibonacci;
 
-	while (c <= 49)
+	for (c = 1; c <= 50; c++)
 	{
+		printf("%ld, ", a);
 		fibonacci = a + b;
-		if (c < 49)
-		{
-			printf("%ld, ", fibonacci);
-		}
-		else
-		{
-			printf("%ld", fibonacci);
-		}
 		a = b;
 		b = fibonacci;
-		c++;
 	}
+		
 	printf("\n");
 	return (0);
 }
