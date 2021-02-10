@@ -21,11 +21,9 @@ int main(void)
 		{
 			printf("%ld", fibonacci);
 		}
-		
 		a = b;
 		b = fibonacci;
 	}
-		
 	printf("\n");
 	return (0);
 }

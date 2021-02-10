@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - finds and prints the sum of the even-valued terms in the fibonacci sequence
+ * main - finds and prints the sum of the even-valued terms in the fibonacci
  *
  * Return: 0 if success
  */
