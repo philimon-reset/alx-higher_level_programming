@@ -1,22 +1,37 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
- * main - psum of multiples of 3 and 5
- *
- * Return: 0 if success
+ * print_times_table - print multiplication table
+ * @a: first digit
+ * @b: second digit
+ * Return: void function
  */
-int main(void)
+void print_times_table(int a, int b)
 {
-	int n, sum = 0;
+	int a = 0, b = 0;
 
-	for (n = 1023; n >= 0; n--)
+	while (a < 10)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
+		b = 0;
+		while (b < 10)
 		{
-			sum += n;
+			if (b == 0)
+			{
+				_putchar('0');
+			}
+			else if (!(a * b > 9))
+			{
+				_putchar(32);
+				_putchar(32);
+				_putchar(44);
+				_putchar('0' + a * b);
+			}
+			else if (a * b > 9)
+			{
+				_putchar(32);
+				_putchar(44);
+				_putchar('0' + a * b);
+			}
 		}
 	}
-	printf("%d", sum);
 	printf("\n");
-	return (0);
 }
