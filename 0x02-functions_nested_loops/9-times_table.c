@@ -34,7 +34,9 @@ void times_table(void)
 				_putchar(l / 10 + '0');
 				_putchar(l % 10 + '0');
 			}
+			b++;
 		}
+		a++;
 	}
 	printf("\n");
 }
