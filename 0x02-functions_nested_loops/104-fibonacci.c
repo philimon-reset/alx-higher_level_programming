@@ -14,11 +14,11 @@ int main(void)
 		fibonacci = a + b;
 		if (c < 98)
 		{
-			printf("%uld, ", fibonacci);
+			printf("%lud, ", fibonacci);
 		}
 		else
 		{
-			printf("%uld", fibonacci);
+			printf("%lud", fibonacci);
 		}
 		a = b;
 		b = fibonacci;
