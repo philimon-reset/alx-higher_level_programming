@@ -17,11 +17,11 @@ int main(void)
 		fibonacci = a + b;
 		if (c < 49)
 		{
-			printf("%d, ", fibonacci);
+			printf("%ld, ", fibonacci);
 		}
 		else
 		{
-			printf("%d", fibonacci);
+			printf("%ld", fibonacci);
 		}
 		a = b;
 		b = fibonacci;
