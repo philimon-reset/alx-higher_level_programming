@@ -5,7 +5,7 @@
  * @b: second digit
  * Return: void function
  */
-void print_times_table(int a, int b)
+void print_times_table(int n)
 {
 	int a = 0, b = 0;
 
