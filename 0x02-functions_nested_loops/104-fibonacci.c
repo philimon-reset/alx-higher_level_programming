@@ -9,7 +9,7 @@ int main(void)
 	unsigned int c;
 	unsigned long a = 0, b = 1, fibonacci;
 
-	for (c = 1; c <= 98; c++)
+	for (c = 1; c < 99; c++)
 	{
 		fibonacci = a + b;
 		if (c < 98)
