@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * times_table - print multiplication table
  * @a: first digit
