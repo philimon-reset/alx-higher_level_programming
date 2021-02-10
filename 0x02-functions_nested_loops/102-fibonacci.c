@@ -12,15 +12,16 @@ int main(void)
 
 	for (c = 1; c <= 50; c++)
 	{
+		fibonacci = a + b;
 		if (c < 50)
 		{
-			printf("%ld, ", a);
+			printf("%ld, ", fibonacci);
 		}
 		else
 		{
-			printf("%ld", a);
+			printf("%ld", fibonacci);
 		}
-		fibonacci = a + b;
+		
 		a = b;
 		b = fibonacci;
 	}
