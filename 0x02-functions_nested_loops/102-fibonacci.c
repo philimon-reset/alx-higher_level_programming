@@ -10,9 +10,16 @@ int main(void)
 	int c;
 	long a = 0, b = 1, fibonacci;
 
-	for (c = 1; c <= 50; c++)
+	for (c = 1; c < 49; c++)
 	{
-		printf("%ld, ", a);
+		if (c < 49)
+		{
+			printf("%ld, ", a);
+		}
+		else
+		{
+			printf("%id", a);
+		}
 		fibonacci = a + b;
 		a = b;
 		b = fibonacci;
