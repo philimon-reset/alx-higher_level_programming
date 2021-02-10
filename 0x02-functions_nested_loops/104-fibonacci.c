@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	int c;
-	long a = 0, b = 1, fibonacci;
+	unsigned int c;
+	unsigned long a = 0, b = 1, fibonacci;
 
 	for (c = 1; c <= 98; c++)
 	{
