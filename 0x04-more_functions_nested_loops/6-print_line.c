@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_lines - prints line in the teminal
+ * print_line - prints line in the teminal
  *
  * @n: number of times _ is used
  * Return: void functions
