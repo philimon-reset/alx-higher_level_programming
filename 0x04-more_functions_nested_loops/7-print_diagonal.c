@@ -18,7 +18,7 @@ void print_numbers(int n)
 			{
 				_putchar(' ');
 			}
-			_putchar('//');
+			_putchar('\\');
 			_putchar('\n');
 			n--;
 		}
