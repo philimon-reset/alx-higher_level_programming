@@ -6,7 +6,7 @@
  * @n: number of times \ is used
  * Return: void functions
  */
-void print_numbers(int n)
+void print_diagonal(int n)
 {
 	int a = n, j;
 
