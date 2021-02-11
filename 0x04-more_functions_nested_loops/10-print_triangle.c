@@ -12,10 +12,21 @@ int main(void)
 
 	if (size > 0)
 	{
-    
+		for (i = 1; i <= size; ++i)
+		{
+			for (j = 1; j <= i; ++j)
+			{
+				printf(" ");
+			}
+			printf("#");
+			printf("\n");
+		}
+	}
 	}
 	else
 	{
-		_putchar('\n');
+		printf("\n");
 	}
+	printf("\n");
+	return (0);
 }
