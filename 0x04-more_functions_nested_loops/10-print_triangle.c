@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
- * main - prints triangle in terminal
+ * print_triangle - prints triangle in terminal
  *
  * @size: size of triangle
- * Return: 0
+ * Return: void function
  */
-int main(void)
+void print_triangle(int size)
 {
-	int size, i, j;
+	int i, j;
 
 	if (size > 0)
 	{
