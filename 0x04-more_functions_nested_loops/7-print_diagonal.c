@@ -8,17 +8,23 @@
  */
 void print_numbers(int n)
 {
-	int i, j;
+	int a = n, j;
 
-	for (i = 0; i <= n; i++)
+	if (n > 0)
 	{
-		for (j = 0; j <= n; j++)
+		while (n > 0)
 		{
-			if (j == i)
+			for (i = a - n, i > 0; i--)
 			{
-				_putchar('\\');
+				_putchar(' ');
 			}
+			_putchar('//');
+			_putchar('\n');
+			n--;
 		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
