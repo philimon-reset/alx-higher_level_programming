@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - prints triangle in terminal
- *@size: size of triangle
+ * @size: size of triangle
  *
  * Return: void function
  */
