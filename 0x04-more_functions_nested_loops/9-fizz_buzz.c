@@ -9,24 +9,26 @@
  */
 int main(void)
 {
-	int output = "", i;
-
-	for (i = 0; i <= 100; i++)
+	int i;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-    if (i % 3)
-    {
-      output += "Fizz";
-    }
-    else if (i % 5)
-    {
-      output += "Buzz";
-    }
-    else if (output == "")
-    {
-      output = i;
-    }
-    printf(output);
-  }
+			printf("FizzBuzz ");
+		}
+		else if (i % 3 == 0)
+		{
+			prinf("Fizz ")
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ")
+		}
+		else
+		{
+			printf("%d ", i)
+		}
+	}
 	printf("\n");
 	return (0);
 }
