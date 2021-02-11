@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -16,10 +15,9 @@ int main(void)
         {
                 if (n % s == 0)
                 {
-                        printf("%d", s);
+                        printf("%d\n", s);
                         break;
                 }
         }
-        printf("\n");
         return (0);
 }
