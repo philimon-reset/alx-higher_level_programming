@@ -4,7 +4,7 @@
  * main - prints triangle in terminal
  *
  * @size: size of triangle
- * Return: void functions
+ * Return: 0
  */
 int main(void)
 {
@@ -16,17 +16,17 @@ int main(void)
 		{
 			for (j = 1; j <= i; ++j)
 			{
-				printf(" ");
+				_putchar(" ");
 			}
-			printf("#");
-			printf("\n");
+			_putchar("#");
+			_putchar("\n");
 		}
 	}
 	}
 	else
 	{
-		printf("\n");
+		_putchar("\n");
 	}
-	printf("\n");
+	_putchar("\n");
 	return (0);
 }
