@@ -2,10 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_square - prints diagonal line in terminal
+ * main - fizz for multiples of 3 and buzz for 5 and fizzbuzz for both
  *
- * @size: size of square
- * Return: void functions
+ * Return: 0
  */
 int main(void)
 {
@@ -22,7 +21,14 @@ int main(void)
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz ")
+			if (i != 100)
+			{
+				printf("Buzz ");
+			}
+			else
+			{
+				printf("Buzz ");
+			}
 		}
 		else
 		{
