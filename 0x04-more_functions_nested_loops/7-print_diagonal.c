@@ -16,8 +16,9 @@ void print_numbers(int n)
 		{
 			if (j == i)
 			{
-				_putchar('\');
+				_putchar('\\');
 			}
+		}
 	}
 	_putchar('\n');
 }
