@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - prints diagonal line in terminal
- *@n: number of times \ is used
+ * @n: number of times \ is used
  * 
  * Return: void functions
  */
