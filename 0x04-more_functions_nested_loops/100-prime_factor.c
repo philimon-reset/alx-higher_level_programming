@@ -10,7 +10,7 @@
 int main(void)
 {
   long n = 612852475143;
-  int s = sqrt(n);
+  int s = (int) sqrt(n);
   
   for (; s < n; s++)
   {
