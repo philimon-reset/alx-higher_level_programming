@@ -1,20 +1,23 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_number - print number in putchar
  *
- * Return: void
+ * Return: void function
  */
 void print_number(int n)
 {
-	
+	unsigned int num = n;
 
-	for (; s < n; s++)
+	if (n < 0)
 	{
-		if (n % s == 0)
-		{
-			printf("%d\n", s);
-			break;
-		}
+		_putchar('-');
+		num = -num
 	}
+	if (num / 10 != 0)
+	{
+		print_number(num / 10);
+	}
+	_putchar((num % 10) + '0');
 }
