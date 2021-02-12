@@ -2,8 +2,7 @@
 
 /**
  * times_table - print multiplication table
- * @a: first digit
- * @b: second digit
+ *
  * Return: void function
  */
 void times_table(void)
