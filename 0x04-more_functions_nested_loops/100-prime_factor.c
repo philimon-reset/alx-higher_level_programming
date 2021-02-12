@@ -1,24 +1,23 @@
 #include "holberton.h"
 #include <stdio.h>
-#include <math.h>
 
 /**
- * main - find the largest prime factor of 612852475143
+ * print_number - print number in putchar
  *
- * Return: 0
+ * Return: void function
  */
-int main(void)
+void print_number(int n)
 {
-	long n = 612852475143;
-	int s = (int) sqrt(n);
+	unsigned int num = n;
 
-	for (; s < n; s++)
+	if (n < 0)
 	{
-		if (n % s == 0)
-		{
-			printf("%d\n", s);
-			break;
-		}
+		_putchar('-');
+		num = -num
 	}
-	return (0);
+	if (num / 10 != 0)
+	{
+		print_number(num / 10);
+	}
+	_putchar(num % 10 + '0');
 }
