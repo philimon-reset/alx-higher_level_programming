@@ -1,23 +1,24 @@
 #include "holberton.h"
-#include <stdio.h>
-
-/**
- * print_number - print number in putchar
- *
- * Return: void function
- */
-void print_number(int n)
-{
-	unsigned int num = n;
-
-	if (n < 0)
-	{
-		_putchar('-');
-		num = -num
-	}
-	if (num / 10 != 0)
-	{
-		print_number(num / 10);
-	}
-	_putchar((num % 10) + '0');
-}
+#include <stdio.h>                                                                                                                                                        
+#include <math.h>                                                                                                                                                         
+                                                                                                                                                                          
+/**                                                                                                                                                                       
+ * main - find the largest prime factor of 612852475143                                                                                                                   
+ *                                                                                                                                                                        
+ * Return: 0                                                                                                                                                              
+ */                                                                                                                                                                       
+int main(void)                                                                                                                                                            
+{                                                                                                                                                                         
+        long n = 612852475143;                                                                                                                                            
+        int s = (int) sqrt(n);                                                                                                                                            
+                                                                                                                                                                          
+        for (; s < n; s++)                                                                                                                                                
+        {                                                                                                                                                                 
+                if (n % s == 0)                                                                                                                                           
+                {                                                                                                                                                         
+                        printf("%d\n", s);                                                                                                                                
+                        break;                                                                                                                                            
+                }                                                                                                                                                         
+        }                                                                                                                                                                 
+        return (0);                                                                                                                                                       
+}   
