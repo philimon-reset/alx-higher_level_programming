@@ -4,6 +4,7 @@
 /**
  * print_number - print number in putchar
  *
+ * @n: number to be printed
  * Return: void function
  */
 void print_number(int n)

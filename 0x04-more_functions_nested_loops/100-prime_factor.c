@@ -9,16 +9,16 @@
  */
 int main(void)
 {
-  long n = 612852475143;
-  int s = (int) sqrt(n);
+	long n = 612852475143;
+	int s = (int) sqrt(n);
 
-  for (; s < n; s++)
-  {
-     if (n % s == 0)
-     {
-       printf("%d\n", s);
-       break;
-     }
-  }
-  return (0);
+	for (; s < n; s++)
+	{
+		if (n % s == 0)
+		{
+			printf("%d\n", s);
+			break;
+		}
+	}
+	return (0);
 }
