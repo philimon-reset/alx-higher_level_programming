@@ -8,7 +8,7 @@
  */
 void print_tables(int n)
 {
-  char i;
+	char i;
 	int j, cont;
 
 	if (n <= 15 && n >= 0)
