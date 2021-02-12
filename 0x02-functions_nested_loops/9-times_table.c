@@ -8,35 +8,15 @@
  */
 void times_table(void)
 {
-	int a = 0, b = 0, l;
+	char l;
+	int j;
 
-	while (a < 10)
+	for (j = 0; j < 10; j++)
 	{
-		b = 0;
-		while (b < 10)
+		for (l = 'a'; l <= 'z'; l++)
 		{
-			l = a * b;
-			if (b == 0)
-			{
-				_putchar('0');
-			}
-			else if (!(l > 9))
-			{
-				_putchar(32);
-				_putchar(32);
-				_putchar(44);
-				_putchar(l + '0');
-			}
-			else if (l > 9)
-			{
-				_putchar(32);
-				_putchar(44);
-				_putchar(l / 10 + '0');
-				_putchar(l % 10 + '0');
-			}
-			b++;
+			_putchar(l);
 		}
-		a++;
+		_putchar(10);
 	}
-	printf("\n");
 }
