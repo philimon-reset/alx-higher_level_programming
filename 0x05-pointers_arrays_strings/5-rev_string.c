@@ -15,7 +15,7 @@ void rev_string(char *s)
 	while (lent > var)
 	{
 		/* what are youuuuu*/
-		swap_char(s + lent, s + var)
+		swap_char(s + lent, s + var);
 		lent--;
 		var++;
 	}
