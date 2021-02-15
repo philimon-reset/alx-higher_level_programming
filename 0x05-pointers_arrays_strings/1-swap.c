@@ -8,7 +8,7 @@
  * Return: void funtion
  */
 
-void reset_to_98(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 	int var;
 
