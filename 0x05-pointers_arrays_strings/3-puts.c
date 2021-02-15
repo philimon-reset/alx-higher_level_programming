@@ -13,4 +13,5 @@ void _puts(char *str)
 
 	var = *str;
 	_putchar(var + '0');
+	_putchar('\n');
 }
