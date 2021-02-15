@@ -19,7 +19,6 @@ void rev_string(char *s)
 		lent--;
 		var++;
 	}
-	_putchar('\n');
 }
 
 /**
