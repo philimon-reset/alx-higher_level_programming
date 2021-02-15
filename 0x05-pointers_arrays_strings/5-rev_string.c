@@ -40,7 +40,7 @@ int _strlen(char *s)
 }
 
 /**
- * swap_int - swap integers of a and b
+ * swap_char - swap integers of a and b
  * @a: first integer
  * @b: second integer
  *
