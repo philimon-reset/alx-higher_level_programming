@@ -6,7 +6,7 @@
  *
  * Return: void funtion
  **/
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int var = 0, lent;
 
