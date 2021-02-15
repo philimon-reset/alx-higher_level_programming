@@ -10,8 +10,10 @@
 void _puts(char *str)
 {
 	int var;
-
-	var = *str;
-	_putchar(var + '0');
+	
+	for (var = 0; str[var] != '\0'; var++)
+	{
+		_putchar(var + '0');
+	}
 	_putchar('\n');
 }
