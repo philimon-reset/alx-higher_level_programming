@@ -12,7 +12,7 @@ void rev_string(char *s)
 
 	lent = _strlen(s) - 1;
 
-	while (lent >= var)
+	while (lent > var)
 	{
 		/* what are youuuuu*/
 		swap_char(s + lent, s + var)
