@@ -6,16 +6,16 @@
  *
  * Return: void funtion
  **/
-void print_rev(char *s)                                                                                                                                                   
-{                                                                                                                                                                         
-        int var, lent;                                                                                                                                                    
-                                                                                                                                                                          
-        lent = _strlen(s);                                                                                                                                                
-        for (var = lent - 1; var >= 0; var--)                                                                                                                             
-        {                                                                                                                                                                 
-                _putchar(s[var]);                                                                                                                                         
-        }                                                                                                                                                                 
-        _putchar('\n');                                                                                                                                                   
+void print_rev(char *s)
+{
+	int var, lent;
+
+	lent = _strlen(s);
+	for (var = lent - 1; var >= 0; var--)
+	{
+		_putchar(s[var]);
+	}
+	_putchar('\n');
 }
 
 /**
