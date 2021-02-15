@@ -17,3 +17,15 @@ void print_rev(char *s)
 	}
 	_putchar('\n');
 }
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	for (var = 0; s[var] != '\0'; var++)
+	{
+		output += 1;
+	}
+	return (output);
+}
