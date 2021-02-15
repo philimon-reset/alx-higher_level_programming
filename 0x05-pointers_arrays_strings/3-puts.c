@@ -5,10 +5,10 @@
  * @str: string to be printed
  *
  * Return: void funtion
- */
+ **/
 void _puts(char *str)
 {
-	int var;
+	int var = 0;
 	
 	while (str[var] != '\0')
 	{
