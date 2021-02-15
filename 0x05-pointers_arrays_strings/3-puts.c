@@ -12,5 +12,5 @@ void _puts(char *str)
 	int var;
 
 	var = *str;
-	_putchar(var + '0')
+	_putchar(var + '0');
 }
