@@ -18,6 +18,12 @@ void print_rev(char *s)
 	_putchar('\n');
 }
 
+/**
+ * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ **/
 int _strlen(char *s)
 {
 	int var;
