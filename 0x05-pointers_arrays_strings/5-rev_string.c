@@ -6,14 +6,18 @@
  *
  * Return: void funtion
  **/
-void rev_string(char *s)
+void print_rev(char *s)
 {
-	int var, lent;
+	int var = 0, lent;
 
-	lent = _strlen(s);
-	for (var = lent - 1; var >= 0; var--)
+	lent = _strlen(s) - 1;
+
+	while (lent >= var)
 	{
-		_putchar(s[var]);
+		/* what are youuuuu*/
+		swap_char(s + lent, s + var)
+		lent--;
+		var++;
 	}
 	_putchar('\n');
 }
@@ -34,4 +38,21 @@ int _strlen(char *s)
 		output += 1;
 	}
 	return (output);
+}
+
+/**
+ * swap_int - swap integers of a and b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: void funtion
+ */
+
+void swap_int(int *a, int *b)
+{
+	int var;
+
+	var = *a;
+	*a = *b;
+	*b = var;
 }
