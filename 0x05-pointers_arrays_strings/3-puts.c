@@ -6,14 +6,14 @@
  *
  * Return: void funtion
  */
-
 void _puts(char *str)
 {
 	int var;
 	
-	for (var = 0; str[var] != '\0'; var++)
+	while (str[var] != '\0')
 	{
 		_putchar(str[var]);
+		var++;
 	}
 	_putchar('\n');
 }
