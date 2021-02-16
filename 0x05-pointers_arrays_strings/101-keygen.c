@@ -14,7 +14,7 @@ int main (void)
 	char passwd;
 
 	srand(time(0));
-	for (var = 0; var < 2645; var++)
+	while (var < 2645)
 	{
 		passwd = rand() % 128;
 		var += passwd;
