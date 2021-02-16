@@ -1,4 +1,7 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <time.h>
+#define LIMIT 89
 
 /**
  * _strlen - return the length of a a string
@@ -7,14 +10,18 @@
  * Return: lenght of string
  */
 
-int _strlen(char *s)
+int main (void)
 {
-	int var;
-	int output = 0;
+	int var, output = 0;
+	char passwd[8], string[] = "ABCDEFGHIJKLMOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz0123456789~`!@#$%^&*()_-+={}[]:;<>,./?";
 
-	for (var = 0; s[var] != '\0'; var++)
+	srand(time(0));
+	for (var = 0; var < 8; var++)
 	{
-		output += 1;
+		output = rand() % LIMIT;
+		passwd[var] = string[output]
 	}
-	return (output);
+	passwd[var] = '\0';
+	printf("%s", passwd);
+	return (0);
 }
