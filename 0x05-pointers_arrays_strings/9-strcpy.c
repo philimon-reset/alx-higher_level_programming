@@ -11,7 +11,6 @@
 char *_strcpy(char *dest, char *src)
 {
 	int var = 0;
-	
 
 	for (var = 0; *(src + var) != '\0'; var++)
 	{
