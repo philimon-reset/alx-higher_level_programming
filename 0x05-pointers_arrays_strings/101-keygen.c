@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 /**
@@ -18,8 +19,8 @@ int main (void)
 	{
 		passwd = rand() % 128;
 		var += passwd;
-		_putchar(passwd);
+		putchar(passwd);
 	}
-	_putchar(2772 - passwd);
+	putchar(2772 - passwd);
 	return (0);
 }
