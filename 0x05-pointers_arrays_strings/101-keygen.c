@@ -1,27 +1,25 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <time.h>
-#define LIMIT 89
 
 /**
- * _strlen - return the length of a a string
- * @s: string to be checked
+ * main - key generated
  *
- * Return: lenght of string
+ * Return: passwd
  */
 
 int main (void)
 {
-	int var, output = 0;
-	char passwd[8], string[] = "ABCDEFGHIJKLMOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz0123456789~`!@#$%^&*()_-+={}[]:;<>,./?";
+	int var;
+	char passwd;
 
 	srand(time(0));
-	for (var = 0; var < 8; var++)
+	for (var = 0; var < 2645; var++)
 	{
-		output = rand() % LIMIT;
-		passwd[var] = string[output]
+		passwd = rand() % 128;
+		var += passwd;
+		_putchar(passwd);
 	}
-	passwd[var] = '\0';
-	printf("%s", passwd);
+	_putchar(2772 - passwd);
 	return (0);
 }
