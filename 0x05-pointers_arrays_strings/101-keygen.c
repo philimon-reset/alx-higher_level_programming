@@ -21,6 +21,6 @@ int main (void)
 		var += passwd;
 		putchar(passwd);
 	}
-	putchar(2772 - passwd);
+	putchar(2772 - var);
 	return (0);
 }
