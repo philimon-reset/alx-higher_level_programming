@@ -1,48 +1,48 @@
 #include "holberton.h"
 
 /**
- * puts_half - print second half of the string
+ * puts_half - prints half of a string to stdout
  * @str: string to be printed
  *
- * Return: void funtion
+ * Return: void
  **/
 void puts_half(char *str)
 {
-	int var, lent;
+	int length = _strlen(str);
 
-	lent = _strlen(str);
-	if (lent % 2 == 0)
+	if (length > 0)
 	{
-		for (var = lent / 2; str[var] != '\0'; var++)
+		if (length % 2 == 0)
 		{
-			_putchar(str[var]);
+			length /= 2;
 		}
-	}
-	else
-	{
-		for (var = (lent - 1) / 2; str[var] != '0'; var++)
+		else
 		{
-			_putchar(str[var]);
+			length  = (length - 1) / 2;
 		}
-
+		while (str[length] != '\0')
+		{
+			_putchar(str[length]);
+			length++;
+		}
 	}
 	_putchar('\n');
 }
 
 /**
- * _strlen - return the length of a a string
- * @s: string to be checked
+ * _strlen - counts the length of a string
+ * @s: string to  be counted
  *
- * Return: lenght of string
- **/
+ * Return: the length of the string
+ */
 int _strlen(char *s)
 {
-	int var;
-	int output = 0;
+	int length = 0, i = 0;
 
-	for (var = 0; s[var] != '\0'; var++)
+	while (s[i] != '\0')
 	{
-		output += 1;
+		length++;
+		i++;
 	}
-	return (output);
+	return (length);
 }
