@@ -17,6 +17,7 @@ void puts_half(char *str)
 		{
 			_putchar(str[var]);
 		}
+		var = lent / 2
 	}
 	else
 	{
@@ -24,6 +25,7 @@ void puts_half(char *str)
 		{
 			_putchar(str[var]);
 		}
+		var = (lent + 1) / 2
 
 	}
 	_putchar('\n');
