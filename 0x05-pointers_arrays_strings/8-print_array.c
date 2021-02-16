@@ -17,10 +17,10 @@ void print_array(int *a, int n)
 		if (var != (n -1))
 		{
 			printf("%d, ", a[var]);
-	}
+		}
 		else
 		{
 			printf("%d", a[var]);
 		}
-	_putchar('\n');
+	printf("\n");
 }
