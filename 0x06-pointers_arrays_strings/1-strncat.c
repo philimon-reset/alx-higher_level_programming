@@ -28,8 +28,8 @@ char *_strncat(char *dest, char *src, int n)
 			for (j = 0; src[j] != '\0'; j++)
 			{
 				dest[output + j] = src[j];
-				a++;
 			}
+			a++;
 		}
 		dest[output + j] = '\0';
 	}
@@ -40,7 +40,6 @@ char *_strncat(char *dest, char *src, int n)
 			for (j = 0; src[j] != '\0'; j++)
 			{
 				dest[output + j] = src[j];
-				a++;
 			}
 			a++;
 		}
