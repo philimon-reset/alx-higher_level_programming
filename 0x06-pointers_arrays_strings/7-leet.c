@@ -12,7 +12,7 @@ char *leet(char *s)
 
 	while (s[i] != '\0')
 	{
-		s[i] = transform(s[i]);
+		s[i] = check(s[i]);
 		i++;
 	}
 	return (s);
