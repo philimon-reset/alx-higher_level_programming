@@ -28,7 +28,7 @@ void reverse_array(int *a, int n)
  * Return: void funtion
  */
 
-void swap_char(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 	int var;
 
