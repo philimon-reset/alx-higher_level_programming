@@ -35,8 +35,9 @@ int _strcmp(char *s1, char *s2)
 		}
 		else
 		{
-			j++;
+			continue;
 		}
+		j++;
 	}
 	return (var);
 }
