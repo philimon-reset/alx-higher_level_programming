@@ -3,4 +3,4 @@ char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
-void swap_char(int *a, int *b);
+void swap_int(int *a, int *b);
