@@ -1,39 +1,44 @@
 #include "holberton.h"
 
 /**
- * reverse_array - function to reverse string
- * @a: array to be reversed
- * @n: number of elements of array
+ * leet - leet encoder
+ * @s: check
  *
- * Return: void function
+ * Return: address of the encoded string
  */
-
-void reverse_array(int *a, int n)
+char *leet(char *s)
 {
-	int j = 0;
+	int i = 0;
 
-	n--;
-	while (j < n)
+	while (s[i] != '\0')
 	{
-		swap_int(a + n, a + j);
-		n--;
-		j++;
+		s[i] = check(s[i]);
+		i++;
 	}
+	return (s);
 }
 
 /**
- * swap_int - swap integers of a and b
- * @a: first integer
- * @b: second integer
+ * check - check
+ * @a: char to be encoded
  *
- * Return: void funtion
+ * Return: char
  */
-
-void swap_int(int *a, int *b)
+char check(char a)
 {
-	int var;
+	char one[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char two[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i = 0;
+	char replacement = a;
 
-	var = *a;
-	*a = *b;
-	*b = var;
+	while (i < 52)
+	{
+		if (a == one[i])
+		{
+			replacement = two[i];
+			break;
+		}
+		i++;
+	}
+	return (replacement);
 }
