@@ -25,16 +25,16 @@ char *cap_string(char *s)
 		}
 		i++;
 	}
-	return (s)
+	return (s);
 }
 
 int separator(char c)
 {
 	char arr[13] = {',', ';', '.', '!', '?', '"', '(', ')', '{',
 		      '}', '\t', '\n', ' '};
-	int a, var;
+	int a = 0, var = 0;
 
-	for (a = 0; a < 13; a++)
+	for (; a < 13; a++)
 	{
 		if (c == arr[a])
 			var = 1;
