@@ -2,7 +2,7 @@
 
 /**
  * leet - leet encoder
- * @str: check
+ * @s: check
  *
  * Return: address of the encoded string
  */
@@ -20,7 +20,7 @@ char *leet(char *s)
 
 /**
  * check - check
- * @c: char to be encoded
+ * @a: char to be encoded
  *
  * Return: char
  */
