@@ -24,26 +24,20 @@ char *_strncat(char *dest, char *src, int n)
 	if (output2 < n)
 	{
 		while (a < n)
-		{
-			for (j = 0; src[j] != '\0'; j++)
-			{
-				dest[output + j] = src[j];
-			}
-			dest[output + j] = '\0';
+		{	
+			dest[output + j] = src[j];
 			a++;
 		}
+		dest[output + j] = '\0';
 	}
 	else
 	{
 		while (src[a] != '\0')
-		{
-			for (j = 0; src[j] != '\0'; j++)
-			{
-				dest[output + j] = src[j];
-			}
-			dest[output + j] = '\0';
+		{	
+			dest[output + j] = src[j];
 			a++;
 		}
+		dest[output + j] = '\0';
 	}
 	return (dest);
 }
