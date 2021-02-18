@@ -1,25 +1,38 @@
 #include "holberton.h"
 
 /**
- * _strncpy - function that copys two strings
- * @dest: destenation of addition
- * @src: string to be added
- * @n: size of bytes to be used
+ * _strncmp - function compares two strings
+ * @dest: destenation 
+ * @src: string to be compared
  *
- * Return: a pointer to the resulting string dest
+ * Return: difference
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src)
 {
-	int j = 0;
+	int j = 0, var = 0;
 
-	for (j = 0; j < n && src[j] != '\0'; j++)
+	while (1)
 	{
-		dest[j] = src[j];
-	}
-	for (j = 0; j < n; j++)
-	{
-		dest[j] = '\0';
-	}
-	return (dest);
+		if (dest[j] != src[j])
+		{
+			var = dest[j] - src[j];
+			break;
+		}
+		else if (dest[j] == '\0')
+		{
+			var = src[j];
+			break;
+		}
+		else if (src[j] == '\0')
+		{
+			var = dest[j];
+			break;
+		}
+		else if (dest[j] == src[j])
+		{
+			continue;
+		}
+		j++;
+	return (var);
 }
