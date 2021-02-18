@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _strncmp - function compares two strings
- * @s1: destenation 
+ * _strcmp - function compares two strings
+ * @s1: destenation
  * @s2: string to be compared
  *
  * Return: difference
