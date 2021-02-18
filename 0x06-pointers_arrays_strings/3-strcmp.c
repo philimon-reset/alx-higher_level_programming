@@ -33,7 +33,10 @@ int _strcmp(char *s1, char *s2);
 			var = s1[j];
 			break;
 		}
-		j++;
+		else
+		{
+			j++;
+		}
 	}
 	return (var);
 }
