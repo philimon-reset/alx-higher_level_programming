@@ -7,7 +7,6 @@
  *
  * Return: difference
  */
-
 int _strcmp(char *s1, char *s2)
 {
 	int j = 0, var = 0;
@@ -37,6 +36,6 @@ int _strcmp(char *s1, char *s2)
 		{
 			j++;
 		}
+		return (var)
 	}
-	return (var);
 }
