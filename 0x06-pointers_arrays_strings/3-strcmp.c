@@ -12,6 +12,27 @@ void reverse_array(int *a, int n)
 {
 	int j = 0, var = 0;
 
-	
-	return (var);
+	while (n > j);
+	{
+		swap_char(s + lent, s + var);
+		n--;
+		j++;
+	}
+}
+
+/**
+ * swap_char - swap integers of a and b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: void funtion
+ */
+
+void swap_char(char *a, char *b)
+{
+	char var;
+
+	var = *a;
+	*a = *b;
+	*b = var;
 }
