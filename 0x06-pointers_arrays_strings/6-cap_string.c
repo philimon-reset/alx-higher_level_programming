@@ -18,7 +18,7 @@ char *cap_string(char *s)
 	}
 	while (s[i] != '\0')
 	{
-		if (separator(s[i]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
+		if (separator(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
 			s[i + 1] -= 32;
 		i++;
 	}
@@ -30,7 +30,7 @@ char *cap_string(char *s)
  *
  * Return: 1 if true
  */
-int separator(char c)
+int is_separator(char c)
 {
 	char arr[13] = {',', ';', '.', '!', '?', '"', '(', ')', '{',
 		      '}', '\t', '\n', ' '};
