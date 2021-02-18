@@ -25,8 +25,8 @@ char *cap_string(char *s)
 	return (s);
 }
 /**
- * separator - if word separator
- * @a: char to be checked
+ * is_separator - if word separator
+ * @c: char to be checked
  *
  * Return: 1 if true
  */
