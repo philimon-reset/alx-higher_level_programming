@@ -14,4 +14,5 @@ char *cap_string(char *s);
 char *rot13(char *s);
 char *leet(char *s);
 int is_separator(char c);
+char check(char a);
 #endif /*HOLBERTON_H*/
