@@ -11,7 +11,7 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j, v, output = 0, output2 = 0;
+	int i, j, v, a, output = 0, output2 = 0;
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
@@ -25,17 +25,25 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		while (a < n)
 		{
-
+			for (j = 0; src[j] != '\0'; j++)
+			{
+				dest[output + j] = src[j];
+			}
+			dest[output + j] = '\0';
+			a++;
 		}
 	}
 	else
 	{
-
+		while (src[a] != '\0')
+		{
+			for (j = 0; src[j] != '\0'; j++)
+			{
+				dest[output + j] = src[j];
+			}
+			dest[output + j] = '\0';
+			a++;
+		}
 	}
-	for (j = 0; src[j] != '\0'; j++)
-	{
-		dest[output + j] = src[j];
-	}
-	dest[output + j] = '\0';
 	return (dest);
 }
