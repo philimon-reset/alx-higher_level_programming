@@ -22,7 +22,7 @@ void reverse_array(int *a, int n)
 }
 
 /**
- * swap_char - swap integers of a and b
+ * swap_int - swap integers of a and b
  * @a: first integer
  * @b: second integer
  *
