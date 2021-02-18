@@ -18,23 +18,19 @@ char *cap_string(char *s)
 	}
 	while (s[i] != '\0')
 	{
-		if (separator(s[i]) && (str[i + 1] >= 'a' && 
-					str[i + 1] <= 'z'))
-		{
+		if (separator(s[i]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
 			s[i + 1] -= 32;
-		}
 		i++;
 	}
 	return (s);
 }
-
-int separator(char c)
 /**
  * separator - if word separator
  * @a: char to be checked
  *
  * Return: 1 if true
  */
+int separator(char c)
 {
 	char arr[13] = {',', ';', '.', '!', '?', '"', '(', ')', '{',
 		      '}', '\t', '\n', ' '};
