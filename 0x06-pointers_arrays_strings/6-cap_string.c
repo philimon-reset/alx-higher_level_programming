@@ -1,39 +1,26 @@
 #include "holberton.h"
 
 /**
- * reverse_array - function to reverse string
- * @a: array to be reversed
- * @n: number of elements of array
+ * cap_string - capitalizes all words of a string
+ * @s: captitalized letter
  *
  * Return: void function
  */
 
-void reverse_array(int *a, int n)
+char *cap_string(char *s)
 {
-	int j = 0;
+	int i = 0;
+	char arr[] = {',', ';', '.', '!', '?', '"', '(', ')', '{',
+		      '}', '\t', '\n', ' '};
 
-	n--;
-	while (j < n)
+	if (s[i] >= 'a' && s[i] <= 'z')
 	{
-		swap_int(a + n, a + j);
-		n--;
-		j++;
+		s[i] -= 32;
+		i++;
+	}
+	while (s[i] != '\0')
+	{
+		
 	}
 }
 
-/**
- * swap_int - swap integers of a and b
- * @a: first integer
- * @b: second integer
- *
- * Return: void funtion
- */
-
-void swap_int(int *a, int *b)
-{
-	int var;
-
-	var = *a;
-	*a = *b;
-	*b = var;
-}
