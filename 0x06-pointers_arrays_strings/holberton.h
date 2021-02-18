@@ -15,7 +15,7 @@ char *string_toupper(char *);
 void swap_int(int *a, int *b);
 char *string_toupper(char *);
 char *cap_string(char *);
-int is_separator(char a);
+int is_separator(char c);
 char transform(char x);
 char *leet(char *);
 char transform_2(char x);
