@@ -10,7 +10,7 @@ int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 void swap_int(int *a, int *b);
 char *string_toupper(char *s);
-char *cap_string(char *);
+char *cap_string(char *s);
 char *rot13(char *s);
 int separator(char c);
 #endif /*HOLBERTON_H*/
