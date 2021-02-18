@@ -24,17 +24,24 @@ char *_strncat(char *dest, char *src, int n)
 	if (output2 > n)
 	{
 		while (a < n)
-		{	
-			dest[output + j] = src[j];
-			a++;
+		{
+			for (j = 0; src[j] != '\0'; j++)
+			{
+				dest[output + j] = src[j];
+				a++;
+			}
 		}
 		dest[output + j] = '\0';
 	}
 	else
 	{
 		while (src[a] != '\0')
-		{	
-			dest[output + j] = src[j];
+		{
+			for (j = 0; src[j] != '\0'; j++)
+			{
+				dest[output + j] = src[j];
+				a++;
+			}
 			a++;
 		}
 		dest[output + j] = '\0';
