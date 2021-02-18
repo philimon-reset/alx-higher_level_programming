@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * leet - leet encoder
+ * rot13 - leet encoder
  * @s: check
  *
  * Return: address of the encoded string
  */
-char *leet(char *s)
+char *rot13(char *s)
 {
 	int i = 0;
 
