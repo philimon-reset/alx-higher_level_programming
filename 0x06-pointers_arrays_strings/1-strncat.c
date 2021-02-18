@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		output2 += 1;
 	}
-	if (output2 < n)
+	if (output2 > n)
 	{
 		while (a < n)
 		{	
