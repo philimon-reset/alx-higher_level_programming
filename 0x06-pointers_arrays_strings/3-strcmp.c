@@ -29,10 +29,9 @@ char *_strncpy(char *dest, char *src)
 			var = dest[j];
 			break;
 		}
-		else if (dest[j] == src[j])
+		else
 		{
-			continue;
+			j++;
 		}
-		j++;
 	return (var);
 }
