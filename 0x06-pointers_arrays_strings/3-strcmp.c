@@ -2,31 +2,31 @@
 
 /**
  * _strncmp - function compares two strings
- * @dest: destenation 
- * @src: string to be compared
+ * @s1: destenation 
+ * @s2: string to be compared
  *
  * Return: difference
  */
 
-char *_strncpy(char *dest, char *src)
+int _strcmp(char *s1, char *s2);
 {
 	int j = 0, var = 0;
 
 	while (1)
 	{
-		if (dest[j] != src[j])
+		if (s1[j] != s2[j])
 		{
-			var = dest[j] - src[j];
+			var = s1[j] - s2[j];
 			break;
 		}
-		else if (dest[j] == '\0')
+		else if (s1[j] == '\0')
 		{
-			var = src[j];
+			var = s2[j];
 			break;
 		}
-		else if (src[j] == '\0')
+		else if (s2[j] == '\0')
 		{
-			var = dest[j];
+			var = s1[j];
 			break;
 		}
 		else
