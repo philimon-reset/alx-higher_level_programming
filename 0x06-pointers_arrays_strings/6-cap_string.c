@@ -29,6 +29,12 @@ char *cap_string(char *s)
 }
 
 int separator(char c)
+/**
+ * separator - if word separator
+ * @a: char to be checked
+ *
+ * Return: 1 if true
+ */
 {
 	char arr[13] = {',', ';', '.', '!', '?', '"', '(', ')', '{',
 		      '}', '\t', '\n', ' '};
