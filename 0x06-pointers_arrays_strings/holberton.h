@@ -7,3 +7,4 @@ void swap_int(int *a, int *b);
 char *string_toupper(char *s);
 char *cap_string(char *s);
 char *rot13(char *s);
+int separator(char c);
