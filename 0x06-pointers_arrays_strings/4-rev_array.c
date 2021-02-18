@@ -10,9 +10,9 @@
 
 void reverse_array(int *a, int n)
 {
-	int j = 0, var = 0;
+	int j = 0;
 
-	while (n > j);
+	while (j < n);
 	{
 		swap_char(s + lent, s + var);
 		n--;
