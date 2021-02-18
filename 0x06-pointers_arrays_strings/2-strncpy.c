@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strncat - function that concatenates two strings
+ * _strncpy - function that copys two strings
  * @dest: destenation of addition
  * @src: string to be added
  * @n: size of bytes to be used
@@ -9,7 +9,7 @@
  * Return: a pointer to the resulting string dest
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n);
 {
 	int i, j, v, output = 0, output2 = 0;
 
@@ -23,17 +23,16 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	if (output2 > n)
 	{
-		for (j = 0; j < n; j++)
+		for (j = 0; j < n && src[j] != '\0'; j++)
 		{
-			dest[output + j] = src[j];
+			dest[j] = src[j];
 		}
-		dest[output + j] = '\0';
 	}
 	else
 	{
-		for (j = 0; src[j] != '\0'; j++)
+		for (j = 0; j < n; j++)
 		{
-			dest[output + j] = src[j];
+			dest[j] = '\0';
 		}
 		dest[output + j] = '\0';
 	}
