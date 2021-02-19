@@ -1,13 +1,17 @@
 #include "holberton.h"
 
 /**
- * cap_string - capitalizes all words of a string
- * @s: captitalized letter
+ * infinite_add -  adds two numbers
+ * @n1: first character
+ * @n2: secondd character
+ * @r:  buffer that the function will use to store the 
+ * result
+ * @size_r: buffer size
  *
- * Return: void function
+ * Return: pointer to the result
  */
 
-char *cap_string(char *s)
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 {
 	int i = 0;
 
@@ -21,7 +25,7 @@ char *cap_string(char *s)
 			s[i + 1] -= 32;
 		i++;
 	}
-	return (s);
+	return (size_r);
 }
 /**
  * is_separator - if word separator
