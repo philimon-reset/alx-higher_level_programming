@@ -15,6 +15,6 @@ char *rot13(char *s);
 char *leet(char *s);
 int is_separator(char c);
 char check(char a);
-void print_number(int n);
 int main(void);
+void print_number(int n);
 #endif /*HOLBERTON_H*/
