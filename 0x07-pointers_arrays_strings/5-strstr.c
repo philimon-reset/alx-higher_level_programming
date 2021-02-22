@@ -10,16 +10,24 @@
 
 char *_strstr(char *haystack, char *needle);
 {
-	int j = 0;
+	int j = 0, i = 0;
+	size_t  len = 0;
 
-	for (; s[j] != '\0' && _strchr(accept, s[j]) == NULL; j++)
+	for (; needle[i] != '\0')
 	{
-		continue;
+		len += 1;
 	}
-	if (s[j] == '\0')
+	while (*haystack)
+	{
+		if (*haystack == *needle)
+		{
+			if (!_strcmp(haystack, needle))
+			{
+				return ((char *)haystack);
+			}
+			haystack++;
+		}
 		return (NULL);
-	else
-		return (s + j);
 }
 
 
@@ -43,4 +51,44 @@ char *_strchr(char *s, char c)
 		return (s + j);
 	else
 		return (NULL);
+}
+
+/**
+ * _strcmp - function compares two strings
+ * @s1: destenation
+ * @s2: string to be compared
+ *
+ * Return: difference
+ */
+int _strcmp(char *s1, char *s2)
+{
+	int j = 0, var = 0;
+
+	while (1)
+	{
+		if (s1[j] == '\0' && s2[j] == '\0')
+		{
+			break;
+		}
+		else if (s1[j] != s2[j])
+		{
+			var = s1[j] - s2[j];
+			break;
+		}
+		else if (s1[j] == '\0')
+		{
+			var = s2[j];
+			break;
+		}
+		else if (s2[j] == '\0')
+		{
+			var = s1[j];
+			break;
+		}
+		else
+		{
+			j++;
+		}
+	}
+	return (var);
 }
