@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
+ * _strspn - function that gets the length of a prefix substring.
  * @s: destenation of string
- * @b: character to replace
- * @n: size of bytes to be used
+ * @accept: characters to check
  *
- * Return: a pointer to the resulting string
+ * Return: number of bytes in the initial segment
  */
 
-char *_memset(char *s, char b, unsigned int n)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int j = 0;
+	unsigned int j = 0, output = 0;
 
-	for (; j < n; j++)
+	for (; s[j] != '\0'; j++)
 	{
-		s[j] = b;
+		if (*(s + j) == *(accept + j)
+		    output += 1;
 	}
-	return (s);
+	return (output);
 }
