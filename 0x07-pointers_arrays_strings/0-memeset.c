@@ -1,25 +1,21 @@
 #include "holberton.h"
 
 /**
- * _strncpy - function that copys two strings
- * @dest: destenation of addition
- * @src: string to be added
+ * _memset - function that fills memory with a constant byte.
+ * @s: destenation of string
+ * @b: character to replace
  * @n: size of bytes to be used
  *
- * Return: a pointer to the resulting string dest
+ * Return: a pointer to the resulting string
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	int j = 0;
 
-	for (; j < n && src[j] != '\0'; j++)
+	for (; j < n && s[j] != '\0'; j++)
 	{
-		dest[j] = src[j];
+		s[j] = b;
 	}
-	for (; j < n; j++)
-	{
-		dest[j] = '\0';
-	}
-	return (dest);
+	return (s);
 }
