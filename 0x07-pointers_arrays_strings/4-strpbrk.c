@@ -8,7 +8,7 @@
  * Return: a pointer to the resulting string
  */
 
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
 {
 	int j = 0;
 
