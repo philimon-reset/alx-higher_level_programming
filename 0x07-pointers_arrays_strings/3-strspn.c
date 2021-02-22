@@ -10,15 +10,15 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int j = 0, output = 0;
+	int j = 0, output = 0;
 
 	for (; s[j] != '\0'; j++)
 	{
 		if (_strchr(s, accept) == NULL)
 		{
 			break;
-			output++;
 		}
+		output++;
 	}
 	return (output);
 }
@@ -33,7 +33,7 @@ unsigned int _strspn(char *s, char *accept)
 
 char *_strchr(char *s, char c)
 {
-	unsigned int j = 0;
+	int j = 0;
 
 	for (; s[j] != '\0' && s[j] != c; j++)
 	{
