@@ -1,21 +1,22 @@
 #include "holberton.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
- * @s: destenation of string
- * @b: character to replace
- * @n: size of bytes to be used
+ * print_diagsums - function prints the sum of the two diagonals of a square matrix of integers
+ * @a: array
+ * @size: size
  *
- * Return: a pointer to the resulting string
+ * Return: void
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void print_diagsums(int *a, int size)
 {
-	unsigned int j = 0;
+	int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	for (; j < n; j++)
+	for (; i < size * size; i += size)
 	{
-		s[j] = b;
+		len1 += a[i + j];
+		len2 += a[i + (size - 1) - j];
+		j++;
 	}
-	return (s);
+	printf("%d , %d\n", len1, len2);
 }
