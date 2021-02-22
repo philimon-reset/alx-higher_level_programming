@@ -16,6 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		if (_strchr(s, accept) == NULL)
 		{
+			break;
 			output++;
 		}
 	}
