@@ -20,5 +20,9 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		output++;
 	}
+	else (s[j] != accept[j])
+	{
+		output++;
+	}
 	return (output);
 }
