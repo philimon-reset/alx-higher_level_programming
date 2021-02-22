@@ -1,21 +1,47 @@
 #include "holberton.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
+ * _strpbrk - function that fills memory with a constant byte.
  * @s: destenation of string
- * @b: character to replace
- * @n: size of bytes to be used
+ * @accept: 
  *
  * Return: a pointer to the resulting string
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strpbrk(char *s, char *accept);
 {
-	unsigned int j = 0;
+	int j = 0;
 
-	for (; j < n; j++)
+	for (; s[j] != '\0' && _strchr(accept, s[j]) == NULL); j++)
 	{
-		s[j] = b;
+			continue;
 	}
+	if (s[j] == '\0')
+		return (NULL)
+	else
+		return (s + j)
 	return (s);
+}
+
+
+/**
+ * _strchr - function that fills memory with a constant byte.
+ * @s: destenation of string
+ * @c: character to replace
+ *
+ * Return: a pointer to the resulting string
+ */
+
+char *_strchr(char *s, char c)
+{
+	int j = 0;
+
+	for (; s[j] != '\0' && s[j] != c; j++)
+	{
+		continue;
+	}
+	if (s[j] == c)
+		return (s + j);
+	else
+		return (NULL);
 }
