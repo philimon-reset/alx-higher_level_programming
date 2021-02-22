@@ -1,21 +1,14 @@
 #include "holberton.h"
 
 /**
- * _memset - function that fills memory with a constant byte.
- * @s: destenation of string
- * @b: character to replace
- * @n: size of bytes to be used
+ * set_string - function that sets the value of a pointer to a char.
+ * @s: address of first pointer
+ * @to: value of second pointer
  *
- * Return: a pointer to the resulting string
+ * Return: void
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void set_string(char **s, char *to)
 {
-	unsigned int j = 0;
-
-	for (; j < n; j++)
-	{
-		s[j] = b;
-	}
-	return (s);
+	*s = to;
 }
