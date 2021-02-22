@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _strpbrk - function that fills memory with a constant byte.
+ * _strpbrk - function that searches a string for any of a set of bytes.
  * @s: destenation of string
- * @accept: 
+ * @accept: string to be checked with
  *
  * Return: a pointer to the resulting string
  */
@@ -14,7 +14,7 @@ char *_strpbrk(char *s, char *accept);
 
 	for (; s[j] != '\0' && _strchr(accept, s[j]) == NULL); j++)
 	{
-			continue;
+		continue;
 	}
 	if (s[j] == '\0')
 		return (NULL);
