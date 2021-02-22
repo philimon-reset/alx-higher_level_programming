@@ -17,10 +17,9 @@ char *_strpbrk(char *s, char *accept);
 			continue;
 	}
 	if (s[j] == '\0')
-		return (NULL)
+		return (NULL);
 	else
-		return (s + j)
-	return (s);
+		return (s + j);
 }
 
 
