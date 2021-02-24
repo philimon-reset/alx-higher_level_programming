@@ -1,22 +1,26 @@
 #include "holberton.h"
 
 /**
- * checker - find is its prime
- * @i: number to be checked
- * @c: original input
+ * _puts_recursion - function to print string
+ * @s: string to be printed
  *
- * Return: 1 if prime 0 if not
+ * Return: void function
  */
-int checker(int i, int c)
+
+void _puts_recursion(char *s)
 {
-	if (c <= 1)
-		return (0);
-	else if (c % i == 0)
-		return (0);
-	else if (i >= c/2)
-		return (1);
-	return (checker(i + 1, c));
+	int j = 0;
+
+	if (*s == '\0')
+		_putchar('\n');
+	else
+	{
+		_putchar(s[j]);
+		_puts_recursion(s + 1);
+	}
 }
+
+
 
 /**
  * _sqrt_recursion - function to if prime
