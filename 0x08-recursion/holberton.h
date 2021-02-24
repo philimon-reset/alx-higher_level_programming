@@ -9,4 +9,5 @@ void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
 int factorial(int n);
 int square_root(int i, int c);
+int _sqrt_recursion(int n);
 #endif HOLBERTON.H
