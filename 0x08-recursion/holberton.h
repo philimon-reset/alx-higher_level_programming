@@ -14,5 +14,6 @@ int is_prime_number(int n);
 int square_root(int i, int c);
 int checker(int i, int c);
 int is_palindrome(char *s);
+void start(char *s, int a, int b, int *flag);
 
 #endif /*HOLBERTON_H*/
