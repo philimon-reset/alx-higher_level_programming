@@ -15,7 +15,7 @@ void start(char *s, int a, int b, int *flag)
 			*flag *= 1;
 		else
 			*flag *= 0;
-		start(s, a + 1, b - 1, flag)
+		start(s, a + 1, b - 1, flag);
 	}
 }
 
