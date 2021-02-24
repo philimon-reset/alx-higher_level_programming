@@ -15,5 +15,6 @@ int square_root(int i, int c);
 int checker(int i, int c);
 int is_palindrome(char *s);
 void start(char *s, int a, int b, int *flag);
+int wildcmp(char *s1, char *s2);
 
 #endif /*HOLBERTON_H*/
