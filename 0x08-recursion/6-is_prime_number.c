@@ -13,7 +13,7 @@ int checker(int i, int c)
 		return (0);
 	else if (c % i == 0)
 		return (0);
-	else if (i >= c / 2)
+	else if (i >= c)
 		return (1);
 	return (checker(i + 1, c));
 }
