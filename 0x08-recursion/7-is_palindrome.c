@@ -12,12 +12,12 @@
 
 void start(char *s, int a, int b, int *flag)
 {
-	if (a <= b)
+	if (a < b + 1)
 	{
-		if (s[a] == s[b])
-			*flag *= 1;
-		else
+		if (s[a] != s[b])
 			*flag *= 0;
+		else
+			*flag *= 1;
 		start(s, a + 1, b - 1, flag);
 	}
 }
@@ -48,7 +48,8 @@ int _strlen_recursion(char *s)
 int is_palindrome(char *s)
 {
 	int flag = 1;
-
+	if (_strlen_recursion(s) == 0)
+		return (flag);
 	start(s, 0, _strlen_recursion(s) - 1, &flag);
 	return (flag);
 }
