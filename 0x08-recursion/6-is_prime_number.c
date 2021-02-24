@@ -13,13 +13,13 @@ int checker(int i, int c)
 		return (0);
 	else if (c % i == 0)
 		return (0);
-	else if (i >= c/2)
+	else if (i >= c / 2)
 		return (1);
 	return (checker(i + 1, c));
 }
 
 /**
- * _sqrt_recursion - function to if prime
+ * is_prime_number - function to if prime
  * @n: integer to be checked
  *
  * Return: 1 if prime else 0
