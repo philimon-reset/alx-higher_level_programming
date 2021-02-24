@@ -49,7 +49,7 @@ void _print_rev_recursion(char *s)
  * Return: 1 if a string is palyndrome 
  */
 
-int is_palindrome(char *s);
+int is_palindrome(char *s)
 {
 	if (_print_rev_recursion(*s) == _puts_recursion(*s))
 		return (1);
