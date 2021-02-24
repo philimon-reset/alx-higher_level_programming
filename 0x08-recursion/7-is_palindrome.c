@@ -20,16 +20,39 @@ void _puts_recursion(char *s)
 	}
 }
 
-
-
 /**
- * _sqrt_recursion - function to if prime
- * @n: integer to be checked
+ * _print_rev_recursion - function to print string in reverse
+ * @s: string to be printed
  *
- * Return: 1 if prime else 0
+ * Return: void function
  */
 
-int is_prime_number(int n)
+void _print_rev_recursion(char *s)
 {
-	return (checker(2, n));
+	int j = 0;
+
+	if (*s == '\0')
+	{
+		return;
+	}
+	else
+	{
+		_print_rev_recursion(s + 1);
+		_putchar(s[j]);
+	}
+}
+
+/**
+ * is_palindrome - function to check if its palindrome
+ * @s: string to be checked
+ *
+ * Return: 1 if a string is palyndrome 
+ */
+
+int is_palindrome(char *s);
+{
+	if (_print_rev_recursion(s) == _puts_recursion(s))
+		return (1);
+	else
+		return (0);
 }
