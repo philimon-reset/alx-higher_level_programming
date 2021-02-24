@@ -12,7 +12,7 @@ int square_root(int i, int c)
 	if (i * i == c)
 		return (i);
 	else if (i * i > c)
-		return (i - 1);
+		return (-1);
 	return (square_root(i + 1, c));
 }
 
