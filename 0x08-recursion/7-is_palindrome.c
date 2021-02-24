@@ -7,34 +7,32 @@
  * Return: void function
  */
 
-void _puts_recursion(char *s)
+void start(char *s, int a, int b, int *flag)
 {
-	if (*s == '\0')
-		_putchar('\n');
-	else
+	if (a <= b)
 	{
-		_putchar(s[0]);
-		_puts_recursion(s + 1);
-	}
+		if (s[a] == s[b])
+			*flag *= 1;
+		else
+			*flag *= 0;
+		start(s, a + 1, b - 1, flag)
 }
+
 
 /**
- * _print_rev_recursion - function to print string in reverse
- * @s: string to be printed
+ * _strlen_recursion - function to print length of string
+ * @s: string to be checked
  *
- * Return: void function
+ * Return: lenght of string
  */
 
-void _print_rev_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
-		_putchar('\n');
-	else
-	{
-		_print_rev_recursion(s + 1);
-		_putchar(s[0]);
-	}
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
+
 
 /**
  * is_palindrome - function to check if its palindrome
@@ -45,8 +43,8 @@ void _print_rev_recursion(char *s)
 
 int is_palindrome(char *s)
 {
-	if (_print_rev_recursion(*s) == _puts_recursion(*s))
-		return (1);
-	else
-		return (0);
+	int flag = 1;
+
+	check(s, 0, _strlen_recursion(s) - 1, &flag);
+	return (flag);
 }
