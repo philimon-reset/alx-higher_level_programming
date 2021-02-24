@@ -48,6 +48,7 @@ int _strlen_recursion(char *s)
 int is_palindrome(char *s)
 {
 	int flag = 1;
+
 	if (_strlen_recursion(s) == 0)
 		return (flag);
 	start(s, 0, _strlen_recursion(s) - 1, &flag);
