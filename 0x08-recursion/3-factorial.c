@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 
 /**
  * factorial - function to print factorial of n
@@ -13,7 +13,7 @@ int factorial(int n)
 
 	if (n < 0)
 		return (-1);
-	if (n == '0')
+	if (n == 0)
 		return (1);
 	else
 	{

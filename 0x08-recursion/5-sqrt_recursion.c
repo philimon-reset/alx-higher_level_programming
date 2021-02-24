@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * square_root: find square root to the nearest round
+ * square_root - find square root to the nearest round
  * @i: number to be checked
  * @c: original input
  *
@@ -13,8 +13,7 @@ int square_root(int i, int c)
 		return (i);
 	else if (i * i > c)
 		return (i - 1);
-	else
-		return (square_root(i + 1, c));
+	return (square_root(i + 1, c));
 }
 
 /**
@@ -32,8 +31,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0)
 		return (1);
-	else
-	{
-		return (square_root(j, n));
-	}
+	return (square_root(j, n));
 }
