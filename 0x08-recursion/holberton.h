@@ -15,4 +15,4 @@ int is_prime_number(int n);
 int checker(int i, int c);
 int is_palindrome(char *s);
 
-#endif HOLBERTON.H
+#endif /*HOLBERTON.H*/
