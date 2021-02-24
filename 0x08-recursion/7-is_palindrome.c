@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * _puts_recursion - function to print string
+ * start - function to check if the first and last letters match
  * @s: string to be printed
+ * @flag: value held to check if its plaindrom
  *
  * Return: void function
  */
