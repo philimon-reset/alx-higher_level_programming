@@ -2,8 +2,10 @@
 
 /**
  * start - function to check if the first and last letters match
- * @s: string to be printed
- * @flag: value held to check if its plaindrom
+ * @a: start index of string
+ * @b: end index of string
+ * @s: string to be checked
+ * @flag: value holder for checker
  *
  * Return: void function
  */
@@ -40,7 +42,7 @@ int _strlen_recursion(char *s)
  * is_palindrome - function to check if its palindrome
  * @s: string to be checked
  *
- * Return: 1 if a string is palyndrome 
+ * Return: flag
  */
 
 int is_palindrome(char *s)
