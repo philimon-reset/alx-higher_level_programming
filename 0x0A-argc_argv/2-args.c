@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main: main function
+ * main - main function
  * @argc: number of arguments
  * @argv: array of pointers
  *
