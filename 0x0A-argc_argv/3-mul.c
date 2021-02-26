@@ -10,9 +10,9 @@
 
 int main(int argc, char** argv)
 {
-	int j = 0, sum = 1;
+	int j = 1, sum = 1;
 
-	if (argc == 3)
+	if (argc < 3)
 	{
 		for (; j < argc; j++)
 		{
