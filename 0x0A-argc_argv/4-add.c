@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main: main function
+ * main - main function
  * @argc: number of arguments
  * @argv: array of pointers
  *
@@ -15,17 +15,17 @@ int main(int argc, char **argv)
 	if (argc > 1)
 	{
 		if (atoi(argv[j]) != 0)
-		    {
+		{
 			for (; j < argc; j++)
 			{
 				sum += atoi(argv[j]);
 			}
 			printf("%d\n", sum);
-		    }
-		 else
-		    {
+		}
+		else
+		{
 			    printf("Error\n");
-		    }
+		}
 	}
 	else
 	{
