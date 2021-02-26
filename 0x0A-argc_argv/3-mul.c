@@ -10,16 +10,19 @@
 
 int main(int argc, char** argv)
 {
-	int j = 0, sum = 0;
+	int j = 0, sum = 1;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
 		for (; j < argc; j++)
 		{
-			printf("%s\n", argv[j]);
 			sum *= atoi(argv[j]);
 		}
-		printf("%d", sum);
+		printf("%d\n", sum);
+	}
+	else
+	{
+		printf("Error");
 	}
 	return (0);
 }
