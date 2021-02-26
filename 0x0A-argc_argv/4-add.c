@@ -1,21 +1,35 @@
 #include "holberton.h"
 
 /**
- * _puts_recursion - function to print string
- * @s: string to be printed
+ * main: main function
+ * @argc: number of arguments
+ * @argv: array of pointers
  *
- * Return: void function
+ * Return: 0
  */
 
-void _puts_recursion(char *s)
+int main(int argc, char** argv)
 {
-	int j = 0;
+	int j = 1, sum = 0;
 
-	if (*s == '\0')
-		_putchar('\n');
+	if (argc > 1)
+	{
+		if (atoi(argv[j]) != 0)
+		    {
+			for (; j < argc; j++)
+			{
+				sum += atoi(argv[j]);
+			}
+			printf("%d\n", sum);
+		    }
+		 else
+		    {
+			    printf("Error\n");
+		    }
+	}
 	else
 	{
-		_putchar(s[j]);
-		_puts_recursion(s + 1);
+		printf("0\n");
 	}
+	return (0);
 }
