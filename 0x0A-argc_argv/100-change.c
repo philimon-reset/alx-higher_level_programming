@@ -45,7 +45,6 @@ int greed(int a)
 		{
 			n = a / coin[i];
 			a = a - n * coin[i];
-			n += n;
 		}
 		i++;
 	}
