@@ -20,13 +20,13 @@ int main(int argc, char **argv)
 			{
 				sum += atoi(argv[j]);
 			}
-			printf("%d\n", sum);
 		}
 		else
 		{
 			printf("Error\n");
 			return (1);
 		}
+		printf("%d\n", sum);
 	}
 	else
 	{
