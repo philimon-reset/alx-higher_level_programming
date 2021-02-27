@@ -30,17 +30,16 @@ int main(int argc, char **argv)
 }
 
 /**
- * checker - check if didigt
+ * checker - check if its letter
+ * @c: checker character
  *
- * @c: charcter checked if its digit
- * Return: 1 if its digit
- * 0 if not
+ * Return: 0 if found in range 1 if not
  */
 int checker(char *c)
 {
 	while (*c)
 	{
-		if ((*c >= 'A' && *c <= 'Z') || (*c >= 'a' && *c <= 'z'))
+		if ((*c >= 65 && *c <= 90) || (*c >= 97 && *c <= 122))
 			return (0);
 		c++;
 	}
