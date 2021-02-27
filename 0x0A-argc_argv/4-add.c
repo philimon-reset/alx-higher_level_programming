@@ -38,12 +38,13 @@ int main(int argc, char **argv)
  * Return: 1 if its digit
  * 0 if not
  */
-int checker(char c)
+int checker(char *c)
 {
-	while (c != '\n')
+	while (*c != '\n')
 	{
 		if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 			return (0);
-		return (1);
+		c++;
 	}
+	return (1);
 }
