@@ -10,14 +10,14 @@
 
 int main(int argc, char **argv)
 {
-	int sum = 0;
+	int j = 1, sum = 0;
 
 	if (argc > 1)
 	{
-		while (--argc > 0)
+		for (; j < argc; j++)
 		{
-			if (checker(argv[argc]))
-				sum += atoi(argv[argc]);
+			if (checker(argv[j]))
+				sum += atoi(argv[j]);
 			else
 			{
 				printf("Error\n");
