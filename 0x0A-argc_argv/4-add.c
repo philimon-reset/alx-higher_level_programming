@@ -38,7 +38,7 @@ int main(int argc, char **argv)
  */
 int checker(char *c)
 {
-	while (*c)
+	while (*c != '\n')
 	{
 		if ((*c >= 'A' && *c <= 'Z') || (*c >= 'a' && *c <= 'z'))
 			return (0);
