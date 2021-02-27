@@ -16,33 +16,14 @@ int main(int argc, char **argv)
 	{
 		for (; j < argc; j++)
 		{
-			if (checker(argv[j]))
-				sum += atoi(argv[j]);
-			else
+			if (!atoi(argv[j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
+			sum += atoi(argv[j]);
 		}
 	}
 	printf("%d\n", sum);
 	return (0);
-}
-
-/**
- * checker - check if didigt
- *
- * @c: charcter checked if its digit
- * Return: 1 if its digit
- * 0 if not
- */
-int checker(char *c)
-{
-	while (*c)
-	{
-		if ((*c >= 'A' && *c <= 'Z') || (*c >= 'a' && *c <= 'z'))
-			return (0);
-		c++;
-	}
-	return (1);
 }
