@@ -40,9 +40,9 @@ int checker(char *c)
 {
 	while (*c)
 	{
-		if (*c >= 48 && *c <= 57)
-			return (1);
+		if ((*c >= 'A' && *c <= 'Z') || (*c >= 'a' && *c <= 'z'))
+			return (0);
 		c++;
 	}
-	return (0);
+	return (1);
 }
