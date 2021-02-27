@@ -16,14 +16,28 @@ int main(int argc, char **argv)
 	{
 		for (j = 1; j < argc; j++)
 		{
-			if (!atoi(argv[j]))
+			if (checker(argv[j]))
+				sum += atoi(argv[j]);
+			else
 			{
 				printf("Error\n");
 				return (1);
 			}
-			sum += atoi(argv[j]);
 		}
 	}
 	printf("%d\n", sum);
 	return (0);
+}
+
+/**
+ * checker - check if its letter
+ * @c: checker character
+ *
+ * Return: 0 if found in range 1 if not
+ */
+int checker(int *c)
+{
+	if ((*c >= 65 && c <= 90) || (*c >= 97 && c <= 122))
+		return (0);
+	return (1);
 }
