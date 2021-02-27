@@ -10,11 +10,12 @@
 
 int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	int j = 1, sum = 1;
+	int sum;
 
 	if (argc < 3)
 	{
-		printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
+		sum = (atoi(argv[1]) * atoi(argv[2]))
+		printf("%d\n", sum);
 	}
 	else
 	{
