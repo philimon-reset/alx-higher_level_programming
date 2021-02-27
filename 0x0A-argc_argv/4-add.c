@@ -42,9 +42,9 @@ int checker(char *c)
 {
 	while (*c != '\n')
 	{
-		if ((*c >= 65 && *c <= 90) || (*c >= 97 && *c <= 122))
-			return (0);
+		if (*c >= 48 && *c <= 57)
+			return (1);
 		c++;
 	}
-	return (1);
+	return (0);
 }
