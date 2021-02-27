@@ -14,37 +14,36 @@ int main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		if (atoi(argv[j]) != 0)
+		for (; j < argc; j++)
 		{
-			for (; j < argc; j++)
+			if (checker(argv[j]))
 			{
 				sum += atoi(argv[j]);
 			}
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
+			else
+			{
+				printf("Error\n"):
+				return (1):
+			}
 		}
 		printf("%d\n", sum);
-	}
-	else
-	{
-		printf("0\n");
 	}
 	return (0);
 }
 
 /**
- * _isdigit - check if didigt
+ * checker - check if didigt
  *
  * @c: charcter checked if its digit
  * Return: 1 if its digit
  * 0 if not
  */
-int _isdigit(int c)
+int checker(char c)
 {
-	if (c >= 48 && c <= 57)
+	while (c != '\n')
+	{
+		if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+			return (0);
 		return (1);
-	return (0);
+	}
 }
