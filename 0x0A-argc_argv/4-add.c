@@ -10,11 +10,11 @@
 
 int main(int argc, char **argv)
 {
-	int j, sum = 0;
+	int j = 1, sum = 0;
 
 	if (argc > 1)
 	{
-		for (j = 1; j < argc; j++)
+		for (; j < argc; j++)
 		{
 			if (checker(argv[j]))
 				sum += atoi(argv[j]);
@@ -35,9 +35,13 @@ int main(int argc, char **argv)
  *
  * Return: 0 if found in range 1 if not
  */
-int checker(int *c)
+int checker(char *c)
 {
-	if ((*c >= 65 && c <= 90) || (*c >= 97 && c <= 122))
-		return (0);
+	while (*c)
+	{
+		if ((*c >= 65 && c <= 90) || (*c >= 97 && c <= 122))
+			return (0);
+		c++;
+	}
 	return (1);
 }
