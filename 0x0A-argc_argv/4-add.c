@@ -10,16 +10,14 @@
 
 int main(int argc, char **argv)
 {
-	int j = 1, sum = 0;
+	int sum = 0;
 
 	if (argc > 1)
 	{
-		for (; j < argc; j++)
+		while (--argc > 0)
 		{
-			if (checker(argv[j]))
-			{
-				sum += atoi(argv[j]);
-			}
+			if (checker(argv[argc]))
+				sum += atoi(argv[argc]);
 			else
 			{
 				printf("Error\n");
@@ -40,7 +38,7 @@ int main(int argc, char **argv)
  */
 int checker(char *c)
 {
-	while (*c != '\n')
+	while (*c)
 	{
 		if (*c >= 48 && *c <= 57)
 			return (1);
