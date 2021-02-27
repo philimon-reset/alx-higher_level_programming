@@ -14,11 +14,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 
 	if (argc < 3)
 	{
-		for (; j < argc; j++)
-		{
-			sum *= atoi(argv[j]);
-		}
-		printf("%d\n", sum);
+		printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
 	}
 	else
 	{
