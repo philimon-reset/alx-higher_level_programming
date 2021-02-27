@@ -37,7 +37,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 int greed(int a)
 {
 	int coin[4] = {25, 10, 5, 1};
-	int i = 0, n, amount = 0;
+	int i = 0, n;
 	
 	while (i < 4)
 	{
