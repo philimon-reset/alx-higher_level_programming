@@ -12,9 +12,9 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
 	int sum;
 
-	if (argc < 3)
+	if (argc == 3)
 	{
-		sum = (atoi(argv[1]) * atoi(argv[2]))
+		sum = (atoi(argv[1]) * atoi(argv[2]));
 		printf("%d\n", sum);
 	}
 	else
