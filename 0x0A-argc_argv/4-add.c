@@ -17,17 +17,15 @@ int main(int argc, char **argv)
 		for (; j < argc; j++)
 		{
 			if (checker(argv[j]))
-			{
 				sum += atoi(argv[j]);
-			}
 			else
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
 
@@ -38,12 +36,13 @@ int main(int argc, char **argv)
  * Return: 1 if its digit
  * 0 if not
  */
-int checker(char c)
+int checker(char *c)
 {
-	while (c != '\n')
+	while (*c)
 	{
-		if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		if ((*c >= 'A' && *c <= 'Z') || (*c >= 'a' && *c <= 'z'))
 			return (0);
-		return (1);
+		c++;
 	}
+	return (1);
 }
