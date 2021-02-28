@@ -21,31 +21,18 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	a = atoi(argv[1]);
-	if (a < 0)
-		printf("0\n");
-	while (a >= 25)
-	{
-		n++;
-		a = a - 25;
-	}
 	for (n = 0; a > 0; n++)
 	{
-		if (coin[i] <= a)
-		{
+		if (a - coin[i] >= 0)
 			a = a - coin[i];
-		}
-		if (coin[i + 1] <= a)
-		{
+		else if (a - coin[i + 1] >= 0)
 			a = a - coin[i + 1];
-		}
-		if (coin[i + 2] <= a)
-		{
+		else if (a - coin[i + 2] >= 0)
 			a = a - coin[i + 2];
-		}
-		if (coin[i + 3] <= a)
-		{
+		else if (a - coin[i + 3] >= 0)
 			a = a - coin[i + 3];
-		}
+		else if (a - coin[i + 4] >= 0)
+			a = a - coin[i + 4];
 	}
 	printf("%d\n", n);
 	return (0);
