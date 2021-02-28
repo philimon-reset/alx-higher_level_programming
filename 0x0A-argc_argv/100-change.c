@@ -20,10 +20,10 @@ int main(int argc, char **argv)
 	sum = atoi(argv[1]);
 	while (i < 4)
 	{
-		if (a >= coin[i])
+		if (sum >= coin[i])
 		{
 			n++;
-			a = a - coin[i];
+			sum = sum - coin[i];
 		}
 		i++;
 	}
