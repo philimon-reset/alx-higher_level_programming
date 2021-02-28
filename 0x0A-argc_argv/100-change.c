@@ -20,31 +20,26 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	sum = atoi(argv[1]);
-	while (sum > 0)
+	for (n = 0; sum > 0; n++)
 	{
 		if (sum >= 25)
 		{
-			n++;
 			sum = sum - 25;
 		}
 		else if (sum >= 10)
 		{
-			n++;
 			sum = sum - 10;
 		}
 		else if (sum >= 5)
 		{
-			n++;
 			sum = sum - 5;
 		}
 		else if (sum >= 2)
 		{
-			n++;
 			sum = sum - 2;
 		}
 		else if (sum >= 1)
 		{
-			n++;
 			sum = sum - 1;
 		}
 	}
