@@ -9,26 +9,41 @@
  */
 int main(int argc, char **argv)
 {
-	int sum;
-	int coin[5] = {25, 10, 5, 2, 1};
-	int i = 0, n = 0;
+	int sum, n;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
 	sum = atoi(argv[1]);
-
-	while (i < 5)
+	while (sum > 0)
 	{
-		if (sum >= coin[i])
+		if (sum >= 25)
 		{
 			n++;
-			sum = sum - coin[i];
+			sum = sum - 25;
 		}
-		i++;
+		else if (sum >= 10)
+		{
+			n++;
+			sum = sum - 10;
+		}
+		else if (sum >= 5)
+		{
+			n++;
+			sum = sum - 5;
+		}
+		else if (sum >= 2)
+		{
+			n++;
+			sum = sum - 2;
+		}
+		else if (sum >= 1)
+		{
+			n++;
+			sum = sum - 1;
+		}
 	}
 	printf("%d\n", n);
 	return (0);
