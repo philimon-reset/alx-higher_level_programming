@@ -24,20 +24,23 @@ int main(int argc, char **argv)
 	if (a < 0)
 		printf("0\n");
 
-	while (a >= 25)
+	else
 	{
-	    n++;
-	    a = a - 25;
-	}
-
-	while (i < 4)
-	{
-		if (coin[i] <= a)
+		while (a >= 25)
 		{
 			n++;
-			a = a - n * coin[i];
+			a = a - 25;
 		}
-		i++;
+
+		while (i < 4)
+		{
+			if (coin[i] <= a)
+			{
+				n++;
+				a = a - n * coin[i];
+			}
+			i++;
+		}
 	}
 	printf("%d", n);
 	return (0);
