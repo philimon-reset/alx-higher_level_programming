@@ -50,6 +50,6 @@ int main(int argc, char **argv)
 		}
 		a--;
 	}
-	printf("%d", n);
+	printf("%d\n", n);
 	return (0);
 }
