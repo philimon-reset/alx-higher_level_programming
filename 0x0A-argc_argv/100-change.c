@@ -18,14 +18,13 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	sum = atoi(argv[1]);
-	while (i < 4)
+	while (sum > 0)
 	{
 		if (sum >= coin[i])
 		{
 			n++;
 			sum = sum - coin[i];
 		}
-		i++;
 	}
 	printf("%d\n", n);
 	return (0);
