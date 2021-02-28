@@ -32,14 +32,24 @@ int main(int argc, char **argv)
 			a = a - 25;
 		}
 
-		while (i < 4)
+		while (a > 0)
 		{
 			if (coin[i] <= a)
 			{
 				n++;
-				a = a - n * coin[i];
+				a = a - coin[i];
 			}
-			i++;
+			if (coin[i + 1] <= a)
+			{
+				n++;
+				a = a - coin[i + 1];
+			}
+			if (coin[i + 2] <= a)
+			{
+				n++;
+				a = a - coin[i + 2];
+			}
+			a--;
 		}
 	}
 	printf("%d", n);
