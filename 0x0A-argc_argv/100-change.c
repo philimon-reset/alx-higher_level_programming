@@ -22,32 +22,32 @@ int main(int argc, char **argv)
 	sum = atoi(argv[1]);
 	if (sum > 0)
 		printf("0\n");
-	while (a > 0)
+	while (sum > 0)
 	{
-		if (a >= 25)
+		if (sum >= 25)
 		{
 			n++;
-			a = a - 25;
+			sum = sum - 25;
 		}
-		else if (a >= 10)
+		else if (sum >= 10)
 		{
 			n++;
-			a = a - 10;
+			sum = sum - 10;
 		}
-		else if (a >= 5)
+		else if (sum >= 5)
 		{
 			n++;
-			a = a - 5;
+			sum = sum - 5;
 		}
-		else if (a >= 2)
+		else if (sum >= 2)
 		{
 			n++;
-			a = a - 2;
+			sum = sum - 2;
 		}
-		else if (a >= 1)
+		else if (sum >= 1)
 		{
 			n++;
-			a = a - 1;
+			sum = sum - 1;
 		}
 	}
 	printf("%d\n", sum);
