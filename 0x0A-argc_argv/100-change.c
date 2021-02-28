@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	int a;
-	int coin[4] = {25, 10, 5, 2, 1};
+	int coin[5] = {25, 10, 5, 2, 1};
 	int i = 1, n = 0;
 
 	if (argc < 2)
@@ -48,6 +48,11 @@ int main(int argc, char **argv)
 			{
 				n++;
 				a = a - coin[i + 2];
+			}
+			if (coin[i + 3] <= a)
+			{
+				n++;
+				a = a - coin[i + 3];
 			}
 			a--;
 		}
