@@ -19,17 +19,17 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	a = atoi(argv[1]);
 	if (a < 0)
 		printf("0\n");
-	
+
 	while (a >= 25)
 	{
 	    n++;
 	    a = a - 25;
 	}
-	
+
 	while (i < 4)
 	{
 		if (coin[i] <= a)
