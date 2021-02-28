@@ -39,6 +39,16 @@ int main(int argc, char **argv)
 				n++;
 				a = a - n * coin[i];
 			}
+			if (coin[i + 1] <= a)
+			{
+				n++;
+				a = a - n * coin[i + 1];
+			}
+			if (coin[i + 2] <= a)
+			{
+				n++;
+				a = a - n * coin[i + 2];
+			}
 			i++;
 		}
 	}
