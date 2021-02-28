@@ -10,9 +10,8 @@
 
 int main(int argc, char **argv)
 {
-	int a;
+	int a, i = 1, n = 0;
 	int coin[5] = {25, 10, 5, 2, 1};
-	int i = 1, n = 0;
 
 	if (argc < 2)
 		printf("Error\n");
