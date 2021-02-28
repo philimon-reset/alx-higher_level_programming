@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 			n++;
 			sum = sum - coin[i];
 		}
+		sum--;
 	}
 	printf("%d\n", n);
 	return (0);
