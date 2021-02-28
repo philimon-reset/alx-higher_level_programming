@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	int sum, n = 0, i = 0;
-	int coin[4] = {25, 10, 5, 1};
+	int coin[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
