@@ -13,7 +13,6 @@
 int main(int argc, char **argv)
 {
 	int a, i = 1, n;
-	int coin[5] = {25, 10, 5, 2, 1};
 
 	if (argc < 2)
 	{
@@ -23,16 +22,16 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	for (n = 0; a > 0; n++)
 	{
-		if (a - coin[i] >= 0)
-			a = a - coin[i];
-		else if (a - coin[i + 1] >= 0)
-			a = a - coin[i + 1];
-		else if (a - coin[i + 2] >= 0)
-			a = a - coin[i + 2];
-		else if (a - coin[i + 3] >= 0)
-			a = a - coin[i + 3];
-		else if (a - coin[i + 4] >= 0)
-			a = a - coin[i + 4];
+		if (a - 25 >= 0)
+			a = a - 25;
+		else if (a - 10 >= 0)
+			a = a - 10;
+		else if (a - 5 >= 0)
+			a = a - 5;
+		else if (a - 2 >= 0)
+			a = a - 2;
+		else if (a - 1 >= 0)
+			a = a - 1;
 	}
 	printf("%d\n", n);
 	return (0);
