@@ -33,6 +33,6 @@ int main(int argc, char **argv)
 		else if (change - 1 >= 0)
 			change = change - 1;
 	}
-	printf("%d\n", change);
+	printf("%d\n", total);
 	return (0);
 }
