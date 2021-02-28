@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * _isupper - prints alphabet
+ * _isdigit - prints alphabet
  *
  * @c: charcter checked if its upper
  * Return: 1 if its upper
  * 0 if not
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
