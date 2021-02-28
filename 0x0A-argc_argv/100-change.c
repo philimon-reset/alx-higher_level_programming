@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	if (a < 0)
 		printf("0\n");
 
-	else
+	else if (argc == 2)
 	{
 		while (a >= 25)
 		{
