@@ -12,7 +12,7 @@
 
 int main(int argc, char **argv)
 {
-	int a, i = 1, n = 0;
+	int a, i = 1, n;
 	int coin[5] = {25, 10, 5, 2, 1};
 
 	if (argc < 2)
@@ -28,29 +28,24 @@ int main(int argc, char **argv)
 		n++;
 		a = a - 25;
 	}
-	while (a > 0)
+	for (n = 0; a > 0; n++)
 	{
 		if (coin[i] <= a)
 		{
-			n++;
 			a = a - coin[i];
 		}
 		if (coin[i + 1] <= a)
 		{
-			n++;
 			a = a - coin[i + 1];
 		}
 		if (coin[i + 2] <= a)
 		{
-			n++;
 			a = a - coin[i + 2];
 		}
 		if (coin[i + 3] <= a)
 		{
-			n++;
 			a = a - coin[i + 3];
 		}
-		a--;
 	}
 	printf("%d\n", n);
 	return (0);
