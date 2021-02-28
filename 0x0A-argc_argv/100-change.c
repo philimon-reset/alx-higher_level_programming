@@ -8,7 +8,7 @@
  * Return: 0
  */
 
-int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
+int main(int argc, char **argv))
 {
 	int sum;
 
@@ -20,9 +20,11 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	
 	sum = atoi(argv[1]);
 	if (sum < 0)
+	{
 		printf("0\n");
-	else
-		return (greed(sum));
+	}
+	printf("%d", greed(sum));
+	return (0);
 	
 }
 
@@ -37,14 +39,30 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 int greed(int a)
 {
 	int coin[4] = {25, 10, 5, 1};
-	int i = 0, n;
+	int i = 0, n = 0;
 	
-	while (i < 4)
+	while (a >= 25)
 	{
-		if (coin[i] <= a)
+		n++;
+		a = a - 25;
+	}
+	
+	while (a > 0)
+	{
+		if (a >= 10)
 		{
-			n = a / coin[i];
-			a = a - n * coin[i];
+			n++;
+			a = a - 10;
+		}
+		if (a >= 5)
+		{
+			n++;
+			a = a - 5
+		}
+		if (a >= 1)
+		{
+			n++;
+			a = a - 1;
 		}
 		i++;
 	}
