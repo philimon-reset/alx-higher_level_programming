@@ -7,7 +7,7 @@
  * Return: NULL if size 0
  */
 
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	int j = 0, n = 0;
 	char *s;
