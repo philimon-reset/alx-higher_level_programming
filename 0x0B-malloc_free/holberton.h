@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limit.h>
 
 int _putchar(char c);
 char *_strdup(char *str);
