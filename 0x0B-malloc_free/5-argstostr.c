@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	while (ac--)
 		len += (_strlen(av[ac]) + 1);
-	str = malloc(sum + 1);
+	str = malloc(len + 1);
 	if (str != NULL)
 	{
 		while (a < i)
@@ -28,7 +28,7 @@ char *argstostr(int ac, char **av)
 			sub += (j + 1);
 			a++;
 		}
-		str[sub] = '\0'
+		str[sub] = '\0';
 	}
 	else
 		return (NULL);
