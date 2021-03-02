@@ -2,29 +2,32 @@
 
 /**
  * create_array - function to create array
- * @size: size of array
- * @c: specific char to initaliize
+ * @str: 
  *
  * Return: NULL if size 0
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str);
 {
 	int j = 0;
-	char *str;
+	char *s, j = 0, n = 0;
 
-	if (size == 0)
+	if (str == NULL)
 		return (NULL);
-	str = malloc(sizeof(char) * size);
+	while (str[n])
+	{
+		n += 1;
+	}
+	s = malloc(sizeof(char) * (n + 1);
         else if (str != NULL)
 	{
-		for (; j < size; j++)
+		for (; j <= n; j++)
 		{
-			str[j] = 'H';
+			s[j] = str[j];
 		}
-		return (str);
+		s[j] = '\n';
 	}
 	else
 		return (NULL);
-	return (0);
+	return (s);
 }
