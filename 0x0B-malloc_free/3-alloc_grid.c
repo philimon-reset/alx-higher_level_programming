@@ -2,8 +2,8 @@
 
 /**
  * alloc_grid - function to create pointer to 2d array
- * @widit: height
- * @height: width
+ * @width: width
+ * @height: height
  *
  * Return: NULL if size 0
  */
