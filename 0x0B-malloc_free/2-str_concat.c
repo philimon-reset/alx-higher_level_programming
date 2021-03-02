@@ -13,8 +13,6 @@ char *str_concat(char *s1, char *s2)
 	int j = 0, i = 0, a = _strlen(s1), b = _strlen(s2);
 	char *str;
 
-	if (str == '\0')
-		return (NULL);
 	str = malloc(a + b + 1);
         if (str != NULL)
 	{
