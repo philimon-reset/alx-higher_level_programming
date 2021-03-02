@@ -10,7 +10,6 @@
 
 char *create_array(unsigned int size, char c)
 {
-	int j = 0;
 	char *str;
 
 	if (size == 0)
@@ -20,7 +19,7 @@ char *create_array(unsigned int size, char c)
 	{
 		while (size--)
 		{
-			str[j] = c;
+			str[size] = c;
 		}
 	}
 	else
