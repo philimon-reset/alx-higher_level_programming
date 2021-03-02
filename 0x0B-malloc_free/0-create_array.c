@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 	{
 		for (; j < size; j++)
 		{
-			str[j] = 'H';
+			str[j] = c;
 		}
 		return (str);
 	}
