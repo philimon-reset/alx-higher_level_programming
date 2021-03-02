@@ -8,7 +8,7 @@
  * Return: void function
  */
 
-void free_grid(int **grid, int height);
+void free_grid(int **grid, int height)
 {
 	int j = 0;
 
