@@ -1,19 +1,19 @@
 #include "holberton.h"
 
 /**
- * create_array - function to create array
- * @size: size of array
- * @c: specific char to initaliize
+ * argstostr - function to create array
+ * @ac: size of array
+ * @av: specific char to initaliize
  *
  * Return: NULL if size 0
  */
 
-char *create_array(unsigned int size, char c)
+char *argstostr(int ac, char **av)
 {
 	int j = 0;
 	char *str;
 
-	if (size == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	str = malloc(sizeof(char) * size);
         else if (str != NULL)
@@ -26,5 +26,5 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 		return (NULL);
-	return (0);
+	return (str);
 }
