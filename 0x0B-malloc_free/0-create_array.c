@@ -22,7 +22,6 @@ char *create_array(unsigned int size, char c)
 		{
 			str[j] = c;
 		}
-		return (str);
 	}
 	else
 		return (NULL);
