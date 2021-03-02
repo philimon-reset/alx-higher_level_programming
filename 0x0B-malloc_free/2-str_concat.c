@@ -10,21 +10,43 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int j = 0;
+	int j = 0, i = 0, a = _strlen(s1), b = _strlen(s2);
 	char *str;
 
-	if (s1 == 0)
+	if (str == '\0')
 		return (NULL);
-	str = malloc(sizeof(s1) + sizeof(s2) + 1);
-        else if (str != NULL)
+	str = malloc(a + b + 1);
+        if (str != NULL)
 	{
-		for (; j < size; j++)
+		for (; j < a; j++)
 		{
-			str[j] = 'H';
+			str[j] = s1[j];
 		}
-		return (str);
+		for (; i <= b; i++)
+		{
+			str[i + j] = s2[i];
+		}
 	}
 	else
 		return (NULL);
-	return (0);
+	return (str);
+}
+
+/**
+ * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	for (var = 0; s[var] != '\0'; var++)
+	{
+		output += 1;
+	}
+	return (output);
 }
