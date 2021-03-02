@@ -42,6 +42,8 @@ int _strlen(char *s)
 	int var;
 	int output = 0;
 
+	if (s == NULL)
+		return (0)
 	for (var = 0; s[var] != '\0'; var++)
 	{
 		output += 1;
