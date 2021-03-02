@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- * create_array - function to create array
- * @size: size of array
- * @c: specific char to initaliize
+ * str_concat - function to concatinate two strings
+ * @s1: first string
+ * @s2: second string
  *
  * Return: NULL if size 0
  */
 
-char *create_array(unsigned int size, char c)
+char *str_concat(char *s1, char *s2)
 {
 	int j = 0;
 	char *str;
 
-	if (size == 0)
+	if (s1 == 0)
 		return (NULL);
-	str = malloc(sizeof(char) * size);
+	str = malloc(sizeof(s1) + sizeof(s2) + 1);
         else if (str != NULL)
 	{
 		for (; j < size; j++)
