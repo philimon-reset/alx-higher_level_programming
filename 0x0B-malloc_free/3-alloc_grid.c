@@ -28,6 +28,10 @@ int **alloc_grid(int width, int height)
 					array[j][i] = 0;
 				}
 			}
+			else
+			{
+				return (NULL);
+			}
 			
 		}
 	}
