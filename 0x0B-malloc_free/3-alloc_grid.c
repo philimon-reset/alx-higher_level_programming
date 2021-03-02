@@ -24,18 +24,15 @@ int **alloc_grid(int width, int height)
 			if (array[j] != NULL)
 			{
 				for (i = 0; i < width; i++)
-				{
 					array[j][i] = 0;
-				}
 			}
 			else
-			{
 				return (NULL);
-			}
-			
 		}
 	}
 	else
+	{
 		return (NULL);
+	}
 	return (array);
 }
