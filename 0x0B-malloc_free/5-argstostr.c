@@ -10,21 +10,49 @@
 
 char *argstostr(int ac, char **av)
 {
-	int j = 0;
+	int j, len = 0, i = ac, sub = 0;
 	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	str = malloc(sizeof(char) * size);
-        else if (str != NULL)
+	while (ac--)
+		len += (_strlen(av[ac]) + 1);
+	str = malloc(sum + 1);
+	if (str != NULL)
 	{
-		for (; j < size; j++)
+		while (a < i)
 		{
-			str[j] = 'H';
+			for (j = 0; av[k][j] != '\0'; j++)
+				str[j + sub] = av[k][j];
+			str[sub + j] = '\n';
+			sub += (j + 1);
+			a++;
 		}
-		return (str);
+		str[sub] = '\0'
 	}
 	else
 		return (NULL);
 	return (str);
+}
+
+/**
+ * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	if (s != NULL)
+	{
+		for (var = 0; s[var] != '\0'; var++)
+		{
+			output += 1;
+		}
+	}
+	return (output);
 }
