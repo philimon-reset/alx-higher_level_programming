@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * create_array - function to create array
- * @str: 
+ * _strdup - function to create array
+ * @str: string to be copied
  *
  * Return: NULL if size 0
  */
@@ -19,7 +19,7 @@ char *_strdup(char *str)
 		n += 1;
 	}
 	s = malloc(sizeof(char) * (n + 1));
-        if (s != NULL)
+	if (s != NULL)
 	{
 		for (; j <= n; j++)
 		{
