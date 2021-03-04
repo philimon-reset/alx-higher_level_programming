@@ -1,41 +1,27 @@
 #include "holberton.h"
 
 /**
- * alloc_grid - function to create pointer to 2d array
- * @width: width
- * @height: height
+ * array_range - function to create array from min to max
+ * @min: min value
+ * @max: max value
  *
- * Return: NULL if size 0
+ * Return: pointer to array
  */
 
-int **alloc_grid(int width, int height)
+int *array_range(int min, int max)
 {
-	int j = 0, i;
-	int **array;
+	int j = 1, i;
+	int *array;
 
-	if (width <= 0 || height <= 0)
+	if (min > max)
 		return (NULL);
-	array = malloc(sizeof(int *) * height);
+	array = malloc(sizeof(int) * max);
 	if (array != NULL)
 	{
-		for (; j < height; j++)
+		array[0] = min;
+		for (; j <= max; j++)
 		{
-			array[j] = malloc(sizeof(int) * width);
-			if (array[j] != NULL)
-			{
-				for (i = 0; i < width; i++)
-					array[j][i] = 0;
-			}
-			else
-			{
-				while (j >= 0)
-				{
-					free(array[j]);
-					j--;
-				}
-				free(array);
-				return (NULL);
-			}
+			array[j] = min + 1
 		}
 	}
 	else
