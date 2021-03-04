@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * str_concat - function to concatinate two strings
+ * string_nconcat - function to concatinate two strings
  * @s1: first string
  * @s2: second string
  * @n: size of init s2
