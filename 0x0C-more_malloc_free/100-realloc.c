@@ -1,28 +1,32 @@
 #include "holberton.h"
 
 /**
- * calloc - function that allocates memory for an array
- * @nmemb: number of elements to be allocated
- * @size: size
+ * _realloc - function that allocates memory for an array
+ * @ptr: number of elements to be allocated
+ * @old_size: size
+ * @new_size: 
  *
  * Return: pointer to allocated memory
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int j = 0, i = nmemb * size;
-	int *array;
+	int j = 0, i;
+	int *s;
 
-	if (nmemb <= 0 || size <= 0)
+	if (old_size == new_size || size <= 0)
+		return (ptr);
+	ptr = malloc(new_size);
+	s = malloc(old_size);
+	if (ptr == NULL)
+		return (ptr);
+	if (new_size == 0 && ptr != NULL)
 		return (NULL);
-	array = malloc(nmemb * size);
-	if (array != NULL)
+	ptr = malloc();
+	if (ptr != NULL)
 	{
-		for (; j < i; j++)
-		{
-			array[j] = 0;
-		}
+		
 	}
 	else
 		return (NULL);
-	return (array);
+	return (pte);
 }
