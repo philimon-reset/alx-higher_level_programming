@@ -9,10 +9,13 @@
  */
 int main(void)
 {
-    char *concat;
+    char *a;
 
-    concat = string_nconcat("Holberton ", "School !!!", 6);
-    printf("%s\n", concat);
-    free(concat);
+    a = _calloc(98, sizeof(char));
+    strcpy(a, "Holberton");
+    strcpy(a + 9, " School! :)\n");
+    a[97] = '!';
+    simple_print_buffer(a, 98);
+    free(a);
     return (0);
 }
