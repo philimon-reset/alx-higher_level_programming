@@ -10,13 +10,11 @@
 char **strtow(char **str)
 {
 	int a = 0, j, len = 0, i = ac, sub = 0;
-	char *str;
+	char **str;
 
-	if (ac == 0 || av == NULL)
+	if (str == "" || str == NULL)
 		return (NULL);
-	while (ac--)
-		len += (_strlen(av[ac]) + 1);
-	str = malloc(len + 1);
+	str = malloc(sizeof(char *) * (word + 1));
 	if (str != NULL)
 	{
 		while (a < i)
@@ -36,6 +34,25 @@ char **strtow(char **str)
 
 /**
  * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	while (var <= _strlen(s))
+	{
+		if (s[var] != 
+	}
+	return (output);
+}
+
+/**
+ * count - return the length of a a string by words
  * @s: string to be checked
  *
  * Return: lenght of string
