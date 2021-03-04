@@ -4,23 +4,23 @@
  * str_concat - function to concatinate two strings
  * @s1: first string
  * @s2: second string
+ * @n: size of init s2
  *
  * Return: NULL if size 0
  */
-
-char *str_concat(char *s1, char *s2)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int j = 0, i = 0, a = _strlen(s1), b = _strlen(s2);
 	char *str;
 
-	str = malloc(a + b + 1);
+	str = malloc(a + n + 1);
 	if (str != NULL)
 	{
 		for (; j < a; j++)
 		{
 			str[j] = s1[j];
 		}
-		for (; i < b; i++)
+		for (; i < n; i++)
 		{
 			str[i + j] = s2[i];
 		}
