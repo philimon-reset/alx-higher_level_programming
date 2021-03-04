@@ -9,15 +9,12 @@
 
 char *malloc_checked(unsigned int b)
 {
-	int j = 0, n = 0;
 	char *s;
 
-	if (b == INT_MAX)
+	s = malloc(b);
+	if (s == NULL)
 	{
-		return (98);
+		void exit (98);
 	}
-	s = malloc(sizeof(char) * b);
-	else
-		return (NULL);
 	return (s);
 }
