@@ -10,7 +10,7 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int j = 0, i;
+	int j;
 	void *s;
 
 	if (old_size == new_size)
@@ -38,8 +38,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	return (s);
 }
-
-unsigned int a, unsigned int b)
+int min(unsigned int a, unsigned int b)
 {
 	if (a < b)
 		return (a);
