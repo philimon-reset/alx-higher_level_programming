@@ -4,7 +4,7 @@
  * _realloc - function that allocates memory for an array
  * @ptr: number of elements to be allocated
  * @old_size: size
- * @new_size: 
+ * @new_size: new size
  *
  * Return: pointer to allocated memory
  */
@@ -38,6 +38,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	return (s);
 }
+
+/**
+ * min - minumum of a and b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: return the minimum
+ */
 int min(unsigned int a, unsigned int b)
 {
 	if (a < b)
