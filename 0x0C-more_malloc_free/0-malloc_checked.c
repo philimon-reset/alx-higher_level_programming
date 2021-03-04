@@ -1,32 +1,22 @@
 #include "holberton.h"
 
 /**
- * _strdup - function to create array
- * @str: string to be copied
+ * malloc_checked - function to allocate memory
+ * @b: size of memeory
  *
- * Return: NULL if size 0
+ * Return: pointer to allocated memory
  */
 
-char *_strdup(char *str)
+char *malloc_checked(unsigned int b)
 {
 	int j = 0, n = 0;
 	char *s;
 
-	if (str == NULL)
-		return (NULL);
-	while (str[n])
+	if (b == INT_MAX)
 	{
-		n += 1;
+		return (98);
 	}
-	s = malloc(sizeof(char) * (n + 1));
-	if (s != NULL)
-	{
-		for (; j <= n; j++)
-		{
-			s[j] = str[j];
-		}
-		s[j] = '\0';
-	}
+	s = malloc(sizeof(char) * b);
 	else
 		return (NULL);
 	return (s);
