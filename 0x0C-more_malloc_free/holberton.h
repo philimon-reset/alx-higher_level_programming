@@ -11,5 +11,6 @@ int _strlen(char *s);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int *array_range(int min, int max);
+int min(int x, int y);
 
 #endif /*HOLBERTON_H*/
