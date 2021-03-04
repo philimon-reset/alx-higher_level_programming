@@ -1,41 +1,25 @@
 #include "holberton.h"
 
 /**
- * alloc_grid - function to create pointer to 2d array
- * @width: width
- * @height: height
+ * calloc - function that allocates memory for an array
+ * @nmemb: number of elements to be allocated
+ * @size: size
  *
- * Return: NULL if size 0
+ * Return: pointer to allocated memory
  */
-
-int **alloc_grid(int width, int height)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int j = 0, i;
-	int **array;
+	int j = 0, i = nmemb * size;
+	int *array;
 
-	if (width <= 0 || height <= 0)
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
-	array = malloc(sizeof(int *) * height);
+	array = malloc(nmemb * size);
 	if (array != NULL)
 	{
-		for (; j < height; j++)
+		for (; j < i; j++)
 		{
-			array[j] = malloc(sizeof(int) * width);
-			if (array[j] != NULL)
-			{
-				for (i = 0; i < width; i++)
-					array[j][i] = 0;
-			}
-			else
-			{
-				while (j >= 0)
-				{
-					free(array[j]);
-					j--;
-				}
-				free(array);
-				return (NULL);
-			}
+			array[j] = 0;
 		}
 	}
 	else
