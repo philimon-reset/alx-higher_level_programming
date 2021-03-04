@@ -31,6 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (ptr != NULL)
 	{
+		s = malloc(new_size);
 		for (; j < new_size; j++)
 		{
 			s[j] = ptr[j]
