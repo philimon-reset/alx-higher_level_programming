@@ -39,16 +39,19 @@ char **strtow(char **str)
  * Return: lenght of string
  */
 
-int _strlen(char *s)
+int split(char *s)
 {
-	int var;
-	int output = 0;
+	int var = 0, out = 0;
 
 	while (var <= _strlen(s))
 	{
-		if (s[var] != 
+		if ((s[var] != ' ') && (s[var] != '\0'))
+		{
+			var++;
+		}
+		
 	}
-	return (output);
+	return (out);
 }
 
 /**
