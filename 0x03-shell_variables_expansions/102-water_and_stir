@@ -6,4 +6,3 @@ STIR=$((5#$STIR));
 DHK=$(($WATER+$STIR));
 echo $(printf "%o\n" $DHK) | tr 01234567 behlnort
 echo $WATER $STIR
-
