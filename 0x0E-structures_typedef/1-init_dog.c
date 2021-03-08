@@ -3,8 +3,10 @@
 
 /**
  * init_dog - initalize struct dog
- * @argc: number of arguments
- * @argv: array of pointers
+ * @d: struct
+ * @name: name
+ * @age: age
+ * @owner: owner of dog
  *
  * Return: void function
  */
