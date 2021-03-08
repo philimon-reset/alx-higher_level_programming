@@ -1,4 +1,4 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#define PI 22/7.0
+#define ABS(x) (((x) < 0) ? ((x) * (-1)) : (x))
 #endif /*HOLBERTON_H*/
