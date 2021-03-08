@@ -1,7 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 /**
- * typedef struct dog - dog
+ * struct dog - dog
  * @name: name
  * @age: age
  * @owner: owner of dog
@@ -15,4 +15,5 @@ struct dog
 };
 
 typedef struct dog dog_t;
+
 #endif /*HOLBERTON_H*/
