@@ -11,8 +11,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	int a = _strlen(name), b = _strlen(owner);
 	char *cpy_name, *cpy_owner;
-	char *name_secando;
-	char *owner_secando;
 	struct dog *temp;
 
 	cpy_name = malloc(sizeof(char *) * (a + 1));
@@ -20,8 +18,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	temp = malloc(sizeof(struct dog));
 	if ((*cpy_name) && (*cpy_owner))
 	{
-		_strcpy(name_secando, name);
-		_strcpy(owner_secando, owner);
+		_strcpy(cpy_name, name);
+		_strcpy(cpy_owner, owner);
 		(*temp).name = name_secando;
 		(*temp).age = age;
 		(*temp).owner = owner_secando;
