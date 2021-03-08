@@ -1,8 +1,10 @@
 #include "dog.h"
 
 /**
- * print_dog - print struct dog
- * @d: pointer to struct dog
+ * new_dog - print new struct dog
+ * @name: name
+ * @age: age
+ * @owner: owner of dog
  *
  * Return: void function
  */
@@ -14,8 +16,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpy_owner;
 	dog_t *temp;
 
-	cpy_name = malloc(sizeof(char *) * (a + 1));
-	cpy_owner = malloc(sizeof(char *) * (b + 1));
+	cpy_name = malloc(sizeof(*name) * (a + 1));
+	cpy_owner = malloc(sizeof(*owner) * (b + 1));
 	temp = malloc(sizeof(struct dog));
 	if ((cpy_name) && (cpy_owner) && (temp))
 	{
