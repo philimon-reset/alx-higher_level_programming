@@ -14,11 +14,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpy_owner;
 	dog_t *temp;
 
-	cpy_name = malloc(sizeof(*name) * (a + 1));
-	cpy_owner = malloc(sizeof(*owner) * (b + 1));
+	cpy_name = malloc(sizeof(char *) * (a + 1));
+	cpy_owner = malloc(sizeof(char *) * (b + 1));
 	temp = malloc(sizeof(struct dog));
 	if ((cpy_name) && (cpy_owner) && (temp))
 	{
+		_strcpy(cpy_name, name);
+		_strcpy(cpy_owner, owner);
 		(*temp).name = name;
 		(*temp).age = age;
 		(*temp).owner = owner;
