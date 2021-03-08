@@ -1,15 +1,25 @@
 #include "holberton.h"
 
 /**
- * main - main function
+ * init_dog - initalize struct dog
  * @argc: number of arguments
  * @argv: array of pointers
  *
- * Return: 0
+ * Return: void function
  */
-
-int main(int argc __attribute__((unused)), char **argv)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	printf("%s\n", *(argv + 0));
-	return (0);
+/**
+ * struct dog - dog
+ * @name: name
+ * @age: age
+ * @owner: owner of dog
+ *
+ */
+	struct dog
+	{
+		char *name;
+		float age;
+		char *owner;
+	};
 }
