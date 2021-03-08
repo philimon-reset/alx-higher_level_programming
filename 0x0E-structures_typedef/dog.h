@@ -1,4 +1,9 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#define PI 22/7.0
+typedef struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
 #endif /*HOLBERTON_H*/
