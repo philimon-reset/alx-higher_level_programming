@@ -19,11 +19,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	temp = malloc(sizeof(struct dog));
 	if ((cpy_name) && (cpy_owner) && (temp))
 	{
-		_strcpy(cpy_name, name);
-		_strcpy(cpy_owner, owner);
-		(*temp).name = cpy_name;
+		(*temp).name = name;
 		(*temp).age = age;
-		(*temp).owner = cpy_owner;
+		(*temp).owner = owner;
 	}
 	else
 	{
