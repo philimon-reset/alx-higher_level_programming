@@ -1,15 +1,17 @@
 #include "holberton.h"
 
 /**
- * main - main function
- * @argc: number of arguments
- * @argv: array of pointers
+ * print_dog - print struct dog
+ * @struct dog *d: pointer to struct dog
  *
- * Return: 0
+ * Return: void function
  */
 
-int main(int argc __attribute__((unused)), char **argv)
+void print_dog(struct dog *d)
 {
-	printf("%s\n", *(argv + 0));
-	return (0);
+	if ((*d).name = NULL)
+		(*d).name = "(nil)";
+	if ((*d).owner = NULL)
+		(*d).owner = "(nil)";
+	printf("Name: %s\nAge: %lf\nOwner: %s\n", (*d).name, (*d).age, (*d).owner);
 }
