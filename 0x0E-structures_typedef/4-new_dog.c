@@ -20,9 +20,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		_strcpy(cpy_name, name);
 		_strcpy(cpy_owner, owner);
-		(*temp).name = name_secando;
+		(*temp).name = cpy_name;
 		(*temp).age = age;
-		(*temp).owner = owner_secando;
+		(*temp).owner = cpy_owner;
 	}
 	else
 	{
