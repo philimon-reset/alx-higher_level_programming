@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "dog.h"
 
 /**
  * init_dog - initalize struct dog
@@ -9,12 +10,10 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-/**
- * struct dog - dog
- * @name: name
- * @age: age
- * @owner: owner of dog
- *
- */
-	struct dog d = {*name, age, *owner};
+	if ((*d) != NULL)
+	{
+		(*d).name = name;
+		(*d).age = age;
+		(*d).owner = owner;
+	}
 }
