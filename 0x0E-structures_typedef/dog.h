@@ -1,7 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 /**
- * dog - dog
+ * struct dog - dog
  * @name: name
  * @age: age
  * @owner: owner of dog
