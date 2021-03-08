@@ -10,7 +10,8 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int a = _strlen(name), b = _strlen(owner);
-	char *cpy_name, *cpy_owner;
+	char *cpy_name;
+	char *cpy_owner;
 	struct dog *temp;
 
 	cpy_name = malloc(sizeof(*name) * (a + 1));
