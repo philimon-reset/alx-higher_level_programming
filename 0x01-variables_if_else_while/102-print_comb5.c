@@ -10,20 +10,19 @@ int main(void)
 {
 	int l, a, e;
 
-	for (l = 48; l <= 57; l++)
+	for (l = 0; l <= 99; l++)
 	{
-		for (a = l + 1; a <= 57; a++)
+		for (a = l + 1; a <= 99; a++)
 		{
-			for (e = a + 1; e <= 57; e++)
-			{
-				putchar(l);
-				putchar(a);
-				putchar(e);
-		if (l != 55 || a != 56 || e != 57)
+			putchar((l / 10) + '0');
+			putchar((l % 10) + '0');
+			putchar(32);
+			putchar((a / 10) + '0');
+			putchar((a % 10) + '0');
+		if (l != 98 || a != 99)
 		{
 		putchar(44);
 		putchar(32);
-		}
 		}
 		}
 	}
