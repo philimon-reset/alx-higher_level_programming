@@ -16,23 +16,23 @@ void times_table(void)
 		    a = j * l;
 		    if ((a / 10) == 0)
 		    {
-		        putchar((a % 10) + '0');
+		        _putchar((a % 10) + '0');
 		    }
 		    else
 		    {
-    			putchar((a / 10) + '0');
-    			putchar((a % 10) + '0');
+    			_putchar((a / 10) + '0');
+    			_putchar((a % 10) + '0');
 		    }
 			if (l != 9)
 			{
-			    putchar(',');
-			    putchar(' ');
+			    _putchar(',');
+			    _putchar(' ');
 			    if ((a / 10) == 0)
 			    {
-			        putchar(' ');
+			        _putchar(' ');
 			    }
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
