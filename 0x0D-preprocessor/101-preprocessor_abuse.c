@@ -1,1 +1,1 @@
-#pragma "Hello, Holberton\n"
+#pragma GCC warning "Hello, Holberton\n"
