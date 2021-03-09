@@ -1,15 +1,18 @@
-#include "holberton.h"
+#include "dog.h"
 
 /**
- * main - main function
- * @argc: number of arguments
- * @argv: array of pointers
+ * free_dog - free new struct dog
+ * @d: struct
  *
- * Return: 0
+ * Return: void function
  */
 
-int main(int argc __attribute__((unused)), char **argv)
+void free_dog(dog_t *d)
 {
-	printf("%s\n", *(argv + 0));
-	return (0);
+	if (d != NULL)
+	{
+		free((*d).name);
+		free((*d).owner);
+		free(d);
+	}
 }

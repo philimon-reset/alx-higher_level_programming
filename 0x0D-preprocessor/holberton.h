@@ -3,5 +3,5 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc, char **argv);
+int main(void);
 #endif /*HOLBERTON_H*/

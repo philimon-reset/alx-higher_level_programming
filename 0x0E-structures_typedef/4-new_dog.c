@@ -1,8 +1,10 @@
 #include "dog.h"
 
 /**
- * print_dog - print struct dog
- * @d: pointer to struct dog
+ * new_dog - print new struct dog
+ * @name: name
+ * @age: age
+ * @owner: owner of dog
  *
  * Return: void function
  */
@@ -21,9 +23,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		_strcpy(cpy_name, name);
 		_strcpy(cpy_owner, owner);
-		(*temp).name = name;
+		(*temp).name = cpy_name;
 		(*temp).age = age;
-		(*temp).owner = owner;
+		(*temp).owner = cpy_owner;
 	}
 	else
 	{
