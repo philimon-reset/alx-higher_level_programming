@@ -1,15 +1,14 @@
-#include "holberton.h"
+#include "function_pointers.h"
 
 /**
- * main - main function
- * @argc: number of arguments
- * @argv: array of pointers
+ * print_name - main function
+ * @name: name
+ * @f: pointer to function
  *
- * Return: 0
+ * Return: void
  */
 
-int main(int argc __attribute__((unused)), char **argv)
+void print_name(char *name, void (*f)(char *));
 {
-	printf("%s\n", *(argv + 0));
-	return (0);
+	f(name);
 }
