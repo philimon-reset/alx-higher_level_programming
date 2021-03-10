@@ -1,29 +1,29 @@
-#include "function_pointers.h"
+#include "calc.h"
 
 /**
- * int_index - function that searches for an integer
- * @array: name
- * @size: size of array
- * @cmp: pointer to function
+ * main - main function
  *
- * Return: return index of integer
+ * Return: return opertation
  */
 
-int int_index(int *array, int size, int (*cmp)(int))
+int main(int argc, char **argv)
 {
-	int i;
+	char i;
 
-	if (size <= 0)
-		return (-1);
-	if ((array != NULL) && (cmp != NULL))
+	if (argc != 4)
 	{
-		for (i = 0; i < size; i++)
-		{
-			if (cmp(array[i]) > 0)
-			{
-				return (i);
-			}
-		}
+		printf("Error");
+		exit(98);
 	}
-	return (-1);
+	if (get_op_func == 0)
+	{
+		printf("Error");
+		exit(99);
+	}
+	if (argv[argc] != 4)
+	{
+		printf("Error");
+		exit(100);
+	}
+	printf("%d\n", atoi(get_op_func));
 }
