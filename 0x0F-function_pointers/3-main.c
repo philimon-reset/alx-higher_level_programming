@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 		printf("Error");
 		exit(98);
 	}
-	if (get_op_func == 0)
+	if (!get_op_func())
 	{
 		printf("Error");
 		exit(99);
