@@ -2,7 +2,8 @@
 
 /**
  * main - main function
- *
+ * @argc: argument count
+ * @argv: argument
  * Return: return opertation
  */
 
