@@ -9,6 +9,8 @@
 int main(int argc, char **argv)
 {
 	int i;
+	
+	int (*p)(int, int);
 
 	if (argc != 4)
 	{
@@ -25,7 +27,7 @@ int main(int argc, char **argv)
 		printf("Error");
 		exit(100);
 	}
-	i = get_op_func(atoi(argv[1]),atoi(argv[3]));
-	printf("%d\n", i);
+	p = get_op_func(argv[2]);
+	printf("%d\n", p(atoi(argv[1]),atoi(argv[3])));
 	return (0);
 }
