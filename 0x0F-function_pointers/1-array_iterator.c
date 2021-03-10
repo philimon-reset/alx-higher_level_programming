@@ -5,7 +5,7 @@
  * @array: name
  * @size: size of array
  * @action: pointer to function
- * 
+ *
  * Return: void
  */
 
