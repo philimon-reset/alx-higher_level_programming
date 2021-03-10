@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv)
 {
-	char i;
+	int i;
 
 	if (argc != 4)
 	{
@@ -20,10 +20,11 @@ int main(int argc, char **argv)
 		printf("Error");
 		exit(99);
 	}
-	if (argv[argc] != 4)
+	if (((argv[2] == '/') || (argv[2] == '%')) && (argv[3] == 0))
 	{
 		printf("Error");
 		exit(100);
 	}
-	printf("%d\n", atoi(get_op_func));
+	i = get_op_func(atoi(argv[1]),atoi(argv[3]));
+	printf("%d\n", i);
 }
