@@ -11,9 +11,9 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	size_t i;
+	int i;
 
-	if ((array != NULL) && (action != NULL))
+	if ((array != NULL) && (cmp != NULL))
 	{
 		for (i = 0; i < size; i++)
 		{
