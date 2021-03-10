@@ -25,6 +25,7 @@ int (*get_op_func(char *s))(int, int)
 		{
 			return (ops[i].f);
 		}
+		i++;
 	}
 	return (0);
 	
