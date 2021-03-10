@@ -1,29 +1,69 @@
-#include "function_pointers.h"
+#include "calc.h"
 
 /**
- * int_index - function that searches for an integer
- * @array: name
- * @size: size of array
- * @cmp: pointer to function
+ * op_add - function that adds a and b
+ * @a: first integer
+ * @b: second integer
  *
- * Return: return index of integer
+ * Return: a + b
  */
 
-int int_index(int *array, int size, int (*cmp)(int))
+int op_add(int a, int b)
 {
-	int i;
+	return (a + b);
+}
 
-	if (size <= 0)
-		return (-1);
-	if ((array != NULL) && (cmp != NULL))
-	{
-		for (i = 0; i < size; i++)
-		{
-			if (cmp(array[i]) > 0)
-			{
-				return (i);
-			}
-		}
-	}
-	return (-1);
+
+/**
+ * op_sub - function that subs a and b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: a - b
+ */
+
+int op_sub(int a, int b);
+{
+	return (a - b);
+}
+
+
+/**
+ * op_mul - function that returns a * b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: a * b
+ */
+
+int op_mul(int a, int b);
+{
+	return (a * b);
+}
+
+
+/**
+ * op_div - function that divides a and b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: a / b
+ */
+int op_div(int a, int b);
+{
+	return (a / b);
+}
+
+
+/**
+ * op_mod - function that mods a and b
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: a % b
+ */
+
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
