@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 
 /**
  * get_op_func - parse which function to use
@@ -21,7 +22,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 6)
 	{
-		if (s[0] == ops[i].op[0])
+		if ((strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
 		}
