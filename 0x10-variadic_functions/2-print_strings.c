@@ -9,14 +9,12 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	char *str;
 	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		str = va_arg(args, char *);
 		if (str == NULL)
 		{
 			printf("(nil)");
@@ -29,7 +27,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			if (separator != NULL)
 			{
-				printf("%s%c ", str, separator[0]);
+				printf("%s%c ", va_arg(args, char *), separator[0]);
 			}
 		}
 	}
