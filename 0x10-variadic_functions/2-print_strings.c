@@ -1,13 +1,13 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - print integers with given separator
+ * print_strings - print strings with given separator
  * @separator: delimiter
  * @n: number of arguments passed
  *
  * Return: void function
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	int sum = 0;
 	unsigned int i;
