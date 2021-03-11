@@ -23,13 +23,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		if (i == (n - 1))
 		{
-			printf("%c", *str);
+			printf("%s", va_arg(args, char *));
 		}
 		else
 		{
 			if (separator != NULL)
 			{
-				printf("%c%c ", *str, separator[0]);
+				printf("%s%c ", *str, separator[0]);
 			}
 		}
 	}
