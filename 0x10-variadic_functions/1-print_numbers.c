@@ -19,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		sum = va_arg(args, int);
 		if (i == (n - 1))
 		{
-			printf("\n");
+			printf("%d\n", sum);
 		}
 		else
 		{
