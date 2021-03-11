@@ -1,12 +1,13 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - add the integers
- * @n: number of variables
+ * print_numbers - print integers with given separator
+ * @separator: delimiter
+ * @n: number of arguments passed
  *
- * Return: sum of integers
+ * Return: void function
  */
-int sum_them_all(const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	int sum = 0;
 	unsigned int i;
@@ -15,8 +16,8 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		sum += va_arg(args, int);
+		sum = va_arg(args, int);
+		printf("%d%c ", sum, separator[0]);
 	}
 	va_end(args);
-	return (sum);
 }
