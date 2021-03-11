@@ -39,7 +39,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 }
 
 /**
- * pnil_check - print strings with given separator
+ * nil_check - print strings with given separator
  * @s: check if its NULL
  *
  * Return: (nil) if null
