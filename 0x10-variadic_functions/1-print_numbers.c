@@ -16,6 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
+		sum = va_arg(args, int);
 		if (separator != NULL)
 		{
 			if (i != (n - 1))
@@ -24,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			}
 			else
 			{
-				printf("%d", sum);
+				printf("%d\n", sum);
 			}
 		}
 		else
