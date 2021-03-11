@@ -9,13 +9,15 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
+	char *str;
 	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		if (str == NULL)
+		str = va_arg(args, char *);
+		if (*str == NULL)
 		{
 			printf("(nil)");
 		}
