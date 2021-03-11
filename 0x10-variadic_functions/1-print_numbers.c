@@ -25,13 +25,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			}
 			else
 			{
-				printf("%d\n", sum);
+				printf("%d", sum);
 			}
 		}
-		else
-		{
-			printf("\n");
-		}
 	}
+	printf("\n");
 	va_end(args);
 }
