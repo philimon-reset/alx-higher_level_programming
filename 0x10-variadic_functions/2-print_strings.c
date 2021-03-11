@@ -48,6 +48,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 char *nil_check(char *s)
 {
 	if (s == NULL)
-		s == "(nil)";
+		s = "(nil)";
 	return (s);
 }
