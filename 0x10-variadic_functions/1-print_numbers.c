@@ -27,7 +27,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%d", sum);
 			}
 		}
-		printf("\n");
+		else
+		{
+			printf("\n");
+		}
 	}
 	va_end(args);
 }
