@@ -1,26 +1,21 @@
-.MODEL SMALL  
-.STACK 100H  
-.DATA  
-  
-;The string to be printed  
-STRING DB 'Hello, Holberton', '$'
-  
-.CODE  
-MAIN PROC FAR  
- MOV AX,@DATA  
- MOV DS,AX  
-  
- ; load address of the string  
- LEA DX,STRING  
-  
- ;output the string 
- ;loaded in dx  
- MOV AH,09H 
- INT 21H  
-  
- ;interrupt to exit
- MOV AH,4CH 
- INT 21H  
-  
-MAIN ENDP  
-END MAIN 
+global _start
+
+section .data
+    msg db "Hello, Holberton", 0x0a
+    len equ $ - msg
+    mov edx, newLineLen
+    mov ecx, newLineMsg
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+
+section .text
+_start:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, msg
+    mov edx, len
+    int 0x80 ;What is this?
+    mov eax, 1
+    mov ebx, 0
+    int 0x80 ;and what is this?
