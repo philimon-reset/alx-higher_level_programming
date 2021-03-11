@@ -16,18 +16,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		sum = va_arg(args, int);
-		if (i == (n - 1))
+		if (separator != NULL)
 		{
-			printf("%d\n", sum);
-		}
-		else
-		{
-			if (separator != NULL)
+			if (i != (n - 1))
 			{
 				printf("%d%c ", sum, separator[0]);
 			}
+			else
+			{
+				printf("%d", sum);
+			}
 		}
+		printf("\n");
 	}
 	va_end(args);
 }
