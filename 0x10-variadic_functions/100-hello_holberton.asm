@@ -1,8 +1,8 @@
-global _start
+global main
 
 section .text
 
-_start:
+main:
   mov rax, 1        ; write(
   mov rdi, 1        ;   STDOUT_FILENO,
   mov rsi, msg      ;   "Hello, Holberton",
