@@ -28,6 +28,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%d", sum);
 			}
 		}
+		else
+			{
+				printf("%d", sum);
+			}
 	}
 	printf("\n");
 	va_end(args);
