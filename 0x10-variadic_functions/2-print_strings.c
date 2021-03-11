@@ -19,13 +19,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		str = va_arg(args, char *);
 		if (i == (n - 1))
 		{
-			printf("%c", *(str + i));
+			printf("%c", *str);
 		}
 		else
 		{
 			if (separator != NULL)
 			{
-				printf("%c%c ", *(str + i), separator[0]);
+				printf("%c%c ", *str, separator[0]);
 			}
 		}
 	}
