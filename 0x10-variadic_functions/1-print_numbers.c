@@ -21,7 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			if (i != (n - 1))
 			{
-				printf("%d%c ", sum, separator[0]);
+				printf("%d%s ", sum, separator);
 			}
 			else
 			{
