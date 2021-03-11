@@ -21,7 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%d%c ", sum, separator[0]);
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 	va_end(args);
 }
