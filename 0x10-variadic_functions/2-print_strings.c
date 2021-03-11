@@ -9,25 +9,26 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	int sum = 0;
+	char *str;
 	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		sum = va_arg(args, int);
+		str = va_arg(args, char *);
 		if (i == (n - 1))
 		{
-			printf("%d\n", sum);
+			printf("%c", str);
 		}
 		else
 		{
 			if (separator != NULL)
 			{
-				printf("%d%c ", sum, separator[0]);
+				printf("%c%c ", str, separator[0]);
 			}
 		}
 	}
+	printf("\n");
 	va_end(args);
 }
