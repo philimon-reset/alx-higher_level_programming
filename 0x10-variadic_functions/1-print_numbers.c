@@ -17,7 +17,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		sum = va_arg(args, int);
-		printf("%d%c ", sum, separator[0]);
+		if (i != (n - 1))
+		{
+			printf("%d%c ", sum, separator[0]);
+		}
+		_putchar('/n')
 	}
 	va_end(args);
 }
