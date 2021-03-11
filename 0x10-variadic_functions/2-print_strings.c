@@ -43,12 +43,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
  * pnil_check - print strings with given separator
  * @s: check if its NULL
  *
- * Return: void function
+ * Return: (nil) if null
  */
-void nil_check(char *s)
+char nil_check(char *s)
 {
 	if (s == NULL)
-		printf("(nil)");
-	else
-		printf("%s", s);
+		s == "(nil)";
+	return (s);
 }
