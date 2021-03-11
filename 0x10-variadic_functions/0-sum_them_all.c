@@ -1,23 +1,21 @@
-#include "function_pointers.h"
+#include "variadic_functions.h"
 
 /**
- * array_iterator - executes a function given as a parameter
- * @array: name
- * @size: size of array
- * @action: pointer to function
+ * sum_them_all - add the integers
+ * @n: number of variables
  *
- * Return: void
+ * Return: sum of integers
  */
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+int sum_them_all(const unsigned int n, ...)
 {
-	size_t i;
+	int i, sum = 0;
+	va_list args;
 
-	if ((array != NULL) && (action != NULL))
+	va_start(args, n);
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
+		sum += va_arg(args, int);
 	}
+	va_end(args);
+	return (sum);
 }
