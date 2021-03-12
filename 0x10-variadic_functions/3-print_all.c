@@ -67,7 +67,18 @@ int checker(const char * const format)
 	}
 	return (i);
 }
-
+/**
+ * comma - print comma
+ * @i: current index
+ * @j: last valid index
+ *
+ * Return: void
+ */
+void comma(int i, int j)
+{
+	if (i != j)
+		printf(", ");
+}
 /**
  * nil_check - print strings with given separator
  * @s: check if its NULL
