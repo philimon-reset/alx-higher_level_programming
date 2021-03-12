@@ -8,16 +8,16 @@
  */
 void print_all(const char * const format, ...)
 {
-	char count;
+	char current;
 	int i = 0, index;
 	va_list args;
 
 	va_start(args, format);
+	index = checker(format);
 	while ((format != NULL) && (format[i]))
 	{
-		index = checker(format);
-		count = format[i];
-		switch (count)
+		current = format[i];
+		switch (current)
 	        {
 			case 'c':
 				printf("%c", va_arg(args, int));
