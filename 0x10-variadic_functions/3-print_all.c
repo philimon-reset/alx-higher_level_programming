@@ -9,11 +9,22 @@
 void print_all(const char * const format, ...)
 {
 	char count;
-	unsigned int i;
+	int i = 0, index;
 	va_list args;
 
 	va_start(args, format);
-	count = checker(count);
+	while ((format != NULL) && (format[i]))
+	{
+		index = checker(format);
+		count = format[i];
+		switch (count)
+		{
+			case 'c':
+				printf("%c", va_arg(args, int);
+				       
+		}
+		
+	}
 	
 	printf("\n");
 	va_end(args);
@@ -21,18 +32,44 @@ void print_all(const char * const format, ...)
 
 
 /**
- * nil_check - print strings with given separator
- * @s: check if its NULL
+ * checker - print strings with given separator
+ * @format: format
  *
- * Return: (nil) if null
+ * Return: int
  */
 int checker(const char * const format)
 {
-	if (s == NULL)
-		s = "(nil)";
-	return (s);
-}
+	int i = 0, j = 0;
+	char str;
 
+	while ((format != NULL) && (format[i]))
+	{
+		str = format[j];
+		switch (str)
+		{
+			case 'c':
+				i = j;
+				j++;
+				break;
+			case 'f':
+				i = j;
+				j++;
+				break;
+			case 's':
+				i = j;
+				j++;
+				break;
+			case 'i':
+				i = j;
+				j++;
+				break;
+			default:
+				j++;
+				break;
+		}
+	}
+	return (i);
+}
 
 /**
  * nil_check - print strings with given separator
