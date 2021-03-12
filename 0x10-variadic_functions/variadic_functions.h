@@ -12,4 +12,6 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 char *nil_check(char *s);
 char *nil(char *s);
+int checker(const char * const format);
+void comma(int i, int j);
 #endif /*VARIADIC_FUNCTIONS_H*/
