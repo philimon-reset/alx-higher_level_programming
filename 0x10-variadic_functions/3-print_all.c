@@ -20,12 +20,9 @@ void print_all(const char * const format, ...)
 		switch (count)
 		{
 			case 'c':
-				printf("%c", va_arg(args, int);
-				       
+				printf("%c", va_arg(args, int);       
 		}
-		
 	}
-	
 	printf("\n");
 	va_end(args);
 }
