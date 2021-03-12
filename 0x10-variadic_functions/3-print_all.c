@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	{
 		current = format[i];
 		switch (current)
-	        {
+		{
 			case 'c':
 				printf("%c", va_arg(args, int));
 				comma(i, index);
