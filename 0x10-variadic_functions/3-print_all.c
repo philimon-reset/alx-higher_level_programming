@@ -18,9 +18,30 @@ void print_all(const char * const format, ...)
 		index = checker(format);
 		count = format[i];
 		switch (count)
-		{
-			case 'c':
-				printf("%c", va_arg(args, int);
+	        {
+		case 'c':
+			printf("%c", va_arg(args, int);
+			       comma(i, index);
+			       i++;
+			       break;
+			case 'i':
+			       printf("%d", va_arg(args, int);
+				      comma(i, index);
+				      i++;
+				      break;
+			       case 'f':
+				      printf("%f", va_arg(args, double);
+					     comma(i, index);
+					     i++;
+					     break;
+				      case 's':
+					 printf("%s", nil(va_arg(args, char *));
+						    comma(i, index);
+						    i++;
+						    break;
+					     default:
+						    i++;
+						    break;
 		}
 	}
 	printf("\n");
@@ -80,12 +101,12 @@ void comma(int i, int j)
 		printf(", ");
 }
 /**
- * nil_check - print strings with given separator
+ * nil - print strings with given separator
  * @s: check if its NULL
  *
  * Return: (nil) if null
  */
-char *nil_check(char *s)
+char *nil(char *s)
 {
 	if (s == NULL)
 		s = "(nil)";
