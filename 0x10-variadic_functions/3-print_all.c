@@ -60,7 +60,7 @@ int checker(const char * const format)
 	int i = 0, j = 0;
 	char str;
 
-	while ((format != NULL) && (format[i]))
+	while ((format != NULL) && (format[j]))
 	{
 		str = format[j];
 		switch (str)
