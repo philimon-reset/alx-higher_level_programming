@@ -19,29 +19,29 @@ void print_all(const char * const format, ...)
 		count = format[i];
 		switch (count)
 	        {
-		case 'c':
-			printf("%c", va_arg(args, int));
-			       comma(i, index);
-			       i++;
-			       break;
+			case 'c':
+				printf("%c", va_arg(args, int));
+				comma(i, index);
+				i++;
+				break;
 			case 'i':
-			       printf("%d", va_arg(args, int);
-				      comma(i, index);
-				      i++;
-				      break;
-			       case 'f':
-				      printf("%f", va_arg(args, double);
-					     comma(i, index);
-					     i++;
-					     break;
-				      case 's':
-					 printf("%s", nil(va_arg(args, char *));
-						    comma(i, index);
-						    i++;
-						    break;
-					     default:
-						    i++;
-						    break;
+				printf("%d", va_arg(args, int));
+				comma(i, index);
+				i++;
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				comma(i, index);
+				i++;
+				break;
+			case 's':
+				printf("%s", nil(va_arg(args, char *)));
+				comma(i, index);
+				i++;
+				break;
+			default:
+				i++;
+				break;
 		}
 	}
 	printf("\n");
