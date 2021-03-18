@@ -1,29 +1,33 @@
 #include "lists.h"
 
 /**
- * add_node - a function that adds node.
+ * add_node_end - a function that adds node to end of file.
  * @head: pointer to a struct
  * @str: name of new node
  *
  * Return: struct
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp = malloc(sizeof(list_t));
+	list_t *last = *head;
 
 	temp->str = strdup(str);
 	temp->len = _strlen(str);
 	temp->next = NULL;
 	if (temp == NULL)
 		return (NULL);
-	else if (head == NULL)
+	if (*head == NULL)
 	{
-		(*head)->next = temp;
+		*head = temp;
 	}
 	else
 	{
-		temp->next = *head;
-		(*head) = temp;
+		while (last->next != NULL)
+		{
+			last = last->next;
+		}
+		last->next = temp;
 	}
 	return (temp);
 }
