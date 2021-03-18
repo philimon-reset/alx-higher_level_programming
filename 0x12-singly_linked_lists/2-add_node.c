@@ -16,10 +16,14 @@ list_t *add_node(list_t **head, const char *str)
 	temp->next = NULL;
 	if (temp == NULL)
 		return (NULL);
+	else if (head == NULL)
+	{
+		(*head)->next = temp;
+	}
 	else
 	{
 		temp->next = head;
-		(*head)->next = temp;
+		(*head) = temp;
 	}
 	return (temp);
 }
