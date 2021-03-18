@@ -1,20 +1,12 @@
 #include "lists.h"
-
+void start_up_func(void)__attribute__((constructor));
 /**
- * free_list - a function that frees linked lists.
- * @head: pointer to a struct
+ * start_up_func - a function that runs before main.
  *
  * Return: void function
  */
-void free_list(list_t *head)
+void start_up_func(void)__attribute__((constructor))
 {
-	list_t *temp;
-
-	while (head != NULL)
-	{
-		temp = head;
-		head = head->next;
-		free(temp->str);
-		free(temp);
-	}
+	printf("You're beat! and yet, you must allow,\n"
+	       "I bore my house upon my back!\n");
 }
