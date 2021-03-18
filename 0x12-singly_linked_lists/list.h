@@ -6,20 +6,24 @@
 #include <stdarg.h>
 #include <limits.h>
 
-typedef struct node *nodeptr;
 
 /**
- * struct node - a struct to hold value and address of list
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
  *
- * @value: value of list
- * @next: address of next list
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-typedef struct map_t
+typedef struct list_s
 {
-	char value;
-	nodeptr next;
-} node;
+    char *str;
+    unsigned int len;
+    struct list_s *next;
+} list_t;
 
 int _putchar(char c);
+size_t print_list(const list_t *h);
 
 #endif /*LIST_H*/
