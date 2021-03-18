@@ -1,22 +1,13 @@
-#include "variadic_functions.h"
+#include "list.h"
 
 /**
- * sum_them_all - add the integers
- * @n: number of variables
+ * print_list - a function that prints all the elements of a list_t list.
+ * @h: value of list
  *
- * Return: sum of integers
+ * Return: any data type list
  */
-int sum_them_all(const unsigned int n, ...)
+size_t print_list(const list_t *h)
 {
-	int sum = 0;
-	unsigned int i;
-	va_list args;
-
-	va_start(args, n);
-	for (i = 0; i < n; i++)
-	{
-		sum += va_arg(args, int);
-	}
-	va_end(args);
+	
 	return (sum);
 }
