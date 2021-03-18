@@ -8,6 +8,21 @@
  */
 size_t print_list(const list_t *h)
 {
-	
-	return (sum);
+	list_t *temp = h;
+	int node = 0;
+
+	if (h->str == NULL)
+	{
+		printf("[0] (nil)");
+	}
+	else
+	{
+		while (temp != NULL)
+		{
+			printf("[%d] %s\n", h.len, h->str);
+			temp = temp->next;
+			node++;
+		}
+	}
+	return (node);
 }
