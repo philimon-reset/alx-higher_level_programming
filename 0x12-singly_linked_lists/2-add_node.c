@@ -1,20 +1,37 @@
 #include "lists.h"
 
 /**
- * print_len - a function that prints number of nodes.
- * @h: value of list
+ * add_node - a function that adds node.
+ * @head: pointer to a struct
+ * @str: name of new node
  *
- * Return: any data type list
+ * Return: struct
  */
-size_t list_len(const list_t *h)
+list_t *add_node(list_t **head, const char *str)
 {
-	const list_t *temp = h;
-	int node = 0;
+	list_t *temp = malloc(sizeof(list_t));
 
-	while (temp != NULL)
+	strdup(str, (temp->str));
+	temp->len = _strlen(str);
+	temp->next = NULL;
+	return (temp);
+}
+
+/**
+ * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	for (var = 0; s[var] != '\0'; var++)
 	{
-		temp = temp->next;
-		node++;
+		output += 1;
 	}
-	return (node);
+	return (output);
 }
