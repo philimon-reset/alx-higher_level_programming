@@ -8,25 +8,12 @@
  */
 void free_list(list_t *head)
 {
-	free(head->str);
-	free(head);
-}
+	list_t *temp = head;
 
-/**
- * _strlen - return the length of a a string
- * @s: string to be checked
- *
- * Return: lenght of string
- */
-
-int _strlen(const char *s)
-{
-	int var;
-	int output = 0;
-
-	for (var = 0; s[var] != '\0'; var++)
+	while (temp != NULL)
 	{
-		output += 1;
+		temp = temp->next;
+		free(temp->str);
+		free(temp);
 	}
-	return (output);
 }
