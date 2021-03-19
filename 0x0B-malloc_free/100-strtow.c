@@ -89,15 +89,12 @@ int split(char *s)
 
 int _strlen(char *s)
 {
-	int var;
-	int output = 0;
+	int len = 0;
 
-	if (s != NULL)
+	if (str != NULL)
 	{
-		for (var = 0; s[var] != '\0'; var++)
-		{
-			output += 1;
-		}
+		while (str[len])
+			len++;
 	}
-	return (output);
+	return (len);
 }
