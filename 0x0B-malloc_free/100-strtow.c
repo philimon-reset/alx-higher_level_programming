@@ -87,7 +87,7 @@ int split(char *s)
  * Return: lenght of string
  */
 
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int len = 0;
 
