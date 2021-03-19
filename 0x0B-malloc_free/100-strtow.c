@@ -34,19 +34,21 @@ char **strtow(char **str)
 					spl[v][j] = '\0';
 					a = j = 0;
 					v++;
-					
-			}
-			else
-			{
-				while (v-- >= 0)
-					free(spl[var]);
-				free(spl);
-				return (NULL);
+				}
+				else
+				{
+					while (v-- >= 0)
+						free(spl[var]);
+					free(spl);
+					return (NULL);
+				}	
 			}
 		}
+		spl[words] = NULL;
+		return (spl);
 	}
-	spl[words] = NULL;
-	return (spl);
+	else
+		return (NULL);
 }
 
 /**
