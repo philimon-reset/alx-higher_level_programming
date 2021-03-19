@@ -16,7 +16,7 @@ char **strtow(char *str)
 	spl = malloc(sizeof(char *) * (words + 1));
 	if (spl != NULL)
 	{
-		for (var = 0; var <= _strlen(*str) && words; var++)
+		for (var = 0; var <= _strlen(str) && words; var++)
 		{ 
 			if ((str[var] != ' ') && (str[var] != '\0'))
 				a++;
