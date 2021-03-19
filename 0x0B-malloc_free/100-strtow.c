@@ -8,7 +8,7 @@
  */
 char **strtow(char **str)
 {
-	int a = 0, j = 0, var, v = 0, words = split(str);
+	int a = 0, j = 0, var, v = 0, words = split(*str);
 	char **spl;
 
 	if (words == 0)
@@ -76,7 +76,6 @@ int split(char *s)
 		{
 			var++;
 		}
-		
 	}
 	return (word);
 }
