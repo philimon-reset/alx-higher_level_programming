@@ -17,10 +17,10 @@ char **strtow(char *str)
 	if (spl != NULL)
 	{
 		for (var = 0; var <= _strlen(str) && words; var++)
-		{ 
+		{
 			if ((str[var] != ' ') && (str[var] != '\0'))
 				a++;
-			else if (((str[var] == ' ') || (str[var] == '\0')) && var && (str[var - 1] != ' '))
+			if (((str[var] == ' ') || (str[var] == '\0')) && var && (str[var - 1] != ' '))
 			{
 				spl[v] = (char *) (malloc(sizeof(char) * (a + 1)));
 				if (spl[v] != NULL)
@@ -40,7 +40,7 @@ char **strtow(char *str)
 						free(spl[var]);
 					free(spl);
 					return (NULL);
-				}	
+				}
 			}
 		}
 		spl[words] = NULL;
