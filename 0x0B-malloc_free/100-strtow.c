@@ -57,7 +57,7 @@ char **strtow(char *str)
  * Return: lenght of string
  */
 
-int split(char *str)
+int num_words(char *str)
 {
 	int i = 0, words = 0;
 
@@ -87,7 +87,7 @@ int split(char *str)
  * Return: lenght of string
  */
 
-int _strlen(char *str)
+int len(char *str)
 {
 	int len = 0;
 
