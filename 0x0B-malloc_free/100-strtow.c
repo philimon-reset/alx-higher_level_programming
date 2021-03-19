@@ -13,16 +13,16 @@ char **strtow(char **str)
 
 	if (words == 0)
 		return (NULL);
-	spl = (char **)malloc(sizeof(char *) * (words + 1));
+	spl = (char **) malloc(sizeof(char *) * (words + 1));
 	if (spl != NULL)
 	{
-		for (var = 0; var <= _strlen(str) && words; var++)
+		for (var = 0; var <= _strlen(*str) && words; var++)
 		{ 
 			if ((s[var] != ' ') && (s[var] != '\0'))
 				a++;
 			else if (((s[var] == ' ') || (s[var] == '\0')) && var && (s[var - 1] != ' '))
 			{
-				spl[v] = (char *)(malloc(sizeof(char) * (a + 1));
+				spl[v] = (char *)(malloc(sizeof(char) * (a + 1)));
 				if (spl[v] != NULL)
 				{
 					while (j < a)
