@@ -9,8 +9,8 @@
  */
 char **strtow(char *str)
 {
-	int a = 0, temp = 0, i, v = 0, words = split(str);
 	char **spl;
+	int a = 0, temp = 0, i, v = 0, words = split(str);
 
 	if (words == 0)
 		return (NULL);
