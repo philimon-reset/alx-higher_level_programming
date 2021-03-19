@@ -40,7 +40,7 @@ char **strtow(char **str)
 			}
 			else
 			{
-				while (var-- >= 0)
+				while (v-- >= 0)
 					free(spl[var]);
 				free(spl);
 				return (NULL);
