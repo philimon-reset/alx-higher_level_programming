@@ -14,5 +14,7 @@ char *argstostr(int ac, char **av);
 int _strlen(char *s);
 int split(char *s);
 char **strtow(char *str);
+int len(char *str);
+int num_words(char *str);
 
 #endif /*HOLBERTON_H*/
