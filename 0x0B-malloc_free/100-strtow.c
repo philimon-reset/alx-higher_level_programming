@@ -8,7 +8,7 @@
  */
 char **strtow(char *str)
 {
-	int a = 0, j = 0, var, v = 0, words = split(str);
+	int a = 0, j = 0, i, v = 0, words = split(str);
 	char **spl;
 
 	if (words == 0)
@@ -16,11 +16,11 @@ char **strtow(char *str)
 	spl = (char **) malloc(sizeof(char *) * (words + 1));
 	if (spl != NULL)
 	{
-		for (var = 0; var <= _strlen(str) && words; var++)
+		for (i = 0; i <= _strlen(str) && words; i++)
 		{
-			if ((str[var] != ' ') && (str[var] != '\0'))
+			if ((str[i] != ' ') && (str[i] != '\0'))
 				a++;
-			if (((str[var] == ' ') || (str[var] == '\0')) && var && (str[var - 1] != ' '))
+			if (((str[i] == ' ') || (strir] == '\0')) && i && (str[i - 1] != ' '))
 			{
 				spl[v] = (char *) (malloc(sizeof(char) * (a + 1)));
 				if (spl[v] != NULL)
@@ -37,7 +37,7 @@ char **strtow(char *str)
 				else
 				{
 					while (v-- >= 0)
-						free(spl[var]);
+						free(spl[i]);
 					free(spl);
 					return (NULL);
 				}
@@ -81,7 +81,7 @@ int split(char *s)
 }
 
 /**
- * count - return the length of a a string by words
+ * _strlen - return the length of a a string by words
  * @s: string to be checked
  *
  * Return: lenght of string
