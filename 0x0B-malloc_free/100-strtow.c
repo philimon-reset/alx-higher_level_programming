@@ -13,7 +13,7 @@ char **strtow(char *str)
 
 	if (words == 0)
 		return (NULL);
-	spl = malloc(sizeof(char *) * (words + 1));
+	spl = (char **) malloc(sizeof(char *) * (words + 1));
 	if (spl != NULL)
 	{
 		for (var = 0; var <= _strlen(str) && words; var++)
@@ -22,7 +22,7 @@ char **strtow(char *str)
 				a++;
 			else if (((str[var] == ' ') || (str[var] == '\0')) && var && (str[var - 1] != ' '))
 			{
-				spl[v] = (malloc(sizeof(char) * (a + 1)));
+				spl[v] = (char *) (malloc(sizeof(char) * (a + 1)));
 				if (spl[v] != NULL)
 				{
 					while (j < a)
