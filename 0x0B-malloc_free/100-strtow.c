@@ -9,31 +9,50 @@
 
 char **strtow(char **str)
 {
-	int a = 0, j, len = 0, i = ac, sub = 0;
-	char **str;
+	int a = 0, j = 0, temp = 0, i, v = 0, words = split(str);
+	char **spl;
 
-	if (str == "" || str == NULL)
+	if (words == 0)
 		return (NULL);
-	str = malloc(sizeof(char *) * (word + 1));
-	if (str != NULL)
+	spl = malloc(sizeof(char *) * (words + 1));
+	if (spl != NULL)
 	{
-		while (a < i)
+		for (var = 0; var <= len(str) && words; var++)
 		{
-			for (j = 0; av[a][j] != '\0'; j++)
-				str[j + sub] = av[a][j];
-			str[sub + j] = '\n';
-			sub += (j + 1);
-			a++;
+			if ((s[var] != ' ') && (s[var] != '\0'))
+			{
+				a++;
+			}
+			else if (((s[var] != ' ') && (s[var] != '\0')) && var && s[var - 1] != ' '))
+			{
+				spl[v] = malloc(sizeof(char *) * (words + 1));
+				if (spl[v] != NULL)
+				{
+					while (j < a)
+					{
+						spl[v][j] = str[(v - a) + j];
+						j++;
+					}
+					spl[v][j] = '\0';
+					a = j = 0;
+					v++;
+					
+			}
+			else
+			{
+				while (var-- >= 0)
+					free(spl[var]);
+				free(spl);
+				return (NULL);
+			}
 		}
-		str[sub] = '\0';
 	}
-	else
-		return (NULL);
-	return (str);
+	spl[words] = NULL;
+	return (spl);
 }
 
 /**
- * _strlen - return the length of a a string
+ * split - return the length of a a string
  * @s: string to be checked
  *
  * Return: lenght of string
@@ -41,7 +60,7 @@ char **strtow(char **str)
 
 int split(char *s)
 {
-	int var = 0, out = 0;
+	int var = 0, word = 0;
 
 	while (var <= _strlen(s))
 	{
@@ -49,9 +68,18 @@ int split(char *s)
 		{
 			var++;
 		}
+		else if (((s[var] != ' ') && (s[var] != '\0')) && var && s[var - 1] != ' '))
+		{
+			word += 1;
+			var++;
+		}
+		else
+		{
+			var++;
+		}
 		
 	}
-	return (out);
+	return (word);
 }
 
 /**
