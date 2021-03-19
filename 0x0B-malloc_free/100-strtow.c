@@ -2,66 +2,67 @@
 #include "holberton.h"
 
 /**
-* strtow - splits a string into words.
-* @str: string to be splitted
-*
-* Return: pointer to the array of splitted words
-*/
+ * strtow - function to split string to words
+ * @str: string
+ *
+ * Return: NULL if size 0
+ */
 char **strtow(char *str)
 {
-	char **split;
-	int i, j = 0, temp = 0, size = 0, words = num_words(str);
+	int a = 0, j = 0, i, v = 0, words = split(str);
+	char **spl;
 
 	if (words == 0)
 		return (NULL);
-	split = (char **) malloc(sizeof(char *) * (words + 1));
-	if (split != NULL)
+	spl = (char **) malloc(sizeof(char *) * (words + 1));
+	if (spl != NULL)
 	{
-		for (i = 0; i <= len(str) && words; i++)
+		for (i = 0; i <= _strlen(str) && words; i++)
 		{
 			if ((str[i] != ' ') && (str[i] != '\0'))
-				size++;
-			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+				a++;
+			if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
-				split[j] = (char *) malloc(sizeof(char) * size + 1);
-				if (split[j] != NULL)
+				spl[v] = (char *) (malloc(sizeof(char) * (a + 1)));
+				if (spl[v] != NULL)
 				{
-					while (temp < size)
+					while (j < a)
 					{
-						split[j][temp] = str[(i - size) + temp];
-						temp++;
+						spl[v][j] = str[(v - a) + j];
+						j++;
 					}
-					split[j][temp] = '\0';
-					size = temp = 0;
-					j++;
+					spl[v][j] = '\0';
+					a = j = 0;
+					v++;
 				}
 				else
 				{
-					while (j-- >= 0)
-						free(split[j]);
-					free(split);
+					while (v-- >= 0)
+						free(spl[i]);
+					free(spl);
 					return (NULL);
 				}
 			}
 		}
-		split[words] = NULL;
-		return (split);
+		spl[words] = NULL;
+		return (spl);
 	}
 	else
 		return (NULL);
 }
 
 /**
-* num_words- counts the number of words in str
-* @str: string to be used
-*
-* Return: number of words
-*/
-int num_words(char *str)
+ * split - return the length of a a string
+ * @str: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int split(char *str)
 {
 	int i = 0, words = 0;
 
-	while (i <= len(str))
+	while (i <= _strlen(str))
 	{
 		if ((str[i] != ' ') && (str[i] != '\0'))
 		{
@@ -81,12 +82,13 @@ int num_words(char *str)
 }
 
 /**
-* len - returns length of str
-* @str: string to be counted
-*
-* Return: length of the string
-*/
-int len(char *str)
+ * _strlen - return the length of a a string by words
+ * @str: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *str)
 {
 	int len = 0;
 
