@@ -57,32 +57,32 @@ char **strtow(char *str)
  * Return: lenght of string
  */
 
-int split(char *s)
+int split(char *str)
 {
-	int var = 0, word = 0;
+	int i = 0, words = 0;
 
-	while (var <= _strlen(s))
+	while (i <= len(str))
 	{
-		if ((s[var] != ' ') && (s[var] != '\0'))
+		if ((str[i] != ' ') && (str[i] != '\0'))
 		{
-			var++;
+			i++;
 		}
-		else if (((s[var] == ' ') || (s[var] == '\0')) && var && (s[var - 1] != ' '))
+		else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 		{
-			word += 1;
-			var++;
+			words += 1;
+			i++;
 		}
 		else
 		{
-			var++;
+			i++;
 		}
 	}
-	return (word);
+	return (words);
 }
 
 /**
  * _strlen - return the length of a a string by words
- * @s: string to be checked
+ * @str: string to be checked
  *
  * Return: lenght of string
  */
