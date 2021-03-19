@@ -9,7 +9,7 @@
 
 char **strtow(char **str)
 {
-	int a = 0, j = 0, temp = 0, i, v = 0, words = split(str);
+	int a = 0, j = 0, var, v = 0, words = split(str);
 	char **spl;
 
 	if (words == 0)
@@ -23,7 +23,7 @@ char **strtow(char **str)
 				a++;
 			else if (((s[var] == ' ') || (s[var] == '\0')) && var && (s[var - 1] != ' '))
 			{
-				spl[v] = malloc(sizeof(char *) * (a + 1));
+				spl[v] = malloc(sizeof(char) * (a + 1));
 				if (spl[v] != NULL)
 				{
 					while (j < a)
