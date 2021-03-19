@@ -52,7 +52,7 @@ char **strtow(char *str)
 
 /**
  * split - return the length of a a string
- * @s: string to be checked
+ * @str: string to be checked
  *
  * Return: lenght of string
  */
@@ -61,7 +61,7 @@ int split(char *str)
 {
 	int i = 0, words = 0;
 
-	while (i <= len(str))
+	while (i <= _strlen(str))
 	{
 		if ((str[i] != ' ') && (str[i] != '\0'))
 		{
