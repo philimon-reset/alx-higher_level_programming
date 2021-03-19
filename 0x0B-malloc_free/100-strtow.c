@@ -1,11 +1,12 @@
+  
 #include "holberton.h"
 
 /**
- * strtow - function to split string to words
- * @str: string
- *
- * Return: NULL if size 0
- */
+* strtow - splits a string into words.
+* @str: string to be splitted
+*
+* Return: pointer to the array of splitted words
+*/
 char **strtow(char *str)
 {
 	char **split;
@@ -51,17 +52,16 @@ char **strtow(char *str)
 }
 
 /**
- * split - return the length of a a string
- * @str: string to be checked
- *
- * Return: lenght of string
- */
-
+* num_words- counts the number of words in str
+* @str: string to be used
+*
+* Return: number of words
+*/
 int num_words(char *str)
 {
 	int i = 0, words = 0;
 
-	while (i <= _strlen(str))
+	while (i <= len(str))
 	{
 		if ((str[i] != ' ') && (str[i] != '\0'))
 		{
@@ -81,12 +81,11 @@ int num_words(char *str)
 }
 
 /**
- * _strlen - return the length of a a string by words
- * @str: string to be checked
- *
- * Return: lenght of string
- */
-
+* len - returns length of str
+* @str: string to be counted
+*
+* Return: length of the string
+*/
 int len(char *str)
 {
 	int len = 0;
