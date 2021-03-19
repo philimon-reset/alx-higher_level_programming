@@ -23,7 +23,7 @@ char **strtow(char *str)
 				a++;
 			if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
-				spl[v] = (char *) (malloc(sizeof(char) * (a + 1)));
+				spl[v] = (char *) malloc(sizeof(char) * a + 1);
 				if (spl[v] != NULL)
 				{
 					while (j < a)
