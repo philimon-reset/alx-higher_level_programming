@@ -18,16 +18,16 @@ char **strtow(char **str)
 	{
 		for (var = 0; var <= _strlen(*str) && words; var++)
 		{ 
-			if ((s[var] != ' ') && (s[var] != '\0'))
+			if ((str[var] != ' ') && (str[var] != '\0'))
 				a++;
-			else if (((s[var] == ' ') || (s[var] == '\0')) && var && (s[var - 1] != ' '))
+			else if (((str[var] == ' ') || (str[var] == '\0')) && var && (str[var - 1] != ' '))
 			{
-				spl[v] = (char *)(malloc(sizeof(char) * (a + 1)));
+				spl[v] = (char *) (malloc(sizeof(char) * (a + 1)));
 				if (spl[v] != NULL)
 				{
 					while (j < a)
 					{
-						spl[v][j] = str[(v - a) + j];
+						spl[v][j] = *str[(v - a) + j];
 						j++;
 					}
 					spl[v][j] = '\0';
