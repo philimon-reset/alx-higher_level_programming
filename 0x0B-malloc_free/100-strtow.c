@@ -18,14 +18,12 @@ char **strtow(char **str)
 	if (spl != NULL)
 	{
 		for (var = 0; var <= len(str) && words; var++)
-		{
+		{ 
 			if ((s[var] != ' ') && (s[var] != '\0'))
-			{
 				a++;
-			}
-			else if (((s[var] != ' ') && (s[var] != '\0')) && var && s[var - 1] != ' '))
+			else if (((s[var] == ' ') || (s[var] == '\0')) && var && (s[var - 1] != ' '))
 			{
-				spl[v] = malloc(sizeof(char *) * (words + 1));
+				spl[v] = malloc(sizeof(char *) * (a + 1));
 				if (spl[v] != NULL)
 				{
 					while (j < a)
@@ -68,7 +66,7 @@ int split(char *s)
 		{
 			var++;
 		}
-		else if (((s[var] != ' ') && (s[var] != '\0')) && var && s[var - 1] != ' '))
+		else if (((s[var] == ' ') || (s[var] == '\0')) && var && (s[var - 1] != ' '))
 		{
 			word += 1;
 			var++;
