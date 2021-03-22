@@ -1,31 +1,23 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - returns the number of elements in a linked list
+ * sum_listint - returns the sum of n values
  * @head: pointer to a struct
- * @index: index to be found
  *
  * Return: int
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+int sum_listint(listint_t *head)
 {
 	listint_t *temp = head;
-	unsigned int count;
+	int count = 0;
 
 	if (temp == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 	while (temp != NULL)
-	{	
-		if (count == index)
-		{
-			return temp;
-			break;
-		}
-		count++;
+	{
+		count += temp->n;
 		temp = temp->next;
 	}
-	if (count != index)
-		return (NULL);
 }
