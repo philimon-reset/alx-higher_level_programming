@@ -1,32 +1,22 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - a function that adds node to end of file.
+ * pop_listint - deletes the head node and returns node’s data n
  * @head: pointer to a struct
- * @n: int
  *
- * Return: struct
+ * Return: int
  */
-listint_t *add_nodeint_end(listint_t **head, const int n)
+int pop_listint(listint_t **head)
 {
 	listint_t *temp = malloc(sizeof(list_t));
-	listint_t *last = *head;
+	listint_t *del = *head;
 
-	if (temp == NULL)
-		return (NULL);
-	temp->len = n;
-	temp->next = NULL;
 	if (*head == NULL)
-	{
-		*head = temp;
-	}
+		return (0);
 	else
 	{
-		while (last->next != NULL)
-		{
-			last = last->next;
-		}
-		last->next = temp;
+		(*head) = (*head)->next;
+		free(*head);
+		return (del->n);
 	}
-	return (temp);
 }
