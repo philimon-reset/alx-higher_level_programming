@@ -1,12 +1,14 @@
 #include "lists.h"
 
 /**
- * sum_listint - returns the sum of n values
+ * insert_nodeint_at_index - returns the sum of all the data of a linked list
  * @head: pointer to a struct
+ * @idx: index given
+ * @n: data
  *
- * Return: int
+ * Return: struct needed
  */
-int sum_listint(listint_t *head)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp = head;
 	int count = 0;
