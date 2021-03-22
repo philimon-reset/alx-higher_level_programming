@@ -26,22 +26,3 @@ listint_t *add_nodeint(listint_t **head, const int n);
 	}
 	return (temp);
 }
-
-/**
- * _strlen - return the length of a a string
- * @s: string to be checked
- *
- * Return: lenght of string
- */
-
-int _strlen(const char *s)
-{
-	int var;
-	int output = 0;
-
-	for (var = 0; s[var] != '\0'; var++)
-	{
-		output += 1;
-	}
-	return (output);
-}
