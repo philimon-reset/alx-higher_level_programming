@@ -1,4 +1,3 @@
-  
 #include "holberton.h"
 
 /**
@@ -28,7 +27,7 @@ char **strtow(char *str)
 				{
 					while (temp < a)
 					{
-						spl[v][temp] = str[(v - a) + temp];
+						spl[v][temp] = str[(i - a) + temp];
 						temp++;
 					}
 					spl[v][temp] = '\0';
