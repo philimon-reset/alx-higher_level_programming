@@ -1,2 +1,2 @@
 #!/bin/bash
-cp 0x04-variables_if_else_while/bettydoc Betty/betty
+cp 0x01-variables_if_else_while/bettydoc Betty/betty
