@@ -1,22 +1,30 @@
 #include "lists.h"
 
 /**
- * pop_listint - deletes the head node and returns node’s data n
+ * get_nodeint_at_index - returns the number of elements in a linked list
  * @head: pointer to a struct
+ * @index: index to be found
  *
  * Return: int
  */
-int pop_listint(listint_t **head)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *temp = malloc(sizeof(list_t));
-	listint_t *del = *head;
+	listint_t *temp = head;
+	unsigned int count;
 
-	if (*head == NULL)
-		return (0);
-	else
+	if (temp == NULL)
 	{
-		(*head) = (*head)->next;
-		free(*head);
-		return (del->n);
+		return (NULL);
 	}
+	while (temp != NULL)
+	{	
+		if (count == index)
+		{
+			return temp;
+		}
+		count++;
+		temp = temp->next;
+	}
+	if (count != index)
+		return (NULL);
 }
