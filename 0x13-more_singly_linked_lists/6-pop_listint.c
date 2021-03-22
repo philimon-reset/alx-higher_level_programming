@@ -8,7 +8,7 @@
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *temp = malloc(sizeof(list_t));
+	listint_t *temp = malloc(sizeof(listint_t));
 	listint_t *del = *head;
 
 	if (*head == NULL)
