@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - returns the sum of all the data of a linked list
+ * insert_nodeint_at_index - inserts a new node at a given position.
  * @head: pointer to a struct
  * @idx: index given
  * @n: data
@@ -10,16 +10,12 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *temp = head;
+	listint_t *temp;
 	int count = 0;
 
-	if (temp == NULL)
+	while (idx--)
 	{
-		return (0);
-	}
-	while (temp != NULL)
-	{
-		count += temp->n;
-		temp = temp->next;
-	}
+		if (idx == 0)
+		{
+			temp == (*head);
 }
