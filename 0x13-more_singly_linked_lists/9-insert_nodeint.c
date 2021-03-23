@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	prev = NULL;
 	temp->n = n;
 	temp->next = NULL;
-	if ((idx < 0) || (idx > listint_len(*head)))
+	if ((idx < 0) || (idx > list_len(*head)))
 	{
 	    return (NULL);
 	}
@@ -44,15 +44,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 }
 
 /**
- * listint_len - a function that prints number of nodes.
+ * list_len - a function that prints number of nodes.
  * @h: value of list
  *
  * Return: any data type list
  */
-size_t listint_len(const listint_t *h)
+size_t list_len(const listint_t *h)
 {
 	const listint_t *temp = h;
-	int node = 0;
+	unsigned int node = 0;
 
 	while (temp != NULL)
 	{
