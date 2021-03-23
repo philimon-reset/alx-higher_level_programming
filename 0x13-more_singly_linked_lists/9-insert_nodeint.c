@@ -61,7 +61,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 size_t list_len(const listint_t *h)
 {
 	const listint_t *temp = h;
-	unsigned int node = 0;
+	size_t node = 0;
 
 	while (temp != NULL)
 	{
