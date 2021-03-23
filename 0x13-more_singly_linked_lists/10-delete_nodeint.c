@@ -1,14 +1,13 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - inserts a new node at a given position.
+ * delete_nodeint_at_index -  deletes the node at index of a linked list
  * @head: pointer to a struct
- * @idx: index given
- * @n: data
+ * @index: index given
  *
- * Return: struct needed
+ * Return: int
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *temp = malloc(sizeof(listint_t));
 	listint_t *c;
@@ -22,18 +21,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	temp->next = NULL;
 	if (head != NULL)
 	{
-		if (idx > list_len(*head))
+		if (index > list_len(*head))
 		{
 			free(temp);
-			return (NULL);
+			return (-1);
 		}
 		for (c = (*head); (c != NULL); c = c->next)
 		{
-			if ((i + 1) == idx)
+			if ((i + 1) == index)
 			{
 				prev = c;
 			}
-			if ((i) == idx)
+			if ((i - 1) == index)
 			{
 				temp->next = c;
 				if (prev != NULL)
@@ -44,12 +43,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 				{
 					(*head) = temp;
 				}
-				return (temp);
+				return (1);
 			}
 			i++;
 		}
 	}
-	return (NULL);
+	return (-1);
 }
 
 /**
