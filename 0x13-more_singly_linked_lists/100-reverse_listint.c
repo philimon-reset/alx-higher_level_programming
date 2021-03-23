@@ -11,7 +11,6 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *temp = *head;
 	listint_t *next = NULL;
 	listint_t *prev = NULL;
-	unsigned int i = 0;
 
 	while (temp != NULL)
 	{
