@@ -12,15 +12,16 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int n = 0;
 	unsigned int base;
 	int i;
+	const char *a = b;
 
 	base = 1;
 	if (_strlen(b) == 0)
 		return (0);
-	while (b[j] != '\0')
+	while (*a)
 	{
-		if (b[j] != '0' && b[j] != '1' || b == NULL)
+		if (*a != '0' && *a != '1' || b == NULL)
 			return (0);
-		j++;
+		a++;
 	}
 	for (i = _strlen(b) - 1; i >= 0; i--)
 	{
