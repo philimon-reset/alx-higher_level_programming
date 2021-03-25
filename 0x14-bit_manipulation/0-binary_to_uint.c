@@ -15,11 +15,11 @@ unsigned int binary_to_uint(const char *b)
 	const char *a = b;
 
 	base = 1;
-	if (_strlen(b) == 0)
+	if (b == NULL)
 		return (0);
 	while (*a)
 	{
-		if ((*a != '0' && *a != '1') || b == NULL)
+		if ((*a != '0' && *a != '1'))
 			return (0);
 		a++;
 	}
