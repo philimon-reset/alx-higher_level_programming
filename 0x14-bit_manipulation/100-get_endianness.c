@@ -1,22 +1,14 @@
 #include "holberton.h"
 
 /**
- * flip_bits - number of bits needed to flip one number to another
- * @n: character
- * @m: second character
+ * get_endianness - checks the endianness.
  *
- * Return: number at index
+ * Return: void function
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int get_endianness(void)
 {
-	unsigned long int a = n ^ m;
-	int len = 0;
+	int n = 1;
 
-	while (a)
-	{
-		if (a & 1)
-			len++;
-		a >>= 1;
-	}
-	return (len);
+	if(*(char *) &n == 1)
+	return (n);
 }
