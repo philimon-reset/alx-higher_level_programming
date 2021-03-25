@@ -14,8 +14,14 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 
 	base = 1;
-	if (!check_valid_string(b))
+	if (_strlen(b) == 0)
 		return (0);
+	while (b[j] != '\0')
+	{
+		if (b[j] != '0' && b[j] != '1' || b == NULL)
+			return (0);
+		j++;
+	}
 	for (i = _strlen(b) - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
@@ -44,23 +50,4 @@ unsigned int _strlen(const char *s)
 		output += 1;
 	}
 	return (output);
-}
-
-/**
- * check_valid_string - checks if a string has only 0's and 1's
- * @b: string to be checked
- *
- * Return: 1 if string is valid, 0 otherwise
- */
-int check_valid_string(const char *b)
-{
-	if (b == NULL)
-		return (0);
-	while (*b)
-	{
-		if (*b != '1' && *b != '0')
-			return (0);
-		b++;
-	}
-	return (1);
 }
