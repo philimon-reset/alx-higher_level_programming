@@ -9,8 +9,6 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int n = 0;
-	unsigned int base;
 	int i, j;
 
 	base = 1;
