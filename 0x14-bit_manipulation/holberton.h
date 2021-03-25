@@ -6,6 +6,6 @@
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
-int _strlen(char *s);
+unsigned int _strlen(const char *s);
 
 #endif /*HOLBERTON_H*/
