@@ -1,20 +1,44 @@
 #include "holberton.h"
 
 /**
- * malloc_checked - function to allocate memory
- * @b: size of memeory
+ * binary_to_uint - function to turn bin to uint
+ * @b: character
  *
- * Return: pointer to allocated memory
+ * Return: unsigned int of char
  */
 
-void *malloc_checked(unsigned int b)
+unsigned int binary_to_uint(const char *b)
 {
-	void *s;
+	unsigned int n = 0;
+	int base, i;
 
-	s = malloc(b);
-	if (s == NULL)
+	base = 1;
+	for (i = _strlen(b) - 1; i >= 0; i--)
 	{
-		exit(98);
+		if (b[i] == '1')
+		{
+			n += base;
+			base *= 2;
+		}
 	}
-	return (s);
+	return (n);
+}
+
+/**
+ * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	for (var = 0; s[var] != '\0'; var++)
+	{
+		output += 1;
+	}
+	return (output);
 }
