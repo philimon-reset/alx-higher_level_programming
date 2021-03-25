@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * set_bit - sets the value of a bit at a given index to 1
+ * flip_bits - number of bits needed to flip one number to another
  * @n: character
- * @index: index needed
+ * @m: index needed
  *
  * Return: number at index
  */
-int set_bit(unsigned long int *n, unsigned int index)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	if (n == NULL || (index > sizeof(unsigned long int) * 8 - 1))
 		return (-1);
