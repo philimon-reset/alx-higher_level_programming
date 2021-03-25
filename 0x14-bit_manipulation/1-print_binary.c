@@ -1,51 +1,26 @@
 #include "holberton.h"
 
 /**
- * binary_to_uint - function to turn bin to uint
- * @b: character
+ * print_binary - prints the binary representation of a number
+ * @n: character
  *
- * Return: unsigned int of char
+ * Return: void function
  */
 
-unsigned int binary_to_uint(const char *b)
+void print_binary(unsigned long int n)
 {
 	unsigned int n = 0;
 	unsigned int base;
-	int i, j = 0;
+	int i, j;
 
 	base = 1;
-	while (b[j] != '\0')
+	for (i = 7; i >= 0; i--)
 	{
-		if ((b[j] != '0' && b[j] != '1') || b == NULL || _strlen(b) == 0)
-			return (0);
-		j++;
-	}
-	for (i = _strlen(b) - 1; i >= 0; i--)
-	{
-		if (b[i] == '1')
+		j = n >> i;
+		if (j & '1')
 		{
-			n += base;
+			_putchar(1 + '0');
 		}
-		base *= 2;
+		_putchar(0 + '0');
 	}
-	return (n);
-}
-
-/**
- * _strlen - return the length of a a string
- * @s: string to be checked
- *
- * Return: lenght of string
- */
-
-unsigned int _strlen(const char *s)
-{
-	int var;
-	int output = 0;
-
-	for (var = 0; s[var] != '\0'; var++)
-	{
-		output += 1;
-	}
-	return (output);
 }
