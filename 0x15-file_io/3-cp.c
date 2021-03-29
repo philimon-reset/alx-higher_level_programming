@@ -1,32 +1,36 @@
 #include "holberton.h"
 
 /**
- * create_file - appends text at the end of a file.
- * @filename: file descripter
- * @text_content: count
+ * main - copies the content of a file to another file
+ * @argc: argument count
+ * @argv: argument array
  *
  * Return: int
  */
 
-int create_file(const char *filename, char *text_content)
+int main(int argc, char **argv)
 {
 	int fd, oz;
+	int f1 = argv[1];
+	int f2 = argv[2];
+	char buf[1024];
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0600);
-	if ((filename == NULL) || (fd == -1))
+	fd[0] = open(argv[1], O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
+	fd[1] = open(argv[2], O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
+	if (argc != 3)
 	{
-		return (-1);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n", fd);
+		exit(97);
 	}
-	if (text_content == NULL)
+	if (fd[0] == -1)
+		return (-1);
+	if ((argv[2] == NULL) || (fd[1] == -1))
 	{
-		close(fd);
-		return (1);
+		close(fb[0]);
+		dprintf(STDERR_FILENO , "Error: Can't write to %s\n", argv[2], fd[1]);
+		exit(98);
 	}
-	oz = write(fd, text_content, _strlen(text_content));
-	if (oz == -1)
-		return (-1);
-	close(fd);
-	return (1);
+	
 }
 
 /**
