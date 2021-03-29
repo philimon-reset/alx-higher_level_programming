@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 	}
 	close(fd[0]);
 	close(fd[1]);
-	return (1);
+	return (0);
 }
 
 int close_new(int f_n)
