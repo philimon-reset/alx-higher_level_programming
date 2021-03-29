@@ -11,7 +11,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, sz, oz;
-	char *buf = malloc(sizeof(char) * _strlen(*text_content));
+	char *buf = malloc(sizeof(char) * _strlen(text_content));
 
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if ((filename == NULL) || (fd == -1) || (buf == NULL))
@@ -19,10 +19,10 @@ int create_file(const char *filename, char *text_content)
 		free(buf);
 		return (-1);
 	}
-	sz = read(fd, buf, _strlen(*text_content));
+	sz = read(fd, buf, _strlen(text_content));
 	if (sz == -1)
 		return (-1);
-	oz = write(filename, buf, _strlen(*text_content));
+	oz = write(filename, buf, _strlen(text_content));
 	if (oz == -1)
 		return (-1);
 	close(fd);
