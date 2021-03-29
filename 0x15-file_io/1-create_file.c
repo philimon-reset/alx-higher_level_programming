@@ -22,6 +22,8 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 	{
 		oz = write(fd, " ", 0);
+		close(fd);
+		return (1);
 	}
 	sz = read(fd, buf, _strlen(text_content));
 	if (sz == -1)
