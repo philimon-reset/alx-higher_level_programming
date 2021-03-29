@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	int fd1, fd2, r1 = 1024, w1;
-	char *buf[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
