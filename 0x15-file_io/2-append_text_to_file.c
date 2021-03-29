@@ -1,18 +1,18 @@
 #include "holberton.h"
 
 /**
- * create_file - appends text at the end of a file.
+ * append_text_to_file - appends text at the end of a file.
  * @filename: file descripter
  * @text_content: count
  *
  * Return: int
  */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, oz;
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_APPEND);
 	if ((filename == NULL) || (fd == -1))
 	{
 		return (-1);
