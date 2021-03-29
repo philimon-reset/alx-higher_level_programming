@@ -1,31 +1,49 @@
 #include "holberton.h"
 
 /**
- * read_textfile - reads a text file and prints it to standard output
+ * create_file - appends text at the end of a file.
  * @filename: file descripter
- * @letters: count
+ * @text_content: count
  *
- * Return: any time size_t
+ * Return: int
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
 	int fd, sz, oz;
-	char *buf = malloc(sizeof(char) * letters);
+	char *buf = malloc(sizeof(char) * _strlen(*text_content));
 
 	fd = open(filename, O_RDONLY);
 	if ((filename == NULL) || (fd == -1) || (buf == NULL))
 	{
 		free(buf);
-		return (0);
+		return (-1);
 	}
-	sz = read(fd, buf, letters);
+	sz = read(fd, buf, _strlen(*text_content));
 	if (sz == -1)
-		return (0);
-	buf[sz] = '\0';
-	oz = write(STDOUT_FILENO, buf, letters);
+		return (-1);
+	oz = write(filename, buf, _strlen(*text_content));
 	if (oz == -1)
-		return (0);
+		return (-1);
 	close(fd);
-	return (fd);
+	return (1);
+}
+
+/**
+ * _strlen - return the length of a a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	for (var = 0; s[var] != '\0'; var++)
+	{
+		output += 1;
+	}
+	return (output);
 }
