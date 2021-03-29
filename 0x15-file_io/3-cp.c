@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd[2], r1, w1, f1 = argv[1], f2 = argv[2];
+	int fd[2], r1, w1;
 	char *buf = malloc(sizeof(char) * 1024);
 
 	if (argc != 3)
@@ -18,18 +18,18 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd[0] = open(f1, O_RONLY);
-	if ((f1 == NULL) || (fd[0] == -1))
+	fd[0] = open(argv[1], O_RONLY);
+	if ((argv[1] == NULL) || (fd[0] == -1))
 	{
 		close(fb[0]);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd[1] = open(f2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if ((f2 == NULL) || (fd[1] == -1))
+	fd[1] = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if ((argv[2] == NULL) || (fd[1] == -1))
 	{
 		close(fb[1]);
-		dprintf(STDERR_FILENO, "Error: Can't write to ", f2);
+		dprintf(STDERR_FILENO, "Error: Can't write to ", argv[2]);
 		exit(99);
 	}
 	while ((r1 = read(f[0], buf, 1024)) != 0)
@@ -37,12 +37,12 @@ int main(int argc, char **argv)
 		w1 = write(f[1], buf, r1);
 		if (r1 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f1);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		if (w1 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to ", f2);
+			dprintf(STDERR_FILENO, "Error: Can't write to ", argv[2]);
 			exit(99);
 		}
 	}
