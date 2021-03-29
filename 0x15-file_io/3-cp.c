@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd1, fd2, r1, w1;
+	int fd[2], r1, w1;
 	char *buf = malloc(sizeof(char) * 1024);
 
 	if (argc != 3)
