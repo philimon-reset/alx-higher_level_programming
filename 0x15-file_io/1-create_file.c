@@ -22,8 +22,6 @@ int create_file(const char *filename, char *text_content)
 		close(fd);
 		return (1);
 	}
-	if (sz == -1)
-		return (-1);
 	oz = write(fd, text_content, _strlen(text_content));
 	if (oz == -1)
 		return (-1);
