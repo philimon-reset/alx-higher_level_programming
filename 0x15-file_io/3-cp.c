@@ -51,7 +51,14 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-int close_new(int f_n)
+
+/**
+ * close_new - check if its closable
+ * @f_n: file descrption
+ *
+ * Return: void
+ */
+void close_new(int f_n)
 {
 	if (close(f_n) == -1)
 	{
