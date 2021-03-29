@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	int fd, sz, oz;
 	char *buf = malloc(sizeof(char) * _strlen(text_content));
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0600);
 	if ((filename == NULL) || (fd == -1) || (buf == NULL))
 	{
 		free(buf);
