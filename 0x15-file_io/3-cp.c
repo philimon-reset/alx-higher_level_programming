@@ -60,7 +60,7 @@ void close_new(int f_n)
 {
 	if (close(f_n) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", -1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", f_n);
 		exit(100);
 	}
 }
