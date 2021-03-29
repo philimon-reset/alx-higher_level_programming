@@ -32,15 +32,14 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 		exit(99);
 	}
-	while (r1 == 1024)
+	while ((r1 = read(fd1, buf, 1024)) != 0)
 	{
-		r1 = read(fd1, buf, 1024);
+		w1 = write(fd2, buf, r1);
 		if (r1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
-		w1 = write(fd2, buf, r1);
 		if (w1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
