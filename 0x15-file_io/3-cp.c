@@ -24,14 +24,14 @@ int main(int argc, char **argv)
 	if ((f1 == NULL) || (fd[0] == -1))
 	{
 		close(fb[0]);
-		dprintf(STDERR_FILENO , "Error: Can't read from file %s\n", f1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", f1);
 		exit(98);
 	}
 	fd[1] = open(f2, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
 	if ((f2 == NULL) || (fd[1] == -1))
 	{
 		close(fb[1]);
-		dprintf(STDERR_FILENO , "Error: Can't write to ", f2);
+		dprintf(STDERR_FILENO, "Error: Can't write to ", f2);
 		exit(99);
 	}
 	while ((r1 = read(f[0], buf, 1024)) != 0)
@@ -40,17 +40,19 @@ int main(int argc, char **argv)
 		if (w1 != r1)
 		{
 			close(fb[1]);
-			dprintf(STDERR_FILENO , "Error: Can't write to ", f2);
+			dprintf(STDERR_FILENO, "Error: Can't write to ", f2);
 			exit(99);
 		}
 	}
 	if (close(f1) == -1)
 	{
-		dprintf(STDERR_FILENO , "Error: Can't close fd %d", f1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", f1);
+		exit(100);
 	}
 	
 	if (close(f2) == -1)
 	{
-		dprintf(STDERR_FILENO , "Error: Can't close fd %d", f2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", f2);
+		exit(100);
 	}
 }
