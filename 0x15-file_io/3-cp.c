@@ -21,14 +21,14 @@ int main(int argc, char **argv)
 	fd1 = open(argv[1], O_RDONLY);
 	if ((argv[1] == NULL) || (fd1 == -1))
 	{
-		close(fb1);
+		close(fd1);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if ((argv[2] == NULL) || (fd[1] == -1))
+	if ((argv[2] == NULL) || (fd2 == -1))
 	{
-		close(fb2);
+		close(fd2);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 		exit(99);
 	}
