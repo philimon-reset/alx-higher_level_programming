@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd[2], r1, w1;
+	int fd1, fd2, r1, w1;
 	char *buf = malloc(sizeof(char) * 1024);
 
 	if (argc != 3)
@@ -32,9 +32,9 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to ", argv[2]);
 		exit(99);
 	}
-	while ((r1 = read(f[0], buf, 1024)) != 0)
+	while ((r1 = read(fd[0], buf, 1024)) != 0)
 	{
-		w1 = write(f[1], buf, r1);
+		w1 = write(fd[1], buf, r1);
 		if (r1 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
