@@ -47,8 +47,8 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
-	close(fd1);
-	close(fd2);
+	close_new(fd1);
+	close_new(fd2);
 	return (0);
 }
 
