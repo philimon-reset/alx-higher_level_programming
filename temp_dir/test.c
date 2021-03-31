@@ -3,7 +3,7 @@
 
 int main()
 {
-    size_t pid;
+    unsigned int pid;
     
     pid = getpip();
     printf("%u\n", pid);
