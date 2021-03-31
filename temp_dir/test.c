@@ -6,7 +6,7 @@ int main()
     size_t pid;
     
     pid = getpip();
-    printf("%d\n", pid)
+    printf("%u\n", pid);
 
     return 0;
 }
