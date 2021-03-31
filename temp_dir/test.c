@@ -1,16 +1,19 @@
+
 #include <stdio.h>
+#include <sys/types.h>
 #include <unistd.h>
-
-/**
- * main - PID
- *
- * Return: Always 0.
- */
-int main(void)
+  
+void forkexample()
 {
-    pid_t my_pid;
-
-    my_pid = getpid();
-    printf("%u\n", my_pid);
-    return (0);
+    int x = 1;
+  
+    if (fork() == 0)
+        printf("Child has x = %d\n", ++x);
+    else
+        printf("Parent has x = %d\n", --x);
+}
+int main()
+{
+    forkexample();
+    return 0;
 }
