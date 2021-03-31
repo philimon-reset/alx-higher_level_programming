@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int main()
+/**
+ * main - PID
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-    unsigned int pid;
-    
-    pid = getpip();
-    printf("%u\n", pid);
+    pid_t my_pid;
 
-    return 0;
+    my_pid = getpid();
+    printf("%u\n", my_pid);
+    return (0);
 }
