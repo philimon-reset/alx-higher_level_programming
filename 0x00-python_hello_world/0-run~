@@ -1,0 +1,3 @@
+#!bin/bash
+import PYFILE=main.py
+python main.py
