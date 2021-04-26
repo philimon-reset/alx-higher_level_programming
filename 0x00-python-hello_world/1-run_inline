@@ -1,3 +1,2 @@
-#!/usr/bin/env python
-import $PYFILE
-python $PYFILE
+#!/bin/bash
+python3.4 -c "$PYCODE"
