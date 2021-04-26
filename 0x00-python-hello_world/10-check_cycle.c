@@ -21,8 +21,14 @@ int check_cycle(listint_t *list)
 		turtle->next = temp->next;
 		hare->next = (temp->next)->next;
 		if (turtle == hare)
+		{
+			free_listint(turtle);
+			free_listint(hare);
 			return (1);
+		}
 		temp = temp->next;
 	}
-	return (0);	
+	free_listint(turtle);
+	free_listint(hare);
+	return (0);
 }
