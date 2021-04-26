@@ -8,27 +8,15 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *turtle = malloc(sizeof(listint_t));
-	listint_t *hare = malloc(sizeof(listint_t));
-	listint_t *temp = list;
+	listint_t *turtle = list;
+	listint_t *hare = list;
 
-	if (turtle == NULL || hare == NULL)
-		return (0);
-	turtle->n = temp->n;
-	hare->n = temp->n;
-	while (temp != NULL)
+	while (turtle != NULL && hare != NULL && hare->next != NULL)
 	{
-		turtle->next = temp->next;
-		hare->next = (temp->next)->next;
+		turtle = turtle->next;
+		hare = (hare->next)->next;
 		if (turtle == hare)
-		{
-			free_listint(turtle);
-			free_listint(hare);
 			return (1);
-		}
-		temp = temp->next;
 	}
-	free_listint(turtle);
-	free_listint(hare);
 	return (0);
 }
