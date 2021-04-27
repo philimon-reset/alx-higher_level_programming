@@ -3,5 +3,5 @@
 def print_last_digit(number):
   new = (str(number))[-1]
   if (number < 0):
-    new = int(new) * -1
+    new = str(int(new) * -1)
   print("{}".format(new), end="")
