@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-for i in range(100):
-    if (len(str(i)) < 2):
-        print("0{}".format(i), end=", ")
-    elif (len(str(i)) == 2 and i != 99):
-        print("{}".format(i), end=", ")
+for i in range(10):
+    for a in range(10):
+        if (i != 9 or a != 9):
+            print("{}{}".format(i, a), end=", ")
+        elif (i == 9 and a == 9):
+            print("{}{}".format(i, a), end="")
