@@ -2,5 +2,5 @@
 for i in range(9):
     for a in range (i+1, 10):
         if i != 8 or a != 9:
-            print("{}{}".format(i, a), end=", ")
-print("{}{}".format(i, a))
+            print("{:n}{:n}".format(i, a), end=", ")
+print("{:n}{:n}".format(i, a))
