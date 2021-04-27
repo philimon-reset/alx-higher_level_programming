@@ -7,4 +7,6 @@ elif (int(str(number)[-1]) < 6):
     temp = "is less than 6 and not 0"
 elif (int(str(number)[-1]) == 0):
     temp = "is 0"
-print("Last digit of {} is {} and {}".format(number, str(number)[-1], temp))
+if (number < 0):
+    print("Last digit of {:n} is -{} and {}".format(number, str(number)[-1], temp))
+print("Last digit of {:n} is {} and {}".format(number, str(number)[-1], temp))
