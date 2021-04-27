@@ -10,4 +10,4 @@ def fizzbuzz():
             str_a += "Buzz"
         if num % 5 != 0 and num % 3 != 0:
             str_a += + str(num)
-        print(str_a)
+        print("{} ".format(str_a))
