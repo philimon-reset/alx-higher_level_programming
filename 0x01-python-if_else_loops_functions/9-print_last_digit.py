@@ -2,4 +2,4 @@
 
 def print_last_digit(number):
   new = str(number)
-  print("{}".format(a[-1]), end="")
+  print("{}".format(int(a[-1])), end="")
