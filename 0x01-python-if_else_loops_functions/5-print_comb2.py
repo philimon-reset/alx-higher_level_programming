@@ -4,5 +4,4 @@ for i in range(0, 100):
         print("0{}".format(i), end=", ")
     elif (len(str(i)) == 2 and i != 99):
         print("{}".format(i), end=", ")
-    else:
-        print("{}".format(i))
+    print("{}".format(i))
