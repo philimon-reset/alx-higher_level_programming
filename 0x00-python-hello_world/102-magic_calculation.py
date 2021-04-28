@@ -3,4 +3,4 @@
 
 def pow(a, b):
 
-        return (a + b) ** 98
+        return 98 + (a ** b)
