@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
 
-def pow(a, b):
-
-        return (a + b) ** 98
+def magic_calculation(a, b):
+        return 98 + (a ** b)
