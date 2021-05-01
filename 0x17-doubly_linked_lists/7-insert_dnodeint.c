@@ -61,23 +61,3 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 	}
 	return (NULL);
 }
-
-/**
- * dlistint_len2 - counts the elements in the list.
- * @h: head of the list.
- *
- * Return: returns the number of nodes.
- */
-
-size_t dlistint_len2(const dlistint_t *h)
-{
-	const dlistint_t *temp = h;
-	int nodes = 0;
-
-	while (temp != NULL)
-	{
-		nodes++;
-		temp = temp->next;
-	}
-	return (nodes);
-}
