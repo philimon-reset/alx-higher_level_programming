@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_dnodeint - get the addressof node at given index.
+ * get_dnodeint_at_index - get the addressof node at given index.
  * @head: head of list.
  * @index: index of needed node.
  *
