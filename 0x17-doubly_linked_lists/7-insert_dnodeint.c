@@ -42,9 +42,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *temp = head;
+	dlistint_t *temp2 = head;
 	unsigned int size = 0, node = 0;
 
-	size = dlistint_len2(head);
+	while (temp2 != NULL)
+	{
+		size++;
+		temp2 = temp2->next;
+	}
 	if (index >= size)
 		return (NULL);
 	while (temp != NULL)
