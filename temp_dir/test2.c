@@ -2,14 +2,16 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int main(int ac, char **av)
+int main(void)
 {
 	int len;
+	char *argv[] = {"/bin/ls", "-l', ""/usr", NULL};
 
-	while (av[len] != '\0')
+	printf("before exec");
+	if (execve(argv[0], argv, NULL) == -1)
 	{
-		printf("%s\n", av[len]);
-		len++;
+		printf("no");
 	}
+	printf("after exec");
 	return (0);
 }
