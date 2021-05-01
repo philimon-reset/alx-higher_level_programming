@@ -13,7 +13,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	dlistint_t *temp = head;
 	unsigned int size = 0, node = 0;
 
-	size = dlistint_len(head);
+	size = dlistint_len2(head);
 	if (index >= size)
 		return (NULL);
 	while (temp != NULL)
@@ -33,7 +33,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
  * Return: returns the number of nodes.
  */
 
-size_t dlistint_len(const dlistint_t *h)
+size_t dlistint_len2(const dlistint_t *h)
 {
 	const dlistint_t *temp = h;
 	int nodes = 0;
