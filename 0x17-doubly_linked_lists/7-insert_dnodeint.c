@@ -11,7 +11,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_mode = malloc(sizeof(dlistint_t));
-	dlistint_t *temp = get_dnodeint_at_index(*h, idx);
+	dlistint_t *temp = get_dnodeint_at_index2(*h, idx);
 
 	if (new_mode == NULL || temp == NULL)
 		return (NULL);
@@ -32,14 +32,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * get_dnodeint_at_index - get the addressof node at given index.
+ * get_dnodeint_at_index2 - get the addressof node at given index.
  * @head: head of list.
  * @index: index of needed node.
  *
  * Return: address of indexed node.
  */
 
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *temp = head;
 	unsigned int size = 0, node = 0;
