@@ -27,7 +27,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 }
 
 /**
- * dlistint_len - counts the elements in the list.
+ * dlistint_len2 - counts the elements in the list.
  * @h: head of the list.
  *
  * Return: returns the number of nodes.
