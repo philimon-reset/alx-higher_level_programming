@@ -4,6 +4,7 @@
 ### Emacs ###
 # -*- mode: gitignore; -*-
 *~
+*.out
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
