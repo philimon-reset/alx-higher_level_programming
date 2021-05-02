@@ -86,7 +86,7 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
  *
  * Return: returns the address of the new element.
  */
-dlistint_t *add(dlistint_t **head, dlistint_t new_mode)
+dlistint_t *add(dlistint_t **head, dlistint_t new_node)
 {
 	if (new_node == NULL)
 		return (NULL);
@@ -111,7 +111,7 @@ dlistint_t *add(dlistint_t **head, dlistint_t new_mode)
  * Return: address of new node.
  */
 
-dlistint_t *end(dlistint_t **head, dlistint_t new_mode)
+dlistint_t *end(dlistint_t **head, dlistint_t new_node)
 {
 	dlistint_t *temp = *head;
 
