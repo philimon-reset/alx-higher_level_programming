@@ -26,7 +26,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_mode->next = NULL;
 	new_mode->prev = NULL;
 	printf("%d\n", size);
-	printf("%d\n", idx);
+	printf("%d\n", index);
 	if (idx == 0)
 	{
 		new_mode = add(h, new_mode);
