@@ -19,7 +19,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index >= size || head == NULL || size == 0)
 		return (-1);
 	temp = *head;
-	for (;node != index; node++, temp = temp->next;)
+	for (;node != index; node++, temp = temp->next)
 	{
 		temp3 = temp;
 		break;
