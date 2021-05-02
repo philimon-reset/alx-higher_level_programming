@@ -54,8 +54,8 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 		if (index == node)
 			return (temp);
 		node++;
-		temp = temp->next;
 		size--;
+		temp = temp->next;
 	}
 	return (NULL);
 }
