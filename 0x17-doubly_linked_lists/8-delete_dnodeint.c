@@ -9,15 +9,33 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp = final_index(*head, index);
+	dlistint_t *temp = *head, *temp2 = *head;
+	unsigned int size = 0, node = 0;
 
+	while (temp2 != NULL)
+	{
+		size++;
+		temp2 = temp2->next;
+	}
+	if (index >= size)
+		return (-1);
+	while (temp != NULL)
+	{
+		if (index == node)
+			break;
+		node++;
+		temp = temp->next;
+	}
 	if (temp == NULL)
 		return (-1);
 	if (*head == temp)
 	{
 		*head = temp->next;
-		(*head)->prev = NULL;
-		return (1);
+		if (*head != NULL)
+		{
+			(*head)->prev = NULL;
+			return (1);
+		}
 	}
 	else
 	{
@@ -28,35 +46,4 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	temp->next = NULL;
 	temp->prev = NULL;
 	return (1);
-}
-
-/**
- * final_index - get the addressof node at given index.
- * @head: head of list.
- * @index: index of needed node.
- *
- * Return: address of indexed node.
- */
-
-dlistint_t *final_index(dlistint_t *head, unsigned int index)
-{
-	dlistint_t *temp = head;
-	dlistint_t *temp2 = head;
-	unsigned int size = 0, node = 0;
-
-	while (temp2 != NULL)
-	{
-		size++;
-		temp2 = temp2->next;
-	}
-	if (index >= size)
-		return (NULL);
-	while (temp != NULL)
-	{
-		if (index == node)
-			return (temp);
-		node++;
-		temp = temp->next;
-	}
-	return (NULL);
 }
