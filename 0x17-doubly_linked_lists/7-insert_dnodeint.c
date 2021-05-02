@@ -16,7 +16,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *temp = get(*h, idx);
 
 	if (h == NULL || temp == NULL)
-		return (NULL)
+		return (NULL);
 	while (op != NULL)
 	{
 		size += 1;
