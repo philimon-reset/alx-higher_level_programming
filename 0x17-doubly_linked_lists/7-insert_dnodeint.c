@@ -56,10 +56,10 @@ dlistint_t *get(dlistint_t *head, unsigned int index, unsigned int *size)
 
 	while (temp2 != NULL)
 	{
-		size++;
+		(*size)++;
 		temp2 = temp2->next;
 	}
-	if (index > size)
+	if (index > *size)
 		return (NULL);
 	while (temp != NULL)
 	{
