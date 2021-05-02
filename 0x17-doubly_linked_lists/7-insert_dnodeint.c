@@ -30,9 +30,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new_mode = add(h, new_mode);
 		return (new_mode);
 	}
+	printf("%d\n", size);
+	printf("%d\n", idx);
 	if (idx == size)
 	{
-		printf("end");
 		new_mode = end(h, new_mode);
 		return (new_mode);
 	}
