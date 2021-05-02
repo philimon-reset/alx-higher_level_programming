@@ -20,10 +20,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		size += 1;
 		op = op->next;
 	}
-	printf("%d\n", size);
-	printf("%d\n", idx);
 	if (new_mode == NULL || h == NULL)
 		return (NULL);
+	printf("%d\n", size);
+	printf("%d\n", idx);
 	new_mode->n = n;
 	new_mode->next = NULL;
 	new_mode->prev = NULL;
@@ -71,13 +71,13 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 	while (temp != NULL)
 	{
 		if (index == node)
-			return (temp);
+			break;
 		node++;
 		temp = temp->next;
 	}
-	if (node == index)
-		return (temp);
-	return (NULL);
+	if (node != index)
+		return (NULL);
+	return (temp);
 }
 
 /**
