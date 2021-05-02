@@ -49,12 +49,13 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 	}
 	if (index > size)
 		return (NULL);
-	while (temp != NULL)
+	while (size != 0)
 	{
 		if (index == node)
 			return (temp);
 		node++;
 		temp = temp->next;
+		size--;
 	}
 	return (NULL);
 }
