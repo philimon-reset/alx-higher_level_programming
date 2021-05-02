@@ -9,7 +9,7 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp = get_dnodeint_at_index2(*head, index);
+	dlistint_t *temp = final_index(*head, index);
 
 	if (temp == NULL)
 		return (-1);
@@ -31,14 +31,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 }
 
 /**
- * get_dnodeint_at_index2 - get the addressof node at given index.
+ * final_index - get the addressof node at given index.
  * @head: head of list.
  * @index: index of needed node.
  *
  * Return: address of indexed node.
  */
 
-dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
+dlistint_t *final_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *temp = head;
 	dlistint_t *temp2 = head;
