@@ -18,7 +18,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_mode->n = n;
 	new_mode->next = NULL;
 	new_mode->prev = NULL;
-	if (temp->next != NULL)
+	if (temp->prev != NULL)
 	{
 		new_mode->prev = temp->prev;
 		(temp->prev)->next = new_mode;
