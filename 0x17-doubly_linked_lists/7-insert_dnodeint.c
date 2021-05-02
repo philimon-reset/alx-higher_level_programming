@@ -40,7 +40,7 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *temp = head;
 	dlistint_t *temp2 = head;
-	unsigned int size = 0, node = 0;
+	unsigned int size = 0, node = 1;
 
 	while (temp2 != NULL)
 	{
