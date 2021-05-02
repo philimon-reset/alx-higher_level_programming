@@ -40,7 +40,7 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *temp = head;
 	dlistint_t *temp2 = head;
-	unsigned int size = 0, node = 1;
+	unsigned int size = 0, node = 0;
 
 	while (temp2 != NULL)
 	{
@@ -49,13 +49,14 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 	}
 	if (index > size)
 		return (NULL);
-	while (size != 0)
+	while (temp != NULL)
 	{
 		if (index == node)
 			return (temp);
 		node++;
-		size--;
 		temp = temp->next;
 	}
+	if (node == index)
+		return (temp);
 	return (NULL);
 }
