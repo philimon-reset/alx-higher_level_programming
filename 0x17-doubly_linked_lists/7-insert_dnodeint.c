@@ -82,7 +82,7 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 /**
  * add - add to the begining of the list.
  * @head: head of list.
- * @n: value of new list
+ * @new_node: value of new list
  *
  * Return: returns the address of the new element.
  */
@@ -106,7 +106,7 @@ dlistint_t *add(dlistint_t **head, dlistint_t *new_node)
 /**
  * end - add new node at the end of the list.
  * @head: head of list.
- * @n: value of the node.
+ * @new_node: value of the node.
  *
  * Return: address of new node.
  */
