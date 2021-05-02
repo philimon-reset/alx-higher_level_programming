@@ -75,6 +75,8 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 		node++;
 		temp = temp->next;
 	}
+	printf("%d\n", node);
+	printf("%d\n", idx);
 	if (node == index)
 		return (temp);
 	return (NULL);
