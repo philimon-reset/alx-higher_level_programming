@@ -49,7 +49,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
  * get - get the address of node at given index.
  * @head: head of list.
  * @index: index of needed node.
- * @size: size given
  *
  * Return: address of indexed node.
  */
