@@ -20,7 +20,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		size += 1;
 		op = op->next;
 	}
-	if (new_mode == NULL || temp != NULL || h == NULL)
+	if (new_mode == NULL || temp == NULL || h == NULL)
 		return (NULL);
 	new_mode->n = n;
 	new_mode->next = NULL;
