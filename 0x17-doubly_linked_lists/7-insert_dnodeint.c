@@ -50,7 +50,7 @@ dlistint_t *get_dnodeint_at_index2(dlistint_t *head, unsigned int index)
 		size++;
 		temp2 = temp2->next;
 	}
-	if (index >= size)
+	if (index > size)
 		return (NULL);
 	while (temp != NULL)
 	{
