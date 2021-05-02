@@ -27,12 +27,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_mode->prev = NULL;
 	if (idx == 0)
 	{
-		new_mode = add(h, n);
+		new_mode = add(h, new_mode);
 		return (new_mode);
 	}
 	if (idx == size)
 	{
-		new_mode = end(h, n);
+		new_mode = end(h, new_mode);
 		return (new_mode);
 	}
 	if (temp->prev != NULL)
@@ -86,15 +86,10 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
  *
  * Return: returns the address of the new element.
  */
-dlistint_t *add(dlistint_t **head, const int n)
+dlistint_t *add(dlistint_t **head, dlistint_t new_mode)
 {
-	dlistint_t *new_node = malloc(sizeof(dlistint_t));
-
 	if (new_node == NULL)
 		return (NULL);
-	new_node->n = n;
-	new_node->next = NULL;
-	new_node->prev = NULL;
 	if (*head == NULL)
 	{
 		*head = new_node;
@@ -116,16 +111,12 @@ dlistint_t *add(dlistint_t **head, const int n)
  * Return: address of new node.
  */
 
-dlistint_t *end(dlistint_t **head, const int n)
+dlistint_t *end(dlistint_t **head, dlistint_t new_mode)
 {
-	dlistint_t *new_node = malloc(sizeof(dlistint_t));
 	dlistint_t *temp = *head;
 
 	if (new_node == NULL)
 		return (NULL);
-	new_node->n = n;
-	new_node->next = NULL;
-	new_node->prev = NULL;
 	if (*head == NULL)
 	{
 		(*head) = new_node;
