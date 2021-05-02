@@ -25,8 +25,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_mode->n = n;
 	new_mode->next = NULL;
 	new_mode->prev = NULL;
-	printf("%d\n", size);
-	printf("%d\n", index);
 	if (idx == 0)
 	{
 		new_mode = add(h, new_mode);
@@ -76,7 +74,7 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 		temp = temp->next;
 	}
 	printf("%d\n", node);
-	printf("%d\n", idx);
+	printf("%d\n", index);
 	if (node == index)
 		return (temp);
 	return (NULL);
