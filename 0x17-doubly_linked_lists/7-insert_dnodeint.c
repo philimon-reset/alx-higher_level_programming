@@ -28,12 +28,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_mode->n = n;
 	new_mode->next = NULL;
 	new_mode->prev = NULL;
-	if (size == 0)
-	{
-		*h = new_mode;
-		return (new_mode);
-	}
-	if (idx == 0)
+	if (idx == 0 || size == 0)
 	{
 		new_mode = add(h, new_mode);
 		return (new_mode);
@@ -96,8 +91,6 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
  */
 dlistint_t *add(dlistint_t **head, dlistint_t *new_node)
 {
-	if (new_node == NULL)
-		return (NULL);
 	if (*head == NULL)
 	{
 		*head = new_node;
@@ -123,8 +116,6 @@ dlistint_t *end(dlistint_t **head, dlistint_t *new_node)
 {
 	dlistint_t *temp = *head;
 
-	if (new_node == NULL)
-		return (NULL);
 	if (*head == NULL)
 	{
 		(*head) = new_node;
