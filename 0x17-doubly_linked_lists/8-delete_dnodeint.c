@@ -1,34 +1,33 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - insert new node at given index.
- * @h: head of list.
- * @idx: index to add in.
- * @n: value to add.
+ * delete_dnodeint_at_index - delete node at given index.
+ * @head: head of list.
+ * @index: index to delete.
  *
- * Return: address of new node.
+ * Return: 1 if successs -1 if not
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *new_mode = malloc(sizeof(dlistint_t));
-	dlistint_t *temp = get_dnodeint_at_index2(*h, idx);
+	dlistint_t *temp = get_dnodeint_at_index2(*head, index);
 
-	if (new_mode == NULL || temp == NULL)
-		return (NULL);
-	new_mode->n = n;
-	new_mode->next = NULL;
-	new_mode->prev = NULL;
-	if (temp->next != NULL)
+	if (temp == NULL)
+		return (-1);
+	if (*head == temp)
 	{
-		new_mode->next = temp;
-		if (temp->prev != NULL)
-		{
-			new_mode->prev = temp->prev;
-			(temp->prev)->next = new_mode;
-		}
-		temp->prev = new_mode;
+		*head = temp->next;
+		*head->prev = NULL;
+		return (1);
 	}
-	return (new_mode);
+	else
+	{
+		(temp->prev)->next = temp->next;
+		if (temp->next != NULL)
+			(temp->next)->prev = temp->prev;
+	}
+	temp->next = NULL;
+	temp->prev = NULL;
+	return (1);
 }
 
 /**
