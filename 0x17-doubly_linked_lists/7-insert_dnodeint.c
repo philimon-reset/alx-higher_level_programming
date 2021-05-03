@@ -68,10 +68,8 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 		size++;
 		temp2 = temp2->next;
 	}
-	printf("%d\n", size);
 	if (index > size)
 		return (NULL);
-	printf("%d\n", size);
 	while (temp != NULL)
 	{
 		if (index == node)
