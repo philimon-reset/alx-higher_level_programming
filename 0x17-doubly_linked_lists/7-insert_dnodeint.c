@@ -22,6 +22,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		size += 1;
 		op = op->next;
 	}
+	if (index > size)
+		return (NULL);
 	temp = get(*h, idx);
 	new_mode = malloc(sizeof(dlistint_t));
 	if (new_mode == NULL)
