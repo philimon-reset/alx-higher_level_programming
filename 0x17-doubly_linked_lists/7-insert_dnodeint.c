@@ -22,7 +22,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		size += 1;
 		op = op->next;
 	}
-	printf("%d\n", size);
 	temp = get(*h, idx);
 	new_mode = malloc(sizeof(dlistint_t));
 	if (new_mode == NULL)
@@ -69,8 +68,10 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 		size++;
 		temp2 = temp2->next;
 	}
+	printf("%d\n", size);
 	if (index > size)
 		return (NULL);
+	printf("%d\n", size);
 	while (temp != NULL)
 	{
 		if (index == node)
