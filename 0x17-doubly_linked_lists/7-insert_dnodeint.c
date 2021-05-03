@@ -12,7 +12,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_mode;
 	unsigned int size = 0;
-	dlistint_t *temp = NULL, *op = NULL;
+	dlistint_t *temp, *op = NULL;
 
 	if (h == NULL)
 		return (NULL);
@@ -24,7 +24,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	temp = get(*h, idx);
 	new_mode = malloc(sizeof(dlistint_t));
-	if (new_mode == NULL || temp == -1)
+	if (new_mode == NULL || temp == NULL)
 		return (NULL);
 	new_mode->n = n;
 	new_mode->next = NULL;
@@ -69,7 +69,7 @@ dlistint_t *get(dlistint_t *head, unsigned int index)
 		temp2 = temp2->next;
 	}
 	if (index > size)
-		return (-1);
+		return (NULL);
 	while (temp != NULL)
 	{
 		if (index == node)
