@@ -8,5 +8,6 @@ def roman_to_int(roman_string):
     for i in roman_string:
         if roman_string[0] == "I":
             total -= dic_t[i]
-        total += dic_t[i]
+        else:
+            total += dic_t[i]
     return total
