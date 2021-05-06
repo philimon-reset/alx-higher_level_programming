@@ -5,9 +5,8 @@ def roman_to_int(roman_string):
     total = 0
     dic_t = {'I' : 1, 'V' : 5, 'X' : 10, 'L' : 50, 'C' : 100,
              'D' : 500, 'M' : 1000}
+    if roman_string[0] == "I":
+            total = -1
     for i in roman_string:
-        if roman_string[0] == "I":
-            total -= dic_t[i]
-        else:
             total += dic_t[i]
     return total
