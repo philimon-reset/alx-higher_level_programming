@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-def square_matrix_simple(matrix=[]):
-    square = lambda x: x ** 2
-    new = matrix[:]
-    for i in new:
-        i = list(map(square, i))
-    print(new)
+def multiply_list_map(my_list=[], number=0):
+    return (list(map(lambda x: x * number), my_list))
