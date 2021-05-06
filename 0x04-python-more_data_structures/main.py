@@ -1,7 +1,13 @@
 #!/usr/bin/python3
-multiply_list_map = __import__('11-multiply_list_map').multiply_list_map
+square_matrix_map = \
+    __import__('101-square_matrix_map').square_matrix_map
 
-my_list = [1, 2, 3, 4, 6]
-new_list = multiply_list_map(my_list, 4)
-print(new_list)
-print(my_list)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+new_matrix = square_matrix_map(matrix)
+print(new_matrix)
+print(matrix)
