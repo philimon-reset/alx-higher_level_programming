@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
     check = ['IV', 'IX', 'XL', 'XC', 'XL', 'CD', 'CM']
     for i in roman_string:
         for a in check:
-            if a in roman_string:
-                total -= dic_t[i]
-        total += dic_t[i]  
+            if a not in roman_string:
+                total += dic_t[i]
+        total -= dic_t[i]
     return total
