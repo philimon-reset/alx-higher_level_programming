@@ -10,5 +10,5 @@ def roman_to_int(roman_string):
         total += dic_t[i]
     for a in check:
         if a in roman_string:
-            total -= (2 *(dic_t[a[0]]))
+            total -= 2 * (dic_t[a[0]])
     return total
