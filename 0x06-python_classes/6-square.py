@@ -48,7 +48,7 @@ class Square():
     def my_print(self):
         """ square made using the character #
             or a blank line if @size == 0"""
-        if (self.size == 0)
+        if (self.size == 0):
             print("")
         for i in range(self.size):
             print("#" * self.size)
