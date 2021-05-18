@@ -67,7 +67,7 @@ class Square():
     def my_print(self):
         """ square made using the character #
             or a blank line if @size == 0"""
-        if (self.size == 0):
+        if (self.__size == 0):
             print("")
-        for i in range(self.size):
-            print((self.position[0] * " ") + ("#" * self.size))
+        for i in range(self.__size):
+            print((self.__position[0] * " ") + ("#" * self.__size))
