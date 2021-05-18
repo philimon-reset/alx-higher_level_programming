@@ -1,13 +1,26 @@
 #!/usr/bin/python3
+"""square class main"""
+
+
 class Square():
     """square class"""
-    def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0):
         """ Instance of class Square
     Arguments:
-        @size: size of side of square
-        @position: amount of spaces used"""
-        self.size = size
-        self.position = position
+        @size: size of side of square"""
+
+        self.__size = size
+        self.__position = position
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+
+    def area(self):
+        """ area of square
+        Return:
+                area of square."""
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -20,10 +33,10 @@ class Square():
     def size(self, value):
         """ setter of the size
     Arguments:
-        @value: value of size"""
+        value: value of size"""
         self.__size = value
         if type(value) != int:
-            raise TypeError("size must be integer")
+            raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
 
@@ -38,7 +51,7 @@ class Square():
     def position(self, value):
         """ setter of the position
     Arguments:
-        @value: value of postion"""
+        value: value of postion"""
         self.__position = value
         if (type(value) != tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -52,9 +65,3 @@ class Square():
             print("")
         for i in range(self.size):
             print("#" * self.size)
-
-    def area(self):
-        """ area of square
-            Return:
-                    area of square."""
-        return self.__size ** 2
