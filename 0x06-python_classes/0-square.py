@@ -3,5 +3,5 @@
 
 
 class Square():
-    """Empty file"""
+    """Empty class"""
     pass
