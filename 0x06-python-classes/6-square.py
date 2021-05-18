@@ -82,9 +82,5 @@ class Square():
         else:
             for x in range(self.position[1]):
                 print()
-            for row in range(self.size):
-                for spaces_X in range(self.position[0]):
-                    print(" ", end="")
-                for row in range(self.size):
-                    print("#", end="")
-                print()
+            for i in range(self.size):
+                print((self.position[0] * " ") + ("#" * self.size))
