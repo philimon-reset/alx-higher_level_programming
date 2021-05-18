@@ -4,13 +4,14 @@
 
 class Square():
     """square class"""
-    def __init__(self, size=0):
+
+    def __init__(self, size=0, position=(0, 0)):
         """ Instance of class Square
     Arguments:
         @size: size of side of square"""
 
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -64,4 +65,4 @@ class Square():
         if (self.size == 0):
             print("")
         for i in range(self.size):
-            print("#" * self.size)
+            print((self.position[0] * " ") + ("#" * self.size))
