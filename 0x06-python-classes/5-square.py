@@ -47,4 +47,3 @@ class Square():
             print("")
         for i in range(self.size):
             print("#" * self.size)
-
