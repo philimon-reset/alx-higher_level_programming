@@ -10,12 +10,21 @@ class Square():
     Arguments:
         @size: size of side of square"""
 
-        self.size = size
-        self.position = position
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
+        elif (type(position) != tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif ((type(position[0]) != int) or (type(position[1]) != int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (position[0] < 0) or (position[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (len(position) != 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__size = size
+            self.__position = position
 
     def area(self):
         """ area of square
@@ -35,11 +44,12 @@ class Square():
         """ setter of the size
     Arguments:
         value: value of size"""
-        self.__size = value
         if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
     @property
     def position(self):
@@ -53,16 +63,24 @@ class Square():
         """ setter of the position
     Arguments:
         value: value of postion"""
-        self.__position = value
         if (type(value) != tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if ((type(value[0]) != int) or (type(value[1]) != int)):
+        elif ((type(value[0]) != int) or (type(value[1]) != int)):
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif (value[0] < 0) or (value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (len(value) != 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
 
     def my_print(self):
         """ square made using the character #
             or a blank line if @size == 0"""
         if (self.size == 0):
             print("")
-        for i in range(self.size):
-            print((self.position[0] * " ") + ("#" * self.size))
+        else:
+            for x in range(self.position[1]):
+                print()
+            for i in range(self.size):
+                print((self.position[0] * " ") + ("#" * self.size))
