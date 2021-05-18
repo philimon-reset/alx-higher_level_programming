@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""square class"""
+"""square class main"""
 
 
 class Square():
@@ -9,6 +9,6 @@ class Square():
         """ Instance of class Square
 
         Args: 
-            size (int):  of side of square
+           size (int):  of side of square
         """
         self.__size = size
