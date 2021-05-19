@@ -29,7 +29,7 @@ class Square():
             self.__position = position
 
     def __str__(self):
-    """ square made using the character #
+        """ square made using the character #
         or a blank line if @size == 0"""
     temp = ""
     if (self.size == 0):
