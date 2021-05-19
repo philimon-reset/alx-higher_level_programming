@@ -95,15 +95,9 @@ class Square():
         temp = ""
         if (self.size == 0):
             print("")
-        if self.position[1] > 0:
-            for i in range(self.size):
-                if (i < self.size - 1):
-                    temp += (self.position[0] * " ") + ("#" * self.size) + "\n"
-                else:
-                    temp += (self.position[0] * " ") + ("#" * self.size)
         else:
             for x in range(self.position[1]):
-                print()
+                temp += "\n"
             for i in range(self.size):
                 if (i < self.size - 1):
                     temp += (self.position[0] * " ") + ("#" * self.size) + "\n"
