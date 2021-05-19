@@ -90,17 +90,16 @@ class Square():
                 print((self.position[0] * " ") + ("#" * self.size))
 
     def __str__(self):
-        """ square made using the character #
-        or a blank line if @size == 0"""
-        temp = ""
-        if (self.size == 0):
-            print("")
+        """print the square"""
+
+        result = ""
+        if self.size == 0:
+            return result
         else:
-            for x in range(self.position[1]):
-                temp += "\n"
+            for i in range(self.position[1]):
+                result += '\n'
             for i in range(self.size):
-                if (i < self.size - 1):
-                    temp += (self.position[0] * " ") + ("#" * self.size) + "\n"
-                else:
-                    temp += (self.position[0] * " ") + ("#" * self.size)
-        return temp
+                result += ((" " * self.position[0]) + ("#" * self.size))
+                if (i != self.size - 1):
+                    result += '\n'
+        return result
