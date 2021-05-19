@@ -35,8 +35,6 @@ class Square():
         if (self.size == 0):
             print("")
         else:
-            for x in range(self.position[1]):
-                print()
             for i in range(self.size):
                 if (i < self.size - 1):
                     temp += (self.position[0] * " ") + ("#" * self.size) + "\n"
