@@ -94,7 +94,7 @@ class Square():
         """
         temp = ""
         if (self.size == 0):
-            print("")
+            return temp
         else:
             for i in range(self.position[1]):
                 temp += "\n"
