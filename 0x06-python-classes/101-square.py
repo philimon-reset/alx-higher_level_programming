@@ -31,16 +31,16 @@ class Square():
     def __str__(self):
         """ square made using the character #
         or a blank line if @size == 0"""
-    temp = ""
-    if (self.size == 0):
-        print("")
-    else:
-        for x in range(self.position[1]):
-            print()
-        for i in range(self.size):
-            temp += (self.position[0] * " ") + ("#" * self.size)
-            temp += "\n"
-    return temp
+        temp = ""
+        if (self.size == 0):
+            print("")
+        else:
+            for x in range(self.position[1]):
+                print()
+            for i in range(self.size):
+                temp += (self.position[0] * " ") + ("#" * self.size)
+                temp += "\n"
+        return temp
 
     def area(self):
         """ area of square
