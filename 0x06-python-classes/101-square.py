@@ -38,8 +38,10 @@ class Square():
             for x in range(self.position[1]):
                 print()
             for i in range(self.size):
-                temp += (self.position[0] * " ") + ("#" * self.size)
-                temp += "\n"
+                if (i < self.size - 1):
+                    temp += (self.position[0] * " ") + ("#" * self.size) + "\n"
+                else:
+                    temp += (self.position[0] * " ") + ("#" * self.size)
         return temp
 
     def area(self):
