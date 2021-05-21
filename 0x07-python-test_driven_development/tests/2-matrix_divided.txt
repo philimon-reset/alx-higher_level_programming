@@ -13,10 +13,10 @@ Traceback (most recent call last):
   File "<stdin>", line 9, in matrix_divided
 TypeError: div must be a number
 >>> temp = [
-...             [1,2,3],[4,5,6]
+...             [1, 2, 3], [4, 2, 5]
 ... ]
 >>> matrix_divided(temp,5)
-[[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
+[[0.2, 0.4, 0.6], [0.8, 0.4, 1.0]]
 >>> matrix_divided(temp, 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
