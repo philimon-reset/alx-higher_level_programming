@@ -14,6 +14,6 @@ def text_indentation(text):
                 if char == ' ' and temp in delims:
                         continue
                 temp = char
-                print("{}".format(char), end="")
+                print("{}".format(char))
                 if char in delims:
                         print("\n\n", end="")
