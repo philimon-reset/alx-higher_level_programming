@@ -38,3 +38,11 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 17, in matrix_divided
 TypeError: Each row of the matrix must have the same size
+>>> temp = [
+...             [1,2,3],["hello"],[1,5,2.3]
+... ]
+>>> matrix_divided(temp, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
