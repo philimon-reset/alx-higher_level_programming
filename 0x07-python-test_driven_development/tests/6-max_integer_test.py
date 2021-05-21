@@ -2,7 +2,7 @@
 import unittest
 max_integer = __import__('M-max_integer').max_integer
 
-class TestMax(unittest.Testcase):
+class TestMaxInteger(unittest.Testcase):
 	""" test class
 	"""
 	def test_max(self):
@@ -13,3 +13,6 @@ class TestMax(unittest.Testcase):
 		self.assertAlmostEqual(max_integer([], None))
 		self.assertAlmostEqual(max_integer(["h", "e", "l", "l"], "l"))
 		self.assertAlmostEqual(max_integer("hello", "h"))
+
+if __name__ == "__main__":
+    unittest.main()
