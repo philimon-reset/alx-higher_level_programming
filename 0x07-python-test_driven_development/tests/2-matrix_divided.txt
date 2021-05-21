@@ -1,7 +1,5 @@
 >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
->>> temp = [
-...             [1, 2, 3], ["A", 2, 5]
-... ]
+>>> temp = [[1, 2, 3], ["A", 2, 5]]
 >>> matrix_divided(temp, 5)
 Traceback (most recent call last):
   ...
@@ -10,32 +8,24 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
   ...
 TypeError: div must be a number
->>> temp = [
-...             [1, 2, 3], [4, 2, 5]
-... ]
+>>> temp = [[1, 2, 3], [4, 2, 5]]
 >>> matrix_divided(temp,5)
 [[0.2, 0.4, 0.6], [0.8, 0.4, 1.0]]
 >>> matrix_divided(temp, 0)
 Traceback (most recent call last):
   ...
 ZeroDivisionError: division by Zero
->>> temp = [
-...             [1, 2, 3], [4, 2, 5], [1]
-... ]
+>>> temp = [[1, 2, 3], [4, 2, 5], [1]]
 >>> matrix_divided(temp, 2)
 Traceback (most recent call last):
   ...
 TypeError: Each row of the matrix must have the same size
->>> temp = [
-...             [1, 2, 3], [4, 2, 5], []
-... ]
+>>> temp = [[1, 2, 3], [4, 2, 5], []]
 >>> matrix_divided(temp, 4)
 Traceback (most recent call last):
   ...
 TypeError: Each row of the matrix must have the same size
->>> temp = [
-...             [1,2,3],["hello"],[1,5,2.3]
-... ]
+>>> temp = [[1,2,3],["hello"],[1,5,2.3]]
 >>> matrix_divided(temp, 3)
 Traceback (most recent call last):
   ...
