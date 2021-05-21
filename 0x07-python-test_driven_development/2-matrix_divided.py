@@ -26,7 +26,7 @@ def matrix_divided(matrix, div):
         for i in range(len(matrix)):
                 new = []
                 for x in matrix[i]:
-                        a = round(x/div, 2)
+                        a = round(float(x)/float(div), 2)
                         new.append(a)
                 large.append(new)
         return large
