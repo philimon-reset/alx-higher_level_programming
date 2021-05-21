@@ -11,19 +11,17 @@
 96
 >>> add_integer()
 Traceback (most recent call last):
-	  ...
+	...
 TypeError: add_integer() takes at least 1 argument (0 given)
 >>> add_integer(a,)
 Traceback (most recent call last):
-	  ...
+	...
 NameError: name 'a' is not defined
 >>> add_integer("str", )
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 3, in add_integer
+	...
 TypeError: a must be an integer
 >>> add_integer("str", 2)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 3, in add_integer
+	...
 TypeError: a must be an integer
