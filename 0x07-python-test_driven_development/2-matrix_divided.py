@@ -9,6 +9,8 @@ def matrix_divided(matrix, div):
         div_error = "div must be a number"
         if not isinstance(matrix, list):
                 raise TypeError(error_1)
+        if len(matrix) == 0:
+                return
         elif not isinstance(div, int) and not isinstance(div, float):
                 raise TypeError(div_error)
         elif div == 0:
