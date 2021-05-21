@@ -20,6 +20,8 @@ def matrix_divided(matrix, div):
         for i in range(len(matrix)):
                 new = []
                 for x in matrix[i]:
+                        if not isinstance(x, int) and not isinstance(x, float):
+                                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
                         a = round(x/div, 2)
                         new.append(a)
                 large.append(new)
