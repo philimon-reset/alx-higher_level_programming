@@ -2,7 +2,7 @@
 import unitest
 max_integer = __import__('M-max_integer').max_integer
 
-class TestMax(unittest.testcase):
+class TestMax(unittest.Testcase):
 	""" test class
 	"""
 	def test_max(self):
