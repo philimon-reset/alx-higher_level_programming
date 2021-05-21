@@ -1,11 +1,26 @@
 #!/usr/bin/python3
-def add_integer(a, b=98):
-        """ add integer
+def matrix_divided(matrix, div):
+        """ matrix_divided
         Arguments:
-        @a: first integer
-        @b: second integer"""
-        if not isinstance(a, int) and not isinstance(a, float):
-                raise TypeError("a not int")
-        if not isinstance(b, int) and not isinstance(b, float):
-                raise TypeError("b not int")
-        return int(a) + int(b)
+        @matrix: matrix to be changed
+        @div: divisable number"""
+        if not isinstance(matrix, list):
+                raise TypeError("matrix must be matrix")
+        elif not isinstance(div, int) and not isinstance(div, float):
+                raise TypeError("div must be a number")
+        elif div == 0:
+                raise ZeroDivisionError("division by Zero")
+        for i in range(len(matrix)):
+                if not isinstance(matrix[i], list):
+                        raise TypeError("matrix must be matrix")
+                L = len(matrix[0])
+                if len(matrix[i]) != L:
+                        raise TypeError("Each row of the matrix must have the same size")
+        large = []
+        for i in range(len(matrix)):
+                new = []
+                for x in matrix[i]:
+                        a = round(x/div, 2)
+                        new.append(a)
+                large.append(new)
+        return large
