@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import unitest
+import unittest
 max_integer = __import__('M-max_integer').max_integer
 
 class TestMax(unittest.Testcase):
