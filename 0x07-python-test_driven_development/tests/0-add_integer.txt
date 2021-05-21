@@ -12,7 +12,7 @@
 >>> add_integer()
 Traceback (most recent call last):
 	  ...
-TypeError: add_integer() missing 1 required positional argument: 'a'
+TypeError: add_integer() takes at least 1 argument (0 given)
 >>> add_integer(a,)
 Traceback (most recent call last):
 	  ...
