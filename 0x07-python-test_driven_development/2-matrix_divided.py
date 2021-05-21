@@ -12,7 +12,7 @@ def matrix_divided(matrix, div):
         elif not isinstance(div, int) and not isinstance(div, float):
                 raise TypeError(div_error)
         elif div == 0:
-                raise ZeroDivisionError("division by Zero")
+                raise ZeroDivisionError("division by zero")
         for i in range(len(matrix)):
                 if not isinstance(matrix[i], list):
                         raise TypeError(error_1)
