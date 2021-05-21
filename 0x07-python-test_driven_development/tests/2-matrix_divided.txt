@@ -7,16 +7,16 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 23, in matrix_divided
 TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> temp = [
-...             [1,2,3],[4,5,6]
-... ]
->>> matrix_divided(temp,5)
-[[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
 >>> matrix_divided(temp, "a")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 9, in matrix_divided
 TypeError: div must be a number
+>>> temp = [
+...             [1,2,3],[4,5,6]
+... ]
+>>> matrix_divided(temp,5)
+[[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
 >>> matrix_divided(temp, 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
