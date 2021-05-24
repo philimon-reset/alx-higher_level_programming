@@ -1,4 +1,3 @@
-  
 #!/usr/bin/python3
 """Module consisting of Rectangle class to represent rectangles"""
 
