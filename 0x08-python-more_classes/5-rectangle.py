@@ -1,49 +1,73 @@
 #!/usr/bin/python3
-"""square class main"""
+"""Module consisting of Rectangle class to represent rectangles"""
 
 
-class Square():
-    """square class"""
-    def __init__(self, size=0):
-        """ Instance of class Square
-    Arguments:
-        @size: size of side of square"""
-
-        self.__size = size
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-
-    def area(self):
-        """ area of square
-        Return:
-                area of square."""
-        return self.__size ** 2
+class Rectangle():
+    """Rectangle class"""
+    def __init__(self, width=0, height=0):
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        self.__width = width
+        self.__height = height
 
     @property
-    def size(self):
-        """ getter of size
-    Return:
-            value of size"""
-        return self.__size
+    def width(self):
+        """width getter"""
+        return self.__width
 
-    @size.setter
-    def size(self, value):
-        """ setter of the size
-    Arguments:
-        value: value of size"""
-        self.__size = value
-        if type(value) != int:
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
+    @property
+    def height(self):
+        """height getter"""
+        return self.__height
 
-    def my_print(self):
-        """ square made using the character #
+    @width.setter
+    def width(self, value):
+        """width setter"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
 
-            or a blank line if size == 0"""
-        if (self.size == 0):
-            print("")
-        for i in range(self.size):
-            print("#" * self.size)
+    @height.setter
+    def height(self, value):
+        """height setter"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
+
+    def area(self):
+        """calculates area"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """calculates perimeter"""
+        if (not self.__width) or (not self.__height):
+            return 0
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """returns printed verison of rectangle"""
+        rect = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rect += '#'
+            if i != (self.__height - 1):
+                rect += '\n'
+        return rect
+
+    def __repr__(self):
+        """returns eval version of rectangle"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """invoked when instance is deleted"""
+        print("Bye rectangle...")
