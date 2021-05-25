@@ -5,8 +5,9 @@
 class Rectangle():
     """Rectangle Class"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
-                """ Instance of class Rectangle
+        """ Instance of class Rectangle
         Arguments:
         @width: width of side of rectangle
         @height: height of side of rectangle"""
@@ -22,15 +23,17 @@ class Rectangle():
             type(self).number_of_instances += 1
             self.__width = width
             self.__height = height
+
     @property
     def width(self):
-                """ width of rectangle
+        """ width of rectangle
         Return:
-                width of rectangle."""
+        width of rectangle."""
         return self.__width
+
     @width.setter
     def width(self, value):
-                """ setter of the width
+        """ setter of the width
         Arguments:
         value: value of width"""
         if not isinstance(value, int):
@@ -42,13 +45,14 @@ class Rectangle():
 
     @property
     def height(self):
-                  """ height of rectangle
+        """ height of rectangle
         Return:
-                height of rectangle."""
+        height of rectangle."""
         return self.__height
+
     @height.setter
     def height(self, value):
-                   """ setter of the width
+        """ setter of the width
         Arguments:
         value: value of height"""
         if not isinstance(value, int):
@@ -59,20 +63,22 @@ class Rectangle():
             self.__height = value
 
     def area(self):
-                """ area of rectangle
+        """ area of rectangle
         Return:
-                area of rectangle."""
+        area of rectangle."""
         return self.__width * self.__height
+
     def perimeter(self):
-                """ perimeter of rectangle
+        """ perimeter of rectangle
         Return:
-                perimeter of rectangle."""
+        perimeter of rectangle."""
         if self.__width == 0 or self.__height = 0:
             return 0
         else:
             return 2 * (self.__width + self.__height)
+
     def __str__(self):
-                """ rectangle made using the character #
+        """ rectangle made using the character #
         """
         string = ""
         if self.__width == 0 or self.__height = 0:
@@ -83,10 +89,12 @@ class Rectangle():
             else:
                 string += ("#" * self.__width)
         return string
+
     def __repr__(self):
         """ represent self for eval"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
     def __del__(self):
-        """ delete self and count"""
+        """delete self and count"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
