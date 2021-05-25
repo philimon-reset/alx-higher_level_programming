@@ -19,6 +19,7 @@ class Rectangle():
         if height < 0:
             raise TypeError("height must be >= 0")
         else:
+            type(self).number_of_instances += 1
             self.__width = width
             self.__height = height
     @property
