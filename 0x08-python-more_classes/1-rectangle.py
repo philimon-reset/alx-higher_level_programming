@@ -9,11 +9,11 @@ class Rectangle():
         Arguments:
         @width: width of side of rectangle
         @height: height of side of rectangle"""
-        if not isinstance(width, int):
+        if type(width) is not int:
             raise TypeError("width must be an integer")
         if width < 0:
             raise TypeError("width must be >= 0")
-        if not isinstance(height, int):
+        if type(height) is not int:
             raise TypeError("height must be an integer")
         if height < 0:
             raise TypeError("height must be >= 0")
@@ -39,7 +39,7 @@ class Rectangle():
         """ setter of the width
         Arguments:
         value: value of width"""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise TypeError("width must be >= 0")
@@ -50,7 +50,7 @@ class Rectangle():
         """ setter of the width
         Arguments:
         value: value of height"""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise TypeError("height must be >= 0")
