@@ -1,17 +1,9 @@
 #!/usr/bin/python3
-Square = __import__('6-square').Square
+Rectangle = __import__('1-rectangle').Rectangle
 
-my_square_1 = Square(3)
-my_square_1.my_print()
+my_rectangle = Rectangle(2, 4)
+print(my_rectangle.__dict__)
 
-print("--")
-
-my_square_2 = Square(3, (1, 1))
-my_square_2.my_print()
-
-print("--")
-
-my_square_3 = Square(3, (3, 0))
-my_square_3.my_print()
-
-print("--")
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle.__dict__)
