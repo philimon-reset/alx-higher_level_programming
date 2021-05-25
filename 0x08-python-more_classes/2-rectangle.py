@@ -2,9 +2,13 @@
 """Rectangle class to represent a square"""
 
 
-class rectangle():
+class Rectangle():
     """Rectangle Class"""
     def __init__(self, width=0, height=0):
+                """ Instance of class Rectangle
+        Arguments:
+        @width: width of side of rectangle
+        @height: height of side of rectangle"""
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -18,9 +22,15 @@ class rectangle():
             self.__height = height
     @property
     def width(self):
+                """ width of rectangle
+        Return:
+                width of rectangle."""
         return self.__width
     @width.setter
     def width(self, value):
+                """ setter of the width
+        Arguments:
+        value: value of width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -30,18 +40,31 @@ class rectangle():
 
     @property
     def height(self):
+                  """ height of rectangle
+        Return:
+                height of rectangle."""
         return self.__height
     @height.setter
     def height(self, value):
+                   """ setter of the width
+        Arguments:
+        value: value of height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise TypeError("height must be >= 0")
         else:
             self.__height = value
+
     def area(self):
+                """ area of rectangle
+        Return:
+                area of rectangle."""
         return self.__width * self.__height
     def perimeter(self):
+                """ perimeter of rectangle
+        Return:
+                perimeter of rectangle."""
         if self.__width == 0 or self.__height = 0:
             return 0
         else:
