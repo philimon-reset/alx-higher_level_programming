@@ -79,7 +79,7 @@ class rectangle():
             return string
         for row in range(self.__height):
             if row < (self.__height - 1):
-                string += ("#" * self.__width) + "\n"
+                string += (type(self).print_symbol * self.__width) + "\n"
             else:
                 string += (type(self).print_symbol * self.__width)
         return string
