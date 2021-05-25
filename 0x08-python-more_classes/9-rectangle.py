@@ -6,11 +6,13 @@ class Rectangle():
     """Rectangle Class"""
     number_of_instances = 0
     print_symbol = "#"
-    def __init__(self, width=0, height=0):
+
+	def __init__(self, width=0, height=0):
                 """ Instance of class Rectangle
         Arguments:
         @width: width of side of rectangle
         @height: height of side of rectangle"""
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
