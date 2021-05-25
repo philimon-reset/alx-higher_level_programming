@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Module consisting of Rectangle class to represent rectangles"""
+"""Rectangle class to represent a square"""
 
 
 class Rectangle():
-    """Rectangle class"""
+    """Rectangle Class"""
     def __init__(self, width=0, height=0):
-        if type(width) is not int:
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        if type(height) is not int:
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
@@ -18,18 +18,24 @@ class Rectangle():
 
     @property
     def width(self):
-        """width getter"""
+        """ width of rectangle
+        Return:
+        width of rectangle."""
         return self.__width
 
     @property
     def height(self):
-        """height getter"""
+        """ height of rectangle
+        Return:
+        height of rectangle."""
         return self.__height
 
     @width.setter
     def width(self, value):
-        """width setter"""
-        if type(value) is not int:
+        """ setter of the width
+        Arguments:
+        value: value of width"""
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -37,8 +43,10 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
-        """height setter"""
-        if type(value) is not int:
+        """ setter of the width
+        Arguments:
+        value: value of height"""
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
