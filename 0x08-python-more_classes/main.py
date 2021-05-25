@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-Rectangle = __import__('1-rectangle').Rectangle
+Rectangle = __import__('2-rectangle').Rectangle
 
-try:
-    my_rectangle = Rectangle(2, -3)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 
-try:
-    my_rectangle = Rectangle(-2, 3)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+print("--")
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
