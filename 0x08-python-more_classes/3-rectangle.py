@@ -71,7 +71,7 @@ class Rectangle():
         """ rectangle made using the character #
         """
         string = ""
-        if self.__width == 0 or self.__height = 0:
+        if self.__width == 0 or self.__height == 0:
             return string
         for row in range(self.__height):
             if row < (self.__height - 1):
