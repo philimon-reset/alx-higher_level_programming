@@ -15,6 +15,7 @@ class Rectangle():
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
+        type(self).number_of_instances += 1
         self.__width = width
         self.__height = height
 
