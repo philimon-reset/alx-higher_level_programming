@@ -9,6 +9,7 @@ class TestMaxInteger(unittest.TestCase):
 		"""
 		test correct output"""
 		self.assertAlmostEqual(max_integer([1,2,3,5,7,1]), 7)
+		self.assertAlmostEqual(max_integer([-2,-5,-1,-8]), -1)
 		self.assertAlmostEqual(max_integer([2]), 2)
 		self.assertAlmostEqual(max_integer([]), None)
 		self.assertAlmostEqual(max_integer(), None)
