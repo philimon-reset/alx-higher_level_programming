@@ -12,7 +12,7 @@ class TestMaxInteger(unittest.TestCase):
 		self.assertAlmostEqual(max_integer([2]), 2)
 		self.assertAlmostEqual(max_integer([]), None)
 		self.assertAlmostEqual(max_integer(["h", "e", "l", "l"]), "l")
-		self.assertAlmostEqual(max_integer("hello"), "h")
+		self.assertAlmostEqual(max_integer("hello"), "o")
 
 if __name__ == "__main__":
     unittest.main()
