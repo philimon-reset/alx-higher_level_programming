@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""add_integer"""
+
+
 def add_integer(a, b=98):
-        """ add integer
+        """ add_integer
         Arguments:
         @a: first integer
         @b: second integer"""
