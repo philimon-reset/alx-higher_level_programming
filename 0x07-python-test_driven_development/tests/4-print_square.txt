@@ -12,11 +12,11 @@
 >>> print_square("a")
 Traceback (most recent call last):
   ...
-TypeError: size must be integer
+TypeError: size must be an integer
 >>> print_square(-2.9)
 Traceback (most recent call last):
   ...
-TypeError: size must be integer
+TypeError: size must be an integer
 >>> print_square(-2)
 Traceback (most recent call last):
   ...
@@ -24,4 +24,4 @@ TypeError: size must be >= 0
 >>> print_square("#")
 Traceback (most recent call last):
   ...
-TypeError: size must be integer
+TypeError: size must be an integer
