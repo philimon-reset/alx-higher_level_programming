@@ -8,8 +8,12 @@ class TestMaxInteger(unittest.TestCase):
 	def test_max(self):
 		"""
 		test correct output"""
-		self.assertAlmostEqual(max_integer([1,2,3,5,7,1]), 7)
+		self.assertAlmostEqual(max_integer([1,2,3,5,7]), 7)
+		self.assertAlmostEqual(max_integer([8,2,3,5,1]), 8)
+		self.assertAlmostEqual(max_integer([2,5,1]), 5)
 		self.assertAlmostEqual(max_integer([-2,-5,-1,-8]), -1)
+		self.assertAlmostEqual(max_integer([8,2,-3,5,1]), 8)
+		self.assertAlmostEqual(max_integer([-2]), -2)
 		self.assertAlmostEqual(max_integer([2]), 2)
 		self.assertAlmostEqual(max_integer([]), None)
 		self.assertAlmostEqual(max_integer(), None)
