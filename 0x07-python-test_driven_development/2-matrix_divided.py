@@ -3,7 +3,8 @@ def matrix_divided(matrix, div):
         """ matrix_divided
         Arguments:
         @matrix: matrix to be changed
-        @div: divisable number"""
+        @div: divisable number
+                Return: large"""
         error_1 = "matrix must be a matrix (list of lists) of integers/floats"
         error_2 = "Each row of the matrix must have the same size"
         div_error = "div must be a number"
