@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" matrix_divided module"""
+
+
 def matrix_divided(matrix, div):
         """ matrix_divided
         Arguments:
