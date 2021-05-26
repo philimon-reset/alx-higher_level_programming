@@ -5,7 +5,8 @@
 def print_square(size):
         """ print_square
         Arguments:
-        @size: size of square"""
+        @size: size of square
+                Return: nothing"""
         if isinstance(size, float) and size < 0:
                 raise TypeError("size must be an integer")
         elif not isinstance(size, int):
@@ -13,6 +14,6 @@ def print_square(size):
         elif size < 0:
                 raise TypeError("size must be >= 0")
         elif size == 0:
-                print()
+                return
         for row in range(1, size + 1):
                 print("#" * size)
