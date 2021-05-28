@@ -25,5 +25,6 @@ int main(void)
             printf("%d\t----\t", i);
         else
             printf("%d\t%s\t", i, (ht->array[i])->key);
+    }
     return (EXIT_SUCCESS);
 }
