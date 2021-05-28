@@ -15,15 +15,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (temp == NULL)
 		return (NULL);
 	temp->size = size;
-	*node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
+	*node = malloc(sizeof(hash_node_t) * size);
+	if (*node == NULL)
 	{
 		free(temp);
 		return (NULL);
 	}
-	for (i = 0; i != size; i++)
-	{
-		temp->array = *node;
-	}
+	temp->array = node;
 	return (temp);
 }
