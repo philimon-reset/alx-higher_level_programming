@@ -24,8 +24,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				temp = add_node((ht->array[new])->value, cpy_v, key);
 				return (1);
 			}
-			(ht->array[new])->value = cpy_v;
 		}
+		(ht->array[new])->value = cpy_v;
 		return (1);
 	}
 	return (0);
