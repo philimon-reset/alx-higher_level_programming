@@ -16,8 +16,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return NULL;
 	if (size > 0)
 	{
-		node->key == NULL;
-		node->value == NULL;
+		temp->size = size;
 		for (i = 0; i < size; i++)
 		{
 			temp->array[i] = node;
