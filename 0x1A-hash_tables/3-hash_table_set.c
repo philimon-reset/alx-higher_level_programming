@@ -11,40 +11,27 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int new;
 	char *cpy_v = strdup(value);
+	const unsigned char *cpy_k = strdup(key);
+	hash_node_t *temp = NULL;
+
 
 	if (key != NULL && value != NULL)
-	{
-		new = key_index(key, ht->size);
-		add_node(&(ht->array[new]), cpy_v, key);
+	{	
+		new = key_index(cpy_k, ht->size);
+		temp = malloc(sizeof(hash_node_t));
+		if (temp == NULL)
+			return (0);
+		temp->key = cpy_k;
+		temp->value = cpy_v;
+		temp->next = NULL;
+		if (head == NULL)
+			(ht->array[new])->next = temp;
+		else
+		{
+			temp->next = ht->array[new];
+			ht->array[new] = temp;
+		}
 		return (1);
 	}
 	return (0);
-}
-
-/**
- * add_node - a function that adds node.
- * @head: pointer to a struct
- * @cpy_v: copy of value
- * @key: key of value
- *
- * Return: void
- */
-void *add_node(hash_node_t **head, char *cpy_v, const char *key)
-{
-	hash_node_t *temp = malloc(sizeof(hash_node_t));
-
-	if (temp == NULL)
-		return;
-	temp->key = key;
-	temp->value = cpy_v;
-	temp->next = NULL;
-	if (head == NULL)
-	{
-		(*head)->next = temp;
-	}
-	else
-	{
-		temp->next = *head;
-		(*head) = temp;
-	}
 }
