@@ -12,6 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int new;
 	int size = 0;
 	char *cpy_v = strcpy(value);
+	hash_node_t *temp = NULL
 
 	if (key != NULL && value != NULL)
 	{
@@ -20,7 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(ht[new]->value, cpy_v) == 0)
 			{
-				add_node((ht->array[new])->value, cpy_v, key);
+				temp = add_node((ht->array[new])->value, cpy_v, key);
 				return (1);
 			}
 			(ht->array[new])->value = cpy_v;
@@ -38,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  *
  * Return: void
  */
-void *add_node(hash_node_t **head, const char *cpy_v, const char *key)
+hash_node_t *add_node(hash_node_t **head, char *cpy_v, const char *key)
 {
 	hash_node_t *temp = malloc(sizeof(hash_node_t));
 
@@ -56,4 +57,5 @@ void *add_node(hash_node_t **head, const char *cpy_v, const char *key)
 		temp->next = *head;
 		(*head) = temp;
 	}
+	return (temp);
 }
