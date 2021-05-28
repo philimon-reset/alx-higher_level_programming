@@ -1,4 +1,3 @@
-
 #include "hash_tables.h"
 /**
  * hash_table_create - create a hash table.
