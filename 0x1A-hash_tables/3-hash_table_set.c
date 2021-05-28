@@ -11,13 +11,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int new;
 	char *cpy_v = strdup(value);
-	unsigned char *cpy_k = strdup(key);
+	const unsigned char *cpy_k = strdup(key);
 	hash_node_t *temp = NULL;
 
 
 	if (key != NULL && value != NULL)
 	{	
-		new = key_index(cpy_k, ht->size);
+		new = key_index((unsigned char *)cpy_k, ht->size);
 		temp = malloc(sizeof(hash_node_t));
 		if (temp == NULL)
 			return (0);
