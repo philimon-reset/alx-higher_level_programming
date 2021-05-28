@@ -21,9 +21,9 @@ int main(void)
     printf("start\n");
     for (i = 0; i < 1024; i++)
     {
-        if (ht[i] == NULL)
+        if (ht->array[i] == NULL)
             printf("%d\t----\t", i);
-        else:
-            printf("%d\t%s----\t", i, ht->array);
+        else;
+            printf("%d\t%s----\t", i, ht->array[i]);
     return (EXIT_SUCCESS);
 }
