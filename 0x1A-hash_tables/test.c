@@ -22,9 +22,9 @@ int main(void)
     for (i = 0; i < 1024; i++)
     {
         if (ht->array[i] == NULL)
-            printf("%d\t----\t", i);
+            printf("%d\t----\t\n", i);
         else
-            printf("%d\t%s\t", i, (ht->array[i])->key);
+            printf("%d\t%s\t\n", i, (ht->array[i])->key);
     }
     return (EXIT_SUCCESS);
 }
