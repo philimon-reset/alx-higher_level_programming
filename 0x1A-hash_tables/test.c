@@ -18,13 +18,4 @@ int main(void)
     hash_table_set(ht, "hetairas", "mentioner");
     hash_table_set(ht, "depravement", "serafins");
     hash_table_set(ht, "joyful", "synaphea");
-    printf("start\n");
-    for (i = 0; i < 1024; i++)
-    {
-        if (ht->array[i] == NULL)
-            printf("%d\t----\t\n", i);
-        else
-            printf("%d\t%s\t\n", i, (ht->array[i])->key);
-    }
-    return (EXIT_SUCCESS);
 }
