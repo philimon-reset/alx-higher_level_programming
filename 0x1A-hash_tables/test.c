@@ -23,7 +23,7 @@ int main(void)
     {
         if (ht->array[i] == NULL)
             printf("%d\t----\t", i);
-        else;
+        else
             printf("%d\t%s----\t", i, ht->array[i]);
     return (EXIT_SUCCESS);
 }
