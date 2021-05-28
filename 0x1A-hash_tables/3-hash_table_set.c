@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		else
 		{
 			temp->next = ht->array[new];
-			ht->array[new] = temp;
+			(ht->array[new])->next = temp;
 		}
 		return (1);
 	}
