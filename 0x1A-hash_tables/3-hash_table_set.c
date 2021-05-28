@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int new;
 	int size = 0;
 	char *cpy_v = strdup(value);
-	hash_node_t *temp = NULL
+	hash_node_t *temp = NULL;
 
 	if (key != NULL && value != NULL)
 	{
@@ -39,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  *
  * Return: void
  */
-hash_node_t *add_node(hash_node_t **head, char *cpy_v, const char *key)
+hash_node_t *add_node(hash_node_t **head, char *cpy_v, char *key)
 {
 	hash_node_t *temp = malloc(sizeof(hash_node_t));
 
