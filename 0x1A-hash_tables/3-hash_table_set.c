@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (ht->array[new] != NULL)
 		{
 			check = key_index(ht[new]->key, ht->size);
-			if (strcmp(check, new) == 0)
+			if (strcmp(&check, &new) == 0)
 			{
 				add_node((ht->array[new])->value, cpy_v, key);
 				return (1);
