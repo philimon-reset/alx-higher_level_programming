@@ -29,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  *
  * Return: void
  */
-void *add_node(hash_node_t **head, char *cpy_v, char *key)
+void *add_node(hash_node_t **head, char *cpy_v,const char *key)
 {
 	hash_node_t *temp = malloc(sizeof(hash_node_t));
 
