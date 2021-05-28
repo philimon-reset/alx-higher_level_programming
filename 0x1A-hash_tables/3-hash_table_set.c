@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp->key = cpy_k;
 		temp->value = cpy_v;
 		temp->next = NULL;
-		if (head == NULL)
+		if (ht->array[new] == NULL)
 			(ht->array[new])->next = temp;
 		else
 		{
