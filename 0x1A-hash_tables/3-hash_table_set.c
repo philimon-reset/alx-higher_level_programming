@@ -13,19 +13,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int size = 0;
 	char *cpy_v = strcpy(value);
 
-	for (new = 0; ht[new] != NULL; new++)
-		size++;
 	if (key != NULL && value != NULL)
 	{
-		new = key_index(key, size);
-		if (ht[new] != NULL)
+		new = key_index(key, ht->size);
+		if (ht->array[new] != NULL)
 		{
 			if (strcmp(ht[new]->value, cpy_v) == 0)
 			{
-				add_node(ht[new]->value, cpy_v, key);
+				add_node((ht->array[new])->value, cpy_v, key);
 				return (1);
 			}
-			ht[new] = cpy_v;
+			(ht->array[new])->value = cpy_v;
+		}
 		return (1);
 	}
 	return (0);
