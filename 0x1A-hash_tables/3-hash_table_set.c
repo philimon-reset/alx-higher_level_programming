@@ -11,17 +11,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long new;
 	char *cpy_v = strdup(value);
-	hash_node_t *temp = NULL;
 
 	if (key != NULL && value != NULL)
 	{
 		new = key_index(key, ht->size);
-		if (ht->array[new] != NULL)
-		{
-			add_node(ht->array[new], cpy_v, key);
-			return (1);
-		}
-		(ht->array[new])->value = cpy_v;
+		add_node(ht->array[new], cpy_v, key);
 		return (1);
 	}
 	return (0);
