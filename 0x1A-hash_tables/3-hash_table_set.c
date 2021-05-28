@@ -1,26 +1,26 @@
 #include "hash_tables.h"
 /**
- * hash_table_create - create a hash table.
- * @size: size of table
+ * hash_table_set - set a node in array
+ * @ht: hash table you want to add or update the key/value to
+ * @key: key can not be an empty string
+ * @value: value associated with the key
  *
  * Return: hash_table or NULL
 */
-hash_table_t *hash_table_create(unsigned long int size)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int i;
-	hash_table_t *temp = NULL;
+	int new;
+	int size = 0;
+	char *cpy_v = strcpy(value);
 
-	temp = malloc(sizeof(hash_table_t));
-	if (temp == NULL)
-		return (NULL);
-	temp->size = size;
-	temp->array = malloc(size * sizeof(hash_node_t *));
-	if (temp->array == NULL)
+	for (new = 0; ht[new] != NULL; new++)
+		size++;
+	if (key != NULL && value != NULL)
 	{
-		free(temp);
-		return (NULL);
+		new = key_index(key, size);
+		if (ht[new] != NULL)
+			ht[new] = cpy_v;
+		return (1);
 	}
-	for (i = 0; i < size; i++)
-		temp->array[i] = NULL;
-	return (temp);
+	return (0);
 }
