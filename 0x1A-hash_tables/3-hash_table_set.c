@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			temp2 = temp2->next;
 		}
 		if (strcmp(key, temp2->key) == 0)
-			return (temp);
+			return (1);
 		if (ht->array[new] == NULL)
 			ht->array[new] = temp;
 		else
