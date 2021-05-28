@@ -13,13 +13,13 @@ int main(void)
     hash_table_t *ht;
     int i;
 
-    ht = hash_table_create(1024);
+    ht = hash_table_create(10);
     hash_table_set(ht, "betty", "holberton");
     hash_table_set(ht, "hetairas", "mentioner");
     hash_table_set(ht, "depravement", "serafins");
     hash_table_set(ht, "joyful", "synaphea");
     printf("start\n");
-    for (i = 0; i < 1024; i++)
+    for (i = 0; i < 10; i++)
     {
         if (ht->array[i] == NULL)
             printf("%d\t----\t\n", i);
