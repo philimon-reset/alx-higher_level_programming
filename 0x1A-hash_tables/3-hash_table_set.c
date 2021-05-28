@@ -9,7 +9,7 @@
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long new;
+	unsigned long int new;
 	char *cpy_v = strdup(value);
 
 	if (key != NULL && value != NULL)
