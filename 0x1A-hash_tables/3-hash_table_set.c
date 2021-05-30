@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp->key = strdup(key);
 		temp->value = strdup(value);
 		temp->next = NULL;
-		if (strcmp((ht->array[new])->key, key) == 0)
+		if (check(ht->array[new], key))
 			(ht->array[new])->value = temp->value;
 		if (ht->array[new] == NULL)
 			ht->array[new] = temp;
@@ -32,6 +32,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ht->array[new] = temp;
 		}
 		return (1);
+	}
+	return (0);
+}
+/**
+ * check - check if the current linked ist is being overwirten
+ * @current: current cells linked list
+ * @key: key to be checked
+ *
+ * Return: 1 if same 0 if not
+ */
+int check(hash_node_t current, const char *key)
+{
+	hash_node_t *temp = current;
+
+	while(temp != NULL)
+	{
+		if (strcmp(temp->key, key) == 0)
+			return (1);
+		temp = temp->next;
 	}
 	return (0);
 }
