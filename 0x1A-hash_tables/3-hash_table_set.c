@@ -37,15 +37,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 /**
  * check - check if the current linked ist is being overwirten
- * @current: current cells linked list
+ * @current: hash table
  * @key: key to be checked
  *
  * Return: 1 if same 0 if not
  */
-int check(hash_node_t current, const char *key)
+int check(hash_table_t *ht, const char *key)
 {
-	hash_node_t *temp = current;
+	hash_node_t *temp;
+	unsigned long int = new;
 
+	new = key_index((unsigned char *)key, ht->size);
+	temp = ht->array[new];
 	while(temp != NULL)
 	{
 		if (strcmp(temp->key, key) == 0)
