@@ -31,13 +31,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 }
 
 /**
- * check - check if the current linked ist is being overwirten
+ * check_get - check if the current linked ist is being overwirten
  * @ht: hash table
  * @key: key to be checked
  *
  * Return: 1 if same 0 if not
  */
-int check(hash_table_t *ht, const char *key)
+int check_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *temp;
 	unsigned long int new;
