@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def add_tuple(tuple_a=(), tuple_b=()):
+    for a in range(2):
+        if len(tuple_a) < 2:
+            new_tuple = tuple_b[a]
+        elif len(tuple_b) < 2:
+            new_tuple = tuple_a[a]
+        new_tuple = tuple_a[a] + tuple_b[a]
