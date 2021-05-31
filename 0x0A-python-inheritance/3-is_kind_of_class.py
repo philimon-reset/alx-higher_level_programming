@@ -4,6 +4,6 @@
 
 """ check if its the same class """
         def is_kind_of_class(obj, a_class):
-                if type(obj) == a_class:
+                if isinstance(obj, a_class) or issubclass(Triangle, Polygon):
                         return True
                 return False
