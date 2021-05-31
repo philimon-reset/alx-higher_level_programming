@@ -1,4 +1,5 @@
->>> my_list = __import__("1-my_list").MyList()
+>>> MyList = __import__("1-my_list").MyList()
+>>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
@@ -14,3 +15,6 @@
 >>> my_list.append(-3)
 >>> my_list.print_sorted()
 [-4, -3, -2, -1, 1, 2, 3, 4, 5]
+>>> y = MyList()
+>>> y.print_sorted()
+[]
