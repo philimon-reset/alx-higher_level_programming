@@ -14,7 +14,7 @@ TypeError: name must be an integer
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
-TypeError: age must be an integer
+TypeError: age must be greater than 0
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", [1,2,3])
