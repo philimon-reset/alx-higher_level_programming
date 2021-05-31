@@ -4,7 +4,7 @@
 
 """ check if its the same class """
 def inherits_from(obj, a_class):
-
+        """inherit"""
         if issubclass(obj, a_class):
                 return True
         return False
