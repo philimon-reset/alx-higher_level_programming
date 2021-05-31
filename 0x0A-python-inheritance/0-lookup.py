@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """look up class"""
 
-def lookup(obj):
+def lookup(object):
     """start of lookup"""
-    return dir(obj)
+    return dir(object)
