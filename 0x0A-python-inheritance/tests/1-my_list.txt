@@ -1,4 +1,4 @@
->>> my_list = __import__("4-print_square").MyList()
+>>> my_list = __import__("1-my_list").MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
