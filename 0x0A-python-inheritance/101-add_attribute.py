@@ -4,4 +4,4 @@
 
 def add_attribute(obj, name, value)
     """start of lookup"""
-    return setattr(obj, name, value)
+    setattr(obj, name, value)
