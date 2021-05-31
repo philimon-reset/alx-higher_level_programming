@@ -4,6 +4,6 @@
 
 def add_attribute(obj, name, value):
     """start of lookup"""
-    if hasattr(obj, name):
+    if hasattr(obj, name) == False:
         raise TypeError("can't add new attribute")  
     setattr(obj, name, value)
