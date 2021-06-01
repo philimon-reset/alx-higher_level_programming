@@ -11,7 +11,8 @@ class Student():
         self.age = age
 
     def to_json(self, attrs=None):
-        """ class to json """
+        """ class to json 
+        @attrs: attribute list"""
         if attrs == None:
             return self.__dict__
         temp = self.__dict__.keys()
