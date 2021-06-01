@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-"""start doc"""
+"""script that adds all arguments to a Python list"""
+import sys
 
 
-def append_write(filename="", text=""):
-    """ append to stdout """
-    with open(filename, mode='a', encoding="utf-8") as mfile:
-        mfile.write(text)
-        count = 0
-        while True:
-            if count == len(text):
-                break
-            count += 1
-    return count
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+
+if __name__ == "__main__":
+    try:
+        my_list = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        my_list = []
+    for i in range(1, len(sys.argv)):
+        my_list.append(sys.argv[i])
+    save_to_json_file(my_list, "add_item.json")
