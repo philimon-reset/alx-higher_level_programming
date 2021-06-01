@@ -14,8 +14,9 @@ class Student():
         """ class to json """
         if attrs == None:
             return self.__dict__
-        new = self.__dict__
+        temp = self.__dict__.keys()
+        new = {}
         for i in attrs:
-            if i == self.__dict__.keys():
-                new[i].append(i.__dict__)
+            if i in temp:
+                new.update(i=i.__dict__)
         return new
