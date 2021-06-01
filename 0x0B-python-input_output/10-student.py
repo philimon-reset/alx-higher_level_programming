@@ -17,6 +17,8 @@ class Student():
         temp = self.__dict__.keys()
         new = {}
         for i in attrs:
+            if type(i) != str:
+                return self.__dict__
             if i in temp:
-                new.update({i: self.__dict__})
+                new.update({i: self.__dict__[i]})
         return new
