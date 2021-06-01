@@ -16,6 +16,6 @@ class Student():
             return self.__dict__
         new = self.__dict__
         for i in attrs:
-            if i in [self.first_name, self.last_name, self.age]:
+            if i == self.__dict__.keys():
                 new[i].append(i.__dict__)
         return new
