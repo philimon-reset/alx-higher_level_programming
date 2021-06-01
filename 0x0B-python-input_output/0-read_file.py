@@ -5,4 +5,4 @@
 def read_file(filename=""):
     """ read to stdout """
     with open(filename, mode='r', encoding="utf-8") as mfile:
-        print(mfile.read())
+        print(mfile.read(), end="")
