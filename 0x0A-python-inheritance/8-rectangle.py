@@ -2,7 +2,7 @@
 """base geometry class"""
 
 
-class BaseGeometry():
+class BaseGeometry(obj):
     """base geometry class main part"""
     def area(self):
             """area of class"""
