@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ start doc """
 
+
 def pascal_triangle(n):
     """ interview question """
     l = []
@@ -18,4 +19,3 @@ def pascal_triangle(n):
             l[i][i] = 1
             l[i][0] = 1
     return l
-  
