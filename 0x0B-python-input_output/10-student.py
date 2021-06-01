@@ -12,8 +12,8 @@ class Student():
 
     def to_json(self, attrs=None):
         """ class to json 
-        @attrs: attribute list"""
-        if attrs == None:
+            @attrs: attribute list"""
+        if attrs is None:
             return self.__dict__
         temp = self.__dict__.keys()
         new = {}
