@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Square = __import__('10-square').Square
+Rectangle = __import__('9-rectangle').Rectangle
 
-print(issubclass(Rectangle, BaseGeometry))
+print(issubclass(Square, Rectangle))
