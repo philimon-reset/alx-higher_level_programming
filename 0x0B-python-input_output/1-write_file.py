@@ -7,6 +7,6 @@ def write_file(filename="", text=""):
     with open(filename, mode='w', encoding="utf-8") as mfile:
         mfile.write(text)
         count = 0
-        for i in mfile:
+        for i in text:
             count += 1
     return count
