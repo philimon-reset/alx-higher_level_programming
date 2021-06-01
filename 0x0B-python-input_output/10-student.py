@@ -12,8 +12,10 @@ class Student():
 
     def to_json(self, attrs=None):
         """ class to json """
-        if attrs != None and self not in attrs:
-            for i in attrs:
-                return i.__dict__
-        else
+        if attrs == None:
             return self.__dict__
+        new = self.__dict__
+        for i in attrs:
+            if i in [self.first_name, self.last_name, self.age]:
+                new[i].append(i.__dict__)
+        return new
