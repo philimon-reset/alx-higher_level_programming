@@ -18,5 +18,5 @@ class Student():
         new = {}
         for i in attrs:
             if i in temp:
-                new.update(i=i.__dict__)
+                new.update({i: self.__dict__})
         return new
