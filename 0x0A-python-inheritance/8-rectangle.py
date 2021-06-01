@@ -1,19 +1,7 @@
 #!/usr/bin/python3
 """base geometry class"""
 
-
-class BaseGeometry(obj):
-    """base geometry class main part"""
-    def area(self):
-            """area of class"""
-            raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-            """integer checker"""
-            if type(value) != int:
-                    raise TypeError("{} must be an integer".format(name))
-            if value <= 0:
-                    raise ValueError("{} must be greater than 0".format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 """Rectangle class to represent a square"""
 
