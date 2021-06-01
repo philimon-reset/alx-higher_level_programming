@@ -2,4 +2,5 @@
 def read_file(filename=""):
     """ read to stdout """
     with open(filename, enncoding="utf-8") as mfile:
-        print(mfile.read())
+        for i in mfile:
+            print("{}".format(i))
