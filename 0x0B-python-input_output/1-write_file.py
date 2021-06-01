@@ -8,7 +8,7 @@ def write_file(filename="", text=""):
         mfile.write(text)
         count = 0
         while True:
-            if count == len(mfile):
+            if count == len(text):
                 break
             count += 1
     return count
