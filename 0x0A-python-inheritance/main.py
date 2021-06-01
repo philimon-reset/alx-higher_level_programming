@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-is_same_class = __import__('2-is_same_class').is_same_class
+Rectangle = __import__('8-rectangle').Rectangle
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-a = 1
-if is_same_class(a, int):
-    print("{} is an instance of the class {}".format(a, int.__name__))
-if is_same_class(a, float):
-    print("{} is an instance of the class {}".format(a, float.__name__))
-if is_same_class(a, object):
-    print("{} is an instance of the class {}".format(a, object.__name__))
+print(issubclass(Rectangle, BaseGeometry))
