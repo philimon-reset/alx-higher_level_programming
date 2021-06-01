@@ -2,13 +2,7 @@
 """start doc"""
 
 
-def append_write(filename="", text=""):
+def save_to_json_file(my_obj, filename):
     """ append to stdout """
     with open(filename, mode='a', encoding="utf-8") as mfile:
-        mfile.write(text)
-        count = 0
-        while True:
-            if count == len(text):
-                break
-            count += 1
-    return count
+        return json.dump(my_obj)
