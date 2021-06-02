@@ -3,6 +3,7 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """ append after given string """
     with open(filename, mode='r+', encoding="utf-8") as mfile:
         a = 0
         ls = mfile.readlines()
