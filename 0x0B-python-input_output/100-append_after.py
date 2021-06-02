@@ -9,7 +9,11 @@ def append_after(filename="", search_string="", new_string=""):
         ls = mfile.readlines()
         for i in ls:
             if search_string in i:
-                ls.insert(a + 1, new_string)
+                if len(ls) < 2:
+                    ls.insert(a + 1, new_string)
+                    break
+                else:
+                    ls.insert(a + 1, new_string)
             a += 1
         mfile.seek(0)
         for i in ls:
