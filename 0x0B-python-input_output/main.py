@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-write_file = __import__('1-write_file').write_file
+append_after = __import__('100-append_after').append_after
 
-nb_characters = write_file("my_first_file.txt", "Holberton School is so cool!\n")
-print(nb_characters)
+append_after("append_after_100.txt", "Python", "\"C is fun!\"\n")
