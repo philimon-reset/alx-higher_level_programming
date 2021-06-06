@@ -94,7 +94,7 @@ class Rectangle(Base):
         temp = {}
         a = ["id", "width", "height", "x", "y"]
         for i in a:
-            temp[i] = getattr(self, i, self.id)
+            temp[i] = getattr(self, i)
         return temp
 
 
