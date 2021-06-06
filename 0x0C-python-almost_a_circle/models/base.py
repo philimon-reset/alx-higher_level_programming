@@ -17,9 +17,9 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
-        for i in list_objs:
-            with open(type(i).__name__, 'w', encoding='utf8') as mfile:
-                json.dump(i.__dict__, mfile)
+        for v in list_objs:
+            with open(cls.__name__, 'w', encoding ='utf8') as json_file:
+                json.dump(v.to_dictionary, json_file, allow_nan=False)
 
 if __name__ == "__main__":
 
