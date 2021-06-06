@@ -15,6 +15,12 @@ class Base():
             return temp
         return temp
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        for i in list_objs:
+            with open(type(i).__name, 'w', encoding='utf8') as mfile:
+                json.dump(i.__dict__, mfile)
+
 if __name__ == "__main__":
 
     b1 = Base()
