@@ -21,8 +21,9 @@ class Base():
         temp = []
         for v in list_objs:
             temp.append(v.to_dictionary())
+        temp = cls.to_json_string(temp)
         with open(cls.__name__ + ".json", 'w', encoding='utf8') as json_file:
-            json.dump(temp, json_file, allow_nan=False)
+            json_file.write(temp)
 
 
 if __name__ == "__main__":
