@@ -10,9 +10,10 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        temp = []
+        if list_dictionaries == None or len(list_dictionaries) == 0:
+            return str(temp)
         temp = json.dumps(list_dictionaries[0])
-        if temp == None or len(temp) == 0:
-            return temp
         return temp
 
     @classmethod
