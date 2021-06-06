@@ -19,7 +19,7 @@ class Base():
     def save_to_file(cls, list_objs):
         temp = []
         for v in list_objs:
-            temp.append(type(v).to_dictionary)
+            temp.append(v.to_dictionary())
         for i in temp:
             with open(cls.__name__ + ".json", 'w', encoding='utf8') as json_file:
                 json.dump(i, json_file, allow_nan=False)
