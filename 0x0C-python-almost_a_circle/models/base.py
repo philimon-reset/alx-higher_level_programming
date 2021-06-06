@@ -13,7 +13,7 @@ class Base():
         temp = []
         if list_dictionaries == None or len(list_dictionaries) == 0:
             return str(temp)
-        temp = json.dumps(list_dictionaries[0])
+        temp = json.dumps(list_dictionaries)
         return temp
 
     @classmethod
