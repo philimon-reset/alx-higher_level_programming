@@ -19,11 +19,16 @@ class Base():
     @classmethod
     def save_to_file(cls, list_objs):
         temp = []
+        if list_objs == None or len(list_objs) == 0:
+            return str(temp)
         for v in list_objs:
             temp.append(v.to_dictionary())
         temp = cls.to_json_string(temp)
         with open(cls.__name__ + ".json", 'w', encoding='utf8') as json_file:
             json_file.write(temp)
+
+    @staticmethod
+    def from_json_string(json_string):
 
 
 if __name__ == "__main__":
