@@ -114,7 +114,7 @@ class Rectangle(Base):
 
     @classmethod
     def load_from_file(cls):
-        """ load string rep of instances and return actual value of instances """
+        """ load string rep and return actual value of instances """
         temp = []
         try:
             with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
