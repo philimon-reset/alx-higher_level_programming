@@ -33,7 +33,7 @@ class Base():
             temp = cls(1, 1)
         elif cls.__name__ == 'Square':
             temp = cls(1)
-        temp = temp.update(dictionary)
+        temp.update(**dictionary)
         return temp
 
 
