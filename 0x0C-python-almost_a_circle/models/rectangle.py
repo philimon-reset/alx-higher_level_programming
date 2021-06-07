@@ -111,30 +111,3 @@ class Rectangle(Base):
         for i in a:
             temp[i] = getattr(self, i)
         return temp
-
-    @classmethod
-    def load_from_file(cls):
-        """ load string rep and return actual value of instances """
-        temp = []
-        try:
-            with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
-                a = super().from_json_string(mfile.read())
-            for i in a:
-                temp.append(super().create(**i))
-            return temp
-        except FileExistsError:
-            return temp
-
-if __name__ == "__main__":
-
-    r1 = Rectangle(10, 2, 1, 9)
-    print(r1)
-    r1_dictionary = r1.to_dictionary()
-    print(r1_dictionary)
-    print(type(r1_dictionary))
-
-    r2 = Rectangle(1, 1)
-    print(r2)
-    r2.update(**r1_dictionary)
-    print(r2)
-    print(r1 == r2)
