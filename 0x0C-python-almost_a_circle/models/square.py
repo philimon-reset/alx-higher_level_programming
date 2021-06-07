@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 """ square class """
-
-
 Rectangle = __import__("rectangle").Rectangle
+
+
 class Square(Rectangle):
-
-
     """ square class with rectangle and base inheritance """
-
     def __init__(self, size, x=0, y=0, id=None):
         """ init """
         self.size = size
