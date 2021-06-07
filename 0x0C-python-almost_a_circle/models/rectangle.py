@@ -111,7 +111,7 @@ class Rectangle(Base):
         for i in a:
             temp[i] = getattr(self, i)
         return temp
-    
+
     @classmethod
     def load_from_file(cls):
         """ load string rep of instances and return actual value of instances """
