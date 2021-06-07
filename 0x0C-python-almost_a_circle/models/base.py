@@ -8,7 +8,7 @@ class Base():
 
     def __init__(self, id=None):
         """ init """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -18,7 +18,7 @@ class Base():
     def to_json_string(list_dictionaries):
         """ convert list rep of json file to string rep """
         temp = []
-        if list_dictionaries == None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return str(temp)
         temp = json.dumps(list_dictionaries)
         return temp
