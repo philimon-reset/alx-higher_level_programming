@@ -46,6 +46,19 @@ class Base():
             mfile.write(temp)
 
     @classmethod
+    def load_from_file(cls):
+        """ load string rep and return actual value of instances """
+        temp = []
+        try:
+            with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
+                a = cls.from_json_string(mfile.read())
+            for i in a:
+                temp.append(cls.create(**i))
+            return temp
+        except FileExistsError:
+            return temp
+
+    @classmethod
     def create(cls, **dictionary):
         """ create dummy instances to fill in and update """
         if cls.__name__ == 'Rectangle':
