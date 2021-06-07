@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 """ Rectangle class """
-
-
 Base = __import__("base").Base
 class Rectangle(Base):
     """ Rectangle class with base inheritance """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """ init """
         super().__init__(id)
