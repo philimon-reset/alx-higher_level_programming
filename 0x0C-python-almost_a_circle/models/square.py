@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ square class """
 Rectangle = __import__("rectangle").Rectangle
+import json
 
 
 class Square(Rectangle):
