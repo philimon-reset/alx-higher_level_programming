@@ -27,8 +27,14 @@ class Base():
         with open(cls.__name__ + ".json", 'w', encoding='utf8') as json_file:
             json_file.write(temp)
 
-    @staticmethod
-    def from_json_string(json_string):
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == 'Rectangle':
+            temp = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            temp = cls(1)
+        temp = temp.update(dictionary)
+        return temp
 
 
 if __name__ == "__main__":
