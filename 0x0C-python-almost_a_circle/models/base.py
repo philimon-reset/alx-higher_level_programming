@@ -27,7 +27,7 @@ class Base():
     def from_json_string(json_string):
         """ convert string rep of json file to list rep """
         temp = []
-        if json_string == None or len(json_string) == 0:
+        if json_string is None or len(json_string) == 0:
             return temp
         return json.loads(json_string)
 
@@ -35,7 +35,7 @@ class Base():
     def save_to_file(cls, list_objs):
         """ save string rep of rep file to new file """
         temp = []
-        if list_objs == None or len(list_objs) == 0:
+        if list_objs is None or len(list_objs) == 0:
             with open(cls.__name__ + ".json", 'w', encoding='utf8') as json_file:
                 json_file.write(temp)
         for v in list_objs:
