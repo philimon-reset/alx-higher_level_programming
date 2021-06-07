@@ -39,6 +39,14 @@ class Square(Rectangle):
                 if i in a:
                     setattr(self, i, kwargs[i])
 
+    def to_dictionary(self):
+        """ list rep of instances """
+        temp = {}
+        a = ["id", "size", "x", "y"]
+        for i in a:
+            temp[i] = getattr(self, i)
+        return temp
+
 
 if __name__ == "__main__":
 
