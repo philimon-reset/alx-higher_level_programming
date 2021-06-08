@@ -108,5 +108,5 @@ class Base():
                         pass
                     temp.append(cls.create(**i))
                 return temp
-        except FileExistsError:
+        except FileNotFoundError:
             return temp
