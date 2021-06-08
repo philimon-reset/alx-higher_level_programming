@@ -27,9 +27,8 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """ convert string rep of json file to list rep """
-        temp = []
-        if json_string is None or len(json_string) == 0:
-            return temp
+        if json_string is None or len(json_string) == 0 or json_string = "[]":
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -51,7 +50,7 @@ class Base():
         """ load string rep and return actual value of instances """
         temp = []
         try:
-            with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
+            with open(cls.__name__ + ".json", "r") as mfile:
                 a = cls.from_json_string(mfile.read())
             for i in a:
                 temp.append(cls.create(**i))
