@@ -111,4 +111,3 @@ class Rectangle(Base):
         for i in a:
             temp[i] = getattr(self, i)
         return temp
-y = value
