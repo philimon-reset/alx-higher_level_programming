@@ -12,3 +12,23 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    @property
+    def width(self):
+        """ width of rectangle """
+        return self.__width
+
+    @property
+    def height(self):
+        """ height of rectangle """
+        return self.__height
+
+    @property
+    def x(self):
+        """ horizontal offset """
+        return self.__x
+
+    @property
+    def y(self):
+        """ vertical offset """
+        return self.__y
