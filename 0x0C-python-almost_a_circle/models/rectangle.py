@@ -32,7 +32,7 @@ class Rectangle(Base):
     def y(self):
         """ vertical offset """
         return self.__y
-    
+
     @width.setter
     def width(self, value):
         """ set width of rectangle or set error value """
