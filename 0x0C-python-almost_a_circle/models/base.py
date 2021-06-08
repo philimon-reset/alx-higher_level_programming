@@ -67,38 +67,3 @@ class Base():
             temp = cls(1)
         temp.update(**dictionary)
         return temp
-
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        temp = []
-        with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
-            if list_objs is not None or len(list_objs) != 0:
-                if cls.__name__ == "Rectangle":
-                    fieldname = ["id", "width", "height", "x", "y"]
-                elif cls.__name__ == "Square":
-                    fieldname = ["id", "size", "x", "y"]
-                wrt = csv.DictWriter(mfile, fieldnames=fieldname)
-                wrt.writeheader()
-                for i in list_objs:
-                    wrt.writerow(i.to_dictionary())
-
-    @classmethod
-    def load_from_file_csv(cls):
-        temp = []
-        try:
-            with open(cls.__name__ + ".csv", 'r', newline='') as mfile:
-                if cls.__name__ == "Rectangle":
-                    fieldname = ["id", "width", "height", "x", "y"]
-                elif cls.__name__ == "Square":
-                    fieldname = ["id", "size", "x", "y"]
-                read = csv.DictReader(mfile)
-                for i in read:
-                    try:
-                        for a in i.keys():
-                            i[a] = int(i[a])
-                    except:
-                        pass
-                    temp.append(cls.create(**i))
-                return temp
-        except FileExistsError:
-            return temp
