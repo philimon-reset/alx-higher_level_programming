@@ -72,15 +72,8 @@ class Base():
     @classmethod
     def save_to_file_csv(cls, list_objs):
         temp = []
-        if list_objs is None or len(list_objs) == 0:
-            with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
-                fieldname = []
-                wrt = csv.DictWriter(mfile, fieldnames=fieldname)
-                wrt.writeheader()
-                for i in list_objs:
-                    wrt.writerow(i.to_dictionary())
-        else:
-            with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
+        with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
+            if list_objs is not None or len(list_objs) != 0:
                 if cls.__name__ == "Rectangle":
                     fieldname = ["id", "width", "height", "x", "y"]
                 elif cls.__name__ == "Square":
