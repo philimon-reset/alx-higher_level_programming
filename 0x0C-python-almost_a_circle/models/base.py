@@ -27,8 +27,8 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """ convert string rep of json file to list rep """
-        if json_string is None or len(json_string) == 0 or json_string == "[]":
+        """deserializes a json list represented as a string"""
+        if json_string is None or json_string == "" or json_string == "[]":
             return []
         return json.loads(json_string)
 
@@ -61,14 +61,13 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        """creates an instances with all attributes set"""
-        new = cls.__new__(cls)
-        if cls.__name__ == "Rectangle":
-            new.__init__(10, 10)
-        if cls.__name__ == "Square":
-            new.__init__(10)
-        new.update(**dictionary)
-        return new
+        """ create dummy instances to fill in and update """
+        if cls.__name__ == 'Rectangle':
+            temp = cls(1, 1)
+        if cls.__name__ == 'Square':
+            temp = cls(1)
+        temp.update(**dictionary)
+        return temp
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
