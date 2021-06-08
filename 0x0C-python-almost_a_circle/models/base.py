@@ -71,7 +71,7 @@ class Base():
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        with open(cls.__name__ + ".csv", 'w', newline='') as mfile:      
+        with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
             if list_objs is not None or len(list_objs) != 0:
                 if cls.__name__ == "Rectangle":
                     fieldname = ["id", "width", "height", "x", "y"]
