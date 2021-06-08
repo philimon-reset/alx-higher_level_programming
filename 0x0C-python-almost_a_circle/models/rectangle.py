@@ -68,3 +68,47 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """ area of rectangle """
+        return self.__width * self.__height
+
+    def display(self):
+        """ rectangle made using the character #
+        """
+        string = ""
+        if self.__width == 0 or self.__height == 0:
+            return string
+        for i in range(self.y):
+            print()
+        for row in range(self.__height):
+            if row < (self.__height - 1):
+                print((self.x * " ") + ("#" * self.__width))
+            else:
+                print((self.x * " ") + ("#" * self.__width))
+
+    def __str__(self):
+        """ staright printed value of instance """
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
+        """ update attribute value """
+        a = ["id", "width", "height", "x", "y"]
+        if len(args) != 0 and args is not None:
+            for i in range(len(args)):
+                if i > len(a) - 1:
+                    break
+                setattr(self, a[i], args[i])
+        else:
+            for i in kwargs.keys():
+                if i in a:
+                    setattr(self, i, kwargs[i])
+
+    def to_dictionary(self):
+        """ list representation of instance """
+        temp = {}
+        a = ["id", "width", "height", "x", "y"]
+        for i in a:
+            temp[i] = getattr(self, i)
+        return temp
+y = value
