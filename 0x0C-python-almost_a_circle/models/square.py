@@ -44,7 +44,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ list rep of instances """
         temp = {}
-        a = ["id", "width", "x", "y"]
+        a = ["id", "size", "x", "y"]
         for i in a:
             temp[i] = getattr(self, i)
         return temp
