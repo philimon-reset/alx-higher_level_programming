@@ -28,7 +28,7 @@ class Base():
     def from_json_string(json_string):
         """ convert string rep of json file to list rep """
         if json_string is None or len(json_string) == 0 or json_string == "[]":
-            return json.loads([])
+            return []
         return json.loads(json_string)
 
     @classmethod
