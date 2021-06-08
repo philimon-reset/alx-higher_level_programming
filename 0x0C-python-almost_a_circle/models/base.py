@@ -27,9 +27,8 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """ convert string rep of json file to list rep """
-        temp = []
         if json_string is None or len(json_string) == 0 or json_string == "[]":
-            return temp
+            return json.loads([])
         return json.loads(json_string)
 
     @classmethod
