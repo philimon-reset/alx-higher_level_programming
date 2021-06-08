@@ -35,7 +35,7 @@ class Square(Rectangle):
                 setattr(self, a[i], args[i])
         else:
             for i in kwargs.keys():
-                if i in a:
+                if i in a or i == "size":
                     if i == "size":
                         setattr(self, a[1], kwargs["size"])
                     else:
@@ -44,7 +44,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ list rep of instances """
         temp = {}
-        a = ["id", "size", "x", "y"]
+        a = ["id", "width", "x", "y"]
         for i in a:
             temp[i] = getattr(self, i)
         return temp
