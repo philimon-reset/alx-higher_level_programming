@@ -37,6 +37,8 @@ class Square(Rectangle):
         else:
             for i in kwargs.keys():
                 if i in a:
+                    if i == "size":
+                        setattr(self, a[1], kwargs[i])
                     setattr(self, i, kwargs[i])
 
     def to_dictionary(self):
