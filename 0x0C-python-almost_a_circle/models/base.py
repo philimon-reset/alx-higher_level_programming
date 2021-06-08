@@ -61,13 +61,14 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        """ create dummy instances to fill in and update """
-        if cls.__name__ == 'Rectangle':
-            temp = cls(1, 1)
-        if cls.__name__ == 'Square':
-            temp = cls(1)
-        temp.update(**dictionary)
-        return temp
+        """creates an instances with all attributes set"""
+        new = cls.__new__(cls)
+        if cls.__name__ == "Rectangle":
+            new.__init__(10, 10)
+        if cls.__name__ == "Square":
+            new.__init__(10)
+        new.update(**dictionary)
+        return new
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
