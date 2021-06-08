@@ -28,7 +28,7 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """deserializes a json list represented as a string"""
-        if json_string is None or json_string == "" or json_string == "[]":
+        if json_string is None or len(json_string) == 0 or json_string == "[]":
             return []
         return json.loads(json_string)
 
@@ -56,7 +56,7 @@ class Base():
             for i in a:
                 temp.append(cls.create(**i))
             return temp
-        except FileExistsError:
+        except FileNotFoundError:
             return temp
 
     @classmethod
