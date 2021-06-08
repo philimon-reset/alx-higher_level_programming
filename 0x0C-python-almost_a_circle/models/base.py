@@ -27,8 +27,9 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """ convert string rep of json file to list rep """
-        if json_string is None or len(json_string) == 0 or json_string = "[]":
-            return []
+        temp = []
+        if json_string is None or len(json_string) == 0:
+            return temp
         return json.loads(json_string)
 
     @classmethod
@@ -50,7 +51,7 @@ class Base():
         """ load string rep and return actual value of instances """
         temp = []
         try:
-            with open(cls.__name__ + ".json", "r") as mfile:
+            with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
                 a = cls.from_json_string(mfile.read())
             for i in a:
                 temp.append(cls.create(**i))
@@ -67,3 +68,45 @@ class Base():
             temp = cls(1)
         temp.update(**dictionary)
         return temp
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        temp = []
+        if list_objs is None or len(list_objs) == 0:
+            with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
+                fieldname = []
+                wrt = csv.DictWriter(mfile, fieldnames=fieldname)
+                wrt.writeheader()
+                for i in list_objs:
+                    wrt.writerow(i.to_dictionary())
+        else:
+            with open(cls.__name__ + ".csv", 'w', newline='') as mfile:
+                if cls.__name__ == "Rectangle":
+                    fieldname = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    fieldname = ["id", "size", "x", "y"]
+                wrt = csv.DictWriter(mfile, fieldnames=fieldname)
+                wrt.writeheader()
+                for i in list_objs:
+                    wrt.writerow(i.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        temp = []
+        try:
+            with open(cls.__name__ + ".csv", 'r', newline='') as mfile:
+                if cls.__name__ == "Rectangle":
+                    fieldname = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    fieldname = ["id", "size", "x", "y"]
+                read = csv.DictReader(mfile)
+                for i in read:
+                    try:
+                        for a in i.keys():
+                            i[a] = int(i[a])
+                    except:
+                        pass
+                    temp.append(cls.create(**i))
+                return temp
+        except FileExistsError:
+            return temp
