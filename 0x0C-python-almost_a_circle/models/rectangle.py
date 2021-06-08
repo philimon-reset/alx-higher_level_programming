@@ -105,3 +105,11 @@ class Rectangle(Base):
             for i in kwargs.keys():
                 if i in a:
                     setattr(self, i, kwargs[i])
+
+    def to_dictionary(self):
+        """ list representation of instance """
+        temp = {}
+        a = ["id", "width", "height", "x", "y"]
+        for i in a:
+            temp[i] = getattr(self, i)
+        return temp
