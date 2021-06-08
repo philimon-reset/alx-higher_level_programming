@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Contains Rectangle class"""
+""" Rectangle class """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle Class to represent a rectangle"""
+    """ Rectangle class with base inheritance """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """instantiation"""
+        """ init """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -15,22 +15,22 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width property getter"""
+        """ width of rectangle """
         return self.__width
 
     @property
     def height(self):
-        """height property getter"""
+        """ height of rectangle """
         return self.__height
 
     @property
     def x(self):
-        """x property getter"""
+        """ horizontal offset """
         return self.__x
 
     @property
     def y(self):
-        """y property getter"""
+        """ vertical offset """
         return self.__y
 
     @width.setter
