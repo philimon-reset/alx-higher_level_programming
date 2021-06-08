@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ square class """
 from models.Rectangle import Rectangle
-import json
 
 
 class Square(Rectangle):
