@@ -63,7 +63,7 @@ class Base():
         """ create dummy instances to fill in and update """
         if cls.__name__ == 'Rectangle':
             temp = cls(1, 1)
-        elif cls.__name__ == 'Square':
+        if cls.__name__ == 'Square':
             temp = cls(1)
         temp.update(**dictionary)
         return temp
