@@ -39,11 +39,12 @@ class Base():
         if list_objs is None or len(list_objs) == 0:
             with open(cls.__name__ + ".json", 'w', encoding='utf8') as mfile:
                 mfile.write(temp)
-        for v in list_objs:
-            temp.append(v.to_dictionary())
-        temp = cls.to_json_string(temp)
-        with open(cls.__name__ + ".json", 'w', encoding='utf8') as mfile:
-            mfile.write(temp)
+        else:
+            for v in list_objs:
+                temp.append(v.to_dictionary())
+            temp = cls.to_json_string(temp)
+            with open(cls.__name__ + ".json", 'w', encoding='utf8') as mfile:
+                mfile.write(temp)
 
     @classmethod
     def load_from_file(cls):
