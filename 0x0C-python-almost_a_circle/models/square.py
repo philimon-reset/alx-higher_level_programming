@@ -13,7 +13,7 @@ class Square(Rectangle):
         """ staright printed value of instance """
         return "[Square] ({}) {}/{} - {}/{}".format(self.id, self.x,
                                                     self.y, self.width)
-    
+
     @property
     def size(self):
         """ returns size """
@@ -48,4 +48,3 @@ class Square(Rectangle):
         for i in a:
             temp[i] = getattr(self, i)
         return temp
-
