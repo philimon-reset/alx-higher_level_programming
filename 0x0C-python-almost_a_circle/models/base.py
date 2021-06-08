@@ -38,7 +38,7 @@ class Base():
         temp = []
         if list_objs is None or len(list_objs) == 0:
             with open(cls.__name__ + ".json", 'w', encoding='utf8') as mfile:
-                mfile.write(temp)
+                mfile.write(cls.to_json_string(temp))
         else:
             for v in list_objs:
                 temp.append(v.to_dictionary())
