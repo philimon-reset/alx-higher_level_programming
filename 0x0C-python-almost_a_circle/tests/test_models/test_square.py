@@ -3,7 +3,6 @@ import unittest
 import json
 import io
 import sys
-import os
 
 from models.rectangle import Rectangle
 from models.base import Base
@@ -268,6 +267,7 @@ class TestSquare(unittest.TestCase):
         contents = x.to_dictionary()
         y = Square.create(**contents)
         self.assertEqual(x.to_dictionary(), y.to_dictionary())
+
 
 if __name__ == "__main__":
     unittest.main()
