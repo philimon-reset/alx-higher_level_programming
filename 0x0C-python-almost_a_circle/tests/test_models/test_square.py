@@ -268,45 +268,6 @@ class TestSquare(unittest.TestCase):
         y = Square.create(**contents)
         self.assertEqual(x.to_dictionary(), y.to_dictionary())
 
-    def test_save_to_file(self):
-        """Testing save_to_file()
-        """
-
-        o4_1 = Rectangle(10, 7, 2, 8)
-        o4_2 = Rectangle(2, 4)
-        o4_3 = Square(10, 7, 2)
-        o4_4 = Square(8)
-
-        rsave = Rectangle.save_to_file([o4_1, o4_2])
-        ssave = Square.save_to_file([o4_3, o4_4])
-
-        self.assertTrue(os.path.isfile('Rectangle.json'))
-        self.assertTrue(os.path.isfile('Square.json'))
-
-    def test_load_from_file(self):
-        """Testing load_from_file()
-        """
-
-        o5_1 = Rectangle(10, 7, 2, 8)
-        o5_2 = Rectangle(2, 4)
-        o5_3 = Square(10, 7, 2)
-        o5_4 = Square(8)
-
-        rsave = Rectangle.save_to_file([o5_1, o5_2])
-        ssave = Square.save_to_file([o5_3, o5_4])
-
-        rlist = Rectangle.load_from_file()
-        slist = Square.load_from_file()
-
-        self.assertIsInstance(rlist[0], Rectangle)
-        self.assertIsInstance(rlist[1], Rectangle)
-        self.assertIsInstance(slist[0], Square)
-        self.assertIsInstance(slist[1], Square)
-
-        self.assertEqual(rlist[0].__str__(), '[Rectangle] (1) 2/8 - 10/7')
-        self.assertEqual(rlist[1].__str__(), '[Rectangle] (2) 0/0 - 2/4')
-        self.assertEqual(slist[0].__str__(), '[Square] (3) 7/2 - 10')
-        self.assertEqual(slist[1].__str__(), '[Square] (4) 0/0 - 8')
 
 if __name__ == "__main__":
     unittest.main()
