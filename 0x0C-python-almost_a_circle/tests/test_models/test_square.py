@@ -274,46 +274,5 @@ class TestSquare(unittest.TestCase):
             e3 = """{"id": 5, "width": 2, "height": 2, "x": 0, "y": 0}]"""
             self.assertEqual(contents, e + e2 + e3)
 
-    def test_save_to_file_square(self):
-        Base._Base__nb_objects = 0
-        Square.save_to_file(None)
-
-        with open("Square.json", "r") as file:
-            contents = file.read()
-            expected = """[]"""
-            self.assertEqual(contents, expected)
-
-        Base._Base__nb_objects = 0
-        r1 = Square(10, 2, 8)
-        Square.save_to_file([r1])
-
-        with open("Square.json", "r") as file:
-            contents = file.read()
-            expected = """[{"id": 1, "size": 10, "x": 2, "y": 8}]"""
-            self.assertEqual(contents, expected)
-
-        Base._Base__nb_objects = 0
-        r1 = Square(10, 2, 8)
-        r2 = Square(2)
-        Square.save_to_file([r1, r2])
-
-        with open("Square.json", "r") as file:
-            contents = file.read()
-            expected = """[{"id": 1, "size": 10, "x": 2, "y": 8}, """
-            expected2 = """{"id": 2, "size": 2, "x": 0, "y": 0}]"""
-            self.assertEqual(contents, expected + expected2)
-
-        r1 = Square(20, 22, 89)
-        r2 = Square(2, 5)
-        r3 = Square(2)
-        Square.save_to_file([r1, r2, r3])
-
-        with open("Square.json", "r") as file:
-            contents = file.read()
-            expected = """[{"id": 3, "size": 20, "x": 22, "y": 89}, """
-            expected2 = """{"id": 4, "size": 2, "x": 5, "y": 0}, """
-            expected3 = """{"id": 5, "size": 2, "x": 0, "y": 0}]"""
-            self.assertEqual(contents, expected + expected2 + expected3)
-
 if __name__ == "__main__":
     unittest.main()
