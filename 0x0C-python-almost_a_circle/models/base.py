@@ -51,14 +51,14 @@ class Base():
     def load_from_file(cls):
         """ load string rep and return actual value of instances """
         temp = []
-        try:
-            with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
-                a = cls.from_json_string(mfile.read())
-            for i in a:
+        with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
+            a = cls.from_json_string(mfile.read())
+        for i in a:
+            if isinstance(i, dict):
                 temp.append(cls.create(**i))
-            return temp
-        except FileNotFoundError:
-            return temp
+            else:
+                temp.append(i)
+        return temp
 
     @classmethod
     def create(cls, **dictionary):
