@@ -233,46 +233,40 @@ class TestSquare(unittest.TestCase):
         expected = {"id": 2, "size": 2, "x": 0, "y": 0}
         self.assertDictEqual(y.to_dictionary(), expected)
 
-    def test_save_to_file_Rect(self):
-        Base._Base__nb_objects = 0
-        Rectangle.save_to_file(None)
+    def test_create_rect(self):
+        x = Rectangle(10, 10, 2, 3)
+        contents = x.to_dictionary()
+        y = Rectangle.create(**contents)
+        self.assertEqual(x.to_dictionary(), y.to_dictionary())
+        self.assertEqual(vars(x), vars(y))
 
-        with open("Rectangle.json", "r") as file:
-            contents = file.read()
-            expected = """[]"""
-            self.assertEqual(contents, expected)
+        x = Rectangle(10, 2, 3)
+        contents = x.to_dictionary()
+        y = Rectangle.create(**contents)
+        self.assertEqual(x.to_dictionary(), y.to_dictionary())
+        self.assertEqual(vars(x), vars(y))
 
-        Base._Base__nb_objects = 0
-        r1 = Rectangle(10, 7, 2, 8)
-        Rectangle.save_to_file([r1])
+        x = Rectangle(1, 2)
+        contents = x.to_dictionary()
+        y = Rectangle.create(**contents)
+        self.assertEqual(x.to_dictionary(), y.to_dictionary())
+        self.assertEqual(vars(x), vars(y))
 
-        with open("Rectangle.json", "r") as file:
-            contents = file.read()
-            e = """[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]"""
-            self.assertEqual(contents, e)
+    def test_create_square(self):
+        x = Square(10, 2, 3)
+        contents = x.to_dictionary()
+        y = Square.create(**contents)
+        self.assertEqual(x.to_dictionary(), y.to_dictionary())
 
-        Base._Base__nb_objects = 0
-        r1 = Rectangle(10, 7, 2, 8)
-        r2 = Rectangle(2, 4)
-        Rectangle.save_to_file([r1, r2])
+        x = Square(10, 3)
+        contents = x.to_dictionary()
+        y = Square.create(**contents)
+        self.assertEqual(x.to_dictionary(), y.to_dictionary())
 
-        with open("Rectangle.json", "r") as file:
-            contents = file.read()
-            e = """[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}, """
-            e2 = """{"id": 2, "width": 2, "height": 4, "x": 0, "y": 0}]"""
-            self.assertEqual(contents, e + e2)
-
-        r1 = Rectangle(20, 50, 22, 89)
-        r2 = Rectangle(2, 4, 5)
-        r3 = Rectangle(2, 2)
-        Rectangle.save_to_file([r1, r2, r3])
-
-        with open("Rectangle.json", "r") as file:
-            contents = file.read()
-            e = """[{"id": 3, "width": 20, "height": 50, "x": 22, "y": 89}, """
-            e2 = """{"id": 4, "width": 2, "height": 4, "x": 5, "y": 0}, """
-            e3 = """{"id": 5, "width": 2, "height": 2, "x": 0, "y": 0}]"""
-            self.assertEqual(contents, e + e2 + e3)
+        x = Square(2)
+        contents = x.to_dictionary()
+        y = Square.create(**contents)
+        self.assertEqual(x.to_dictionary(), y.to_dictionary())
 
 if __name__ == "__main__":
     unittest.main()
