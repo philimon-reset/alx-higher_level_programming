@@ -249,8 +249,8 @@ class TestSquare(unittest.TestCase):
 
         with open("Rectangle.json", "r") as file:
             contents = file.read()
-            expected = """[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]"""
-            self.assertEqual(contents, expected)
+            e = """[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]"""
+            self.assertEqual(contents, e)
 
         Base._Base__nb_objects = 0
         r1 = Rectangle(10, 7, 2, 8)
@@ -259,9 +259,9 @@ class TestSquare(unittest.TestCase):
 
         with open("Rectangle.json", "r") as file:
             contents = file.read()
-            expected = """[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}, """
-            expected2 = """{"id": 2, "width": 2, "height": 4, "x": 0, "y": 0}]"""
-            self.assertEqual(contents, expected + expected2)
+            e = """[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}, """
+            e2 = """{"id": 2, "width": 2, "height": 4, "x": 0, "y": 0}]"""
+            self.assertEqual(contents, e + e2)
 
         r1 = Rectangle(20, 50, 22, 89)
         r2 = Rectangle(2, 4, 5)
@@ -270,10 +270,10 @@ class TestSquare(unittest.TestCase):
 
         with open("Rectangle.json", "r") as file:
             contents = file.read()
-            expected = """[{"id": 3, "width": 20, "height": 50, "x": 22, "y": 89}, """
-            expected2 = """{"id": 4, "width": 2, "height": 4, "x": 5, "y": 0}, """
-            expected3 = """{"id": 5, "width": 2, "height": 2, "x": 0, "y": 0}]"""
-            self.assertEqual(contents, expected + expected2 + expected3)
+            e = """[{"id": 3, "width": 20, "height": 50, "x": 22, "y": 89}, """
+            e2 = """{"id": 4, "width": 2, "height": 4, "x": 5, "y": 0}, """
+            e3 = """{"id": 5, "width": 2, "height": 2, "x": 0, "y": 0}]"""
+            self.assertEqual(contents, e + e2 + e3)
 
     def test_save_to_file_square(self):
         Base._Base__nb_objects = 0
