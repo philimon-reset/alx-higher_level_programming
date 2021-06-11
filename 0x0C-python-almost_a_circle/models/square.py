@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """contains Square class to represent squares"""
 from models.rectangle import Rectangle
-from models.base import Base
-from models.square import Square
 
 
 class Square(Rectangle):
     """class to represent a Square"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """square class"""
         super().__init__(size, size, x, y, id)
