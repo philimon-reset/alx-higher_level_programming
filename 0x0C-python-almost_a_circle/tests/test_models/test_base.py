@@ -44,7 +44,7 @@ class TestBaseCls(unittest.TestCase):
         json_str = json.dumps(temp2)
         temp = Base.from_json_string(json_str)
         self.assertEqual(temp, json.loads(json_str))
- 
+
 # why wont u work :(
     def test_save_to_file_Rect(self):
         Base._Base__nb_objects = 0
@@ -127,7 +127,7 @@ class TestBaseCls(unittest.TestCase):
             expected2 = """{"id": 4, "size": 2, "x": 5, "y": 0}, """
             expected3 = """{"id": 5, "size": 2, "x": 0, "y": 0}]"""
             self.assertEqual(contents, expected + expected2 + expected3)
-  
+
     def test_load_to_file_rect(self):
         Base._Base__nb_objects = 0
         Rectangle.save_to_file(None)
