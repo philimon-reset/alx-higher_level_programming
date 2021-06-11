@@ -268,8 +268,16 @@ class TestSquare(unittest.TestCase):
         y = Square.create(**contents)
         self.assertEqual(x.to_dictionary(), y.to_dictionary())
 
-
+# why wont u work :(
     def test_save_to_file_Rect(self):
+        Base._Base__nb_objects = 0
+        Rectangle.save_to_file(None)
+
+        with open("Rectangle.json", "r") as file:
+            contents = file.read()
+            expected = """[]"""
+            self.assertEqual(contents, expected)
+
         Base._Base__nb_objects = 0
         r1 = Rectangle(10, 7, 2, 8)
         Rectangle.save_to_file([r1])
@@ -304,6 +312,14 @@ class TestSquare(unittest.TestCase):
 
     def test_save_to_file_square(self):
         Base._Base__nb_objects = 0
+        Square.save_to_file(None)
+
+        with open("Square.json", "r") as file:
+            contents = file.read()
+            expected = """[]"""
+            self.assertEqual(contents, expected)
+
+        Base._Base__nb_objects = 0
         r1 = Square(10, 2, 8)
         Square.save_to_file([r1])
 
@@ -337,6 +353,12 @@ class TestSquare(unittest.TestCase):
   
     def test_load_to_file_rect(self):
         Base._Base__nb_objects = 0
+        Rectangle.save_to_file(None)
+        contents = Rectangle.load_from_file()
+        expected = []
+        self.assertEqual(contents, expected)
+
+        Base._Base__nb_objects = 0
         r1 = Rectangle(10, 7, 2, 8)
         Rectangle.save_to_file([r1])
         contents = Rectangle.load_from_file()
@@ -363,6 +385,12 @@ class TestSquare(unittest.TestCase):
             self.assertEqual(vars(contents[i]), vars(expected[i]))
 
     def test_load_to_file_square(self):
+        Base._Base__nb_objects = 0
+        Square.save_to_file(None)
+        contents = Square.load_from_file()
+        expected = []
+        self.assertEqual(contents, expected)
+
         Base._Base__nb_objects = 0
         r1 = Square(10, 2, 8)
         Square.save_to_file([r1])
@@ -391,6 +419,7 @@ class TestSquare(unittest.TestCase):
         for i in range(len(contents)):
             self.assertEqual(contents[i].to_dictionary(),
                              expected[i].to_dictionary())
+
 
 if __name__ == "__main__":
     unittest.main()
