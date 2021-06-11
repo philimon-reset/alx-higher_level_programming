@@ -3,6 +3,8 @@
 import json
 import csv
 import turtle
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class Base():
@@ -51,14 +53,14 @@ class Base():
     def load_from_file(cls):
         """ load string rep and return actual value of instances """
         temp = []
-        with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
-            a = cls.from_json_string(mfile.read())
-        for i in a:
-            if isinstance(i, dict):
+        try:
+            with open(cls.__name__ + ".json", "r", encoding="utf-8") as mfile:
+                a = cls.from_json_string(mfile.read())
+            for i in a:
                 temp.append(cls.create(**i))
-            else:
-                temp.append(i)
-        return temp
+            return temp
+        except FileNotFoundError:
+            return temp
 
     @classmethod
     def create(cls, **dictionary):
