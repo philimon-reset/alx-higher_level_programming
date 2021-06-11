@@ -3,8 +3,6 @@
 import json
 import csv
 import turtle
-from models.rectangle import Rectangle
-from models.square import Square
 
 
 class Base():
