@@ -2,7 +2,7 @@
 # loop holberton school 10 times
 n=1
 
-until [ $n -le 10 ]
+until [ $n -ge 10 ]
 do
     echo "Holberton School"
     (( n++ ))
