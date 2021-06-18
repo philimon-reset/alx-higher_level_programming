@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 # loop holberton school hi if 9
 hour=0
 
