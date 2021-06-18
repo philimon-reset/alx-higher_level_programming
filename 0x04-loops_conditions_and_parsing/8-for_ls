@@ -1,1 +1,8 @@
 #!/usr/bin/env
+# list all directories
+
+list="$(ls)"
+for i in $list
+do
+    echo "$i"
+done
