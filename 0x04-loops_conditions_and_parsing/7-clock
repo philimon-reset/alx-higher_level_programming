@@ -1,1 +1,16 @@
 #!/usr/bin/env
+# loop holberton school hi if 9
+hour=0
+min=0
+
+while (( $hour <= 12 ))
+do
+    echo "Hour: $hour"
+    min=0
+    while (( $min <= 59 ))
+    do
+        echo "$min"
+        (( min++ ))
+    done
+    (( hour++ ))
+done
