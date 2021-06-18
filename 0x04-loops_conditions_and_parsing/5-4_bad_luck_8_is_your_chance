@@ -1,1 +1,17 @@
 #!/usr/bin/env
+# loop holberton school hi if 9
+n=1
+
+while (( $n <= 10 ))
+do
+    if [ $n -eq 4 ]
+    then
+        echo "bad luck"
+    elif [ $n -eq 8 ]
+    then
+        echo "good luck"
+    else
+        echo "Holberton School"
+    fi
+    (( n++ ))
+done
