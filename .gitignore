@@ -1,0 +1,4 @@
+# ignore emacs extensions
+.*
+*~
+.cache*
