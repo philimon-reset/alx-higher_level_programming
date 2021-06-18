@@ -8,8 +8,8 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
-:wq
 :q
+:wq
 :Q
 :"Wq
 :Wq
@@ -27,17 +27,30 @@
 	M
 
 # File marks:
-'0  1  0  ~/alx-higher_level_programming/.git/MERGE_MSG
-'1  3  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+'0  1  0  ~/.git/MERGE_MSG
+'1  2  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+'2  1  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+'3  4  0  ~/alx-higher_level_programming/.git/MERGE_MSG
 
 # Jumplist (newest first):
+-'  1  0  ~/.git/MERGE_MSG
+-'  2  0  ~/alx-higher_level_programming/.git/MERGE_MSG
 -'  1  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+-'  4  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+-'  3  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+-'  2  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+-'  1  0  ~/alx-higher_level_programming/.git/MERGE_MSG
+-'  4  0  ~/alx-higher_level_programming/.git/MERGE_MSG
 -'  3  0  ~/alx-higher_level_programming/.git/MERGE_MSG
 
 # History of marks within files (newest to oldest):
 
-> ~/alx-higher_level_programming/.git/MERGE_MSG
+> ~/.git/MERGE_MSG
 	"	1	0
-	^	3	0
-	.	2	3
-	+	2	3
+
+> ~/alx-higher_level_programming/.git/MERGE_MSG
+	"	2	0
+	^	2	0
+	.	1	3
+	+	3	3
+	+	1	3
