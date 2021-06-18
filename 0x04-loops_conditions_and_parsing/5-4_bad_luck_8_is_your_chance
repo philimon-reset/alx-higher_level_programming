@@ -2,7 +2,7 @@
 # loop holberton school hi if 9
 n=1
 
-while (( $n <= 10 ))
+while [ $n -le 10 ]
 do
     if [ $n -eq 4 ]
     then
