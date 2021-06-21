@@ -2,7 +2,7 @@
 # loop and echo To infinity and beyond indefinitely.
 
 a=echo "I am invincible!!!"
-trap $a 15
+trap "$a" 15
 while true
 do
     echo "To infinity and beyond"
