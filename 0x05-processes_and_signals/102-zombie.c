@@ -3,7 +3,7 @@
 #include <unistd.h>
 int infinite_while(void);
 
-int main()
+int main(void)
 {
 	int n = 0;
 
