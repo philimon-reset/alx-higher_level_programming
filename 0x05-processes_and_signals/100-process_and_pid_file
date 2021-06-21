@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # loop and echo To infinity and beyond indefinitely.
 
-echo $$ > touch /var/run/holbertonscript.pid
-trap 'rm /var/run/holbertonscript.pid && exit' SIGQUIT
-trap "echo Y U no love me?!" SIGINT
-trap 'echo "I hate the kill command" && exit && rm /var/run/holbertonscript.pid' SIGTERM
-touch /var/run/holbertonscript.pid
 while true
 do
+    echo $$ > touch /var/run/holbertonscript.pid
+    trap "echo Y U no love me?!" SIGINT
+    trap 'echo "I hate the kill command" && exit && rm /var/run/holbertonscript.pid' SIGTERM
+    trap 'rm /var/run/holbertonscript.pid && exit' SIGQUIT
+    touch /var/run/holbertonscript.pid
     echo "To infinity and beyond"
     sleep 2
 done
