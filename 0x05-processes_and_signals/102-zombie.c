@@ -21,6 +21,7 @@ int main()
 		n++;
 	}
 	infinite_while();
+	return (0);
 }
 
 /**
