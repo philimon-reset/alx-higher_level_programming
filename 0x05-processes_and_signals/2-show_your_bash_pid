@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# show all sections of process list with bash
+# Display line containing bash word
 # shellcheck disable=SC2009
-ps -auxH | grep -w "bash"
+ps axuf | grep -e "bash"
