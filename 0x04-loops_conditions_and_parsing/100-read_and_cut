@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+# read and cut
+
+n=cut -d ":" f1,3,5 > /etc/passwd
+while read -r "$n"
+do
+  echo "$n"
+done
