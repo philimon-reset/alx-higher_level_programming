@@ -3,13 +3,12 @@ int infinite_while(void);
 
 int main()
 {
-	pid_t child;
 	int n = 0;
 
 	while (n < 6)
 	{
-		child = fork();
-		printf("Zombie process created, PID: %d\n", getpid());
+		if (fork() != 0)
+			printf("Zombie process created, PID: %d\n", getpid());
 		n++;
 	}
 	infinite_while();
