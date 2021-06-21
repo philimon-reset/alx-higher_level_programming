@@ -9,5 +9,4 @@ do
     trap "echo Y U no love me?!" SIGINT
     trap 'echo "I hate the kill command" && exit && rm /var/run/holbertonscript.pid' SIGTERM
     trap 'rm /var/run/holbertonscript.pid && exit' SIGQUIT
-    touch /var/run/holbertonscript.pid
 done
