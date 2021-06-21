@@ -3,6 +3,11 @@
 #include <unistd.h>
 int infinite_while(void);
 
+/**
+ * main - main function
+ *
+ * Return: void function
+ */
 int main(void)
 {
 	int n = 0;
