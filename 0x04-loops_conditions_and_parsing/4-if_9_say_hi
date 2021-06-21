@@ -2,12 +2,12 @@
 # loop holberton school hi if 9
 n=1
 
-while (( $n <= 10 ))
+while [ $n -le 10 ]
 do
+    echo "Holberton School"
     if [ $n -eq 9 ]
     then
-        echo "hi"
+        echo "Hi"
     fi
-    echo "Holberton School"
-    (( n++ ))
+    n=$(( n + 1 ))
 done
