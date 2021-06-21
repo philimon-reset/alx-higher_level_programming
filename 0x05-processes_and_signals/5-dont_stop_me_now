@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # loop and echo To infinity and beyond indefinitely.
 
-kill pgrep -t "4-to_infinity_and_beyond"
+kill pgrep "4-to_infinity_and_beyond"
+echo "Terminated"
