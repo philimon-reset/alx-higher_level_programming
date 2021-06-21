@@ -12,7 +12,7 @@ int main(void)
 {
 	int n = 0;
 
-	while (n < 6)
+	while (n < 5)
 	{
 		if (fork() != 0)
 			printf("Zombie process created, PID: %d\n", getpid());
