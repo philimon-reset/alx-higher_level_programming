@@ -1,7 +1,5 @@
 import cmd
 import models
-import io
-import sys
 import json
 
 
@@ -10,10 +8,6 @@ class HBNBCommand(cmd.Cmd):
     classes = ["BaseModel", "FileStorage"]
 
     prompt = '(hbnb)'
-
-    def help_greet(self):
-        print("greet [person]")
-        print("Greet the named person")
 
     def do_create(self, line):
         """ Create Basemodel instance"""
@@ -121,9 +115,6 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, line):
         """ Quit command to exit the program. """
         return True
-
-    def postloop(self):
-        print
 
 
 if __name__ == '__main__':
