@@ -102,6 +102,7 @@ class HBNBCommand(cmd.Cmd):
                         a += 1
                         if i.split('.')[1] == liner[1]:
                             # working space
+                            # FUCK UUUUUUUUUU IM DONE
                             pass
                         elif (a == len(models.storage.all())):
                             print("** no instance found **")
