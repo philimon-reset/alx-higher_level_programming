@@ -156,10 +156,19 @@ class HBNBCommand(cmd.Cmd):
             if splited[0] in models.dummy_classes:
                 parsed = splited[1].split("(")
                 parsed[1] = parsed[1].strip(")")
-                parsed[1] = parsed[1].strip('"')
+                args = parsed[1].split(",")
+                args = [arg.strip() for arg in args]
+                if len(args) >= 3:
+                    temp = args[2]
+                    args = [arg.strip('"') for arg in args[:2]]
+                    args.append(temp)
+                else:
+                    args = [arg.strip('"') for arg in args]
                 command = self.fetch_command(parsed[0])
                 if command:
-                    reconstructed_command = " ".join([splited[0], parsed[1]])
+                    reconstructed_args = [arg for arg in args]
+                    reconstructed_args.insert(0, splited[0])
+                    reconstructed_command = " ".join(reconstructed_args)
                     command(self, reconstructed_command)
                 else:
                     print("*** Unknown syntax: {}".format(line))
