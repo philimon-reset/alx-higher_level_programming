@@ -15,10 +15,11 @@ class FileStorage:
 
     def save(self):
         """ save string rep of rep file to new file """
+        temp = {}
         for i, o in self.__objects.items():
-            self.__objects[i] = o.to_dict()
+            temp[i] = o.to_dict()
         with open(self.__file_path, 'w', encoding='utf8') as mfile:
-            json.dump(self.__objects, mfile)
+            json.dump(temp, mfile)
 
     def reload(self):
         try:

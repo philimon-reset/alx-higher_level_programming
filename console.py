@@ -9,17 +9,15 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb)'
 
+    def emptyline(self):
+        """pass Empty line"""
+        pass
+
     def do_create(self, line):
         """ Create Basemodel instance"""
         if line and line in self.classes:
             temp_ins = models.dummy_ins[self.classes[0]]()
-            models.storage.save()
-            if models.storage.all().keys():
-                for i, dic in models.storage.all().items():
-                    if (i.split('.')[1] == temp_ins.id):
-                        models.storage.reload()
-            else:
-                models.storage.save()
+            temp_ins.save()
             print(temp_ins.id)
         elif line:
             print("** class doesn't exist **")
@@ -31,7 +29,7 @@ class HBNBCommand(cmd.Cmd):
         if line:
             liner = line.split()
             if len(liner) > 1:
-                if (liner[0] and liner[1]) and liner[0] in self.classes:
+                if liner[0] in self.classes:
                     a = 0
                     for i, dic in models.storage.all().items():
                         a += 1
@@ -40,8 +38,6 @@ class HBNBCommand(cmd.Cmd):
                             break
                         elif (a == len(models.storage.all())):
                             print("** no instance found **")
-                elif liner[0] not in self.classes:
-                    print("** class doesn't exist **")
                 else:
                     print("** no instance found **")
             elif line not in self.classes:
@@ -53,7 +49,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """ print all instances """
-        if line in self.classes:
+        if line or len(line.split()) < 1:
             temp = []
             for i, di in models.storage.all().items():
                 temp.append(str(di))
@@ -116,6 +112,7 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, line):
         """ Quit command to exit the program. """
         return True
+
 
 if __name__ == '__main__':
     import sys
