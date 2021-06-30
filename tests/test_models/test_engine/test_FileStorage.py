@@ -6,6 +6,7 @@ import unittest
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 
+
 class test_FileStorage(unittest.TestCase):
     """
         Base test class
