@@ -4,6 +4,7 @@
 """
 import models
 
+
 class User(models.BaseModel):
     """
         User class
