@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    module containing FileStorage used for file storage
+module containing FileStorage used for file storage
 """
 import json
 import models
@@ -8,27 +8,27 @@ import models
 
 class FileStorage:
     """
-        serializes and deserializes instances to and from JSON file
+    serializes and deserializes instances to and from JSON file
     """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
         """
-            returns a dictionary containing every object
+        returns a dictionary containing every object
         """
         return self.__objects
 
     def new(self, obj):
         """
-            creates a new object and saves it to __objects
+        creates a new object and saves it to __objects
         """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         self.__objects[key] = obj
 
     def save(self):
         """
-            update the JSON file to reflect any change in the objects
+        update the JSON file to reflect any change in the objects
         """
         temp = {}
         for id, obj in self.__objects.items():
@@ -38,7 +38,7 @@ class FileStorage:
 
     def reload(self):
         """
-            update __objects dict to restore previously created objects
+        update __objects dict to restore previously created objects
         """
         try:
             with open(self.__file_path, "r") as json_file:
