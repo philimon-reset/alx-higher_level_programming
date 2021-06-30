@@ -1,123 +1,120 @@
+#!/usr/bin/python3
+"""
+    Main Console program
+"""
 import cmd
 import models
-import json
 
 
 class HBNBCommand(cmd.Cmd):
-    """Simple command processor example."""
-    classes = ["BaseModel", "FileStorage"]
+    """Console"""
+    prompt = "(hbnb) "
 
-    prompt = '(hbnb)'
+    def do_EOF(self, arg):
+        """Quit the program"""
+        return True
+
+    def do_quit(self, arg):
+        """Quit the program"""
+        return True
 
     def emptyline(self):
-        """pass Empty line"""
+        """Ignore empty inputs"""
         pass
 
-    def do_create(self, line):
-        """ Create Basemodel instance"""
-        if line and line in self.classes:
-            temp_ins = models.dummy_ins[self.classes[0]]()
-            temp_ins.save()
-            print(temp_ins.id)
-        elif line:
-            print("** class doesn't exist **")
-        else:
-            print("** class name missing ** ")
-
-    def do_show(self, line):
-        """ show Basemodel instance"""
-        if line:
-            liner = line.split()
-            if len(liner) > 1:
-                try:
-                    if liner[0] in self.classes:
-                        a = 0
-                        for i, dic in models.storage.all().items():
-                            a += 1
-                            if i.split('.')[1] == liner[1]:
-                                print(dic)
-                                break
-                except:
-                    print("** no instance found **")
-                else:
-                    print("** no instance found **")
-            elif line not in self.classes:
+    def do_create(self, arg):
+        """Creates a new instance of a Model"""
+        if arg:
+            try:
+                new_instance = models.dummy_classes[arg]
+                new_instance = new_instance()
+                new_instance.save()
+                print(new_instance.id)
+            except:
                 print("** class doesn't exist **")
-            else:
-                print("** instance id missing **")
         else:
-            print("** class name missing ** ")
+            print("** class name missing **")
 
-    def do_all(self, line):
-        """ print all instances """
-        if line or len(line.split()) < 1:
-            temp = []
-            for i, di in models.storage.all().items():
-                temp.append(str(di))
-            print(temp)
-        else:
-            print("** class doesn't exist **")
-
-    def do_destroy(self, line):
-        """ Destroy instance """
-        if line:
-            liner = line.split()
-            if len(liner) > 1:
-                if (liner[0] and liner[1]) and liner[0] in self.classes:
-                    a = 0
-                    for i, dic in models.storage.all().items():
-                        a += 1
-                        if i.split('.')[1] == liner[1]:
-                            models.storage.all().pop(i).save()
-                            break
-                        # THE FUCKKKKKK
-                        elif (a == len(models.storage.all())):
-                            print("** no instance found **")
+    def do_show(self, arg):
+        """Prints the string representation of an instance based on the class name and id"""
+        if arg:
+            arg = arg.split()
+            if arg[0] in models.dummy_classes:
+                if len(arg) > 1:
+                    key = "{}.{}".format(arg[0], arg[1])
+                    try:
+                        print(models.storage.all()[key])
+                    except:
+                        print("** no instance found **")
                 else:
-                    print("** no instance found **")
-            elif line not in self.classes:
-                print("** class doesn't exist **")
+                    print("** instance id missing **")
             else:
-                print("** instance id missing **")
+                print("** class doesn't exist **")
         else:
-            print("** class name missing ** ")
+            print("** class name missing **")
 
-    def do_update(self, line):
-        """ update instance """
-        if line:
-            liner = line.split()
-            if len(liner) > 1:
-                if (liner[0] and liner[1]) and liner[0] in self.classes:
-                    a = 0
-                    for i, dic in models.storage.all().items():
-                        a += 1
-                        if i.split('.')[1] == liner[1]:
-                            # working space
-                            # FUCK UUUUUUUUUU IM DONE
-                            pass
-                        elif (a == len(models.storage.all())):
-                            print("** no instance found **")
+    def do_destroy(self, arg):
+        """ Deletes an instance based on the class name and id"""
+        if arg:
+            arg = arg.split()
+            if arg[0] in models.dummy_classes:
+                if len(arg) > 1:
+                    key = "{}.{}".format(arg[0], arg[1])
+                    try:
+                        garbage = models.storage.all().pop(key)
+                        del(garbage)
+                        models.storage.save()
+                    except:
+                        print("** no instance found **")
                 else:
-                    print("** no instance found **")
-            elif line not in self.classes:
-                print("** class doesn't exist **")
+                    print("** instance id missing **")
             else:
-                print("** instance id missing **")
+                print("** class doesn't exist **")
         else:
-            print("** class name missing ** ")
+            print("** class name missing **")
 
-    def do_EOF(self, line):
-        """EOF Quit command to exit the program"""
-        return True
+    def do_all(self, arg):
+        """Prints all string representation of all instances based or not on the class name"""
+        result = []
+        if arg:
+            arg = arg.split()
+            if arg[0] in models.dummy_classes:
+                for instance, obj in models.storage.all().items():
+                    if instance.split('.')[0] == arg[0]:
+                        result.append(str(obj))
+            else:
+                print("** class doesn't exist **")
+        else:
+            for instance, obj in models.storage.all().items():
+                result.append(str(obj))
+        if result:
+            print(result)
 
-    def do_quit(self, line):
-        """ Quit command to exit the program. """
-        return True
+    def do_update(self, arg):
+        """Updates an instance based on the class name and id by adding or updating attribute"""
+        if arg:
+            arg = arg.split()
+            if arg[0] in models.dummy_classes:
+                if len(arg) > 1:
+                    key = "{}.{}".format(arg[0], arg[1])
+                    try:
+                        instance = models.storage.all()[key]
+                        if len(arg) > 2:
+                            if len(arg) > 3:
+                                setattr(instance, arg[2], arg[3].strip('"'))
+                                instance.save()
+                            else:
+                                print("** value missing **")
+                        else:
+                            print("** attribute name missing **")
+                    except:
+                        print("** no instance found **")
+                else:
+                    print("** instance id missing **")
+            else:
+                print("** class doesn't exist **")
+        else:
+            print("** class name missing **")
 
-
-if __name__ == '__main__':
-    import sys
-    if len(sys.argv) > 1:
-        HBNBCommand().onecmd(' '.join(sys.argv[1:]))
-    else:
-        HBNBCommand().cmdloop()
+if __name__ == "__main__":
+    HBNBCommand().cmdloop()

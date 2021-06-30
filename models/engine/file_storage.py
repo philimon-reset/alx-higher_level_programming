@@ -1,9 +1,15 @@
+#!/usr/bin/python3
+"""
+    module containing FileStorage used for file storage
+"""
 import json
 import models
 
-
 class FileStorage:
-    __file_path = "file.json"
+    """
+        serializes instances to a JSON file and deserializes JSON file to instances
+    """
+    __file_path = "storage.json"
     __objects = {}
 
     def all(self):
@@ -14,19 +20,18 @@ class FileStorage:
         self.__objects[key] = obj
 
     def save(self):
-        """ save string rep of rep file to new file """
         temp = {}
-        for i, o in self.__objects.items():
-            temp[i] = o.to_dict()
-        with open(self.__file_path, 'w', encoding='utf8') as mfile:
-            json.dump(temp, mfile)
+        for id, obj in self.__objects.items():
+            temp[id] = obj.to_dict()
+        with open(self.__file_path, "w") as json_file:
+            json.dump(temp, json_file)
 
     def reload(self):
         try:
-            with open(self.__file_path, 'r', encoding='utf8') as mfile:
-                a = json.load(mfile)
-            for i, di in a.items():
-                temp_ins = models.dummy_ins[di["__class__"]](**di)
-                self.__objects[i] = temp_ins
+            with open(self.__file_path, "r") as json_file:
+                temp = json.load(json_file)
+            for id, dict in temp.items():
+                temp_instance = models.dummy_classes[dict["__class__"]](**dict)
+                self.__objects[id] = temp_instance
         except:
             pass
