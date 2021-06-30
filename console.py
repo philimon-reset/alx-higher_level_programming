@@ -14,10 +14,10 @@ class HBNBCommand(cmd.Cmd):
     @classmethod
     def fetch_command(cls, command):
         commands = {"all": cls.do_all, "show": cls.do_show,
-                    "destroy": cls.do_destroy, "update":cls.do_update,
+                    "destroy": cls.do_destroy, "update": cls.do_update,
                     "count": cls.do_count}
         if command in commands:
-            return commands[command]    
+            return commands[command]
         else:
             return None
 
@@ -162,7 +162,7 @@ class HBNBCommand(cmd.Cmd):
                     reconstructed_command = " ".join([splited[0], parsed[1]])
                     command(self, reconstructed_command)
                 else:
-                    print("*** Unknown syntax: {}".format(line))        
+                    print("*** Unknown syntax: {}".format(line))
             else:
                 print("** class doesn't exist **")
         else:
