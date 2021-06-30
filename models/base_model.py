@@ -22,7 +22,8 @@ class BaseModel():
                 if key == "__class__":
                     continue
                 elif key in ("created_at", "updated_at"):
-                    setattr(self, key, datetime.fromisoformat(kwargs[key]))
+                    iso = "%Y-%m-%dT%H:%M:%S.%f"
+                    setattr(self, key, datetime.strptime(kwargs[key], iso))
                 else:
                     setattr(self, key, kwargs[key])
         else:
