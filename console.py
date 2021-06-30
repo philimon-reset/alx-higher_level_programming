@@ -29,15 +29,16 @@ class HBNBCommand(cmd.Cmd):
         if line:
             liner = line.split()
             if len(liner) > 1:
-                if liner[0] in self.classes:
-                    a = 0
-                    for i, dic in models.storage.all().items():
-                        a += 1
-                        if i.split('.')[1] == liner[1]:
-                            print(dic)
-                            break
-                        elif (a == len(models.storage.all())):
-                            print("** no instance found **")
+                try:
+                    if liner[0] in self.classes:
+                        a = 0
+                        for i, dic in models.storage.all().items():
+                            a += 1
+                            if i.split('.')[1] == liner[1]:
+                                print(dic)
+                                break
+                except:
+                    print("** no instance found **")
                 else:
                     print("** no instance found **")
             elif line not in self.classes:
