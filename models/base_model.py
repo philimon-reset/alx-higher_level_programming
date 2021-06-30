@@ -6,11 +6,13 @@ from uuid import uuid4
 from datetime import datetime
 import models
 
+
 class BaseModel():
     """
         Base class to define all common attributes and methods for
         other classes
     """
+
     def __init__(self, *args, **kwargs):
         """
             initialization
