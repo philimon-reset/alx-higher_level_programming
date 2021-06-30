@@ -18,7 +18,7 @@ class Test_BaseModel(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """setup class"""
-        cls.dummy = BaseModel() 
+        cls.dummy = BaseModel()
 
     @classmethod
     def tearDownClass(cls):
@@ -28,7 +28,6 @@ class Test_BaseModel(unittest.TestCase):
             os.remove("storage.json")
         except:
             pass
-
 
     def test_id(self):
         """
@@ -112,7 +111,7 @@ class Test_BaseModel(unittest.TestCase):
         self.assertIsInstance(test_instance.updated_at, datetime)
         self.assertEqual(test_instance.created_at, dummy.created_at)
         self.assertEqual(test_instance.updated_at, dummy.updated_at)
-        
+
 
 if __name__ == "__main__":
         unittest.main()

@@ -4,6 +4,7 @@
 """
 import models
 
+
 class Place(models.BaseModel):
     """
         Place class

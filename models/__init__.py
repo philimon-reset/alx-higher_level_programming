@@ -8,7 +8,8 @@ from models.user import User
 from models.place import Place
 
 dummy_classes = {"BaseModel": BaseModel, "User": User,
-                 "Review": Review, "City": City, "State": State, "Place": Place}
+                 "Review": Review, "City": City,
+                 "State": State, "Place": Place}
 
 storage = file_storage.FileStorage()
 storage.reload()
