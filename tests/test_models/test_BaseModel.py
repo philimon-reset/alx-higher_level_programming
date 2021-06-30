@@ -25,7 +25,7 @@ class Test_BaseModel(unittest.TestCase):
         """tear down"""
         del cls.dummy
         try:
-            os.remove("test.json")
+            os.remove("storage.json")
         except:
             pass
 

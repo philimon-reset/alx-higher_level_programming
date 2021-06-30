@@ -9,7 +9,7 @@ class FileStorage:
     """
         serializes instances to a JSON file and deserializes JSON file to instances
     """
-    __file_path = "test.json"
+    __file_path = "storage.json"
     __objects = {}
 
     def all(self):
