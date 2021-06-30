@@ -4,11 +4,22 @@
 """
 import cmd
 import models
+import re
 
 
 class HBNBCommand(cmd.Cmd):
     """Console"""
     prompt = "(hbnb) "
+
+    @classmethod
+    def fetch_command(cls, command):
+        commands = {"all": cls.do_all, "show": cls.do_show,
+                    "destroy": cls.do_destroy, "update":cls.do_update,
+                    "count": cls.do_count}
+        if command in commands:
+            return commands[command]    
+        else:
+            return None
 
     def do_EOF(self, arg):
         """Quit the program"""
@@ -116,6 +127,45 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class name missing **")
 
+    def do_count(self, arg):
+        """
+        count number of instances
+        """
+        count = 0
+        if arg:
+            arg = arg.split()
+            if arg[0] in models.dummy_classes:
+                for instance, obj in models.storage.all().items():
+                    if instance.split('.')[0] == arg[0]:
+                        count += 1
+            else:
+                print("** class doesn't exist **")
+        else:
+            for instance, obj in models.storage.all().items():
+                count += 1
+        print(count)
+
+    def default(self, line):
+        """
+        handle invalid commands and
+        special commands like <class name>.<command>()
+        """
+        match = re.fullmatch(r"[A-Za-z]+\.[A-Za-z]+\(.*?\)", line)
+        if match:
+            splited = line.split('.')
+            if splited[0] in models.dummy_classes:
+                parsed = splited[1].split("(")
+                parsed[1] = parsed[1].strip(")")
+                command = self.fetch_command(parsed[0])
+                if command:
+                    reconstructed_command = " ".join([splited[0]])
+                    command(self, reconstructed_command)
+                else:
+                    print("*** Unknown syntax: {}".format(line))        
+            else:
+                print("** class doesn't exist **")
+        else:
+            print("*** Unknown syntax: {}".format(line))
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
