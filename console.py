@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
     def do_show(self, arg):
-        """string representation of an instance based on the class name and id"""
+        """string representation of an instance"""
         if arg:
             arg = arg.split()
             if arg[0] in models.dummy_classes:
@@ -74,7 +74,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
     def do_all(self, arg):
-        """string representation of all instances based or not on the class name"""
+        """string representation of all instances"""
         result = []
         if arg:
             arg = arg.split()
