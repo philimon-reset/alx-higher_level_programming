@@ -14,13 +14,22 @@ class FileStorage:
     __objects = {}
 
     def all(self):
+        """
+            returns a dictionary containing every object
+        """
         return self.__objects
 
     def new(self, obj):
+        """
+            creates a new object and saves it to __objects
+        """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         self.__objects[key] = obj
 
     def save(self):
+        """
+            update the JSON file to reflect any change in the objects
+        """
         temp = {}
         for id, obj in self.__objects.items():
             temp[id] = obj.to_dict()
@@ -28,6 +37,9 @@ class FileStorage:
             json.dump(temp, json_file)
 
     def reload(self):
+        """
+            update __objects dict to restore previously created objects
+        """
         try:
             with open(self.__file_path, "r") as json_file:
                 temp = json.load(json_file)
