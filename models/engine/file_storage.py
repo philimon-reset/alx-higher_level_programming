@@ -10,9 +10,11 @@ class FileStorage:
     """
     serializes and deserializes instances to and from JSON file
     saved into file_path
+
     """
+
     __file_path = "file.json"
-    __objects = {}
+    __objects = dict()
 
     def all(self):
         """
