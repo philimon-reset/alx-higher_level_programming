@@ -1,4 +1,4 @@
 all: holberton
-holberton: holberton.o
-        @echo "Checking.."
-        gcc main.c holberton.c -o holberton
+
+holberton:
+	gcc main.c holberton.c -o holberton
