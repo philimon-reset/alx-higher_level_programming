@@ -1,0 +1,7 @@
+all:
+
+CC:= gcc
+SRC:= main.c holberton.c
+OBJ:= main.o holberton.o
+hol:
+	gcc main.c holberton.c -o holberton
