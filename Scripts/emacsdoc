@@ -1,5 +1,4 @@
-(when (version<= "26.0.50" emacs-version )
-  (global-display-line-numbers-mode))
+(setq column-number-mode t)
 (setq c-default-style "bsd"
       c-basic-offset 8
       tab-width 8
