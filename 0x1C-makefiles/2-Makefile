@@ -5,7 +5,7 @@ BINS:= $(SRC:%.c=%)
 NAME:= holberton
 all: ${OBJ}
 
-%: %.c %.o
-	${CC} -c -o $< $@
+%: %.c
+	${CC} -c -o $^ $@
 %:
 	${CC} ${OBJ} -o ${NAME}
