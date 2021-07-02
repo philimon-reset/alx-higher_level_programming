@@ -1,10 +1,10 @@
 .PHONY: clean oclean fclean
-CC:= gcc
-SRC:= main.c holberton.c
-OBJ:= $(SRC:%.c=%.o)
-BINS:= $(SRC:%.c=%)
-NAME:= holberton
-RM:= rm -f
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
+BINS = $(SRC:%.c=%)
+NAME = holberton
+RM = rm -f
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 clean:
