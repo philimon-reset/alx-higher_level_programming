@@ -3,6 +3,7 @@
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
+.*
 *~
 *.out
 \#*\#
