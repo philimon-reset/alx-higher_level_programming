@@ -6,3 +6,7 @@
 (setq whitespace-style '(face empty lines-tail trailing))
 (global-whitespace-mode t)
 (setq column-number-mode t)
+(require 'linum)
+(setq linum-format
+      (lambda (line)
+        (propertize (number-to-string (1- line)) 'face 'linum)))
