@@ -26,6 +26,9 @@ class test_FileStorage(unittest.TestCase):
         del cls.dummy
 
     def test_attrs(self):
+        """
+            attribute tests
+        """
         self.assertTrue(hasattr(self.dummy, "_FileStorage__objects"))
         self.assertTrue(isinstance(self.dummy._FileStorage__objects, dict))
         self.assertTrue(hasattr(self.dummy, "_FileStorage__file_path"))
