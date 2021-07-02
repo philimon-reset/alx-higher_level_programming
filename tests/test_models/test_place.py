@@ -8,6 +8,7 @@ from models.user import User
 from models.base_model import BaseModel
 import unittest
 
+
 class test_Place(unittest.TestCase):
     """
         test for Place class
@@ -47,7 +48,7 @@ class test_Place(unittest.TestCase):
         self.assertTrue(hasattr(self.dummy_city, "updated_at"))
 
     def test_attrs(self):
-        """ 
+        """
             test attributes
         """
         self.assertTrue(hasattr(self.dummy_city, "city_id"))

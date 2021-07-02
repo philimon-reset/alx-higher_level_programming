@@ -6,6 +6,7 @@ from models.base_model import BaseModel
 from models.amenity import Amenity
 import unittest
 
+
 class test_Amenity(unittest.TestCase):
     """
         test for amenity class

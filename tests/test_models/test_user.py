@@ -6,6 +6,7 @@ import unittest
 from models.user import User
 from models.base_model import BaseModel
 
+
 class test_User(unittest.TestCase):
     """
         User class tests
@@ -38,7 +39,7 @@ class test_User(unittest.TestCase):
         self.assertTrue(hasattr(self.dummy_user, "updated_at"))
 
     def test_attrs(self):
-        """ 
+        """
             test attributes
         """
         self.assertTrue(hasattr(self.dummy_user, "email"))

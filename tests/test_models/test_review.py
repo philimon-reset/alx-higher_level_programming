@@ -8,6 +8,7 @@ from models.place import Place
 from models.user import User
 import unittest
 
+
 class test_Review(unittest.TestCase):
     """
         test for Review class
@@ -39,7 +40,7 @@ class test_Review(unittest.TestCase):
         self.assertTrue(hasattr(self.dummy_review, "updated_at"))
 
     def test_attrs(self):
-        """ 
+        """
             test attributes
         """
         self.assertTrue(hasattr(self.dummy_review, "text"))
