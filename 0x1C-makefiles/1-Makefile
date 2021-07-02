@@ -1,6 +1,6 @@
-all:
+all: hol
 
 CC:= gcc
-SRCS:= main.c holberton.c
+SRC:= main.c holberton.c
 hol:
-	gcc main.c holberton.c -o holberton
+	${CC} ${SRC} -o holberton
