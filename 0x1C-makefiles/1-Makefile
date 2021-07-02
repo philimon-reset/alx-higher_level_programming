@@ -1,4 +1,4 @@
-CC= gcc
-SRC= $(*.c)
+CC = gcc
+SRC = $(*.c)
 all:
 	$(CC) $(SRC) -o holberton
