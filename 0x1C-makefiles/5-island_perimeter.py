@@ -6,6 +6,7 @@
 """
 
 def island_perimeter(grid):
+
     """Island perimeter counter
 
     Args:
