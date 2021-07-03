@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    island requirment
+"""
 def island_perimeter(grid):
     """Island perimeter counter
 
