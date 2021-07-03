@@ -2,7 +2,9 @@
 
 """
     island requirment
+    i think, making this as long as i can
 """
+
 def island_perimeter(grid):
     """Island perimeter counter
 
