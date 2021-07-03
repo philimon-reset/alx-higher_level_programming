@@ -91,3 +91,13 @@ def total(grid, i, x, fb_ver, fb_ver2, fb_ver_n):
         elif fb_ver and grid[i][x - 1] == 1:
             sum += 1
     return sum
+
+if __name__ == "__main__":
+    grid = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0]
+    ]
+    print(island_perimeter(grid))
