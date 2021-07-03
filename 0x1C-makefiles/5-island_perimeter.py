@@ -4,7 +4,6 @@ def island_perimeter(grid):
 
     Args:
         grid (matrix): grid representing island
-
     Returns:
         int: perimeter of island
     """
