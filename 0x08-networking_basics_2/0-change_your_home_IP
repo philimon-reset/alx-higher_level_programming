@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# change ip addresses in host dir (not mine)
+# change ip addresses in host dir (not mine, stolen code)
 
 cp /etc/hosts ~/hosts.new
 sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new
