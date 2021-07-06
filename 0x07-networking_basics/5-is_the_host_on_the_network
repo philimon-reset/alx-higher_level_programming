@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # displays pings an IP address passed as an argument.
 
-filename="IP_ADDRESS"
-
-if [ -e $filename ]
+if [ "$#" -eq 0 ]
 then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
