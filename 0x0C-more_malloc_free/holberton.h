@@ -5,6 +5,10 @@
 #include <stdlib.h>
 
 int _putchar(char c);
+void _prntstr(char *s);
+long int numstrchk(char *s);
+void *_calloc_buffer(long int num, long int size);
+char *trimzero(char *s);
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 int _strlen(char *s);
