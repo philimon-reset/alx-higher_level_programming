@@ -28,7 +28,7 @@ int _strlen(const char *s);
 void free_listint(listint_t *head);
 void free_listint2(listint_t **head);
 int pop_listint(listint_t **head);
-int check_ptr(const listint_t *ptr, listint_t **array, unsigned int size);
+listint_t *find_listint_loop_pl(listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int sum_listint(listint_t *head);
