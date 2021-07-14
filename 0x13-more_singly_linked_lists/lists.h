@@ -20,6 +20,11 @@ struct listint_s *next;
 } listint_t;
 
 int _putchar(char c);
+void _prntstr(char *s);
+long int numstrchk(char *s);
+void *_calloc_buffer(long int num, long int size);
+char *trimzero(char *s);
+
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
 listint_t *find_listint_loop_fl(listint_t *head);
