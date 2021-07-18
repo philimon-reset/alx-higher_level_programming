@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 .vscode/
 *~
 *.pyc
 __pycache__/
 *.json
 test.py
+=======
+# ignore emacs extensions
+.*
+*~
+.cache*
+>>>>>>> f4ccc175bc04783ded433480f60677bfb6781702
