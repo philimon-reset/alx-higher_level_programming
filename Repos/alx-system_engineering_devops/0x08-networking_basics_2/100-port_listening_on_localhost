@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# check listening port of 98
-
-nc -l 98
