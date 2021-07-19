@@ -1,15 +1,32 @@
 #include "binary_trees.h"
 
-/**
- * binary_tree_is_root - checks if a node is the root node
- * @node: node to be checked
- * 
- * Return: 1 is it is and 0 if not
+/** binary_tree_inorder - search through the tree in inorder
+ * @tree: tree to be search
+ * @func: function to print node values
+ *
+ * Return: void funcion
  */
- 
-int binary_tree_is_root(const binary_tree_t *node)
+
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
-	if (node->parent == NULL)
-		return (1);
-	return (0);
+	if (tree == NULL)
+	{
+		func(tree->n);
+		return;
+	}
+	else
+	{
+		if (tree->left != NULL)
+		{
+			binary_tree_inorder(tree->left, func);
+		}
+		if (tree != NULL)
+		{
+			func(tree->n);
+		}
+		if (tree->right != NULL)
+		{
+			binary_tree_inorder(tree->right, func);
+		}
+	}
 }
