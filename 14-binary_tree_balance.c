@@ -1,29 +1,47 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_nodes - count possible nodes of tree
+ * binary_tree_balance - count possible balance factor
  * @tree: tree to be search
  *
- * Return: number of nodes
+ * Return: balance factor
  */
 
-size_t binary_tree_nodes(const binary_tree_t *tree)
+int binary_tree_balance(const binary_tree_t *tree)
 {
-	size_t nodes = 0;
+	int height_L = height_max(tree->left);
+	int height_R = height_max(tree->right);
 
 	if (tree == NULL)
 		return (0);
-	if (tree->parent == NULL)
-		nodes++;
-	if (tree->left != NULL)
-	{
-		nodes++;
-		binary_tree_nodes(tree->left);
-	}
-	if (tree->right != NULL)
-	{
-		nodes++;
-		binary_tree_nodes(tree->right);
-	}
-	return (nodes);
+	return (height_L - height_R);
+}
+
+/**
+ * max- max value of a and b
+ * @a: first value
+ * @b: second value
+ *
+ * Return: max value between a and b
+ */
+
+int max(int a, int b)
+{
+	if (a >= b) 
+		return (a);
+	return (b);
+}
+
+/**
+ * height_max - max height
+ * @tree: tree to be checked
+ *
+ * Return: max height of tree
+ */
+
+int height_max(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return 0;
+	return 1 + max(height_max(tree->left), height_max(tree->right));
 }
