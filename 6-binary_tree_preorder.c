@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 
-/** 
+/**
  * binary_tree_preorder - search through the tree in preorder
  * @tree: tree to be search
  * @func: function to print node values
@@ -19,7 +19,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 	{
 		if (tree != NULL)
 		{
-	    		func(tree->n);
+			func(tree->n);
 		}
 		if (tree->left != NULL)
 		{
