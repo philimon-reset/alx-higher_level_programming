@@ -1,6 +1,7 @@
 #include "binary_trees.h"
 
-/** binary_tree_postorder - search through the tree in postorder
+/**
+ * binary_tree_postorder - search through the tree in postorder
  * @tree: tree to be search
  * @func: function to print node values
  *
