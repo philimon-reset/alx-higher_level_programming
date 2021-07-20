@@ -1,6 +1,7 @@
 #include "binary_trees.h"
 
-/** binary_tree_inorder - search through the tree in inorder
+/**
+ * binary_tree_inorder - search through the tree in inorder
  * @tree: tree to be search
  * @func: function to print node values
  *
