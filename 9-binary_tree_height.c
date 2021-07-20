@@ -17,6 +17,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	return (H);
 }
 
+/**
+ * height - copy of height function due to prototype limits
+ * @tree: tree to be checked
+ * @H: height of tree
+ *
+ * Return: height of tree
+ */
 size_t height(const binary_tree_t *tree, size_t H)
 {
 	if (tree->left == NULL && tree->right == NULL)
