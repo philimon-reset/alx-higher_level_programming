@@ -27,7 +27,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 int max(int a, int b)
 {
-	if (a >= b) 
+	if (a >= b)
 		return (a);
 	return (b);
 }
@@ -42,6 +42,6 @@ int max(int a, int b)
 int height_max(const binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return 0;
-	return 1 + max(height_max(tree->left), height_max(tree->right));
+		return (0);
+	return (1 + max(height_max(tree->left), height_max(tree->right)));
 }
