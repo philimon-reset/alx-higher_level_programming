@@ -2,24 +2,35 @@
 
 
 /**
- * binary_tree_node - creates a binary tree node
- * @parent: a pointer to the parent node
- * @value: the value to put in the new node
- *
- * Return: binary tree
+ * binary_tree_height - measure the height of a binary tree
+ * @tree: tree to be measured
+ * 
+ * Return: height of the tree
  */
-binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
+ 
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	binary_tree_t *node;
+	size_t H = 0;
 
-	node = malloc(sizeof(binary_tree_t));
+	if (tree == NULL)
+		return (0);
+	H = height(tree, H);
+	return (H);
+}
 
-	if (node == NULL)
-		return (NULL);
-	node->parent = parent;
-	node->left = NULL;
-	node->right = NULL;
-	node->n = value;
-
-	return (node);
+size_t height(const binary_tree_t *tree, size_t H)
+{
+	if (tree->left == NULL && tree->right == NULL)
+		return (H);
+	if (tree->left != NULL)
+	{
+		H++;
+		height(tree->left, H);
+	}
+	if (tree->right != NULL)
+	{
+		H++;
+		height(tree->right, H);
+	}
+	return (H);
 }
