@@ -1,17 +1,23 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_size - size of the tree
+ * binary_tree_leaves - count leaves of tree
  * @tree: tree to be checked
  *
- * Return: size of tree
+ * Return: leaves of tree
  */
-
-size_t binary_tree_size(const binary_tree_t *tree)
+ 
+size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-	size_t size = 1;
+	binary_tree_t *node = tree;
 
-	if (tree == NULL)
-		return (0);
-	return (binary_tree_size(tree->left) + 1 + binary_tree_size(tree->right));
+	while(1)
+	{
+	if (node->left != NULL)
+		node = node->left;
+	else if (node->right != NULL)
+		node = node->right;
+	else
+		break;
+	}
 }
