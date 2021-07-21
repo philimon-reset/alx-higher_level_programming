@@ -58,5 +58,5 @@ int height_max(const binary_tree_t *tree)
 		height_L = height_max(tree->left);
 	if (tree->right != NULL)
 		height_R = height_max(tree->right);
-	return (1 + max(height_L, height_R));
+	return (max(height_L, height_R) + 1);
 }
