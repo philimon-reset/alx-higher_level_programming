@@ -9,13 +9,9 @@
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int height_L = height_max(tree->left);
-	int height_R = height_max(tree->right);
-
 	if (tree == NULL)
 		return (0);
-
-	if (height_L == height_R)
+	if (height_max(tree->left) == height_max(tree->right))
 	{
 		if (tree->left == NULL && tree->right == NULL)
 			return (1);
