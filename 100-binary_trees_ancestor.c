@@ -7,18 +7,25 @@
  *
  * Return: common ancestor of both
  */
-
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second)
 {
-	binary_tree_t *nodes;
+	binary_tree_t *nodes_F;
+	binary_tree_t *nodes_S;
 
-	if (first->parent == second || second->parent == NULL)
+	if (first->parent == second)
 		return (first->parent);
-	if (second->parent == first || first->parent == NULL)
+	if (second->parent == NULL)
 		return (second->parent);
+	if (second->parent == first)
+		return (second->parent);
+	if (first->parent == NULL)
+		return (first->parent);
 	if (first->parent == second->parent)
 		return (first->parent);
-	nodes = binary_trees_ancestor(first->parent, second->parent);
-	return (nodes);
+	nodes_F = binary_trees_ancestor(first->parent, second);
+	nodes_S = binary_trees_ancestor(first, second->parent);
+	if (nodes_F)
+		return (nodes_F);
+	return (nodes_S);
 }
