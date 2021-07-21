@@ -1,57 +1,36 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_perfect - check if the tree is perfect
- * @tree: tree to be checked
+ * binary_tree_is_uncle - find uncle of node
+ * @node: node to be checked
  *
- * Return: 1 if it is and 0 if it isnt
+ * Return: uncle of node
  */
 
-int binary_tree_is_perfect(const binary_tree_t *tree)
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	int height_L = height_max(tree->left);
-	int height_R = height_max(tree->right);
-
-	if (tree == NULL)
-		return (0);
-
-	if (height_L == height_R)
-	{
-		if (tree->left == NULL && tree->right == NULL)
-			return (1);
-		if (tree->left == NULL || tree->right == NULL)
-			return (0);
-		return (binary_tree_is_perfect(tree->left) && 
-			binary_tree_is_perfect(tree->right));
-	}
-	return (0);
+	if (node == NULL || node->parent == NULL)
+		return (NULL);
+	if (node->parent->parent == NULL)
+		return (NULL);
+	return (sibling(node->parent));
 }
 
 /**
- * max- max value of a and b
- * @a: first value
- * @b: second value
+ * sibling - check if there siblings
+ * @node: node to be search
  *
- * Return: max value between a and b
+ * Return: sibling of node
  */
 
-int max(int a, int b)
+binary_tree_t *sibling(binary_tree_t *node)
 {
-	if (a >= b)
-		return (a);
-	return (b);
-}
-
-/**
- * height_max - max height
- * @tree: tree to be checked
- *
- * Return: max height of tree
- */
-
-int height_max(const binary_tree_t *tree)
-{
-	if (tree == NULL)
-		return (0);
-	return (1 + max(height_max(tree->left), height_max(tree->right)));
+	if (node == NULL || node->parent == NULL)
+		return (NULL);
+	if (node->parent->left == NULL || node->parent->right == NULL)
+		return (NULL);
+	if (node->parent->left == node)
+		return (node->parent->right);
+	if (node->parent->right == node)
+		return (node->parent->left);
 }
