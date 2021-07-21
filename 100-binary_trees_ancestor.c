@@ -35,10 +35,14 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		return (second->parent);
 	if (first->parent == second->parent)
 		return (first->parent);
-	nodes_F = binary_trees_ancestor(first->parent, second);
-	nodes_S = binary_trees_ancestor(first, second->parent);
-	if (nodes_F)
-		return (nodes_F);
+	while (first != second)
+	{
+		if (first == second)
+			break;
+		first = first->parent;
+		second = second->parent;
+	}
+	return (binary_tree_t *) first);
 }
 
 /**
