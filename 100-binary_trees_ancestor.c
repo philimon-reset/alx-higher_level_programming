@@ -12,18 +12,23 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 {
 	binary_tree_t *nodes_F;
 	binary_tree_t *nodes_S;
-	size_t depthf = depth(first);
-	size_t depths = depth(second);
+	int first_depth, second_depth;
 
-	if (depthf < depths)
-	{
-		second = second->parent;
-		depths--;
-	}
-	if (depthf > depths)
+	if (!first || !second)
+		return (NULL);
+
+	first_depth = depth(first);
+	second_depth = depth(second);
+
+	if (first_depth > second_depth)
 	{
 		first = first->parent;
-		depthf--;
+		first_depth--;
+	}
+	else if (second_depth > first_depth)
+	{
+		second = second->parent;
+		second_depth--;
 	}
 	if (first == NULL || second == NULL)
 		return (NULL);
