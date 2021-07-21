@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_uncle - find uncle of node
+ * binary_tree_uncle - find uncle of node
  * @node: node to be checked
  *
  * Return: uncle of node
