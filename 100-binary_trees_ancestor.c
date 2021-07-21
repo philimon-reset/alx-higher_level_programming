@@ -1,3 +1,5 @@
+#include "binary_trees.h"
+
 /**
  * binary_trees_ancestor - calculate the ancestor of the nodes
  * @first: first nodes
