@@ -15,6 +15,10 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	size_t depthf = depth(first);
 	size_t depths = depth(second);
 
+	if (first == NULL || second == NULL)
+		return (NULL);
+	if (first->parent == NULL && second->parent == NULL)
+		return (NULL);
 	if (depthf < depths)
 	{
 		second = second->parent;
@@ -25,10 +29,6 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		first = first->parent;
 		depthf--;
 	}
-	if (first == NULL || second == NULL)
-		return (NULL);
-	if (first->parent == NULL && second->parent == NULL)
-		return (NULL);
 	if (first->parent == second || first->parent == NULL)
 		return (first->parent);
 	if (second->parent == NULL || second->parent == first)
