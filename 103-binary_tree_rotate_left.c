@@ -2,27 +2,27 @@
 
 
 /**
- * binary_tree_rotate_right - check if tree if complete
+ * binary_tree_is_rotate_left - check if tree if complete
  * @tree: tree to be checked
  *
  * Return: 1 or 0
  */
 
-binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 {
-	binary_tree_t *left = tree->left;
+	binary_tree_t *right = tree->right;
 
 	if (tree == NULL)
 		return (NULL);
-	if (tree->left != NULL)
+	if (tree->right != NULL)
 	{
-		tree->left = left->right;
-		if (left->right != NULL)
-			left->right->parent = tree;
-		left->right = tree;
-		tree->parent = left;
-		left->parent = tree->parent;
-		tree = left;
+		tree->right = right->left;
+		if (right->left != NULL)
+			right->left->parent = tree;
+		right->left = tree;
+		tree->parent = right;
+		right->parent = tree->parent;
+		tree = right;
 		return (tree);
 	}
 	return (NULL);
