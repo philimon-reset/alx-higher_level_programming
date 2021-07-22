@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 
-/**binary_tree_is_rotate_right - check if tree if complete
+/**
+ * binary_tree_is_rotate_right - check if tree if complete
  * @tree: tree to be checked
  *
  * Return: 1 or 0
