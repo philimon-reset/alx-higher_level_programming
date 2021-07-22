@@ -55,5 +55,7 @@ int max(int a, int b);
 int binary_tree_is_bst(const binary_tree_t *tree);
 binary_tree_t *sibling(binary_tree_t *node);
 bst_t *bst_insert(bst_t **tree, int value);
+bst_t *array_to_bst(int *array, size_t size);
+bst_t *bst_search(const bst_t *tree, int value);
 
 #endif /* _BINARY_TREES_H_ */
