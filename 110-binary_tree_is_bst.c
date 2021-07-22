@@ -1,6 +1,5 @@
 #include "binary_trees.h"
 #include <limits.h>
-int is_bst(const binary_tree_t *tree, int min, int max);
 
 /**
  * binary_tree_is_bst - check if tree is bst
