@@ -52,6 +52,7 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 int max(int a, int b);
+int binary_tree_is_bst(const binary_tree_t *tree);
 binary_tree_t *sibling(binary_tree_t *node);
 
 #endif /* _BINARY_TREES_H_ */
