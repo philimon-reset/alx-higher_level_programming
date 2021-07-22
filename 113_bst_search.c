@@ -1,29 +1,28 @@
 #include "binary_trees.h"
 
-
 /**
- * binary_tree_rotate_right - check if tree if complete
- * @tree: tree to be checked
+ * bst_search - search node of tree
+ * @tree: tree to be search
+ * @value: value to be searched
  *
- * Return: 1 or 0
+ * Return: node of value searched
  */
 
-binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
+bst_t *bst_search(const bst_t *tree, int value)
 {
-	binary_tree_t *left = tree->left;
+	bst_t *node = NULL;
 
-	if (tree == NULL)
-		return (NULL);
-	if (tree->left != NULL)
+	if (tree != NULL)
 	{
-		tree->left = left->right;
-		if (left->right != NULL)
-			left->right->parent = tree;
-		left->right = tree;
-		tree->parent = left;
-		left->parent = tree->parent;
-		tree = left;
-		return (tree);
+		if (value == (tree)->n)
+			node = (bst_t*)tree;
+		if (value < (tree)->n)
+			node = bst_search(((tree)->left), value);
+		else
+			node = bst_search(((tree)->right), value);
+		if (node == NULL)
+			return (NULL);
+		return (node);
 	}
 	return (NULL);
 }
