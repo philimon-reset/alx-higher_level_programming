@@ -21,17 +21,18 @@ bst_t *bst_insert(bst_t **tree, int value)
 			return (NULL);
 		if (value < (*tree)->n)
 		{
-			if ((*tree)->left) == NULL)
+			if ((*tree)->left == NULL)
 			{
-				((*tree)->left) = binary_tree_node((*tree)->left, value);
+				((*tree)->left = binary_tree_node((*tree)->left, value);
 				return ((*tree)->left);
 			}
 			return (bst_insert(&((*tree)->left), value));
+		}
 		else
 		{
-			if ((*tree)->right) == NULL)
+			if ((*tree)->right == NULL)
 			{
-				((*tree)->right) = binary_tree_node((*tree)->right, value);
+				((*tree)->right = binary_tree_node((*tree)->right, value);
 				return ((*tree)->right);
 			}
 			return (bst_insert(&((*tree)->right), value));
