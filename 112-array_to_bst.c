@@ -17,7 +17,7 @@ bst_t *array_to_bst(int *array, size_t size)
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
-		tree = bst_insert(&tree, array[i]);
+		tree2 = bst_insert(&tree, array[i]);
 		if (tree2 == NULL)
 			continue;
 	}
