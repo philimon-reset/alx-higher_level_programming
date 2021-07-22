@@ -1,29 +1,23 @@
 #include "binary_trees.h"
 
-
 /**
- * binary_tree_rotate_right - check if tree if complete
- * @tree: tree to be checked
+ * array_to_bst - array_to_bst
+ * @array: array to be checked
+ * @size: size
  *
- * Return: 1 or 0
+ * Return: bst
  */
 
-binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
+bst_t *array_to_bst(int *array, size_t size)
 {
-	binary_tree_t *left = tree->left;
+	size_t i = 0;
+	bst_t *tree = NULL;
 
-	if (tree == NULL)
+	if (array == NULL)
 		return (NULL);
-	if (tree->left != NULL)
+	for (i = 0; i < size; i++)
 	{
-		tree->left = left->right;
-		if (left->right != NULL)
-			left->right->parent = tree;
-		left->right = tree;
-		tree->parent = left;
-		left->parent = tree->parent;
-		tree = left;
-		return (tree);
+		tree = bst_insert(&tree, array[i]);
 	}
-	return (NULL);
+	return (tree);
 }
