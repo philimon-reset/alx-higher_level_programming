@@ -1,15 +1,27 @@
 #include "binary_trees.h"
 
-/**
- * binary_tree_size - size of the tree
+
+/**binary_tree_is_rotate_right - check if tree if complete
  * @tree: tree to be checked
  *
- * Return: size of tree
+ * Return: 1 or 0
  */
 
-size_t binary_tree_size(const binary_tree_t *tree)
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 {
+	binary_tree_t *temp = tree->left;
+
 	if (tree == NULL)
-		return (0);
-	return (binary_tree_size(tree->left) + 1 + binary_tree_size(tree->right));
+		return (NULL);
+	if (tree->left != NULL)
+	{
+		tree->left = temp->right;
+		if (temp->right != NULL)
+			temp->right->parent = tree;
+		temp->right = tree;
+		tree->parent = temp;
+		temp->parent = tree->parent;
+	return (tree);
+	}
+	return (NULL);
 }
