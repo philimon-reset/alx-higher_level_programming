@@ -50,3 +50,15 @@ int height_max(const binary_tree_t *tree)
 	return (1 + max(height_max(tree->left),
 			height_max(tree->right)));
 }
+
+/**
+ * binary_tree_is_avl - check if the tree if height balanced
+ * @tree: tree to be checked
+ *
+ * Return: 1 or 0
+ */
+
+int binary_tree_is_avl(const binary_tree_t *tree)
+{
+	
+}
