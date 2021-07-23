@@ -27,8 +27,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 		if ((*tree)->right == NULL)
 			return (NULL);
 	}
-	else
-		return (*tree);
+	return (*tree);
 }
 
 /**
