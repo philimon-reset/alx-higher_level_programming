@@ -13,8 +13,10 @@ bst_t *bst_insert(bst_t **tree, int value)
 	avl_t **new;
 
 	if (*tree == NULL)
-		return (*new = binary_tree_node(*tree, value));
-
+	{
+		*new = binary_tree_node(*tree, value)
+		return (*new);
+	}
 	if ((*tree)->n > value)
 	{
 		(*tree)->left = bst_insert(&(*tree)->left, value);
