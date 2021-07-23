@@ -52,6 +52,27 @@ int height_max(const binary_tree_t *tree)
 }
 
 /**
+ * binary_tree_balance - count possible balance factor
+ * @tree: tree to be search
+ *
+ * Return: balance factor
+ */
+
+int binary_tree_balance(const binary_tree_t *tree)
+{
+	int height_L = 0;
+	int height_R = 0;
+
+	if (tree == NULL)
+		return (0);
+	if (tree->left != NULL)
+		height_L = height_max(tree->left);
+	if (tree->right != NULL)
+		height_R = height_max(tree->right);
+	return (height_L - height_R);
+}
+
+/**
  * binary_tree_is_avl - check if the tree if height balanced
  * @tree: tree to be checked
  *
@@ -60,5 +81,11 @@ int height_max(const binary_tree_t *tree)
 
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
-	
+    if (tree == NULL)
+        return (0);
+    if (binary_tree_balance(tree) <= 1 && binary_tree_is_bst(tree))
+    {
+        return (binary_tree_is_avl(tree->left) && binary_tree_is_avl(tree->right));
+    }
+    return (0);
 }
