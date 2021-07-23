@@ -11,31 +11,31 @@ void Cbalance(avl_t **tree, int value)
 {
 	int balance;
 
-	balance = binary_tree_balance(*node);
+	balance = binary_tree_balance(*tree);
 
-	if (balance > 1 && value < (*node)->left->n)
+	if (balance > 1 && value < (*tree)->left->n)
 	{
-		*node = binary_tree_rotate_right(*node);
+		*tree = binary_tree_rotate_right(*tree);
 		return;
 	}
 
-	if (balance < -1 && value > (*node)->right->n)
+	if (balance < -1 && value > (*tree)->right->n)
 	{
-		*node = binary_tree_rotate_left(*node);
+		*tree = binary_tree_rotate_left(*tree);
 		return;
 	}
 
-	if (balance > 1 && value > (*node)->left->n)
+	if (balance > 1 && value > (*tree)->left->n)
 	{
-		(*node)->left = binary_tree_rotate_left((*node)->left);
-		*node = binary_tree_rotate_right(*node);
+		(*tree)->left = binary_tree_rotate_left((*tree)->left);
+		*tree = binary_tree_rotate_right(*tree);
 		return;
 	}
 
-	if (balance < -1 && value < (*node)->right->n)
+	if (balance < -1 && value < (*tree)->right->n)
 	{
-		(*node)->right = binary_tree_rotate_right((*node)->right);
-		*node = binary_tree_rotate_left(*node);
+		(*tree)->right = binary_tree_rotate_right((*tree)->right);
+		*tree = binary_tree_rotate_left(*tree);
 		return;
 	}
 }
