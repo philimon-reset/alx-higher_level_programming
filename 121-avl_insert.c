@@ -7,9 +7,10 @@
  *
  * Return: tree inserted
  */
-
 bst_t *bst_insert(bst_t **tree, int value)
 {
+	avl_t *node;
+
 	if (tree != NULL)
 	{
 		if (value == (*tree)->n)
@@ -22,8 +23,15 @@ bst_t *bst_insert(bst_t **tree, int value)
 				return ((*tree)->left);
 			}
 			else
-				return (bst_insert(&((*tree)->left), value));
-		}
+			{
+				node = bst_insert(&((*tree)->left), value);
+				if (node)
+				{
+					Cbalance(tree, value);
+				}
+				return (node);
+			}
+	}
 		else
 		{
 			if ((*tree)->right == NULL)
@@ -32,10 +40,16 @@ bst_t *bst_insert(bst_t **tree, int value)
 				return ((*tree)->right);
 			}
 			else
-				return (bst_insert(&((*tree)->right), value));
+			{
+				node = bst_insert(&((*tree)->right), value);
+				if (node)
+				{
+					Cbalance(tree, value);
+				}
+				return (node);
+			}
 		}
 	}
-	return (NULL);
 }
 
 /**
@@ -57,10 +71,6 @@ avl_t *avl_insert(avl_t **tree, int value)
 		return (*tree);
 	}
 	node = bst_insert(tree, value);
-	if (node)
-	{
-		Cbalance(tree, value);
-	}
 	return (node);
 }
 
