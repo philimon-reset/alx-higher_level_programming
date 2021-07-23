@@ -31,9 +31,8 @@ bst_t *bst_insert(bst_t **tree, int value)
 			if ((*tree)->right == NULL)
 				return (NULL);
 		}
-		return (*tree);
 	}
-	return (NULL);
+	return (*tree);
 }
 
 /**
@@ -47,6 +46,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *node = NULL;
 
+	if (tree == NULL)
+		return (NULL);
 	if (*tree == NULL)
 	{
 		(*tree) = binary_tree_node(*tree, value);
