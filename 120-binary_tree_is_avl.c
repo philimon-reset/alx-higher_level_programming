@@ -15,9 +15,9 @@ int balance(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 	if (tree->left != NULL)
-		height_L = height(tree->left);
+		height_L = height_BST(tree->left);
 	if (tree->right != NULL)
-		height_R = height(tree->right);
+		height_R = height_BST(tree->right);
 	return (height_L - height_R);
 }
 
@@ -28,12 +28,12 @@ int balance(const binary_tree_t *tree)
  * Return: max height of tree
  */
 
-int height(const binary_tree_t *tree)
+int height_BST(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	return (1 + max(height(tree->left),
-			height(tree->right)));
+	return (1 + MAX(height_BST(tree->left),
+			height_BST(tree->right)));
 }
 
 /**
