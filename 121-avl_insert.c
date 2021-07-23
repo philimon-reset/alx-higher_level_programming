@@ -12,11 +12,6 @@ bst_t *bst_insert(bst_t **tree, int value)
 {
 	if (tree != NULL)
 	{
-		if (*tree == NULL)
-		{
-			(*tree) = binary_tree_node(*tree, value);
-			return (*tree);
-		}
 		if (value == (*tree)->n)
 			return (NULL);
 		if (value < (*tree)->n)
@@ -54,16 +49,17 @@ avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *node = NULL;
 
-	if (tree != NULL)
+	if (*tree == NULL)
 	{
-		node = bst_insert(tree, value);
-		if (node)
-		{
-			Cbalance(tree, value);
-		}
-		return (node);
+		(*tree) = binary_tree_node(*tree, value);
+		return (*tree);
 	}
-	return (NULL);
+	node = bst_insert(tree, value);
+	if (node)
+	{
+		Cbalance(tree, value);
+	}
+	return (node);
 }
 
 /**
@@ -76,7 +72,9 @@ avl_t *avl_insert(avl_t **tree, int value)
 
 void Cbalance(avl_t **tree, int value)
 
-	int balance_n = binary_tree_balance(*tree);
+	int balance_n;
+
+	balance_n = binary_tree_balance(*tree);
 
 	if ((balance_n > 1) && (value < (*tree)->left->n))
 	{
