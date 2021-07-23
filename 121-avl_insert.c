@@ -71,7 +71,7 @@ avl_t *avl_insert(avl_t **tree, int value)
  */
 
 void Cbalance(avl_t **tree, int value)
-
+{
 	int balance_n;
 
 	balance_n = binary_tree_balance(*tree);
