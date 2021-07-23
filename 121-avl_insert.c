@@ -75,24 +75,26 @@ avl_t *avl_insert(avl_t **tree, int value)
  */
 
 void Cbalance(avl_t **tree, int value)
-{
-	if ((balance(*tree) > 1) && (value < (*tree)->left->n))
+
+	int balance_n = balance(*tree);
+
+	if ((balance_n > 1) && (value < (*tree)->left->n))
 	{
 		*tree = binary_tree_rotate_right(*tree);
 		return;
 	}
-	if ((balance(*tree) > 1) && (value > (*tree)->left->n))
+	if ((balance_n > 1) && (value > (*tree)->left->n))
 	{
 		(*tree)->left = binary_tree_rotate_left((*tree)->left);
 		*tree = binary_tree_rotate_right(*tree);
 		return;
 	}
-	if ((balance(*tree) < -1) && (value > (*tree)->right->n))
+	if ((balance_n < -1) && (value > (*tree)->right->n))
 	{
 		*tree = binary_tree_rotate_left(*tree);
 		return;
 	}
-	if ((balance(*tree) < -1) && (value < (*tree)->right->n))
+	if ((balance_n < -1) && (value < (*tree)->right->n))
 	{
 		(*tree)->right = binary_tree_rotate_right((*tree)->right);
 		*tree = binary_tree_rotate_left(*tree);
