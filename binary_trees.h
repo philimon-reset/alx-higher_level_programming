@@ -24,6 +24,8 @@ typedef struct binary_tree_s
 } binary_tree_t;
 typedef struct binary_tree_s bst_t;
 
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
+
 void binary_tree_print(const binary_tree_t *);
 size_t depth(const binary_tree_t *tree);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -60,5 +62,9 @@ int binary_tree_is_complete(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
+int height_BST(const binary_tree_t *tree);
+int balance(const binary_tree_t *tree);
+int bst_is(const binary_tree_t *tree, int min, int max);
+
 
 #endif /* _BINARY_TREES_H_ */
