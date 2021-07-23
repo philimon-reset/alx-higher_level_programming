@@ -52,24 +52,35 @@ int height_max(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_balance - count possible balance factor
- * @tree: tree to be search
+ * binary_tree_is_bst - check if tree is bst
+ * @tree: tree to be checked
  *
- * Return: balance factor
+ * Return: 1 or 0
  */
-
-int binary_tree_balance(const binary_tree_t *tree)
+int binary_tree_is_bst(const binary_tree_t *tree)
 {
-	int height_L = 0;
-	int height_R = 0;
-
 	if (tree == NULL)
 		return (0);
-	if (tree->left != NULL)
-		height_L = height_max(tree->left);
-	if (tree->right != NULL)
-		height_R = height_max(tree->right);
-	return (height_L - height_R);
+	return (is_bst(tree, INT_MIN, INT_MAX));
+}
+
+/**
+ * is_bst - check if tree is bst
+ * @tree: tree to be checked
+ * @min: min value
+ * @max: max value
+ *
+ * Return: 1 if it is and 0 if not
+ */
+
+int is_bst(const binary_tree_t *tree, int min, int max)
+{
+	if (tree == NULL)
+		return (1);
+	if (tree->n < min || tree->n > max)
+		return (0);
+	return (is_bst(tree->left, min, tree->n - 1) &&
+	is_bst(tree->right, tree->n + 1, max));
 }
 
 /**
