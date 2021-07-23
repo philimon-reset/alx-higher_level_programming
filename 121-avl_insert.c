@@ -104,7 +104,7 @@ void Cbalance(avl_t **tree, int value)
 	{
 		Cbalance(&((*tree)->left), value);
 	}
-	if (((*tree)->left) != NULL)
+	if (((*tree)->right) != NULL)
 	{
 		Cbalance(&((*tree)->right), value);
 	}
