@@ -51,8 +51,12 @@ int bst_is(const binary_tree_t *tree, int min, int max)
 		return (1);
 	if (tree->n < min || tree->n > max)
 		return (0);
-	return (bst_is(tree->left, min, tree->n - 1) &&
-	bst_is(tree->right, tree->n + 1, max));
+	if (balance(tree) <= 1 && balance(tree) >= -1)
+	{
+		return (bst_is(tree->left, min, tree->n - 1) &&
+		bst_is(tree->right, tree->n + 1, max));
+	}
+	return (0);
 }
 
 /**
@@ -65,13 +69,6 @@ int bst_is(const binary_tree_t *tree, int min, int max)
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return (1);
-	if (balance(tree) <= 1 && balance(tree) >= -1)
-	{
-		if (bst_is(tree, INT_MIN, INT_MAX) == 0)
-			return (0);
-		return (binary_tree_is_avl(tree->left) &&
-			binary_tree_is_avl(tree->right));
-	}
-	return (0);
+		return (0);
+	return (bst_is(tree, INT_MIN, INT_MAX));
 }
