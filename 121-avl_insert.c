@@ -14,7 +14,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 
 	if (*tree == NULL)
 	{
-		*new = binary_tree_node(*tree, value)
+		*new = binary_tree_node(*tree, value);
 		return (*new);
 	}
 	if ((*tree)->n > value)
