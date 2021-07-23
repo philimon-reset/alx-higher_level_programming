@@ -1,13 +1,52 @@
 #include "binary_trees.h"
 
 /**
- * insert - inserts a value in a Binary Search Tree
- * @tree: tree to be inserted
- * @value: value to be inserted
+ * Cbalance - checks the balance of each node
  *
- * Return: tree inserted
+ * @node: pointer to the node
+ * @value: input value
+ * Return: no return
  */
+void Cbalance(avl_t **tree, int value)
+{
+	int balance;
 
+	balance = binary_tree_balance(*node);
+
+	if (balance > 1 && value < (*node)->left->n)
+	{
+		*node = binary_tree_rotate_right(*node);
+		return;
+	}
+
+	if (balance < -1 && value > (*node)->right->n)
+	{
+		*node = binary_tree_rotate_left(*node);
+		return;
+	}
+
+	if (balance > 1 && value > (*node)->left->n)
+	{
+		(*node)->left = binary_tree_rotate_left((*node)->left);
+		*node = binary_tree_rotate_right(*node);
+		return;
+	}
+
+	if (balance < -1 && value < (*node)->right->n)
+	{
+		(*node)->right = binary_tree_rotate_right((*node)->right);
+		*node = binary_tree_rotate_left(*node);
+		return;
+	}
+}
+
+/**
+ * insert - checks if node is inserted
+ *
+ * @tree: tree root
+ * @value: node value
+ * Return: pointer to the new node
+ */
 avl_t *insert(avl_t **tree, int value)
 {
 	avl_t *node;
@@ -27,7 +66,8 @@ avl_t *insert(avl_t **tree, int value)
 			return (node);
 		}
 	}
-	else
+
+	if (value > (*tree)->n)
 	{
 		if ((*tree)->right == NULL)
 		{
@@ -42,63 +82,28 @@ avl_t *insert(avl_t **tree, int value)
 			return (node);
 		}
 	}
+
 	return (NULL);
 }
 
 /**
- * avl_insert - insert node to make avl
- * @tree: tree to be checked
- * @value: value to be inserted
+ * avl_insert - inserts a value in a AVL Tree
  *
- * Return: tree after insertion
+ * @tree: tree root
+ * @value: node value
+ * Return: pointer to the new node
  */
 avl_t *avl_insert(avl_t **tree, int value)
 {
-	avl_t *node = NULL;
+	avl_t *node;
 
 	if (*tree == NULL)
 	{
-		(*tree) = binary_tree_node(NULL, value);
+		*tree = binary_tree_node(NULL, value);
 		return (*tree);
 	}
+
 	node = insert(tree, value);
+
 	return (node);
-}
-
-/**
- * Cbalance - check the balance
- * @tree: node to be check
- * @value: value to be checked
- *
- * Return: void function
- */
-
-void Cbalance(avl_t **tree, int value)
-{
-	int balance_n;
-
-	balance_n = binary_tree_balance(*tree);
-
-	if ((balance_n > 1) && (value < (*tree)->left->n))
-	{
-		*tree = binary_tree_rotate_right(*tree);
-		return;
-	}
-	if ((balance_n > 1) && (value > (*tree)->left->n))
-	{
-		(*tree)->left = binary_tree_rotate_left((*tree)->left);
-		*tree = binary_tree_rotate_right(*tree);
-		return;
-	}
-	if ((balance_n < -1) && (value > (*tree)->right->n))
-	{
-		*tree = binary_tree_rotate_left(*tree);
-		return;
-	}
-	if ((balance_n < -1) && (value < (*tree)->right->n))
-	{
-		(*tree)->right = binary_tree_rotate_right((*tree)->right);
-		*tree = binary_tree_rotate_left(*tree);
-		return;
-	}
 }
