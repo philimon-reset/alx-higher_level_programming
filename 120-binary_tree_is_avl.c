@@ -66,9 +66,9 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (1);
-	if (binary_tree_balance(tree) <= 1 && binary_tree_balance(tree) >= -1)
+	if (balance(tree) <= 1 && balance(tree) >= -1)
 	{
-		if (is_bst(tree, INT_MIN, INT_MAX) == 0)
+		if (bst_is(tree, INT_MIN, INT_MAX) == 0)
 			return (0);
 		return (binary_tree_is_avl(tree->left) &&
 			binary_tree_is_avl(tree->right));
