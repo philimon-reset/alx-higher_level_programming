@@ -62,8 +62,6 @@ avl_t *avl_insert(avl_t **tree, int value)
 		return (*tree);
 	}
 	node = bst_insert(tree, value);
-	if (node)
-		Cbalance(tree, value);
 	return (node);
 }
 
