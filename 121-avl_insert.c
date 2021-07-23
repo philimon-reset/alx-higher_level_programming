@@ -98,4 +98,17 @@ void Cbalance(avl_t **tree, int value)
 		*tree = binary_tree_rotate_left(*tree);
 		return;
 	}
+	if ((((*tree)->left) != NULL) && (((*tree)->right) != NULL))
+	{
+		Cbalance(&((*tree)->left), value);
+		Cbalance(&((*tree)->right), value);
+	}
+	else if (((*tree)->left) != NULL)
+	{
+		Cbalance(&((*tree)->left), value);
+	}
+	else if (((*tree)->left) != NULL)
+	{
+		Cbalance(&((*tree)->right), value);
+	}
 }
