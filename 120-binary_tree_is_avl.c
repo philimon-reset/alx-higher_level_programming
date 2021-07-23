@@ -22,7 +22,7 @@ int balance(const binary_tree_t *tree)
 }
 
 /**
- * height - max height
+ * height_BST - max height
  * @tree: tree to be checked
  *
  * Return: max height of tree
