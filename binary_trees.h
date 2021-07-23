@@ -77,6 +77,7 @@ int bst_is(const binary_tree_t *tree, int min, int max);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 void Cbalance(avl_t **tree, int value);
+avl_t *avl_insert(avl_t **tree, int value);
 
 typedef struct binary_tree_s heap_t;
 
