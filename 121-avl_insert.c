@@ -1,38 +1,45 @@
 #include "binary_trees.h"
 
 /**
- * bst_insert - inserts a value in a Binary Search Tree
+ * insert - inserts a value in a Binary Search Tree
  * @tree: tree to be inserted
  * @value: value to be inserted
  *
  * Return: tree inserted
  */
 
-bst_t *bst_insert(bst_t **tree, int value)
+avl_t *insert(avl_t **tree, int value)
 {
-	if (tree != NULL)
+	avl_t *node;
+
+	if (value < (*tree)->n)
 	{
-		if (value == (*tree)->n)
-			return (NULL);
-		if (value < (*tree)->n)
+		if ((*tree)->left == NULL)
 		{
-			if ((*tree)->left == NULL)
-			{
-				(*tree)->left = binary_tree_node(*tree, value);
-				return ((*tree)->left);
-			}
-			else
-				return (bst_insert(&((*tree)->left), value));
+			(*tree)->left = binary_tree_node(*tree, value);
+			return ((*tree)->left);
 		}
 		else
 		{
-			if ((*tree)->right == NULL)
-			{
-				(*tree)->right = binary_tree_node(*tree, value);
-				return ((*tree)->right);
-			}
-			else
-				return (bst_insert(&((*tree)->right), value));
+			node = insert(&((*tree)->left), value);
+			if (node)
+				Cbalance(tree, value);
+			return (node);
+		}
+	}
+	else
+	{
+		if ((*tree)->right == NULL)
+		{
+			(*tree)->right = binary_tree_node(*tree, value);
+			return ((*tree)->right);
+		}
+		else
+		{
+			node = insert(&((*tree)->right), value);
+			if (node)
+				Cbalance(tree, value);
+			return (node);
 		}
 	}
 	return (NULL);
@@ -49,16 +56,14 @@ avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *node = NULL;
 
-	if (*tree == NULL)
+	if (tree == NULL)
 	{
-		(*tree) = binary_tree_node(*tree, value);
+		(*tree) = binary_tree_node(NULL, value);
 		return (*tree);
 	}
 	node = bst_insert(tree, value);
 	if (node)
-	{
 		Cbalance(tree, value);
-	}
 	return (node);
 }
 
@@ -97,18 +102,5 @@ void Cbalance(avl_t **tree, int value)
 		(*tree)->right = binary_tree_rotate_right((*tree)->right);
 		*tree = binary_tree_rotate_left(*tree);
 		return;
-	}
-	if ((((*tree)->left) != NULL) && (((*tree)->right) != NULL))
-	{
-		Cbalance(&((*tree)->left), value);
-		Cbalance(&((*tree)->right), value);
-	}
-	else if (((*tree)->left) != NULL)
-	{
-		Cbalance(&((*tree)->left), value);
-	}
-	else if (((*tree)->left) != NULL)
-	{
-		Cbalance(&((*tree)->right), value);
 	}
 }
