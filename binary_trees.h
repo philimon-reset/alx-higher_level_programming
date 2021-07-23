@@ -79,5 +79,7 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 
 typedef struct binary_tree_s heap_t;
 
+int binary_tree_is_heap(const binary_tree_t *tree);
+
 
 #endif /* _BINARY_TREES_H_ */
