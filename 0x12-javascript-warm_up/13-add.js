@@ -1,8 +1,5 @@
 #!/usr/bin/node
-const myObject = {
-  type: 'object',
-  value: 12
-};
-console.log(myObject);
-myObject.value = 89;
-console.log(myObject);
+exports.add = function(a, b) {
+  const c = Number(a) + Number(b);
+  return (c);
+}
