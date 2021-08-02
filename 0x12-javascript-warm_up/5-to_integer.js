@@ -4,5 +4,5 @@ const { argv } = require('process');
 if (isNaN(Number(argv[2]))) {
   console.log('Not a number');
 } else {
-  console.log(Number(argv[2]));
+  console.log(Number(argv[2]) | 0);
 }
