@@ -1,4 +1,8 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-console.log(argv[2] + ' is ' + argv[3]);
+if (Number(argv[2]) === NaN) {
+  console.log('Not a number');
+} else {
+  console.log(Number(argv[2]));
+}
