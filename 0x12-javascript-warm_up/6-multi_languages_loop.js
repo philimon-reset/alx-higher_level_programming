@@ -1,4 +1,5 @@
-#!/usr/bin/node
 const { argv } = require('process');
 
-console.log(argv[2] + ' is ' + argv[3]);
+let la = ["C is fun", "Python is cool", "JavaScript is amazing"];
+
+la.forEach(x => console.log(x));
