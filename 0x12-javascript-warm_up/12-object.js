@@ -1,4 +1,8 @@
 #!/usr/bin/node
-const { argv } = require('process');
-
-console.log(argv[2] + ' is ' + argv[3]);
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+myObject['value'] = 89;
+console.log(myObject);
