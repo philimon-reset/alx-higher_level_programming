@@ -1,4 +1,7 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-console.log(argv[2] + ' is ' + argv[3]);
+exports.add = function(a,b) {
+  const c = Number(a) + Number(b);
+  console.log(c);
+}
