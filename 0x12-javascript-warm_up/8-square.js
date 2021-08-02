@@ -1,4 +1,11 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-console.log(argv[2] + ' is ' + argv[3]);
+if (argv[2] === undefined) {
+        console.log('Missing size');
+} else {
+        let rip = "X".repeat(argv[2])
+        for (let i = 0; i < argv[2]; i++) {
+                console.log(rip);
+        }
+}
