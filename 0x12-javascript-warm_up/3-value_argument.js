@@ -4,6 +4,6 @@ const { argv } = require('process');
 try {
   console.log(argv[3]);
 }
-catch (err) {
+catch (error) {
   console.log('No argument');
 }
