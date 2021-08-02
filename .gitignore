@@ -6,4 +6,5 @@
 .e*
 .git
 *~
+test
 __pycache__
