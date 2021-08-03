@@ -18,7 +18,10 @@ int is_palindrome(listint_t **head)
 	if (check_A == NULL)
 		return (0);
 	if (size == 0)
+	{
+		free(check_A);
 		return (1);
+	}
 	while (temp != NULL)
 	{
 		check_A[i] = temp->n;
