@@ -1,10 +1,13 @@
 #!/usr/bin/node
-const { argv } = require('process');
+class Rectangle {
+  constructor (w, h) {
 
-if (argv.length === 2) {
-  console.log('No argument');
-} else if (argv.length === 3) {
-  console.log('Argument found');
-} else if (process.argv.length > 3) {
-  console.log('Arguments found');
+    if (w > 0 && h > 0)
+    {
+      this.width = w;
+      this.height = h;
+    }
+  }
 }
+
+module.exports = Rectangle;
