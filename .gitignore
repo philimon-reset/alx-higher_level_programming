@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 test.c
 *.out
 *.exe
 *~
 .*
+=======
+.p*
+.v*
+.n*
+.b*
+.c*
+.e*
+.git
+*~
+test
+__pycache__
+>>>>>>> adea8b15dc072fb1776170463f8db591fc129017

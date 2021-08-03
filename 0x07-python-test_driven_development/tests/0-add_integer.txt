@@ -1,0 +1,27 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(7, 8.7)
+15
+>>> add_integer(8.7)
+106
+>>> add_integer(-2, )
+96
+>>> add_integer(-2)
+96
+>>> add_integer()
+Traceback (most recent call last):
+	...
+TypeError: add_integer() takes at least 1 argument (0 given)
+>>> add_integer(a,)
+Traceback (most recent call last):
+	...
+NameError: name 'a' is not defined
+>>> add_integer("str", )
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+>>> add_integer("str", 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
