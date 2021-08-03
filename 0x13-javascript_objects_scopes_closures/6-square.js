@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let ASquare = require('./5-square.js');
-class Square extends ASquare.Square {
+class Square extends ASquare {
   constructor (size) {
     super(size, size);
     this.size = size;
@@ -17,5 +17,10 @@ class Square extends ASquare.Square {
     }
   }
 }
+
+const s1 = new Square(4);
+s1.charPrint();
+
+s1.charPrint('C');
 
 
