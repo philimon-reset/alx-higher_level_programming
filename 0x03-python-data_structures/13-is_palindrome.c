@@ -13,12 +13,12 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
 	int size = check_size(temp), i = 0;
-	int *check_A = malloc(sizeof(temp) * size);
+	int *check_A = malloc(sizeof(temp) * size);a	
 
 	if (check_A == NULL)
 		return (0);
 	if (size == 0)
-		return (0);
+		return (1);
 	while (temp != NULL)
 	{
 		check_A[i] = temp->n;
@@ -28,8 +28,12 @@ int is_palindrome(listint_t **head)
 	for (i = 0; i < size; i++)
 	{
 		if (check_A[i] != check_A[(size - 1) - i])
-		return (0);
+		{
+			free(check_A);
+			return (0);
+		}
 	}
+	free(check_A);
 	return (1);
 }
 
