@@ -1,4 +1,18 @@
 #!/usr/bin/node
-const { argv } = require('process');
+class Rectangle {
+  constructor (w, h) {
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
+  }
 
-console.log(argv[2] + ' is ' + argv[3]);
+  print () {
+    const rip = 'X'.repeat(this.width);
+    for (let i = 0; i < this.height; i++) {
+      console.log(rip);
+    }
+  }
+}
+
+module.exports = Rectangle;
