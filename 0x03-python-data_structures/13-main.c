@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * main - create even numbered list palindrome and check if it is a palindrome
+ * main - check space complexity
  *
  * Return: Always 0.
  */
@@ -12,16 +12,15 @@ int main(void)
 	listint_t *head;
 
 	head = NULL;
-	add_nodeint_end(&head, 1);
-	add_nodeint_end(&head, 17);
-	add_nodeint_end(&head, 972);
-	add_nodeint_end(&head, 50);
-	add_nodeint_end(&head, 98);
 	add_nodeint_end(&head, 98);
 	add_nodeint_end(&head, 50);
+	add_nodeint_end(&head, 0);
+	add_nodeint_end(&head, 727);
 	add_nodeint_end(&head, 972);
-	add_nodeint_end(&head, 17);
-	add_nodeint_end(&head, 1);
+	add_nodeint_end(&head, 727);
+	add_nodeint_end(&head, 0);
+	add_nodeint_end(&head, 50);
+	add_nodeint_end(&head, 98);
 	print_listint(head);
 
 	if (is_palindrome(&head) == 1)
