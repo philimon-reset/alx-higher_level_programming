@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	int check_A[size];
 
 	if (size == 0)
-		return 0;
+		return (0);
 	while (temp != NULL)
 	{
 		check_A[i] = temp->n;
@@ -35,7 +35,8 @@ int is_palindrome(listint_t **head)
  * Return: size of list
  */
 
-int check_size(listint_t *head) {
+int check_size(listint_t *head)
+{
 	int i = 0;
 
 	while (head != NULL)
