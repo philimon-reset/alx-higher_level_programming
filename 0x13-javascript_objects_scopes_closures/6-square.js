@@ -1,6 +1,6 @@
 #!/usr/bin/node
-let Square = require('./5-square.js');
-class Square extends Square {
+let ASquare = require('./5-square.js');
+class Square extends ASquare.Square {
   constructor (size) {
     super(size, size);
     this.size = size;
