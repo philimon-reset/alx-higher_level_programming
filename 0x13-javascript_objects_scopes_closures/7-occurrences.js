@@ -1,10 +1,11 @@
 #!/usr/bin/node
-const { argv } = require('process');
+exports.nbOccurences = function (list, searchElement) {
+  let count = 0;
 
-if (argv[2] === undefined) {
-  console.log('Missing number of occurrences');
-} else {
-  for (let i = 0; i < argv[2]; i++) {
-    console.log('C is fun');
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === searchElement) {
+      count++;
+    }
   }
-}
+  return count;
+};
