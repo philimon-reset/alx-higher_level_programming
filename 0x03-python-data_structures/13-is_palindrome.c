@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+int check_size(listint_t *head);
 
 /**
  * is_palindrome - check if the linked list is a palindrome
