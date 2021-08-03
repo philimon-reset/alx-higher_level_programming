@@ -1,11 +1,6 @@
 #!/usr/bin/node
-const { argv } = require('process');
-
-function Fact (num) {
-  if (isNaN(num) || num === 0) {
-    return (1);
-  }
-  return (num * Fact(num - 1));
-}
-
-console.log(Fact(Number(argv[2])));
+exports.converter = function (base) {
+  return function (y) {
+    return (y.toString(base));
+  };
+};
