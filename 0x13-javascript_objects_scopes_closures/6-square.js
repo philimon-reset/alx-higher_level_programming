@@ -1,11 +1,6 @@
 #!/usr/bin/node
 const ASquare = require('./5-square.js');
 class Square extends ASquare {
-  constructor (size) {
-    super(size, size);
-    this.size = size;
-  }
-
   charPrint (c) {
     if (c !== undefined) {
       const rip = 'C'.repeat(this.size);
