@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
 	int size = check_size(temp), i = 0;
-	int check_A[1024];
+	int check_A[12700];
 
 	if (check_A == NULL)
 		return (0);
