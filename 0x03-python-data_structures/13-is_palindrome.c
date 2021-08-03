@@ -10,17 +10,21 @@ int is_palindrome(listint_t **head)
 {
         listint_t *temp = *head;
         int size = check_size(temp), i = 0;
-        int array_hold[size];
+        int check_A[size];
 
         if (size == 0)
                 return 0;
         temp = *head;
         while (temp != NULL) {
-                array_hold[i] = temp->n;
-                i++;
+                check_A[i] = temp->n;
                 temp = temp->next;
+                i++;
         }
-        return (array_hold[0]);
+        for (i = 0; i < size; i++) {
+                if (check_A[i] != check_A[(size - 1) - i])
+                        return (0);
+        }
+        return (1);
 }
 
 /**
