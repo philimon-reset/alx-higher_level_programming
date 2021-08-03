@@ -1,8 +1,11 @@
 #!/usr/bin/node
-const { argv } = require('process');
 
-if (isNaN(Number(argv[2]))) {
-  console.log('Not a number');
-} else {
-  console.log(`My number: ${Number(argv[2]) | 0}`);
+const Rectangle = require('./4-rectangle');
+
+class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
 }
+
+module.exports = Square;
