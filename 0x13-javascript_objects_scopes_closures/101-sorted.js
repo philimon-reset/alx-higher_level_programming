@@ -3,7 +3,6 @@ const dict = require('./101-data.js').dict;
 const ND = {};
 const Empty = Object.entries(dict);
 
-console.log(dict);
 for (let i = 0; i < Empty.length; i++) {
   ND[Empty[i][1]] = [];
 }
