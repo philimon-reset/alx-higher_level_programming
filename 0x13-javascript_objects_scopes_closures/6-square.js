@@ -3,9 +3,8 @@ const ASquare = require('./5-square.js');
 class Square extends ASquare {
   charPrint (c) {
     if (c !== undefined) {
-      const rip = 'C'.repeat(this.width);
       for (let i = 0; i < this.height; i++) {
-        console.log(rip);
+        console.log('C'.repeat(this.width));
       }
     } else {
       super.print();
@@ -13,3 +12,8 @@ class Square extends ASquare {
   }
 }
 module.exports = Square;
+
+const s1 = new Square(4);
+s1.charPrint();
+
+s1.charPrint('C');
