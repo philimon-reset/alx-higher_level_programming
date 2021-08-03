@@ -1,5 +1,0 @@
-#!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    for i in range(len(martix[] - 1):
-        for a in range(len(matrix) - 1):
-                   print("{}
