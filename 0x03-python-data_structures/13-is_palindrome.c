@@ -8,23 +8,24 @@
  */
 int is_palindrome(listint_t **head)
 {
-        listint_t *temp = *head;
-        int size = check_size(temp), i = 0;
-        int check_A[size];
+	listint_t *temp = *head;
+	int size = check_size(temp), i = 0;
+	int check_A[size];
 
-        if (size == 0)
-                return 0;
-        temp = *head;
-        while (temp != NULL) {
-                check_A[i] = temp->n;
-                temp = temp->next;
-                i++;
-        }
-        for (i = 0; i < size; i++) {
-                if (check_A[i] != check_A[(size - 1) - i])
-                        return (0);
-        }
-        return (1);
+	if (size == 0)
+		return 0;
+	while (temp != NULL)
+	{
+		check_A[i] = temp->n;
+		temp = temp->next;
+		i++;
+	}
+	for (i = 0; i < size; i++)
+	{
+		if (check_A[i] != check_A[(size - 1) - i])
+		return (0);
+	}
+	return (1);
 }
 
 /**
@@ -35,11 +36,12 @@ int is_palindrome(listint_t **head)
  */
 
 int check_size(listint_t *head) {
-        int i = 0;
+	int i = 0;
 
-        while (head != NULL) {
-                i++;
-                head = head->next;
-        }
-        return (i);
+	while (head != NULL)
+	{
+		i++;
+		head = head->next;
+	}
+	return (i);
 }
