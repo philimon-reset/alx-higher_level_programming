@@ -13,4 +13,6 @@ VALUES
   ("Arizona"),
   ("Texas"),
   ("New York"),
-  ("Nevada");
+  ("Nevada"),
+  ("new Yorkaa"),
+  ("nevada");
