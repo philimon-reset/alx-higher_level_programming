@@ -1,23 +1,13 @@
 #!/usr/bin/python3
 import MySQLdb
 
-db = MySQLdb.connect("localhost", "3306", "Sisbro@2018", "hbtn_0e_0_usa")
-
-cursor = db.cursor()
-
-# Prepare SQL query to INSERT a record into the database.
-sql = """SELECT * FROM states ORDER BY id"""
-try:
-    # Execute the SQL command
-    cursor.execute(sql)
-    cursor.execute("DELETE FROM EMPLOYEE WHERE FIRST_NAME = 'Mac'")
-# Commit your changes in the database
-    db.commit()
-except:
-    # Rollback in case there is any error
-    db.rollback()
-cursor.execute("SELECT * FROM EMPLOYEE")
-
-data = cursor.fetchall()
-print(f"data is: {data}")
-db.close()
+conn = MySQLdb.connect(host="localhost", port=3306,
+                       user="root", passwd="root", db="my_db", charset="utf8")
+cur = conn.cursor()
+# HERE I have to know SQL to grab all states in my database
+cur.execute("SELECT * FROM states ORDER BY id ASC")
+query_rows = cur.fetchall()
+for row in query_rows:
+    print(row)
+cur.close()
+conn.close()
