@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+import sys
 import MySQLdb
 
 conn = MySQLdb.connect(host="localhost", port=3306,
-                       user="root", passwd="Sisbro@2018", db="hbtn_0e_0_usa", charset="utf8")
+                       user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
 cur = conn.cursor()
 # HERE I have to know SQL to grab all states in my database
 try:
