@@ -17,8 +17,11 @@ try:
     conn.commit()
 except:
     conn.rollback()
-print([x for x in cur.fetchall()].join(", "))
-
+data = cur.fetchall()
+final = []
+for i in data:
+    j = [final.append(x) for x in i]
+print(", ".join(final))
 
 cur.close()
 conn.close()
