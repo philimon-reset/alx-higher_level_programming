@@ -7,7 +7,7 @@ conn = MySQLdb.connect(host="localhost", port=3306,
 cur = conn.cursor()
 # HERE I have to know SQL to grab all states in my database
 cur.execute(
-    f"SELECT * FROM states WHERE REGEXP_LIKE(`name`, {sys.argv[4]}, 'c') = 1 ORDER BY states.id ASC")
+    """SELECT * FROM states WHERE `name` = {} ORDER BY states.id ASC""".format(sys.argv[4]))
 
 for row in cur.fetchall():
     print(row)
