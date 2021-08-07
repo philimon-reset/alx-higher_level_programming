@@ -8,7 +8,7 @@ if __name__ == '__main__':
     cur = conn.cursor()
     # HERE I have to know SQL to grab all states in my database
     cur.execute(
-        """SELECT * FROM states WHERE `name` = {} ORDER BY
+        """SELECT * FROM states WHERE BINARY `name` = {} ORDER BY
         states.id ASC""".format(sys.argv[4]))
 
     for row in cur.fetchall():
