@@ -11,6 +11,6 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     s2 = Session()
-    for i in s2.query(State.id, State.name).order_by(State.id)[0:1]:
-        print("{}: {}".format(i.id, i.name))
+    first = s2.query(State.id, State.name).order_by(State.id).first()
+    print("{}: {}".format(first.id, first.name))
     s2.close()
