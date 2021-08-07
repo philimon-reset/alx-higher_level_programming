@@ -1,18 +1,21 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+import sys
 import MySQLdb
 
-# Open database connection
-db = MySQLdb.connect("localhost", "testuser", "test123", "TESTDB")
+conn = MySQLdb.connect(host="localhost", port=3306,
+                       user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
+cur = conn.cursor()
+# HERE I have to know SQL to grab all states in my database
+try:
+    cur.execute(
+        """SELECT * FROM states WHERE REGEXP_LIKE(`name`, '^N', 'c') = 1 ORDER BY states.id ASC""")
 
-# prepare a cursor object using cursor() method
-cursor = db.cursor()
+    conn.commit()
+except:
+    conn.rollback()
 
-# execute SQL query using execute() method.
-cursor.execute("SELECT VERSION()")
-
-# Fetch a single row using fetchone() method.
-data = cursor.fetchone()
-print(data)
-
-# disconnect from server
-db.close()
+query_rows = cur.fetchall()
+for row in query_rows:
+    print(row)
+cur.close()
+conn.close()
