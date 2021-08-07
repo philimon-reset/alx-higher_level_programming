@@ -15,8 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     s2 = Session()
     content = s2.query(State).order_by(
-        State.id).filter(State.name == user).all()
-    print(content[0].id)
-    if (len(content) == 0):
+        State.id).filter(State.name == user)
+    if (len(content.all()) == 0):
         print("Not found")
+    else:
+        print(content[0].id)
     s2.close()
