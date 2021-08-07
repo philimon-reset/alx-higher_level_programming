@@ -18,7 +18,7 @@ if __name__ == "__main__":
         State.id).filter(State.name == user).all()
     print(content)
     for i in content:
-        if (i != None):
+        if (i is not None):
             print(i.id)
     if (len(content) == 0):
         print("Not found")
