@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""main file"""
 if __name__ == '__main__':
     import sys
     import MySQLdb
