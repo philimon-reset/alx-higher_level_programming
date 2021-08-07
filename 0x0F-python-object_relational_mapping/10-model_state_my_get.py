@@ -22,4 +22,4 @@ if __name__ == "__main__":
             print(i.id)
     if (len(content) == 0):
         print("Not found")
-s2.close()
+    s2.close()
