@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     s2 = Session()
-    s2.query(State).order_by(
-        State.id).filter(State.id == 1)[0].name = "New Mexico"
+    s2.query(State).filter(State.id == 2).update(
+        {State.name: "New Mexico"}, synchronize_session=False)
     s2.commit()
     s2.close()
