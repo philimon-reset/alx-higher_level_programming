@@ -8,11 +8,10 @@ Base = declarative_base()
 
 
 class State(Base):
-        """State class
+    """State class
 
-        Args:
-            Base (imported class): [imported class]
-        """
+    Args:
+        Base (imported class): [imported class]"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True,
                 nullable=False, autoincrement=True)
