@@ -16,7 +16,6 @@ if __name__ == "__main__":
     s2 = Session()
     content = s2.query(State).order_by(
         State.id).filter(State.name == user).all()
-    print(content)
     for i in content:
         if (i is not None):
             print(i.id)
