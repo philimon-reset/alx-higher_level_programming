@@ -11,15 +11,12 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    user = sys.argv[4].split("'")
     Session = sessionmaker(bind=engine)
     s2 = Session()
+    content = State(name="Louisiana")
+    s2.add(content)
+    s2.commit()
     content = s2.query(State).order_by(
-        State.id).filter(State.name == user).all()
-    print(content)
-    for i in content:
-        if (i is not None):
-            print(i.id)
-    if (len(content) == 0):
-        print("Not found")
-s2.close()
+        State.id).filter(State.name == "Louisiana")
+    print(content[0].id)
+    s2.close()
