@@ -10,8 +10,10 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
+
+    user = sys.argv[4]
     Session = sessionmaker(bind=engine)
     s2 = Session()
-    for i in s2.query(State).order_by(State.id).filter(State.name.like("%a%")):
-        print("{}: {}".format(i.id, i.name))
+    for i in s2.query(State).order_by(State.id):
+        print(i)
     s2.close()
