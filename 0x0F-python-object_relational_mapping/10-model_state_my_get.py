@@ -11,7 +11,7 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    user = sys.argv[4].split("'")
+    user = sys.argv[4]
     Session = sessionmaker(bind=engine)
     s2 = Session()
     content = s2.query(State).order_by(
