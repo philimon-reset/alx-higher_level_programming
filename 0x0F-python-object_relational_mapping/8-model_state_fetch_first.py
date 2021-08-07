@@ -12,7 +12,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     s2 = Session()
     first = s2.query(State.id, State.name).order_by(State.id).first()
-    if (first == None):
+    if (first is None):
         print("Nothing")
     print("{}: {}".format(first.id, first.name))
     s2.close()
