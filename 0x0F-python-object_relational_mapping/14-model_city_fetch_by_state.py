@@ -13,6 +13,6 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     s2 = Session()
-    for i, a in s2.query(City, State).join(State, City.state_id == State.id):
+    for i, a in s2.query(City, State).join(State):
         print("{}: ({}) {}".format(a.name, i.id, i.name))
     s2.close()
