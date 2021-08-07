@@ -19,5 +19,5 @@ except:
 cursor.execute("SELECT * FROM EMPLOYEE")
 
 data = cursor.fetchall()
-print(f"data is: {data}")
+print(data)
 db.close()
