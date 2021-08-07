@@ -4,6 +4,7 @@
 import sys
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from model_state import State
 Base = declarative_base()
 
 
@@ -17,4 +18,3 @@ class City(Base):
                 nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey(State.id))
-    State = relationship("State", back_populates="addresses")
