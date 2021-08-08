@@ -12,8 +12,7 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     s2 = Session()
-    for i in s2.query(State):
-        for j in i.cities:
-            print("{}: {} -> {}".format(j.id, j.name, i.name))
+    for i in s2.query(City):
+        print("{}: {} -> {}".format(i.id, i.name, i.state.name))
     s2.commit()
     s2.close()
