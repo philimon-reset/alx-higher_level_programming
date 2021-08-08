@@ -4,7 +4,7 @@
 import sys
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from relationship_state import State
+from relationship_state import Base, State
 Base = declarative_base()
 
 
