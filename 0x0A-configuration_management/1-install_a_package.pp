@@ -1,6 +1,8 @@
 # puppet project
 
-package { 'puppet-lint':
+package { $ssh:
   ensure  => '2.1.1',
-  provider => 'gem'
+  alias   => 'puppet-lint',
+  require => Package[openssl]
+  provider => 'gem',
 }
