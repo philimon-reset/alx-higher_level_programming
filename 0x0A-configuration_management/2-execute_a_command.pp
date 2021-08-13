@@ -1,6 +1,6 @@
 # puppet project
 
 exec { 'kill process':
-  command => "pkill killmenow",
+  command => "pkill 'killmenow'",
   path    => '/usr/bin/'
 }
