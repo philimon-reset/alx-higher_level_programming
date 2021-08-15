@@ -1,1 +1,3 @@
-.
+#!/usr/bin/env bash
+# configure ssh
+IdentityFile ~/.ssh/holberton
