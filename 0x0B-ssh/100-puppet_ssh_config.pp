@@ -1,6 +1,6 @@
 # puppet
-class { 'ssh::server':
-  options           => {
-    'HostKey' => ['~/.ssh/holberton'],
-  },
+sshkey { 'github.com':
+  ensure => present,
+  type   => 'ssh-rsa',
+  key    => ~/.ssh/holberton,
 }
