@@ -1,1 +1,1 @@
-# configuring SSH
+# SSH configuration
