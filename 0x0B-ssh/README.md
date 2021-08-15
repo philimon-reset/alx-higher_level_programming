@@ -1,1 +1,1 @@
-# loops conditions and parsing
+# configuring SSH
