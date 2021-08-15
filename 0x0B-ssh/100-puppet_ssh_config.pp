@@ -7,6 +7,5 @@ file_line { "Ciphers":
 
 file_line { "Ciphers":
   ensure => created,
-  path => "/etc/ssh/ssh_config",
   line => "PasswordAuthentication no"
 }
