@@ -1,7 +1,5 @@
 # puppet
-ssh_authorized_key { 'ubuntu@34.138.81.214':
-  ensure => present,
-  user   => 'ubuntu',
-  type   => 'ssh-rsa',
-  key    => '~/.ssh/holberton',
+file_line { 'Ciphers':
+  path => '/etc/ssh/ssh_config',
+  line => 'IdentityFile ~/.ssh/holberton'
 }
