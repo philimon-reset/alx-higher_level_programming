@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # generate keygen
-ssh-keygen -b -p betty 4096
+echo "betty" | ssh-keygen -b 4096
