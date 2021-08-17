@@ -6,3 +6,4 @@ sudo ufw enable
 sudo ufw allow 'nginx HTTP'
 sudo chmod -R 777 *
 sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo service nginx restart
