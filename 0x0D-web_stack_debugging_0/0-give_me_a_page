@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # webstack debugging
 sudo apt-get install apache2 -y
-service apache2 start
+sudo service apache2 start
