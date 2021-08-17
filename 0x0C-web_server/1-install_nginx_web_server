@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # install nginx
+sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo ufw enable
-sudo ufw allow 'nginx HTTP'
+sudo ufw enable -y
+sudo ufw allow 'nginx HTTP' -y
 echo "Holberton School" >> ~/index | cp ~/index /var/www/demo/
