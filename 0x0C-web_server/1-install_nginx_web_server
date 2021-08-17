@@ -5,4 +5,4 @@ sudo apt-get install nginx -y
 sudo ufw enable
 sudo ufw allow 'nginx HTTP'
 sudo chmod -R 777 *
-echo "Holberton School" >> ~/index | cp ~/index /var/www/html/index
+sudo echo "Holberton School" >> ~/index | cp ~/index /var/www/html/index
