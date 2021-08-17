@@ -4,4 +4,4 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 sudo ufw enable
 sudo ufw allow 'nginx HTTP' -y
-echo "Holberton School" >> ~/index | cp ~/index /var/www/demo/index
+echo "Holberton School" >> ~/index | cp ~/index /var/www/html/index
