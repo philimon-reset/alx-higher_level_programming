@@ -1,1 +1,9 @@
 #!/usr/bin/env bash
+# iredirect nginx
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo ufw enable
+sudo ufw allow 'nginx HTTP'
+sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo rewrite "34.198.248.145/redirect_me/" https://www.youtube.com/watch?v=Gbz2C2gQREI permanent
+sudo service nginx restart
