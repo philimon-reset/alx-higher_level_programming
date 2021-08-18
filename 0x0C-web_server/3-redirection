@@ -5,8 +5,8 @@ sudo apt-get install nginx -y
 sudo ufw enable
 sudo ufw allow 'nginx HTTP'
 sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
-if [ $request_filename ~ "35.227.56.113/redirect_me" ]
-then
-  sudo rewrite ^ https://www.youtube.com/watch?v=Gbz2C2gQREI;
-fi
+server	{
+	server_name "35.227.56.113/redirect_me";
+	rewrite ^/$ https://www.youtube.com/watch?v=Gbz2C2gQREI permanent;
+}
 sudo service nginx restart
