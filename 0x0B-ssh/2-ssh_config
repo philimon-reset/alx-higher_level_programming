@@ -1,3 +1,0 @@
-Host *
-    PasswordAuthentication no
-    IdentityFile ~/.ssh/holberton

@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# generate keygen
-echo 'holberton' | ssh-keygen -b 4096 -N "betty"

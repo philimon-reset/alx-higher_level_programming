@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# kill using pkill
-pkill -15 "./7-highlander"
