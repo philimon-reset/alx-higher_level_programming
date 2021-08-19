@@ -1,3 +1,3 @@
 #!/bin/bash
-# curl for size
-curl -i -s "$1" | grep "Content-Length:" | cut -d ":" -f 2
+# curl for getting available methods
+curl -s -i -X OPTIONS google.com | grep "Allow:" | cut -d ":" -f 2
