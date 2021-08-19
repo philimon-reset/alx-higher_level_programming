@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl for size
-curl -s -w "You%20got%20me!" --output /dev/null "$1"
+curl -s -w "You got me!" --output /dev/null "$1"
