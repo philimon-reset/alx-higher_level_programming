@@ -1,3 +1,3 @@
 #!/bin/bash
-# curl for size
-curl -i -s "$1" | grep "Content-Length:" | cut -d ":" -f 2
+# curl for setting value
+curl -i -s "$1" -X GET -H "X-HolbertonSchool-User-Id: 98"
