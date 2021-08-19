@@ -1,3 +1,3 @@
 #!/bin/bash
-# curl for size
-curl -i -s "$1" | grep "Content-Length:" | cut -d ":" -f 2
+# curl for setting value
+curl -i -s "$1" -X POST -d "email=hr@holbertonschool.com&subject=I will always be here for PLD"
