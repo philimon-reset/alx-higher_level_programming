@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import time
-from random import randint
 """ Module starting point
     """
 
