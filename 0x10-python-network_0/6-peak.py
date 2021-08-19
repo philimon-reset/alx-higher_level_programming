@@ -9,10 +9,8 @@ def find_peak(list_of_integers):
     """ try to find the peak """
     if not len(list_of_integers):
                 return (None)
-    return max(list_of_integers)
-
-
-if __name__ == '__main__':
-    big_boi = [randint(-10000, 10000) for i in range(10000000)]
-    start = time.time()
-    print(find_peak(big_boi), time.time() - start)
+    max2 = list_of_integers[0]
+    for x in range(len(list_of_integers) - 1):
+        if list_of_integers[x + 1] >= list_of_integers[x]:
+            max2 = list_of_integers[x + 1]
+    return max2
