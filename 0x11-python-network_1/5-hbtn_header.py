@@ -3,6 +3,9 @@
 if __name__ == '__main__':
     import requests
     from sys import argv
-    response = requests.get(argv[1])
-    html = response.headers
-    print(html["X-Request-Id"])
+    try:
+        response = requests.get(argv[1])
+        html = response.headers
+        print(html["X-Request-Id"])
+    except:
+        pass
