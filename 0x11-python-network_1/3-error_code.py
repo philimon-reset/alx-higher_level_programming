@@ -9,5 +9,5 @@ try:
                 test = response.read().decode('UTF-8')
                 print(test)
 except HTTPError as e:
-        status = e.status_code
+        status = e.response.status_code
         print("Error code: {}".format(status))
