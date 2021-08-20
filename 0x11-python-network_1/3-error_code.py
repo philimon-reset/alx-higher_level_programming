@@ -8,5 +8,6 @@ try:
         with request.urlopen(argv[1]) as response:
                 test = response.read().decode('UTF-8')
                 print(test)
-except:
-        print("Error code: {}".format(HTTPError.getcode))
+except HTTPError as e:
+        status = e.status_code
+        print("Error code: {}".format(status))
