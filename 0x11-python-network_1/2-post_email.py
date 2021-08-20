@@ -9,5 +9,5 @@ data = parse.urlencode(value)
 data = data.encode('ascii')
 req = request.Request(argv[1], data)
 with request.urlopen(req) as response:
-        test = response.read()
+        test = response.read().decode('UTF-8')
         print(test)
