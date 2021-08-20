@@ -4,7 +4,9 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    req = requests.get("https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1]))
+    req = requests.get(
+        "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1]))
     html = req.json()
     for i in range(10):
-        print("{}: {}".format(html[i]["sha"], html[i]["commit"]["committer"]["name"]))
+        print("{}: {}".format(html[i]["sha"],
+              html[i]["commit"]["committer"]["name"]))
