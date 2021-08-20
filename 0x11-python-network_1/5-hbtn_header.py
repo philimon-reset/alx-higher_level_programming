@@ -3,6 +3,6 @@
 if __name__ == '__main__':
     import requests
     from sys import argv
-    with requests.get(argv[1]) as response:
-        html = response.headers
-        print(html["X-Request-Id"])
+    response = requests.get(argv[1])
+    html = response.headers
+    print(html["X-Request-Id"])
