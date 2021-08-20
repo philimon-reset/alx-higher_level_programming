@@ -3,7 +3,5 @@
 import requests
 from sys import argv
 
-with requests.get(argv[1]) as response:
-    r = response.post('https://httpbin.org/post', data = {'email':argv[2]})
-    html = requests.text
-    print(html)
+r = requests.post(argv[1], data = {'email':argv[2]})
+print(r.text)
