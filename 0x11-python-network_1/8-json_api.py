@@ -4,8 +4,12 @@ import requests
 from sys import argv
 
 try:
-        my_obj = {'q':argv[2]}
+        my_obj = {'q':argv[1]}
 except:
         my_obj = {'q': ""}
 r = requests.post("http://0.0.0.0:5000/search_user", data = my_obj)
-print(r.json())
+if len(r.json()) == 0:
+        print("No result")
+else:
+        html = r.json()
+        print("[{}] {}".format(html["id"], html["name"]))
