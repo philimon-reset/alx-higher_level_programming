@@ -7,5 +7,4 @@ if __name__ == '__main__':
     req = requests.get("https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1]))
     html = req.json()
     for i in range(10):
-                for j in range(len(html[i]["parents"])):
-                    print("{}: {}".format(html[i]["parents"][j]["sha"], html[i]["committer"]["login"]))
+        print("{}: {}".format(html[i]["sha"], html[i]["commit"]["committer"]["name"]))
