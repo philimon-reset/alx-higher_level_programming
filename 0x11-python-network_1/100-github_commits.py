@@ -6,6 +6,6 @@ from sys import argv
 if __name__ == '__main__':
     req = requests.get("https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1]))
     html = req.json()
-    # response = requests.get(html["commits"])
-    # html2 = response.json()
-    print(html)
+    for i in range(10):
+                for j in range(len(html[i]["parents"])):
+                    print("{}: {}".format(html[i]["parents"][j]["sha"], html[i]["committer"]["login"]))
