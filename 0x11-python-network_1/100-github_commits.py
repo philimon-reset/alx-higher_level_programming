@@ -9,4 +9,4 @@ if __name__ == '__main__':
     html = req.json()
     for i in range(10):
         print("{}: {}".format(html[i].get("sha"),
-              html[i].get("commit").get("committer").get("name")))
+              html[i].get("commit").get("author").get("name")))
