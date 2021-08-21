@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """ contains find_peak """
 
 
@@ -24,19 +23,3 @@ def find_peak(list_of_integers):
         else:
             i += 1
     return peak
-=======
-import time
-from random import randint
-""" Module starting point
-    """
-
-
-def find_peak(list_of_integers):
-    """ try to find the peak """
-    if not len(list_of_integers):
-                return (None)
-    return max(list_of_integers)
-
-if __name__ == '__main__':
-    print(find_peak([4, 2, 1, 2, 3, 1]))
->>>>>>> 8383a837... 1st
