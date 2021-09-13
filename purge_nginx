@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# purge haproxy
+sudo apt-get purge nginx nginx-common -y ; sudo apt-get autoremove -y
