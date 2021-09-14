@@ -1,34 +1,21 @@
 #!/usr/bin/node
-const { argv } = require('process');
 const request = require('request');
+const { argv } = require('process');
 
-function MakeRequest (url) {
-  return new Promise(function (resolve, reject) {
-    request(url, (error, response, body) => {
-      if (!error && response.statusCode === 200) {
-        resolve(body);
+request(argv[2], (error, response, body) => {
+  if (error) {
+    console.error(error);
+  }
+  const final = {};
+  console.log(JSON.parse(body).forEach(file => {
+    if (file.completed) {
+      const id = file.userId;
+      if (final[id] !== undefined) {
+        final[id]++;
       } else {
-        reject(error);
-      }
-    });
-  });
-}
-
-async function main () {
-  let todos = await MakeRequest(argv[2]);
-  todos = JSON.parse(todos);
-  const result = {};
-  todos.forEach(element => {
-    if (element.completed) {
-      const key = element.userId;
-      if (result[key] !== undefined) {
-        result[key]++;
-      } else {
-        result[key] = 1;
+        final[id] = 1;
       }
     }
-  });
-  console.log(result);
-}
-
-main();
+  }));
+  console.log(final);
+});
