@@ -7,7 +7,7 @@ request(argv[2], (error, response, body) => {
     console.error(error);
   }
   const final = {};
-  console.log(JSON.parse(body).forEach(file => {
+  JSON.parse(body).forEach(file => {
     if (file.completed) {
       const id = file.userId;
       if (final[id] !== undefined) {
@@ -16,6 +16,6 @@ request(argv[2], (error, response, body) => {
         final[id] = 1;
       }
     }
-  }));
+  });
   console.log(final);
 });
