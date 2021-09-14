@@ -1,4 +1,17 @@
 #!/usr/bin/node
+const request = require('request');
 const { argv } = require('process');
 
-console.log(argv[2] + ' is ' + argv[3]);
+request(argv[2], (error, response, body) => {
+  if (error) {
+    console.error(error);
+  }
+  let Count = 0;
+  const doc = JSON.parse(body).results;
+  doc.forEach(p => p.characters.forEach(msg => {
+    if (msg.slice(37, -1) === '18') {
+      Count++;
+    }
+  }));
+  console.log(Count);
+});
