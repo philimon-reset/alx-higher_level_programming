@@ -9,7 +9,7 @@ request(argv[2], (error, response, body) => {
   let Count = 0;
   const doc = JSON.parse(body).results;
   doc.forEach(p => p.characters.forEach(msg => {
-    if (msg.slice(37, -1) === '18') {
+    if (msg.slice(-3, -1) === '18') {
       Count++;
     }
   }));
