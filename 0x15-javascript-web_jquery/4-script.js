@@ -1,8 +1,8 @@
-$(function(){
+$("#toggle_header").click(function() {
 	if ($("header").hasClass("green")) {
-		$("#toggle_header").click(function() {$( "header" ).removeClass( "green" ).addClass( "red" );});
+		$( "header" ).removeClass( "green" ).addClass( "red" );
 	}
 	else {
-		$("#toggle_header").click(function() {$( "header" ).removeClass( "red" ).addClass( "green" );});
+		$( "header" ).removeClass( "red" ).addClass( "green" )
 	}
-	});
+});
