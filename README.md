@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# alx-system_engineering-devops
-=======
 # Higher Level Programming
->>>>>>> 635b9d9c0274eba5a5b90a1ee7cb3733e2a5ff6f
+* Collection of projects related to Higher level programming including but not limited to advanced algorithms, space and time
+complexity, database management, and front-end programming.
+* Used: C, MySQL, Flask, JavaScript, Node.js, Python, SQLAlchemy
